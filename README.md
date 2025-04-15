@@ -29,3 +29,25 @@ npm run dev
 npm run build
 
 Собранная версия будет находиться в директории `dist/`
+
+///////////////
+
+Поумничал и вынес все стили шрифтов в файл typography.css, теперь приходиться подключать стили в каждом модуле через шаблонные строки: className={`${styles.button} ${typography.buttonText}`}
+
+или вот так:
+
+className={[
+typographyStyles.headingH1,
+additionalStyles.specialHeading
+].join(' ')}.
+
+А ещё можно сделать утилиту:
+
+export function cn(...classes: (string | false | null | undefined)[]): string {
+return classes.filter(Boolean).join(' ');
+}
+
+и писать стили в компонентах вот так:
+className={cn(styles.button, typography.buttonText, isPrimary && styles.primary)}.
+
+Но так ведь нельзя, это похоже на стороннюю библиотеку cn)))).
