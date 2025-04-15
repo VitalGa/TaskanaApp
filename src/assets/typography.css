@@ -1,0 +1,124 @@
+/* typography.css */
+/* ============== FONT FACES ============== */
+/* Подключение шрифтов в формате woff2 */
+@font-face {
+  font-family: 'Source Sans 3';
+  src: url('../assets/fonts/SourceSans3-Regular.woff2') format('woff2');
+  font-weight: 400; /* Regular */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Sans 3';
+  src: url('../assets/fonts/SourceSans3-SemiBold.woff2') format('woff2');
+  font-weight: 600; /* SemiBold */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Sans 3';
+  src: url('../assets/fonts/SourceSans3-Bold.woff2') format('woff2');
+  font-weight: 700; /* Bold */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ============== HEADINGS ============== */
+.heading-h1 {
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: 0;
+}
+
+.heading-h2 {
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0;
+}
+
+.heading-h3 {
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0;
+}
+
+/* ============== BODY TEXT ============== */
+/* Large */
+.text-lg-semibold {
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0;
+}
+
+.text-lg-regular {
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0;
+}
+
+/* Medium */
+.text-md-bold {
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+}
+
+.text-md-semibold {
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+}
+
+.text-md-regular {
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+}
+
+/* Small */
+.text-sm-semibold {
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+}
+
+.text-sm-regular {
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+}
+
+/* ============== UTILITY CLASSES ============== */
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-no-wrap {
+  white-space: nowrap;
+}
