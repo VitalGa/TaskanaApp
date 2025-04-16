@@ -32,7 +32,7 @@ npm run build
 
 ///////////////
 
-Поумничал и вынес все стили шрифтов в файл typography.css, теперь приходиться подключать стили в каждом модуле через шаблонные строки: className={`${styles.button} ${typography.buttonText}`}
+Поумничал и вынес все стили шрифтов в файл typography.css, теперь приходиться прописывать стили в каждом модуле через шаблонные строки: className={`${styles.button} ${typography.buttonText}`}, className={`heading-h1 ${isActive ? 'active' : ''}`}, className={styles.button + ' heading-h1'}
 
 или вот так:
 
@@ -41,7 +41,9 @@ typographyStyles.headingH1,
 additionalStyles.specialHeading
 ].join(' ')}.
 
-А ещё можно сделать утилиту:
+Подключать typography.css в каждый компонент не надо, т.к. он подключен глобально в App.jsx
+
+А ещё можно сделать утилиту и поместить её в папку utils:
 
 export function cn(...classes: (string | false | null | undefined)[]): string {
 return classes.filter(Boolean).join(' ');
@@ -50,4 +52,4 @@ return classes.filter(Boolean).join(' ');
 и писать стили в компонентах вот так:
 className={cn(styles.button, typography.buttonText, isPrimary && styles.primary)}.
 
-Но так ведь нельзя, это похоже на стороннюю библиотеку cn)))).
+Но так ведь нельзя, это похоже на стороннюю библиотеку cn и будет расценено как хулиганство)))).
