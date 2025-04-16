@@ -3,10 +3,10 @@ import TaskList from '@/components/taskList/TaskList';
 
 const MainContainer = () => {
   return (
-    <main>
+    <>
       <Title />
       <TaskList />
-    </main>
+    </>
   );
 };
 

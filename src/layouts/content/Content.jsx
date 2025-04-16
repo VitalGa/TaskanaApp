@@ -1,12 +1,12 @@
 import NavBar from '@/components/navBar/NavBar';
-import IncomingTasks from '@/pages/incomingTasks/IncomingTasks';
 import SideBar from '@/components/sideBar/SideBar';
+import { Outlet } from 'react-router-dom';
 
 const Content = () => {
   return (
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
       <NavBar />
-      <IncomingTasks />
+      <Outlet />
       <SideBar />
     </div>
   );

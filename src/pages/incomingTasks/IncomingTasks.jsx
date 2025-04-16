@@ -3,8 +3,15 @@ import Footer from '@/components/footer/Footer';
 
 const IncomingTasks = () => {
   return (
-    <div>
-      <MainContainer />
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+      }}>
+      <main>
+        <MainContainer />
+      </main>
       <Footer />
     </div>
   );

@@ -1,12 +1,13 @@
+import './appLayout.module.css';
 import Header from '@/components/header/Header';
 import Content from '@/layouts/content/Content';
 
 const AppLayout = () => {
   return (
-    <>
+    <div className='app-layout'>
       <Header />
       <Content />
-    </>
+    </div>
   );
 };
 
