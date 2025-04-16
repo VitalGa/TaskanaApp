@@ -2,6 +2,7 @@ import js from '@eslint/js';
 import globals from 'globals';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
+import path from 'path';
 
 export default [
   { ignores: ['dist'] },
@@ -14,6 +15,22 @@ export default [
         ecmaVersion: 'latest',
         ecmaFeatures: { jsx: true },
         sourceType: 'module',
+      },
+    },
+    settings: {
+      'import/resolver': {
+        alias: {
+          map: [
+            ['@', path.resolve(__dirname, './src')],
+            ['@components', path.resolve(__dirname, './src/components')],
+            ['@containers', path.resolve(__dirname, './src/containers')],
+            ['@pages', path.resolve(__dirname, './src/pages')],
+            ['@assets', path.resolve(__dirname, './src/assets')],
+            ['@layouts', path.resolve(__dirname, './src/layouts')],
+            ['@ui', path.resolve(__dirname, './src/ui')],
+          ],
+          extensions: ['.js', '.jsx', '.json'],
+        },
       },
     },
     plugins: {
