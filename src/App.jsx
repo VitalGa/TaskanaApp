@@ -1,11 +1,12 @@
 import './App.css';
 import './assets/global.css';
 import './assets/typography.css';
+import AppLayout from '@/layouts/appLayout/AppLayout';
 
 function App() {
   return (
     <div>
-      <h1 className='heading-h1'>Hello World</h1>
+      <AppLayout />
     </div>
   );
 }

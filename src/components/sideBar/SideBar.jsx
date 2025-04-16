@@ -1,5 +1,12 @@
+import Statistic from '@/components/statistic/Statistic';
+
 function SideBar() {
-  return <div>SideBar</div>;
+  return (
+    <>
+      <h3>SideBar</h3>
+      <Statistic />
+    </>
+  );
 }
 
 export default SideBar;
