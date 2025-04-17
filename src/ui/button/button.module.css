@@ -1,13 +1,32 @@
 .button {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 11px;
-  background-color: var(--primary-400);
-  border-radius: 8px;
-  padding: 12px 24px;
+  justify-content: center;
   height: 40px;
+  gap: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
 }
 
-.button__text {
-  color: var(--neutral-0);
+/* Варианты кнопок */
+.primary {
+  background-color: var(--primary-400);
+  color: white;
 }
+
+/* .primary:hover {
+  background-color: #d81d49;
+} */
+
+/* Размеры кнопок */
+
+.medium {
+  padding: 8px 16px 8px 12px;
+}
+
+/* Состояние disabled */
+/* .disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+} */

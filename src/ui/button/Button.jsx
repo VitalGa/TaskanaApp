@@ -1,11 +1,25 @@
 import styles from './button.module.css';
-import plusIcon from '@public/plus-2-Icon.svg';
 
-function Button() {
+function Button({
+  children,
+  variant = 'primary',
+  size = 'medium',
+  disabled = false,
+  onClick,
+  className = '',
+  type = 'button',
+}) {
+  const buttonClasses = [
+    styles.button,
+    styles[variant],
+    styles[size],
+    disabled ? styles.disabled : '',
+    className,
+  ].join(' ');
+
   return (
-    <button className={styles.button}>
-      <img src={plusIcon} width={24} height={24} alt='плюс' />
-      <span className={styles.button__text + ' text-md-semibold'}>Создать</span>
+    <button type={type} className={buttonClasses} disabled={disabled} onClick={onClick}>
+      {children}
     </button>
   );
 }
