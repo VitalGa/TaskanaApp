@@ -1,0 +1,23 @@
+.wrapper {
+  background-color: var(--neutral-300);
+  padding: 24px 16px 0 16px;
+}
+
+.navBar {
+  width: 240px;
+  min-width: 240px;
+  background-color: var(--base-white);
+  border-right: 1px solid var(--base-gray-200);
+}
+
+.textWrapper {
+  width: 124px;
+  height: 24px;
+}
+
+/* @media (max-width: 1280px) {
+  .navBar {
+    width: 200px;
+    min-width: 200px;
+  }
+} */

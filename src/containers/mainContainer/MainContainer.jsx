@@ -1,12 +1,11 @@
-import Title from '@/ui/title/Title';
 import TaskList from '@/components/taskList/TaskList';
+import styles from './mainContainer.module.css';
 
 const MainContainer = () => {
   return (
-    <>
-      <Title />
+    <main className={styles.mainContainer}>
       <TaskList />
-    </>
+    </main>
   );
 };
 

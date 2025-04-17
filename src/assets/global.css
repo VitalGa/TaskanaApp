@@ -27,6 +27,10 @@ body {
   display: flex;
 }
 
+.flex-start {
+  align-items: flex-start;
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -43,7 +47,7 @@ body {
   justify-content: space-between;
 }
 
-/* .gap-2 {
+.gap-2 {
   gap: var(--spacing-sm);
 }
 
@@ -88,4 +92,4 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-} */
+}

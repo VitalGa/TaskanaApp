@@ -1,0 +1,7 @@
+.mainContainer {
+  position: relative;
+  max-height: 600px; /* Максимальная высота блока */
+  overflow-y: auto; /* Включает вертикальную прокрутку при необходимости */
+  scroll-behavior: smooth; /* Плавная прокрутка */
+  -webkit-overflow-scrolling: touch; /* Улучшает прокрутку на мобильных устройствах */
+}

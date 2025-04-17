@@ -1,17 +1,10 @@
 import MainContainer from '@/containers/mainContainer/MainContainer';
 import Footer from '@/components/footer/Footer';
-
+import styles from './incomingTasks.module.css';
 const IncomingTasks = () => {
   return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-      }}>
-      <main>
-        <MainContainer />
-      </main>
+    <div className={`${styles.incomingTasks} flex flex-col`}>
+      <MainContainer />
       <Footer />
     </div>
   );

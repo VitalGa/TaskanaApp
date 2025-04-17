@@ -1,0 +1,14 @@
+.sideBar {
+  background-color: var(--neutral-300);
+  width: 320px;
+  min-width: 320px;
+
+  border-left: 1px solid var(--base-gray-200);
+}
+
+@media (max-width: 1280px) {
+  .sideBar {
+    width: 280px;
+    min-width: 280px;
+  }
+}
