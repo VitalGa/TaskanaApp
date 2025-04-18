@@ -1,4 +1,4 @@
 .header {
   background-color: var(--base-black);
-  padding: 12px 24px 12px 16px;
+  padding: calc(var(--spacing-sm) + 4px) var(--spacing-lg) var(--spacing-md);
 }

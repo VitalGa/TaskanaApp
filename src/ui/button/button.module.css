@@ -2,9 +2,9 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 40px;
-  gap: 8px;
-  border-radius: 8px;
+  height: calc(var(--spacing-xl) + 8px);
+  gap: var(--spacing-sm);
+  border-radius: var(--border-radius-md);
   cursor: pointer;
   border: none;
 }
@@ -23,17 +23,10 @@
 /* Размеры кнопок */
 
 .medium {
-  padding: 8px 16px 8px 12px;
+  padding: var(--spacing-sm) var(--spacing-md) var(--spacing-sm) calc(var(--spacing-sm) + 4px);
 }
 
 .large {
-  padding: 8px;
-
-  height: 40px;
+  padding: var(--spacing-sm);
+  height: calc(var(--spacing-xl) + 8px);
 }
-
-/* Состояние disabled */
-/* .disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-} */

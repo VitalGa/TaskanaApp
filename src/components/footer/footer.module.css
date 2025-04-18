@@ -4,7 +4,8 @@
   color: var(--neutral-600);
 }
 
-.footer__text {
+.footer__link {
+  color: inherit;
   text-decoration: underline;
-  margin-left: 4px;
+  margin-left: var(--spacing-xs);
 }

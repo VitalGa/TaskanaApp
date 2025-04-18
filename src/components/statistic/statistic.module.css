@@ -3,5 +3,5 @@
 }
 
 .statistic {
-  gap: 24px;
+  gap: var(--spacing-lg);
 }

@@ -1,4 +1,4 @@
 .containerHeader {
-  padding: 24px;
+  padding: var(--spacing-lg);
   height: 88px;
 }

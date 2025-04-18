@@ -1,18 +1,16 @@
 .wrapper {
   width: 204px;
   background-color: var(--neutral-300);
-  padding: 24px 16px;
-  gap: 24px;
+  padding: var(--spacing-lg) var(--spacing-md);
+  gap: var(--spacing-lg);
 }
 
 .navBar {
   background-color: var(--base-white);
-  border-right: 1px solid var(--base-gray-200);
   position: relative;
-  max-height: 600px; /* Максимальная высота блока */
-  overflow-y: auto; /* Включает вертикальную прокрутку при необходимости */
-  scroll-behavior: smooth; /* Плавная прокрутка */
-  -webkit-overflow-scrolling: touch; /* Улучшает прокрутку на мобильных устройствах */
+  max-height: 600px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
 }
 
 .navBar ul {
@@ -23,12 +21,5 @@
 
 .textWrapper {
   width: 124px;
-  height: 24px;
+  height: var(--spacing-lg);
 }
-
-/* @media (max-width: 1280px) {
-  .navBar {
-    width: 200px;
-    min-width: 200px;
-  }
-} */

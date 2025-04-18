@@ -11,13 +11,18 @@ const EmptyTask = () => {
   return (
     <div className={`${styles.wrapper} flex flex-col items-center justify-center`}>
       <div className={styles.illustration}>
-        <img src={card1} className={styles.card1} alt='Задание 1' />
-        <img src={card2} className={styles.card2} alt='Задание 2' />
-        <img src={card3} className={styles.card3} alt='Задание 3' />
-        <img src={card4} className={styles.card4Big} alt='Задание 4' />
-        <img src={girl} className={styles.girl} alt='Девушка' />
-        <img src={leafBig} className={styles.leafBig} alt='Листок большой' />
-        <img src={leafSmall} className={styles.leafSmall} alt='Листок маленький' />
+        {/* Карточки задач */}
+        <img src={card1} className={styles.card1} alt='Карточка задачи 1' loading='lazy' />
+        <img src={card2} className={styles.card2} alt='Карточка задачи 2' loading='lazy' />
+        <img src={card3} className={styles.card3} alt='Карточка задачи 3' loading='lazy' />
+        <img src={card4} className={styles.card4Big} alt='Карточка задачи 4' loading='lazy' />
+
+        {/* Основная иллюстрация */}
+        <img src={girl} className={styles.girl} alt='Девушка с карточками' loading='lazy' />
+
+        {/* Декоративные элементы */}
+        <img src={leafBig} className={styles.leafBig} alt='Большой листок' loading='lazy' />
+        <img src={leafSmall} className={styles.leafSmall} alt='Маленький листок' loading='lazy' />
       </div>
     </div>
   );

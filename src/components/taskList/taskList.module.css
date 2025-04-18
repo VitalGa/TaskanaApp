@@ -1,4 +1,3 @@
 .taskList {
-  gap: 40px;
-  /* padding: 84.5px 24px 108.5px 24px; */
+  gap: calc(var(--spacing-xl) + 8px);
 }
