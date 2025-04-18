@@ -30,3 +30,12 @@
   padding: var(--spacing-sm);
   height: calc(var(--spacing-xl) + 8px);
 }
+
+/* Тени кнопок */
+.shadow-md {
+  box-shadow: var(--shadow-md);
+}
+
+.shadow-sm {
+  box-shadow: var(--shadow-sm);
+}

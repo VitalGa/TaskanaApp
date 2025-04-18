@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header className={`${styles.header} flex justify-between items-center`}>
       <Logo />
-      <Button variant='primary' size='medium' className='text-md-semibold'>
+      <Button variant='primary' size='medium' className='text-md-semibold' shadow='shadow-md'>
         <img src={plusIcon} width={24} height={24} alt='Плюс' />
         Создать
       </Button>

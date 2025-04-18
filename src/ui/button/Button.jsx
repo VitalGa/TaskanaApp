@@ -8,11 +8,13 @@ function Button({
   onClick,
   className = '',
   type = 'button',
+  shadow = 'shadow-md',
 }) {
   const buttonClasses = [
     styles.button,
     styles[variant],
     styles[size],
+    styles[shadow],
     disabled ? styles.disabled : '',
     className,
   ].join(' ');
