@@ -52,4 +52,4 @@ return classes.filter(Boolean).join(' ');
 и писать стили в компонентах вот так:
 className={cn(styles.button, typography.buttonText, isPrimary && styles.primary)}.
 
-Но так ведь нельзя, это похоже на стороннюю библиотеку cn и будет расценено как хулиганство)))).
+Но так ведь нельзя, это похоже на стороннюю библиотеку cn и будет расценено как хулиганство))).
