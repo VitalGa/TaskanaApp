@@ -1,4 +1,10 @@
 .footer {
+  margin-top: 84px;
   height: 56px;
   color: var(--neutral-600);
+}
+
+.footer__text {
+  text-decoration: underline;
+  margin-left: 4px;
 }

@@ -13,13 +13,7 @@ function NavBar() {
       </Button>
       <nav className={styles.navBar}>
         <ul>
-          <li>NavBar</li>
-          <li>NavBar</li>
-          <li>NavBar</li>
-          <li>NavBar</li>
-          <li>NavBar</li>
-          <li>NavBar</li>
-          <li>NavBar</li>
+          <li>Покормить кота</li>
         </ul>
       </nav>
     </div>

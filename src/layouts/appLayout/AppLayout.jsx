@@ -1,10 +1,10 @@
-import './appLayout.module.css';
+import styles from './appLayout.module.css';
 import Header from '@/components/header/Header';
 import Content from '@/layouts/content/Content';
 
 const AppLayout = () => {
   return (
-    <div className='app-layout'>
+    <div className={`${styles.appLayout} flex flex-col`}>
       <Header />
       <Content />
     </div>

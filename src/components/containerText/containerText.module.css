@@ -1,3 +1,4 @@
-/* .containerText {
-  height: 72px;
-} */
+.containerText {
+  margin-top: 60px;
+  color: var(--neutral-800);
+}

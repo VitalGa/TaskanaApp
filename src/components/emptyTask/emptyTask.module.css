@@ -1,9 +1,4 @@
 .wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 40px 20px;
   position: relative;
   text-align: center;
 }
@@ -17,6 +12,7 @@
 .card1,
 .card2,
 .card3,
+.card4Big,
 .girl,
 .leafBig,
 .leafSmall {
@@ -24,37 +20,37 @@
 }
 
 .card1 {
-  bottom: 0;
-  left: 20px;
+  bottom: 138px;
+  left: 100px;
 }
 
 .card2 {
-  bottom: 40px;
-  right: 40px;
+  bottom: 45px;
+  right: 67px;
 }
 
 .card3 {
-  bottom: 100px;
-  left: 80px;
+  bottom: 0px;
+  left: 245px;
 }
 
 .card4Big {
-  bottom: 100px;
-  left: 80px;
+  bottom: 0px;
+  left: 38px;
 }
 
 .girl {
   top: 0;
-  left: 50%;
+  left: 49%;
   transform: translateX(-50%);
 }
 
 .leafBig {
   bottom: 0;
-  right: 50px;
+  right: 20px;
 }
 
 .leafSmall {
   bottom: 0;
-  right: 40px;
+  right: 7px;
 }

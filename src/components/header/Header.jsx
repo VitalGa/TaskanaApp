@@ -5,7 +5,7 @@ import plusIcon from '@/assets/icons/buttonIcons/plus-2-Icon.svg';
 
 const Header = () => {
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} flex justify-between items-center`}>
       <Logo />
       <Button variant='primary' size='medium' className='text-md-semibold'>
         <img src={plusIcon} width={24} height={24} alt='Плюс' />

@@ -1,14 +1,19 @@
 .sideBar {
   background-color: var(--neutral-300);
-  width: 320px;
-  min-width: 320px;
+  width: 400px;
+  padding: 24px;
+  gap: 24px;
 
-  border-left: 1px solid var(--base-gray-200);
+  position: relative;
+
+  overflow-y: auto; /* Включает вертикальную прокрутку при необходимости */
+  scroll-behavior: smooth; /* Плавная прокрутка */
+  -webkit-overflow-scrolling: touch; /* Улучшает прокрутку на мобильных устройствах */
 }
 
-@media (max-width: 1280px) {
+/* @media (max-width: 1280px) {
   .sideBar {
     width: 280px;
     min-width: 280px;
   }
-}
+} */

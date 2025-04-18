@@ -9,7 +9,7 @@ import leafSmall from '@/assets/icons/emptyTaskIcons/leafSmall.svg';
 
 const EmptyTask = () => {
   return (
-    <div className={styles.wrapper}>
+    <div className={`${styles.wrapper} flex flex-col items-center justify-center`}>
       <div className={styles.illustration}>
         <img src={card1} className={styles.card1} alt='Задание 1' />
         <img src={card2} className={styles.card2} alt='Задание 2' />

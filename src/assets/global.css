@@ -5,7 +5,6 @@
 body {
   margin: 0;
   display: flex;
-  /* min-width: 320px; */
   min-height: 100vh;
   font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -48,10 +47,14 @@ body {
 }
 
 .gap-2 {
-  gap: var(--spacing-sm);
+  gap: calc(var(--spacing-xs) / 2);
 }
 
 .gap-4 {
+  gap: var(--spacing-xs);
+}
+
+.gap-16 {
   gap: var(--spacing-md);
 }
 
@@ -77,19 +80,4 @@ body {
 
 .m-4 {
   margin: var(--spacing-md);
-}
-
-.container {
-  width: 100%;
-  max-width: var(--container-max-width);
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: var(--container-padding);
-  padding-right: var(--container-padding);
-}
-
-.wrapper {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
