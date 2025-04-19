@@ -13,7 +13,9 @@ function NavBar() {
       </Button>
       <nav className={styles.navBar}>
         <ul>
-          <li>Покормить кота</li>
+          {Array.from({ length: 30 }).map((_, index) => (
+            <li key={index}>Покормить кота</li>
+          ))}
         </ul>
       </nav>
     </div>

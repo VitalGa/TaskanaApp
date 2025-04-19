@@ -24,7 +24,6 @@ export default defineConfig({
       '@assets': checkDir('./src/assets'),
       '@layouts': checkDir('./src/layouts'),
       '@ui': checkDir('./src/ui'),
-      '@public': checkDir('./public'),
     },
   },
 });

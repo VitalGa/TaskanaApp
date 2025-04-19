@@ -1,9 +1,7 @@
-import logoImage from '@public/logo.svg';
-
 function Logo() {
   return (
     <div className='logo'>
-      <img src={logoImage} alt='Логотип приложения' width='124' height='40' />
+      <img src='/logo.svg' alt='Логотип приложения' width='124' height='40' />
     </div>
   );
 }
