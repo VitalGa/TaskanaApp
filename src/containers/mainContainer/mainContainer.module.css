@@ -1,8 +1,7 @@
 .mainContainer {
   padding: var(--spacing-lg);
   position: relative;
-  /* max-height: 600px; */
   overflow-y: auto;
   scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
+  margin-bottom: var(--spacing-lg);
 }

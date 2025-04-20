@@ -8,12 +8,14 @@ function NavBar() {
       <nav className={styles.navBar}>
         <ul>
           <li>
-            <Button variant='secondary' size='large'>
-              <img src={inboxIcon} width={24} height={24} alt='Входящие' />
-              <div className={`${styles.textWrapper} flex flex-start`}>
-                <span className='text-md-semibold'>Входящие</span>
-              </div>
-            </Button>
+            <a href='#'>
+              <Button variant='secondary' size='large'>
+                <img src={inboxIcon} width={24} height={24} alt='Входящие' />
+                <div className={`${styles.textWrapper} flex flex-start`}>
+                  <span className='text-md-semibold'>Входящие</span>
+                </div>
+              </Button>
+            </a>
           </li>
         </ul>
       </nav>
