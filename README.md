@@ -53,3 +53,5 @@ return classes.filter(Boolean).join(' ');
 className={cn(styles.button, typography.buttonText, isPrimary && styles.primary)}.
 
 Но так ведь нельзя, это похоже на стороннюю библиотеку cn и будет расценено как хулиганство))).
+
+Router сделал, на случай если страница будет не одна. Если не понадобиться, то уберу.

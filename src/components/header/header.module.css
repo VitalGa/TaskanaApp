@@ -1,4 +1,11 @@
 .header {
+  height: var(--spacing-3xl);
+  box-sizing: border-box;
+
+  position: sticky;
+  z-index: 10;
+  top: 0;
+
   background-color: var(--base-black);
   padding: calc(var(--spacing-sm) + 4px) var(--spacing-lg) calc(var(--spacing-md) - 4px)
     var(--spacing-md);

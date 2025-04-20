@@ -1,16 +1,20 @@
 .wrapper {
+  display: block;
+  box-sizing: border-box;
   width: 204px;
   background-color: var(--neutral-300);
   padding: var(--spacing-lg) var(--spacing-md);
-  gap: var(--spacing-lg);
+
+  border-right: 1px solid var(--neutral-light-300);
+
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
 }
 
 .navBar {
   background-color: var(--base-white);
   position: relative;
-  max-height: 600px;
-  overflow-y: auto;
-  scroll-behavior: smooth;
 }
 
 .navBar ul {

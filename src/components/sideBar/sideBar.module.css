@@ -1,12 +1,21 @@
 .sideBar {
+  display: block;
   background-color: var(--neutral-300);
   width: 400px;
   padding: var(--spacing-lg);
   gap: var(--spacing-lg);
+  padding-top: 254px;
+
+  border-left: 1px solid var(--neutral-light-300);
 
   position: relative;
 
   overflow-y: auto;
+
+  scrollbar-gutter: stable;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
+}
+
+.sideBar__text {
 }

@@ -5,21 +5,24 @@ import inboxIcon from '@/assets/icons/buttonIcons/inboxIcon.svg';
 function NavBar() {
   return (
     <div className={`${styles.wrapper} flex flex-col items-center`}>
-      <Button variant='secondary' size='large'>
-        <img src={inboxIcon} width={24} height={24} alt='Входящие' />
-        <div className={`${styles.textWrapper} flex flex-start`}>
-          <span className='text-md-semibold'>Входящие</span>
-        </div>
-      </Button>
       <nav className={styles.navBar}>
         <ul>
-          {Array.from({ length: 30 }).map((_, index) => (
-            <li key={index}>Покормить кота</li>
-          ))}
+          <li>
+            <Button variant='secondary' size='large'>
+              <img src={inboxIcon} width={24} height={24} alt='Входящие' />
+              <div className={`${styles.textWrapper} flex flex-start`}>
+                <span className='text-md-semibold'>Входящие</span>
+              </div>
+            </Button>
+          </li>
         </ul>
       </nav>
     </div>
   );
 }
+
+// {Array.from({ length: 30 }).map((_, index) => (
+//   <li key={index}>Покормить кота</li>
+// ))}
 
 export default NavBar;

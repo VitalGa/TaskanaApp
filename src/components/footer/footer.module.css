@@ -1,7 +1,7 @@
 .footer {
-  margin-top: 84px;
-  height: 56px;
+  /* height: 56px; */
   color: var(--neutral-600);
+  padding: 16px 24px;
 }
 
 .footer__link {

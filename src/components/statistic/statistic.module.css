@@ -1,7 +1,3 @@
 .wrapper {
   height: 100%;
 }
-
-.statistic {
-  gap: var(--spacing-lg);
-}
