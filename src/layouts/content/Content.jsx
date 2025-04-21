@@ -7,7 +7,7 @@ const Content = () => {
   return (
     <div className={styles.content}>
       <NavBar />
-      <div className={styles.mainContent}>
+      <div className={styles.incomingTasks}>
         <IncomingTasks />
       </div>
       <SideBar />

@@ -3,6 +3,6 @@
   height: calc(100dvh - var(--spacing-3xl));
 }
 
-.mainContent {
+.incomingTasks {
   flex-grow: 1;
 }
