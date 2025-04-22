@@ -4,7 +4,7 @@ import inboxIcon from '@/assets/icons/buttonIcons/inboxIcon.svg';
 
 function NavBar() {
   return (
-    <div className={`${styles.wrapper} flex flex-col items-center`}>
+    <aside className={`${styles.wrapper} flex flex-col items-center`}>
       <nav className={styles.navBar}>
         <ul>
           <li>
@@ -19,7 +19,7 @@ function NavBar() {
           </li>
         </ul>
       </nav>
-    </div>
+    </aside>
   );
 }
 

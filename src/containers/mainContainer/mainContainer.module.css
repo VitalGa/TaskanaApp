@@ -4,3 +4,9 @@
   overflow-y: auto;
   margin-bottom: var(--spacing-lg);
 }
+
+@media (min-width: 1600px) {
+  .mainContainer {
+    padding: var(--spacing-md);
+  }
+}

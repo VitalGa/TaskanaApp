@@ -1,8 +1,11 @@
 .content {
   display: flex;
   height: calc(100dvh - var(--spacing-3xl));
+  overflow: hidden;
 }
 
 .incomingTasks {
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
