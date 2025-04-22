@@ -1,4 +1,32 @@
 /* typography.css */
+/* ============== CSS VARIABLES ============== */
+:root {
+  /* Font Family */
+  --font-family: 'Source Sans 3', sans-serif;
+
+  /* Font Sizes with Line Heights */
+  --font-size-14: 14px/20px;
+  --font-size-16: 16px/24px;
+  --font-size-18: 18px/24px;
+  --font-size-24: 24px/32px;
+  --font-size-32: 32px/40px;
+
+  /* Font Combinations */
+  --font-heading-h1: 700 var(--font-size-32) var(--font-family);
+  --font-heading-h2: 700 var(--font-size-24) var(--font-family);
+  --font-heading-h3: 700 var(--font-size-18) var(--font-family);
+
+  --font-lg-semibold: 600 var(--font-size-18) var(--font-family);
+  --font-lg-regular: 400 var(--font-size-18) var(--font-family);
+
+  --font-md-bold: 700 var(--font-size-16) var(--font-family);
+  --font-md-semibold: 600 var(--font-size-16) var(--font-family);
+  --font-md-regular: 400 var(--font-size-16) var(--font-family);
+
+  --font-sm-semibold: 600 var(--font-size-14) var(--font-family);
+  --font-sm-regular: 400 var(--font-size-14) var(--font-family);
+}
+
 /* ============== FONT FACES ============== */
 /* Подключение шрифтов в формате woff2 */
 @font-face {
@@ -27,87 +55,47 @@
 
 /* ============== HEADINGS ============== */
 .heading-h1 {
-  font-family: 'Source Sans 3', sans-serif;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 40px;
-  letter-spacing: 0;
+  font: var(--font-heading-h1);
 }
 
 .heading-h2 {
-  font-family: 'Source Sans 3', sans-serif;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 32px;
-  letter-spacing: 0;
+  font: var(--font-heading-h2);
 }
 
 .heading-h3 {
-  font-family: 'Source Sans 3', sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 24px;
-  letter-spacing: 0;
+  font: var(--font-heading-h3);
 }
 
 /* ============== BODY TEXT ============== */
 /* Large */
 .text-lg-semibold {
-  font-family: 'Source Sans 3', sans-serif;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 24px;
-  letter-spacing: 0;
+  font: var(--font-lg-semibold);
 }
 
 .text-lg-regular {
-  font-family: 'Source Sans 3', sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 24px;
-  letter-spacing: 0;
+  font: var(--font-lg-regular);
 }
 
 /* Medium */
 .text-md-bold {
-  font-family: 'Source Sans 3', sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0;
+  font: var(--font-md-bold);
 }
 
 .text-md-semibold {
-  font-family: 'Source Sans 3', sans-serif;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0;
+  font: var(--font-md-semibold);
 }
 
 .text-md-regular {
-  font-family: 'Source Sans 3', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0;
+  font: var(--font-md-regular);
 }
 
 /* Small */
 .text-sm-semibold {
-  font-family: 'Source Sans 3', sans-serif;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: 0;
+  font: var(--font-sm-semibold);
 }
 
 .text-sm-regular {
-  font-family: 'Source Sans 3', sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: 0;
+  font: var(--font-sm-regular);
 }
 
 /* ============== UTILITY CLASSES ============== */
