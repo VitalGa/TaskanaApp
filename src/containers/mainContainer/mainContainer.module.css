@@ -2,6 +2,5 @@
   padding: var(--spacing-lg);
   position: relative;
   overflow-y: auto;
-  scroll-behavior: smooth;
   margin-bottom: var(--spacing-lg);
 }
