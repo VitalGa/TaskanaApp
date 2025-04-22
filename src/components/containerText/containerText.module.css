@@ -1,3 +1,9 @@
 .containerText {
   color: var(--neutral-800);
 }
+
+@media (min-width: 1920px) {
+  .containerText {
+    padding-top: 208px;
+  }
+}

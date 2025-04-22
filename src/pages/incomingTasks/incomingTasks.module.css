@@ -1,3 +1,12 @@
 .incomingTasks {
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.incomingTasks > :nth-child(2) {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
