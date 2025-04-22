@@ -4,7 +4,7 @@ import Content from '@/layouts/content/Content';
 
 const AppLayout = () => {
   return (
-    <div className={`${styles.appLayout}  `}>
+    <div className={`${styles.appLayout} `}>
       <Header />
       <Content />
     </div>
