@@ -50,6 +50,10 @@ body {
   gap: var(--spacing-md);
 }
 
+.gap-24 {
+  gap: var(--spacing-lg);
+}
+
 .w-full {
   width: 100%;
 }

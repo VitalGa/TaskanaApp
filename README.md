@@ -30,6 +30,9 @@ npm run build
 
 Собранная версия будет находиться в директории `dist/`
 
+ThemeToggle.jsx, CreateAndTheme.jsx используются только в хедере,
+поэтому размещены в папке header (не в общих компонентах).
+
 ///////////////
 
 Поумничал и вынес все стили шрифтов в файл typography.css, теперь приходиться прописывать стили в каждом модуле через шаблонные строки: className={`${styles.button} ${typography.buttonText}`}, className={`heading-h1 ${isActive ? 'active' : ''}`}, className={styles.button + ' heading-h1'}

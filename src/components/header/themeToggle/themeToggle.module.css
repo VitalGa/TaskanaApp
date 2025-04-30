@@ -1,0 +1,6 @@
+.themeToggle {
+  background-color: var(--base-800);
+  border-radius: 8px;
+  padding: 4px;
+  box-shadow: 2px 2px 4px 0px #00000080;
+}
