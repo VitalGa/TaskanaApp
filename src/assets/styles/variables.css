@@ -1,24 +1,13 @@
 :root {
   /* Neutral/Light colors */
-  --neutral-0: #ffffff; /* Основной фон */
-  --neutral-00: #fbfbfb; /* Фон боковых лайаутов */
-  --neutral-200: #f3f3f3; /* Фон вторичных кнопок, ховер списков */
-  --neutral-300: #ececec; /* Ховер вторичных кнопок */
-  --neutral-400: #bfbfbf; /* Бордеры */
-  --neutral-500: #8c8c8c; /* Иконки */
-  --neutral-600: #6c6c6c; /* Второстепенный текст, ховер бордера */
-  --neutral-700: #393939; /* (не указано назначение) */
   --neutral-800: #1c1c1c; /* Основной текст */
-  --neutral-900: #141414; /* (не указано назначение) */
+  --neutral-600: #6c6c6c; /* Второстепенный текст, ховер бордера */
+  --neutral-300: #ececec; /* Ховер вторичных кнопок */
+  --neutral-100: #fbfbfb; /* Фон боковых лайаутов */
 
   /* Primary colors */
-  --primary-0: #fff4f4; /* Подложка приоритета 03 */
-  --primary-100: #ffcece; /* (не указано назначение) */
-  --primary-200: #fca9a9; /* (не указано назначение) */
-  --primary-300: #f25959; /* Pressed контролов */
   --primary-400: #d51010; /* Основной цвет ★ */
   --primary-500: #a60c0c; /* Ховер */
-  --primary-600: #760909; /* (не указано назначение) */
 
   /* Акцентные кнопки (градиент или два состояния) */
   --primary-accent: linear-gradient(to bottom, var(--primary-400), var(--primary-500));
@@ -26,6 +15,10 @@
   /* Base colors */
   --base-black: #000000; /* Фон хедера */
   --base-800: #262626; /* Фон свитчера */
+
+  /* Box-shadow */
+  --shadow-md: 2px 2px 4px 0px #00000033; /* тень средней интенсивности: смещение 2px вправо и вниз, размытие 4px, прозрачность 20% */
+  --shadow-sm: 2px 2px 4px 0px #0000001a; /* лёгкая тень */
 
   /* Типографика */
   --font-size-sm: 0.875rem; /* 14px */
@@ -68,8 +61,22 @@
   --breakpoint-lg: 1024px;
   --breakpoint-xl: 1280px;
   --breakpoint-2xl: 1536px;
+}
 
-  /* Box-shadow */
-  --shadow-md: 2px 2px 4px 0px #00000033; /* тень средней интенсивности: смещение 2px вправо и вниз, размытие 4px, прозрачность 20% */
-  --shadow-sm: 2px 2px 4px 0px #0000001a; /* лёгкая тень */
+:root[data-theme='dark'] {
+  --neutral-800: #ffffff; /* Основной текст */
+  --neutral-600: #bfbfbf; /* Второстепенный текст, ховер бордера */
+  --neutral-300: #3a3a3a; /* Ховер вторичных кнопок */
+  --neutral-100: #121212; /* Фон боковых лайаутов */
+
+  --primary-400: #ff6f6f; /* Основной цвет */
+  --primary-500: #e03333; /* Ховер */
+
+  --primary-accent: linear-gradient(to bottom, var(--primary-400), var(--primary-500));
+
+  --base-black: #000000; /* Фон хедера */
+  --base-800: #1a1a1a; /* Фон свитчера */
+
+  --shadow-md: 2px 2px 4px 0px #ffffff1a;
+  --shadow-sm: 2px 2px 4px 0px #ffffff0d;
 }

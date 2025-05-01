@@ -1,5 +1,4 @@
 import styles from './sideBar.module.css';
-import book from '@/assets/icons/sideBarIcons/book.svg';
 import Illustration from '@/components/illustration/Illustration';
 
 function SideBar() {
@@ -7,7 +6,6 @@ function SideBar() {
     <aside className={`${styles.sideBar}`}>
       <div className={`${styles.sideBar__wrapper} flex  items-center justify-center`}>
         <figure className={`${styles.sideBar__figure} flex flex-col items-center justify-center`}>
-          {/* <img src={book} width={231} height={168} alt='Тетрадь' /> */}
           <Illustration name='book' width={231} height={168} />
           <figcaption className={styles.sideBar__text}>
             Здесь мы&nbsp;поможем тебе управлять твоими
@@ -23,14 +21,3 @@ function SideBar() {
 }
 
 export default SideBar;
-
-{
-  /* <ul>
-  {Array.from({ length: 5 }).map((_, index) => (
-    <li key={index}>
-      Этот параграф сочинён для того, что бы было видно, что при переполнении этой колонки
-      появляется скролл
-    </li>
-  ))}
-</ul>; */
-}

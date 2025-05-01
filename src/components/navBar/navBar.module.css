@@ -1,7 +1,7 @@
 .wrapper {
   display: block;
   width: 204px;
-  background-color: var(--neutral-00);
+  background-color: var(--neutral-100);
   padding: var(--spacing-lg) var(--spacing-md);
 
   border-right: 1px solid var(--neutral-300);
