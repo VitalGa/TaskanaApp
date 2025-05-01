@@ -1,16 +1,21 @@
-.themeToggle {
+.themeSwitcher {
   background-color: var(--base-800);
   border-radius: 8px;
   padding: 4px;
   box-shadow: 2px 2px 4px 0px #00000080;
 }
 
-.themeToggleButton {
+.themeSwitcherButtonSun,
+.themeSwitcherButtonMoon {
   width: 32px;
   height: 32px;
   border-radius: 4px;
-  padding: 4;
+  padding: 4px;
   background-color: transparent;
   border: none;
   cursor: pointer;
+}
+
+.themeSwitcherButtonSun {
+  background-color: var(--primary-400);
 }

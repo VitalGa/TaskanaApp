@@ -1,7 +1,7 @@
 import Button from '@/ui/button/Button';
 import plusIcon from '@/assets/icons/buttonIcons/plus-2-Icon.svg';
 import styles from './createAndTheme.module.css';
-import ThemeToggle from '../themeToggle/ThemeToggle';
+import ThemeSwitcher from '../themeSwitcher/ThemeSwitcher';
 
 function CreateAndTheme() {
   return (
@@ -10,7 +10,7 @@ function CreateAndTheme() {
         <img src={plusIcon} width={24} height={24} alt='Плюс' />
         Создать
       </Button>
-      <ThemeToggle />
+      <ThemeSwitcher />
     </div>
   );
 }
