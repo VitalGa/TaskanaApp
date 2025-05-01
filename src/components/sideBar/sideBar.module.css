@@ -4,7 +4,7 @@
   width: 400px;
   padding: var(--spacing-lg);
   gap: var(--spacing-lg);
-  border-left: 1px solid var(--neutral-light-300);
+  border-left: 1px solid var(--neutral-300);
 
   overflow-y: auto;
 }

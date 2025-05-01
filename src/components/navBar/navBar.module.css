@@ -4,7 +4,7 @@
   background-color: var(--neutral-00);
   padding: var(--spacing-lg) var(--spacing-md);
 
-  border-right: 1px solid var(--neutral-light-300);
+  border-right: 1px solid var(--neutral-300);
 
   overflow-y: auto;
 }
