@@ -58,13 +58,19 @@
   --transition-fast: 150ms;
   --transition-normal: 300ms;
   --transition-slow: 500ms;
+  --transition-theme: 200ms ease-in-out;
+}
 
-  /* Брейкпоинты */
-  --breakpoint-sm: 640px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 1024px;
-  --breakpoint-xl: 1280px;
-  --breakpoint-2xl: 1536px;
+/* Добавляем transition для html элемента */
+html {
+  transition: background-color var(--transition-theme), color var(--transition-theme);
+}
+
+/* Применяем transition ко всем элементам */
+* {
+  transition: background-color var(--transition-theme), color var(--transition-theme),
+    border-color var(--transition-theme), fill var(--transition-theme),
+    stroke var(--transition-theme);
 }
 
 :root[data-theme='dark'] {

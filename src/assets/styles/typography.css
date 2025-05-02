@@ -56,24 +56,29 @@
 /* ============== HEADINGS ============== */
 .heading-h1 {
   font: var(--font-heading-h1);
+  color: var(--neutral-800);
 }
 
 .heading-h2 {
   font: var(--font-heading-h2);
+  color: var(--neutral-800);
 }
 
 .heading-h3 {
   font: var(--font-heading-h3);
+  color: var(--neutral-800);
 }
 
 /* ============== BODY TEXT ============== */
 /* Large */
 .text-lg-semibold {
   font: var(--font-lg-semibold);
+  color: var(--neutral-800);
 }
 
 .text-lg-regular {
   font: var(--font-lg-regular);
+  color: var(--neutral-800);
 }
 
 /* Medium */
@@ -83,19 +88,23 @@
 
 .text-md-semibold {
   font: var(--font-md-semibold);
+  color: var(--neutral-800);
 }
 
 .text-md-regular {
   font: var(--font-md-regular);
+  color: var(--neutral-800);
 }
 
 /* Small */
 .text-sm-semibold {
   font: var(--font-sm-semibold);
+  color: var(--neutral-800);
 }
 
 .text-sm-regular {
   font: var(--font-sm-regular);
+  color: var(--neutral-800);
 }
 
 /* ============== UTILITY CLASSES ============== */

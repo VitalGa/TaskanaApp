@@ -16,3 +16,7 @@
 .sideBar__figure {
   gap: var(--spacing-lg);
 }
+
+.sideBar__text {
+  color: var(--neutral-800);
+}
