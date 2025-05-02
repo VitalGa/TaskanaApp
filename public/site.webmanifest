@@ -1,0 +1,19 @@
+{
+  "name": "Taskana App",
+  "short_name": "Taskana",
+  "icons": [
+    {
+      "src": "/favicon32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}

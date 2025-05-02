@@ -11,21 +11,25 @@ const ThemeSwitcher = () => {
   }, [theme]);
 
   return (
-    <div className={`${styles.themeSwitcher} flex gap-4`}>
+    <div className={`${styles.themeSwitcher} flex gap-4`} tabIndex={0}>
       <button
         className={`${styles.themeSwitcherButtonSun} ${
           theme === 'light' ? styles.themeSwitcherButtonActive : ''
         } flex items-center justify-center`}
-        onClick={toggleTheme}
-        aria-label='Светлая тема'>
+        onClick={theme === 'dark' ? toggleTheme : undefined}
+        disabled={theme === 'light'}
+        aria-label='Светлая тема'
+        tabIndex={-1}>
         <Icon name='sun' color='white' size={24} />
       </button>
       <button
         className={`${styles.themeSwitcherButtonMoon} ${
           theme === 'dark' ? styles.themeSwitcherButtonActive : ''
         } flex items-center justify-center`}
-        onClick={toggleTheme}
-        aria-label='Тёмная тема'>
+        onClick={theme === 'light' ? toggleTheme : undefined}
+        disabled={theme === 'dark'}
+        aria-label='Тёмная тема'
+        tabIndex={-1}>
         <Icon name='moon' color='white' size={24} />
       </button>
     </div>
