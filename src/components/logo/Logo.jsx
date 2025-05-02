@@ -1,3 +1,6 @@
+import styles from './logo.module.css';
+import Icon from '../icon/Icon';
+
 function Logo() {
   const handleClick = (e) => {
     e.preventDefault();
@@ -6,8 +9,8 @@ function Logo() {
   };
 
   return (
-    <a href={import.meta.env.BASE_URL} className='logo' onClick={handleClick}>
-      <img src='/logo.svg' alt='Логотип приложения' width='124' height='40' />
+    <a href={import.meta.env.BASE_URL} className={styles.logo} onClick={handleClick}>
+      <Icon name='logo' width='124' height='40' />
     </a>
   );
 }
