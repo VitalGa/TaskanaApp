@@ -10,6 +10,12 @@
   --primary-400: #d51010; /* Основной цвет ★ */
   --primary-500: #a60c0c; /* Ховер */
 
+  /* BookillustrationIcon */
+  --book-lightTheme: #ffffff;
+  --book-pen-lightTheme: #393939;
+  --book-strokes-lightTheme: #393939;
+  --book-border-lightTheme: #ececec;
+
   /* Фиксированные цвета (не меняются при смене темы) */
   --primary-400-fixed: #d51010; /* Основной цвет (фиксированный) */
 
@@ -85,6 +91,12 @@ html {
 
   /* Фиксированные цвета (не меняются при смене темы) */
   --primary-400-fixed: #d51010; /* Основной цвет (фиксированный) */
+
+  /* BookillustrationIcon  */
+  --book-lightTheme: #141414;
+  --book-pen-lightTheme: #ececec;
+  --book-strokes-lightTheme: #393939;
+  --book-border-lightTheme: #333333;
 
   --primary-accent: linear-gradient(to bottom, var(--primary-400), var(--primary-500));
 

@@ -1,10 +1,10 @@
 import React from 'react';
 import { GirlillustrationIcon } from './illustrations/GirlIllustrationIcon';
-import { BookillustrationIcon } from './illustrations/BookillustrationIcon';
+import { BookIllustrationIcon } from './illustrations/BookillustrationIcon';
 
 const iconMap = {
   girl: GirlillustrationIcon,
-  book: BookillustrationIcon,
+  book: BookIllustrationIcon,
 };
 
 const Illustration = ({ name, size = 24, className = '', ...props }) => {

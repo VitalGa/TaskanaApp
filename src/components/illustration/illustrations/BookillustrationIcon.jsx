@@ -1,4 +1,4 @@
-export const BookillustrationIcon = ({ width = 233, height = 168, className = '', ...props }) => {
+export const BookIllustrationIcon = ({ width = 233, height = 168, className = '', ...props }) => {
   return (
     <svg
       width={width}
@@ -8,11 +8,12 @@ export const BookillustrationIcon = ({ width = 233, height = 168, className = ''
       {...props}>
       <path
         d='M211.274 0H8.56255C3.83359 0 0 3.83779 0 8.57195V159.428C0 164.162 3.83359 168 8.56255 168H211.274C216.003 168 219.836 164.162 219.836 159.428V8.57195C219.836 3.83779 216.003 0 211.274 0Z'
-        style={{ fill: '#ECECEC' }}
+        // style={{ fill: 'var(--primary-500)' }}
+        style={{ fill: 'var(--book-border-lightTheme)' }}
       />
       <path
         d='M8.56283 1.96973C4.92689 1.96973 1.96777 4.93209 1.96777 8.57202V159.424C1.96777 163.064 4.92689 166.026 8.56283 166.026H211.274C214.91 166.026 217.869 163.064 217.869 159.424V8.57202C217.869 4.93209 214.91 1.96973 211.274 1.96973H8.56283Z'
-        style={{ fill: 'white' }}
+        style={{ fill: 'var(--book-lightTheme)' }}
       />
       <path d='M110.699 1.00439H109.129V167.18H110.699V1.00439Z' fill='#ECECEC' />
       <path
@@ -157,7 +158,7 @@ export const BookillustrationIcon = ({ width = 233, height = 168, className = ''
       />
       <path
         d='M148.884 90.3804L227.767 32.4036C228.699 31.7134 230.005 31.933 230.689 32.8742L232.6 35.5252C233.284 36.4664 233.066 37.784 232.134 38.4742L153.267 96.451H153.251L142.793 101L142 99.902L148.884 90.3804Z'
-        style={{ fill: '#393939' }}
+        style={{ fill: 'var(--book-pen-lightTheme)' }}
       />
     </svg>
   );
