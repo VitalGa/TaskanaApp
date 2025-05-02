@@ -1,6 +1,6 @@
 import styles from './navBar.module.css';
 import Button from '@/ui/button/Button';
-import inboxIcon from '@/assets/icons/buttonIcons/inboxIcon.svg';
+import Icon from '@/components/icon/Icon';
 
 function NavBar() {
   return (
@@ -10,7 +10,7 @@ function NavBar() {
           <li>
             <a href='#'>
               <Button variant='secondary' size='large'>
-                <img src={inboxIcon} width={24} height={24} alt='Входящие' />
+                <Icon name='inbox' fill='white' />
                 <div className={`${styles.textWrapper} flex flex-start`}>
                   <span className='text-md-semibold'>Входящие</span>
                 </div>
@@ -22,9 +22,5 @@ function NavBar() {
     </aside>
   );
 }
-
-// {Array.from({ length: 30 }).map((_, index) => (
-//   <li key={index}>Покормить кота</li>
-// ))}
 
 export default NavBar;

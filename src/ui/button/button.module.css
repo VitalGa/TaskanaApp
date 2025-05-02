@@ -15,6 +15,11 @@
   color: white;
 }
 
+.primaryFixed {
+  background-color: var(--primary-400-fixed);
+  color: white;
+}
+
 .secondary {
   background-color: var(--neutral-800);
   color: white;

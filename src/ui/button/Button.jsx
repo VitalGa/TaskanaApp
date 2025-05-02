@@ -9,10 +9,11 @@ function Button({
   className = '',
   type = 'button',
   shadow = 'shadow-md',
+  fixedColor = false,
 }) {
   const buttonClasses = [
     styles.button,
-    styles[variant],
+    fixedColor ? styles.primaryFixed : styles[variant],
     styles[size],
     styles[shadow],
     disabled ? styles.disabled : '',
