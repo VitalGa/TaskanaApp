@@ -16,6 +16,10 @@
   --book-strokes-lightTheme: #393939;
   --book-border-lightTheme: #ececec;
 
+  /* GirlillustrationIcon */
+  --girl-lightTheme: #141414;
+  --girl-group-lightTheme: #ececec;
+
   /* Фиксированные цвета (не меняются при смене темы) */
   --primary-400-fixed: #d51010; /* Основной цвет (фиксированный) */
 
@@ -95,8 +99,12 @@ html {
   /* BookillustrationIcon  */
   --book-lightTheme: #141414;
   --book-pen-lightTheme: #ececec;
-  --book-strokes-lightTheme: #393939;
+  --book-strokes-lightTheme: #ececec;
   --book-border-lightTheme: #333333;
+
+  /* GirlillustrationIcon */
+  --girl-lightTheme: #ffffff;
+  --girl-group-lightTheme: #333333;
 
   --primary-accent: linear-gradient(to bottom, var(--primary-400), var(--primary-500));
 

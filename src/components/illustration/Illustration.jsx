@@ -1,9 +1,9 @@
 import React from 'react';
-import { GirlillustrationIcon } from './illustrations/GirlIllustrationIcon';
-import { BookIllustrationIcon } from './illustrations/BookillustrationIcon';
+import { GirlIllustrationIcon } from './illustrations/GirlIllustrationIcon';
+import { BookIllustrationIcon } from './illustrations/BookIllustrationIcon';
 
 const iconMap = {
-  girl: GirlillustrationIcon,
+  girl: GirlIllustrationIcon,
   book: BookIllustrationIcon,
 };
 
@@ -20,5 +20,4 @@ const Illustration = ({ name, size = 24, className = '', ...props }) => {
     />
   );
 };
-
 export default Illustration;
