@@ -4,13 +4,12 @@
   padding: 4px;
   box-shadow: 2px 2px 4px 0px #00000080;
   transition: outline 0.2s ease-in-out;
-  outline: none; /* обязательно убрать браузерный дефолт, если переопределяешь ниже */
+  outline: none;
+}
 
-  &:focus,
-  &:focus-visible {
-    outline: 2px solid #ffffff;
-    outline-offset: 2px;
-  }
+.themeSwitcher:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
 }
 
 .themeSwitcherButtonSun,
@@ -23,7 +22,7 @@
   border: none;
   cursor: pointer;
   box-shadow: 2px 2px 4px 0px #00000080;
-  transition: opacity 0.2s ease;
+  transition: all 0.2s ease-in-out;
 }
 
 .themeSwitcherButtonSun:disabled,
@@ -40,5 +39,6 @@
 }
 
 .themeSwitcherButtonActive:hover svg {
+  transition: color 0.2s ease-in-out;
   color: black;
 }

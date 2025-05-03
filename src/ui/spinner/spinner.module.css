@@ -1,0 +1,21 @@
+.loader {
+  width: 20px;
+  height: 20px;
+  border: 3px solid white;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Прячем текст, не удаляя его */
+.hiddenContent {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Анимация */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

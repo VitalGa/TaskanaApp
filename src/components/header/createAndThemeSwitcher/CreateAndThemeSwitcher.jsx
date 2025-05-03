@@ -11,7 +11,8 @@ function CreateAndThemeSwitcher() {
         size='medium'
         className='text-md-semibold'
         fixedColor={true}
-        shadow='shadow-md'>
+        shadow='shadow-md'
+        loading={true}>
         <img src={plusIcon} width={24} height={24} alt='Плюс' />
         Создать
       </Button>
