@@ -7,6 +7,24 @@
   border-radius: var(--border-radius-md);
   cursor: pointer;
   border: none;
+  position: relative;
+  min-width: 100px;
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: #a60c0c;
+  box-shadow: 2px 8px 12px 0px #000000cc;
+}
+
+.button:focus-visible {
+  border-color: #141414;
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+.button:active {
+  background-color: #f25959;
 }
 
 /* Варианты кнопок */
@@ -43,4 +61,39 @@
 
 .shadow-sm {
   box-shadow: var(--shadow-sm);
+}
+
+.disabled {
+  background: #d5101080;
+  box-shadow: 2px 2px 4px 0px #00000080;
+  pointer-events: none;
+  cursor: not-allowed;
+  filter: brightness(0.7);
+}
+
+.loading {
+  background-color: #f25959 !important;
+  cursor: wait;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.loading .content {
+  visibility: hidden;
+}
+
+.spinnerWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.loading .spinnerWrapper {
+  display: block;
 }

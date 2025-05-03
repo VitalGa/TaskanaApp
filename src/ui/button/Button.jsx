@@ -1,4 +1,5 @@
 import styles from './button.module.css';
+import Spinner from '../spinner/Spinner';
 
 function Button({
   children,
@@ -10,6 +11,7 @@ function Button({
   type = 'button',
   shadow = 'shadow-md',
   fixedColor = false,
+  loading = false,
 }) {
   const buttonClasses = [
     styles.button,
@@ -17,12 +19,16 @@ function Button({
     styles[size],
     styles[shadow],
     disabled ? styles.disabled : '',
+    loading ? styles.loading : '',
     className,
   ].join(' ');
 
   return (
-    <button type={type} className={buttonClasses} disabled={disabled} onClick={onClick}>
-      {children}
+    <button type={type} className={buttonClasses} disabled={disabled || loading} onClick={onClick}>
+      <div className={styles.content}>{children}</div>
+      <div className={styles.spinnerWrapper}>
+        <Spinner />
+      </div>
     </button>
   );
 }
