@@ -9,3 +9,7 @@
   text-decoration: underline;
   margin-left: var(--spacing-xs);
 }
+
+.footer__link:hover {
+  color: var(--footer-link-color);
+}

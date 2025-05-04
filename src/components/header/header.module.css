@@ -8,5 +8,5 @@
   background-color: var(--base-black);
   padding: calc(var(--spacing-sm) + 4px) var(--spacing-lg) calc(var(--spacing-md) - 4px)
     var(--spacing-md);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-header-fixed);
 }

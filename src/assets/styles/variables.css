@@ -11,6 +11,7 @@
   /* Primary colors */
   --primary-400: #d51010; /* Основной цвет ★ */
   --primary-500: #a60c0c; /* Ховер */
+  --button-disable-background: #d5101080;
 
   /* BookillustrationIcon */
   --book-lightTheme: #ffffff;
@@ -22,8 +23,14 @@
   --girl-lightTheme: #141414;
   --girl-group-lightTheme: #ececec;
 
+  /* Footer */
+  --footer-link-color: #1c1c1c;
+
   /* Фиксированные цвета (не меняются при смене темы) */
+  --neutral-0-fixed: #ffffff;
   --primary-400-fixed: #d51010; /* Основной цвет (фиксированный) */
+  --primary-500-fixed: #a60c0c;
+  --primary-300-fixed: #f25959;
 
   /* Акцентные кнопки (градиент или два состояния) */
   --primary-accent: linear-gradient(to bottom, var(--primary-400), var(--primary-500));
@@ -37,6 +44,17 @@
   --shadow-base-hover: 2px 8px 12px 0px #00000040;
   --shadow-sm-default: 2px 2px 4px 0px #0000001a;
   --shadow-sm-hover: 2px 8px 12px 0px #00000033;
+
+  --shadow-button-hover-fixed: 2px 8px 12px 0px #000000cc;
+  --shadow-button-disabled-fixed: 2px 2px 4px 0px #00000080;
+
+  /* Switch */
+  --shadow-switch-default-fixed: 2px 2px 4px 0px #00000080;
+  --shadow-switch-hover-fixed: 2px 8px 12px 0px #000000cc;
+  --shadow-switch-focus-fixed: 2px 8px 12px 0px #000000cc;
+
+  /* Header */
+  --shadow-header-fixed: 2px 2px 4px 0px #00000033;
 
   /* Типографика */
   --font-size-sm: 0.875rem; /* 14px */
@@ -118,11 +136,11 @@ html {
   --girl-lightTheme: #ffffff;
   --girl-group-lightTheme: #333333;
 
+  /* Footer */
+  --footer-link-color: #ffffff;
+
   --primary-accent: linear-gradient(to bottom, var(--primary-400), var(--primary-500));
 
   --base-black: #000000; /* Фон хедера */
   --base-800: #1a1a1a; /* Фон свитчера */
-
-  --shadow-md: 2px 2px 4px 0px #ffffff1a;
-  --shadow-sm: 2px 2px 4px 0px #ffffff0d;
 }

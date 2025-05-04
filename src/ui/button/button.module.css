@@ -15,12 +15,12 @@
 
 .primaryFixed {
   background-color: var(--primary-400-fixed);
-  color: white;
+  color: var(--neutral-0-fixed);
 }
 
 .primaryFixed:hover {
-  background-color: #a60c0c;
-  box-shadow: 2px 8px 12px 0px #000000cc;
+  background-color: var(--primary-500-fixed);
+  box-shadow: var(--shadow-button-hover);
   transform: scale(1.05);
   animation-timing-function: ease-out;
   animation-duration: 300ms;
@@ -29,12 +29,12 @@
 
 .primaryFixed:focus-visible {
   border-color: #141414;
-  outline: 2px solid #ffffff;
+  outline: 2px solid var(--neutral-0-fixed);
   outline-offset: 2px;
 }
 
 .primaryFixed:active {
-  background-color: #f25959;
+  background-color: var(--primary-300-fixed);
 }
 
 .secondary {
@@ -55,10 +55,10 @@
 }
 
 /* Убираем обычный фокус для всех типов кнопок */
-/* .button:focus:not(:focus-visible) {
+.button:focus:not(:focus-visible) {
   outline: none;
   box-shadow: none;
-} */
+}
 
 /* Размеры кнопок */
 
@@ -72,15 +72,15 @@
 }
 
 .disabled {
-  background: #d5101080;
-  box-shadow: 2px 2px 4px 0px #00000080;
+  background: var(--button-disable-background);
+  box-shadow: var(--shadow-button-disabled);
   pointer-events: none;
   cursor: not-allowed;
   filter: brightness(0.7);
 }
 
 .loading {
-  background-color: #f25959 !important;
+  background-color: var(--primary-300-fixed) !important;
   cursor: wait;
 }
 
