@@ -84,12 +84,6 @@
   cursor: wait;
 }
 
-.content {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-sm);
-}
-
 .loading .content {
   visibility: hidden;
 }

@@ -18,12 +18,20 @@ body {
   display: flex;
 }
 
+.inline-flex {
+  display: inline-flex;
+}
+
 .flex-start {
   align-items: flex-start;
 }
 
 .flex-col {
   flex-direction: column;
+}
+
+.flex-grow {
+  flex-grow: 1;
 }
 
 .items-center {

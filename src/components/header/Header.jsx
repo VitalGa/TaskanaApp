@@ -5,7 +5,7 @@ import Logo from '../logo/Logo';
 const Header = () => {
   return (
     <header className={`${styles.header} flex justify-between items-center`}>
-      <Logo />
+      <Logo className={styles.logo} />
       <CreateAndThemeSwitcher />
     </header>
   );

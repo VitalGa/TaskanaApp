@@ -21,7 +21,6 @@ const Icon = ({ name, fill, ...props }) => {
     return null;
   }
 
-  // Если fill не указан, используем цвет в зависимости от темы
   const iconFill = fill || (theme === 'light' ? '#000000' : '#FFFFFF');
 
   return <IconComponent fill={iconFill} {...props} />;

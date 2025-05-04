@@ -1,10 +1,10 @@
 import styles from './spinner.module.css';
-import Icon from '../../components/icon/Icon';
+import Icon from '@/components/icon/Icon';
 
 function Spinner() {
   return (
-    <div className={styles.spinnerContainer}>
-      <div className={styles.spinner}>
+    <div className={`${styles.spinnerContainer} flex items-center justify-center`}>
+      <div className={`${styles.spinner} flex items-center justify-center`}>
         <Icon name='loading' />
       </div>
     </div>

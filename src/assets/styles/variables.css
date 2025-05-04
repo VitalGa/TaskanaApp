@@ -1,16 +1,16 @@
 :root {
   /* Neutral/Light colors */
   --neutral-900: #141414;
-  --neutral-800: #1c1c1c; /* Основной текст */
-  --neutral-700: #393939; /* Фон вторичных кнопок, ховер списков */
-  --neutral-600: #6c6c6c; /* Второстепенный текст, ховер бордера */
-  --neutral-300: #ececec; /* Ховер вторичных кнопок */
-  --neutral-100: #fbfbfb; /* Фон боковых лайаутов */
-  --neutral-0: #ffffff; /* Основной фон */
+  --neutral-800: #1c1c1c;
+  --neutral-700: #393939;
+  --neutral-600: #6c6c6c;
+  --neutral-300: #ececec;
+  --neutral-100: #fbfbfb;
+  --neutral-0: #ffffff;
 
   /* Primary colors */
-  --primary-400: #d51010; /* Основной цвет ★ */
-  --primary-500: #a60c0c; /* Ховер */
+  --primary-400: #d51010;
+  --primary-500: #a60c0c;
   --button-disable-background: #d5101080;
 
   /* BookillustrationIcon */
@@ -23,12 +23,15 @@
   --girl-lightTheme: #141414;
   --girl-group-lightTheme: #ececec;
 
+  /* SideBar */
+  --sideBar-width: 400px;
+
   /* Footer */
   --footer-link-color: #1c1c1c;
 
   /* Фиксированные цвета (не меняются при смене темы) */
   --neutral-0-fixed: #ffffff;
-  --primary-400-fixed: #d51010; /* Основной цвет (фиксированный) */
+  --primary-400-fixed: #d51010;
   --primary-500-fixed: #a60c0c;
   --primary-300-fixed: #f25959;
 
@@ -36,8 +39,8 @@
   --primary-accent: linear-gradient(to bottom, var(--primary-400), var(--primary-500));
 
   /* Base colors */
-  --base-black: #000000; /* Фон хедера */
-  --base-800: #262626; /* Фон свитчера */
+  --base-black: #000000;
+  --base-800: #262626;
 
   /* Box-shadow */
   --shadow-base-default: 2px 2px 4px 0px #00000033;
@@ -107,18 +110,18 @@ html {
 
 :root[data-theme='dark'] {
   --neutral-900: #ececec;
-  --neutral-800: #fbfbfb; /* Основной текст-- */
+  --neutral-800: #fbfbfb;
   --neutral-700: #ececec;
-  --neutral-600: #bfbfbf; /* Второстепенный текст -- */
-  --neutral-300: #333333; /* Ховер бордера-- */
-  --neutral-100: #1c1c1c; /* Фон боковых лайаутов-- */
-  --neutral-0: #141414; /* Основной фон--*/
+  --neutral-600: #bfbfbf;
+  --neutral-300: #333333;
+  --neutral-100: #1c1c1c;
+  --neutral-0: #141414;
 
-  --primary-400: #ff6f6f; /* Основной цвет */
-  --primary-500: #e03333; /* Ховер */
+  --primary-400: #ff6f6f;
+  --primary-500: #e03333;
 
   /* Фиксированные цвета (не меняются при смене темы) */
-  --primary-400-fixed: #d51010; /* Основной цвет (фиксированный) */
+  --primary-400-fixed: #d51010;
 
   /* Box-shadow */
   --shadow-base-default: 2px 2px 4px 0px #00000080;
@@ -141,6 +144,6 @@ html {
 
   --primary-accent: linear-gradient(to bottom, var(--primary-400), var(--primary-500));
 
-  --base-black: #000000; /* Фон хедера */
-  --base-800: #1a1a1a; /* Фон свитчера */
+  --base-black: #000000;
+  --base-800: #1a1a1a;
 }

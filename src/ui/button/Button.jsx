@@ -25,9 +25,9 @@ function Button({
 
   return (
     <button type={type} className={buttonClasses} disabled={disabled || loading} onClick={onClick}>
-      <div className={styles.content}>{children}</div>
+      <div className={`${styles.content} inline-flex items-center gap-2`}>{children}</div>
       <div className={styles.spinnerWrapper}>
-        <Spinner />
+        <Spinner width={24} height={24} />
       </div>
     </button>
   );

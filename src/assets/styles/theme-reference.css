@@ -1,15 +1,13 @@
 .theme-reference {
   /* Neutral/Light colors */
 
-  --neutral-200: #f3f3f3; /* Фон вторичных кнопок, ховер списков */
-  --neutral-400: #bfbfbf; /* Бордеры */
-  --neutral-500: #8c8c8c; /* Иконки */
-  /* (не указано назначение) */
+  --neutral-200: #f3f3f3;
+  --neutral-400: #bfbfbf;
+  --neutral-500: #8c8c8c;
 
   /* Primary colors */
-  --primary-0: #fff4f4; /* Подложка приоритета 03 */
-  --primary-100: #ffcece; /* (не указано назначение) */
-  --primary-200: #fca9a9; /* (не указано назначение) */
-  /* Pressed контролов */
-  --primary-600: #760909; /* (не указано назначение) */
+  --primary-0: #fff4f4;
+  --primary-100: #ffcece;
+  --primary-200: #fca9a9;
+  --primary-600: #760909;
 }

@@ -1,7 +1,7 @@
 .sideBar {
   display: block;
   background-color: var(--neutral-100);
-  width: 400px;
+  width: var(--sideBar-width);
   padding: var(--spacing-lg);
   gap: var(--spacing-lg);
   border-left: 1px solid var(--neutral-300);

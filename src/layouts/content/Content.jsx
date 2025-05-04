@@ -5,9 +5,9 @@ import IncomingTasks from '@/pages/incomingTasks/IncomingTasks';
 
 const Content = () => {
   return (
-    <div className={styles.content}>
+    <div className={`${styles.content} flex`}>
       <NavBar />
-      <div className={styles.incomingTasks}>
+      <div className={`${styles.incomingTasks} flex flex-col flex-grow`}>
         <IncomingTasks />
       </div>
       <SideBar />

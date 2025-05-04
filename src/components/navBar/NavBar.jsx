@@ -8,7 +8,7 @@ function NavBar() {
   const color = theme === 'light' ? 'white' : 'black';
 
   return (
-    <aside className={`${styles.wrapper} flex flex-col items-center`}>
+    <aside className={`${styles.wrapper}   flex flex-col items-center`}>
       <nav className={styles.navBar}>
         <ul>
           <li>

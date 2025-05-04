@@ -11,13 +11,6 @@ const Illustration = ({ name, size = 24, className = '', ...props }) => {
   const SvgIcon = iconMap[name];
   if (!SvgIcon) return null;
 
-  return (
-    <SvgIcon
-      width={size}
-      height={size}
-      className={className}
-      {...props} // Все пропсы передаются, но без изменения значений fill
-    />
-  );
+  return <SvgIcon width={size} height={size} className={className} {...props} />;
 };
 export default Illustration;
