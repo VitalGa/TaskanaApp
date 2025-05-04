@@ -10,27 +10,7 @@
   position: relative;
   min-width: 100px;
   transition: all 0.2s ease-in-out;
-}
-
-.button:hover {
-  background-color: #a60c0c;
-  box-shadow: 2px 8px 12px 0px #000000cc;
-}
-
-.button:focus-visible {
-  border-color: #141414;
-  outline: 2px solid #ffffff;
-  outline-offset: 2px;
-}
-
-.button:active {
-  background-color: #f25959;
-}
-
-/* Варианты кнопок */
-.primary {
-  background-color: var(--primary-400);
-  color: white;
+  outline: none;
 }
 
 .primaryFixed {
@@ -38,10 +18,47 @@
   color: white;
 }
 
+.primaryFixed:hover {
+  background-color: #a60c0c;
+  box-shadow: 2px 8px 12px 0px #000000cc;
+  transform: scale(1.05);
+  animation-timing-function: ease-out;
+  animation-duration: 300ms;
+  transition: all 0.3s ease-out;
+}
+
+.primaryFixed:focus-visible {
+  border-color: #141414;
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+.primaryFixed:active {
+  background-color: #f25959;
+}
+
 .secondary {
   background-color: var(--neutral-800);
-  color: white;
+  color: var(--neutral-0);
+  box-shadow: var(--shadow-base-default);
 }
+
+.secondary:hover {
+  background-color: var(--neutral-700);
+  box-shadow: var(--shadow-base-hover);
+}
+
+.secondary:focus-visible {
+  box-shadow: var(--shadow-base-hover);
+  outline: 2px solid var(--neutral-900);
+  outline-offset: 2px;
+}
+
+/* Убираем обычный фокус для всех типов кнопок */
+/* .button:focus:not(:focus-visible) {
+  outline: none;
+  box-shadow: none;
+} */
 
 /* Размеры кнопок */
 
@@ -52,15 +69,6 @@
 .large {
   padding: var(--spacing-sm);
   height: calc(var(--spacing-xl) + 8px);
-}
-
-/* Тени кнопок */
-.shadow-md {
-  box-shadow: var(--shadow-md);
-}
-
-.shadow-sm {
-  box-shadow: var(--shadow-sm);
 }
 
 .disabled {

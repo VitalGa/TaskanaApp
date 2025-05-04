@@ -1,6 +1,8 @@
 :root {
   /* Neutral/Light colors */
+  --neutral-900: #141414;
   --neutral-800: #1c1c1c; /* Основной текст */
+  --neutral-700: #393939; /* Фон вторичных кнопок, ховер списков */
   --neutral-600: #6c6c6c; /* Второстепенный текст, ховер бордера */
   --neutral-300: #ececec; /* Ховер вторичных кнопок */
   --neutral-100: #fbfbfb; /* Фон боковых лайаутов */
@@ -31,8 +33,10 @@
   --base-800: #262626; /* Фон свитчера */
 
   /* Box-shadow */
-  --shadow-md: 2px 2px 4px 0px #00000033; /* тень средней интенсивности: смещение 2px вправо и вниз, размытие 4px, прозрачность 20% */
-  --shadow-sm: 2px 2px 4px 0px #0000001a; /* лёгкая тень */
+  --shadow-base-default: 2px 2px 4px 0px #00000033;
+  --shadow-base-hover: 2px 8px 12px 0px #00000040;
+  --shadow-sm-default: 2px 2px 4px 0px #0000001a;
+  --shadow-sm-hover: 2px 8px 12px 0px #00000033;
 
   /* Типографика */
   --font-size-sm: 0.875rem; /* 14px */
@@ -84,7 +88,9 @@ html {
 }
 
 :root[data-theme='dark'] {
+  --neutral-900: #ececec;
   --neutral-800: #fbfbfb; /* Основной текст-- */
+  --neutral-700: #ececec;
   --neutral-600: #bfbfbf; /* Второстепенный текст -- */
   --neutral-300: #333333; /* Ховер бордера-- */
   --neutral-100: #1c1c1c; /* Фон боковых лайаутов-- */
@@ -95,6 +101,12 @@ html {
 
   /* Фиксированные цвета (не меняются при смене темы) */
   --primary-400-fixed: #d51010; /* Основной цвет (фиксированный) */
+
+  /* Box-shadow */
+  --shadow-base-default: 2px 2px 4px 0px #00000080;
+  --shadow-base-hover: 2px 8px 12px 0px #000000cc;
+  --shadow-sm-default: 2px 2px 4px 0px #0000004d;
+  --shadow-sm-hover: 2px 8px 12px 0px #00000099;
 
   /* BookillustrationIcon  */
   --book-lightTheme: #141414;
