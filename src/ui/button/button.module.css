@@ -48,11 +48,12 @@
   box-shadow: var(--shadow-base-hover);
 }
 
-/* .secondary:focus-visible {
+.secondary:focus-visible {
   box-shadow: var(--shadow-base-hover);
   outline: 2px solid var(--neutral-900);
   outline-offset: 2px;
-} */
+  transition: all 0.2s ease-out;
+}
 
 /* Убираем обычный фокус для всех типов кнопок */
 /* .button:focus:not(:focus-visible) {

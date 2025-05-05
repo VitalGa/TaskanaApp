@@ -12,14 +12,14 @@ function NavBar() {
       <nav className={styles.navBar}>
         <ul>
           <li>
-            <a className={styles.button} href='#'>
+            <div className={styles.button} href='#'>
               <Button variant='secondary' size='large'>
                 <Icon name='inbox' fill={color} />
                 <div className={`${styles.textWrapper} flex flex-start`}>
                   <span className='text-md-semibold'>Входящие</span>
                 </div>
               </Button>
-            </a>
+            </div>
           </li>
         </ul>
       </nav>
