@@ -48,17 +48,17 @@
   box-shadow: var(--shadow-base-hover);
 }
 
-.secondary:focus-visible {
+/* .secondary:focus-visible {
   box-shadow: var(--shadow-base-hover);
   outline: 2px solid var(--neutral-900);
   outline-offset: 2px;
-}
+} */
 
 /* Убираем обычный фокус для всех типов кнопок */
-.button:focus:not(:focus-visible) {
+/* .button:focus:not(:focus-visible) {
   outline: none;
   box-shadow: none;
-}
+} */
 
 /* Размеры кнопок */
 

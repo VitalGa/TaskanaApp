@@ -3,7 +3,7 @@
   border-radius: 8px;
   padding: var(--spacing-xs);
   box-shadow: var(--shadow-switch-default-fixed);
-  transition: outline 0.2s ease-in-out;
+  transition: outline 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   outline: none;
 }
 
@@ -11,10 +11,19 @@
   box-shadow: var(--shadow-switch-hover-fixed);
 }
 
-.themeSwitcher:focus-visible {
+.themeSwitcher button:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+.themeSwitcher:has(button:focus-visible) {
   box-shadow: var(--shadow-switch-focus-fixed);
-  outline: 2px solid var(--neutral-0-fixed);
-  outline-offset: 2px;
+  outline: var(--focus-outline-width) solid var(--focus-outline-color);
+  outline-offset: var(--focus-outline-offset);
+}
+
+.themeSwitcher:focus {
+  box-shadow: var(--shadow-switch-focus-fixed);
 }
 
 .themeSwitcherButtonSun,

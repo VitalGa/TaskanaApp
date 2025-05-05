@@ -11,15 +11,17 @@ const ThemeSwitcher = () => {
   }, [theme]);
 
   return (
-    <div className={`${styles.themeSwitcher} flex gap-4`} tabIndex={0}>
+    <div
+      className={`${styles.themeSwitcher} flex gap-4`}
+      role='group'
+      aria-label='Переключатель темы'>
       <button
         className={`${styles.themeSwitcherButtonSun} ${
           theme === 'light' ? styles.themeSwitcherButtonActive : ''
         } flex items-center justify-center`}
         onClick={theme === 'dark' ? toggleTheme : undefined}
         disabled={theme === 'light'}
-        aria-label='Светлая тема'
-        tabIndex={-1}>
+        aria-label='Светлая тема'>
         <Icon name='sun' color='white' size={32} />
       </button>
       <button
@@ -28,8 +30,7 @@ const ThemeSwitcher = () => {
         } flex items-center justify-center`}
         onClick={theme === 'light' ? toggleTheme : undefined}
         disabled={theme === 'dark'}
-        aria-label='Тёмная тема'
-        tabIndex={-1}>
+        aria-label='Тёмная тема'>
         <Icon name='moon' color='white' size={32} />
       </button>
     </div>

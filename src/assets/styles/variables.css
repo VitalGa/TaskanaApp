@@ -59,6 +59,11 @@
   /* Header */
   --shadow-header-fixed: 2px 2px 4px 0px #00000033;
 
+  /* Фокус для Tab навигации - одинаковый для обеих тем */
+  --focus-outline-color: #ffffff;
+  --focus-outline-width: 2px;
+  --focus-outline-offset: 2px;
+
   /* Типографика */
   --font-size-sm: 0.875rem; /* 14px */
   --font-size-base: 1rem; /* 16px */
@@ -128,6 +133,11 @@ html {
   --shadow-base-hover: 2px 8px 12px 0px #000000cc;
   --shadow-sm-default: 2px 2px 4px 0px #0000004d;
   --shadow-sm-hover: 2px 8px 12px 0px #00000099;
+
+  /* Фокус для Tab навигации - сохраняем те же значения */
+  --focus-outline-color: #ffffff;
+  --focus-outline-width: 2px;
+  --focus-outline-offset: 2px;
 
   /* BookillustrationIcon  */
   --book-lightTheme: #141414;

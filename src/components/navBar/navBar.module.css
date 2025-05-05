@@ -26,3 +26,11 @@
 .textWrapper span {
   color: var(--neutral-0);
 }
+
+a:focus-visible {
+  box-shadow: var(--shadow-base-hover);
+  outline: 2px solid var(--neutral-900);
+  border-radius: 8px;
+  outline-offset: 2px;
+  transition: all 0.2s ease-out;
+}
