@@ -1,14 +1,9 @@
-import { useEffect } from 'react';
 import Icon from '@/components/icon/Icon';
 import styles from './themeSwitcher.module.css';
 import { useTheme } from '@/context/ThemeContext';
 
 const ThemeSwitcher = () => {
   const { theme, toggleTheme } = useTheme();
-
-  useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme);
-  }, [theme]);
 
   return (
     <div
