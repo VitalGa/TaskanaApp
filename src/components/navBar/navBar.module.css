@@ -18,6 +18,16 @@
   margin: 0;
 }
 
+.navBar li {
+  margin-bottom: var(--spacing-sm);
+}
+
+.navButton {
+  width: 100%;
+  justify-content: flex-start;
+  gap: var(--spacing-sm);
+}
+
 .textWrapper {
   width: 124px;
   height: var(--spacing-lg);

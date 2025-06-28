@@ -4,6 +4,7 @@ import LogoIcon from './icons/LogoIcon';
 import InboxIcon from './icons/buttonIcons/inboxIcon';
 import { useTheme } from '@/context/ThemeContext';
 import LoadingIcon from './icons/buttonIcons/LoadingIcon';
+import PlusIcon from './icons/headerIcons/plusIcon';
 
 const icons = {
   sun: SunIcon,
@@ -11,6 +12,7 @@ const icons = {
   logo: LogoIcon,
   inbox: InboxIcon,
   loading: LoadingIcon,
+  plus: PlusIcon,
 };
 
 const Icon = ({ name, fill, ...props }) => {
