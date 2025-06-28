@@ -97,3 +97,7 @@
 .loading .spinnerWrapper {
   display: block;
 }
+
+.content {
+  gap: 10px;
+}
