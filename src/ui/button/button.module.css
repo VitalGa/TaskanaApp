@@ -21,9 +21,6 @@
 .primaryFixed:hover {
   background-color: var(--primary-500-fixed);
   box-shadow: var(--shadow-button-hover);
-  transform: scale(1.05);
-  animation-timing-function: ease-out;
-  animation-duration: 300ms;
   transition: all 0.3s ease-out;
 }
 

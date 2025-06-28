@@ -3,6 +3,7 @@
   background-color: var(--neutral-100);
   width: var(--sideBar-width);
   padding: var(--spacing-lg);
+  padding-bottom: 42px;
   gap: var(--spacing-lg);
   border-left: 1px solid var(--neutral-300);
 

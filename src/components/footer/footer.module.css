@@ -1,6 +1,7 @@
 .footer {
   color: var(--neutral-600);
-  padding: var(--spacing-md) var(--spacing-lg);
+  /* padding: var(--spacing-md) var(--spacing-lg); */
+  padding: 30px;
   margin-top: auto;
 }
 

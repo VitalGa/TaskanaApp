@@ -18,7 +18,6 @@ function CreateAndThemeSwitcher() {
     <div className={`${styles.createAndThemeSwitcher} flex gap-24`}>
       <Button
         loading={isLoading}
-        // disabled={isLoading}
         variant='primary'
         size='medium'
         className='text-md-semibold'
