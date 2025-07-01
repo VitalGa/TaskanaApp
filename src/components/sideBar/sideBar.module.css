@@ -6,8 +6,8 @@
   padding-bottom: 42px;
   gap: var(--spacing-lg);
   border-left: 1px solid var(--neutral-300);
-
   overflow-y: auto;
+  transition: background-color var(--transition-theme), border-color var(--transition-theme);
 }
 
 .sideBar__wrapper {

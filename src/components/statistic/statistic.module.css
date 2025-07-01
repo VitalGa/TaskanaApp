@@ -1,3 +1,9 @@
 .statistic__figure {
   gap: var(--spacing-lg);
 }
+
+.statistic__text {
+  font: var(--font-md-regular);
+  color: var(--neutral-800);
+  text-align: center;
+}

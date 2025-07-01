@@ -5,11 +5,13 @@
   padding: var(--spacing-lg) var(--spacing-md);
   border-right: 1px solid var(--neutral-300);
   overflow-y: auto;
+  transition: background-color var(--transition-theme), border-color var(--transition-theme);
 }
 
 .navBar {
-  background-color: var(--base-white);
+  background-color: var(--neutral-0);
   position: relative;
+  transition: background-color var(--transition-theme);
 }
 
 .navBar ul {
@@ -35,4 +37,5 @@
 
 .textWrapper span {
   color: var(--neutral-0);
+  transition: color var(--transition-theme);
 }
