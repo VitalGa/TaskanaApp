@@ -1,9 +1,4 @@
-import SunIcon from './icons/themeToggleIcons/SunIcon';
-import MoonIcon from './icons/themeToggleIcons/MoonIcon';
-import LogoIcon from './icons/LogoIcon';
-import InboxIcon from './icons/buttonIcons/InboxIcon';
-import LoadingIcon from './icons/buttonIcons/LoadingIcon';
-import PlusIcon from './icons/headerIcons/plus-2-Icon';
+import { SunIcon, MoonIcon, LogoIcon, InboxIcon, LoadingIcon, PlusIcon } from './icons';
 
 const icons = {
   sun: SunIcon,
