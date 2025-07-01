@@ -1,9 +1,9 @@
 import styles from './header.module.css';
 import Logo from '../logo/Logo';
-import Button from '@/ui/button/Button';
-import ThemeSwitcher from './themeSwitcher/ThemeSwitcher';
-import Icon from '@/components/icon/Icon';
+import Button from '../../ui/button/Button';
+import Icon from '../icon/Icon';
 import { useState } from 'react';
+import ThemeSwitcher from './themeSwitcher/ThemeSwitcher';
 
 const Header = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -19,6 +19,7 @@ const Header = () => {
       <Logo className={styles.logo} />
       <div className={`${styles.createAndThemeSwitcher} flex gap-24`}>
         <Button
+          type='button'
           loading={isLoading}
           variant='primary'
           size='medium'

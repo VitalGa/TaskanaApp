@@ -7,7 +7,7 @@ const Content = () => {
   return (
     <div className={`${styles.content} flex`}>
       <NavBar />
-      <div className={`${styles.incomingTasks} flex flex-col flex-grow`}>
+      <div className={`flex flex-col flex-grow`}>
         <IncomingTasks />
       </div>
       <SideBar />

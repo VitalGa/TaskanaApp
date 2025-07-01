@@ -11,6 +11,7 @@ const ThemeSwitcher = () => {
       role='group'
       aria-label='Переключатель темы'>
       <button
+        type='button'
         className={`${styles.themeSwitcherButtonSun} ${
           theme === 'light' ? styles.themeSwitcherButtonActive : ''
         } flex items-center justify-center`}
@@ -20,6 +21,7 @@ const ThemeSwitcher = () => {
         <Icon name='sun' color='white' size={32} />
       </button>
       <button
+        type='button'
         className={`${styles.themeSwitcherButtonMoon} ${
           theme === 'dark' ? styles.themeSwitcherButtonActive : ''
         } flex items-center justify-center`}
