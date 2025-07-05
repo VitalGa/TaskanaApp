@@ -1,8 +1,12 @@
 .mainContainer {
-  padding: var(--spacing-lg);
+  scrollbar-gutter: stable;
   position: relative;
   overflow-y: auto;
+  overflow-x: hidden;
   margin-bottom: var(--spacing-lg);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 @media (min-width: 1600px) {

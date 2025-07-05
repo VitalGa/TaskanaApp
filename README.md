@@ -1,7 +1,7 @@
 # TaskanaApp
 
 - Имя: Vitaly
-- Ник: Vitalga108
+- Ник: VitalGa
 
 ## Описание проекта
 
@@ -16,49 +16,69 @@ TaskanaApp1 - это веб-приложение, разработанное с 
 
 ### Установка зависимостей
 
+```bash
 npm install
+```
 
 ### Запуск в режиме разработки
 
+```bash
 npm run dev
+```
 
 После запуска приложение будет доступно по адресу: http://localhost:5173
 
 ### Сборка проекта
 
+```bash
 npm run build
+```
 
 Собранная версия будет находиться в директории `dist/`
 
 ThemeToggle.jsx, CreateAndTheme.jsx используются только в хедере,
 поэтому размещены в папке header (не в общих компонентах).
 
-///////////////
+---
 
-Поумничал и вынес все стили шрифтов в файл typography.css, теперь приходиться прописывать стили в каждом модуле через шаблонные строки: className={`${styles.button} ${typography.buttonText}`}, className={`heading-h1 ${isActive ? 'active' : ''}`}, className={styles.button + ' heading-h1'}
+## Заметки разработчика
+
+Поумничал и вынес все стили шрифтов в файл typography.css, теперь приходиться прописывать стили в каждом модуле через шаблонные строки:
+
+```jsx
+className={`${styles.button} ${typography.buttonText}`}
+className={`heading-h1 ${isActive ? 'active' : ''}`}
+className={styles.button + ' heading-h1'}
+```
 
 или вот так:
 
+```jsx
 className={[
-typographyStyles.headingH1,
-additionalStyles.specialHeading
-].join(' ')}.
+  typographyStyles.headingH1,
+  additionalStyles.specialHeading
+].join(' ')}
+```
 
 Подключать typography.css в каждый компонент не надо, т.к. он подключен глобально в App.jsx
 
 А ещё можно сделать утилиту и поместить её в папку utils:
 
+```typescript
 export function cn(...classes: (string | false | null | undefined)[]): string {
-return classes.filter(Boolean).join(' ');
+  return classes.filter(Boolean).join(' ');
 }
+```
 
 и писать стили в компонентах вот так:
-className={cn(styles.button, typography.buttonText, isPrimary && styles.primary)}.
+
+```jsx
+className={cn(styles.button, typography.buttonText, isPrimary && styles.primary)}
+```
 
 Но так ведь нельзя, это похоже на стороннюю библиотеку cn и будет расценено как хулиганство.
 
-Statistic.jsx пока никак не задействовал, потом проясниться как его использовать.
+### Дополнительные заметки
 
-ThemeSwitcher положил в папку header, т.к. он используется в нём, что бы было всё в одном месте.
-
-А ещё кнопка "Создать" нажимается и появляется лоадер)
+- **ThemeSwitcher** положил в папку header, т.к. он используется в нём, что бы было всё в одном месте.
+- А ещё кнопка "Создать" нажимается и появляется лоадер)

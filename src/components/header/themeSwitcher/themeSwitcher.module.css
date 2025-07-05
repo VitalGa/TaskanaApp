@@ -1,4 +1,4 @@
-.themeSwitcher {
+/* .themeSwitcher {
   background-color: var(--base-800);
   border-radius: 8px;
   padding: var(--spacing-xs);
@@ -44,6 +44,64 @@
   &:hover {
     background-color: var(--neutral-0-fixed);
   }
+}
+
+.themeSwitcherButtonActive:hover svg {
+  transition: color 0.2s ease-in-out;
+  color: black;
+} */
+
+.themeSwitcher {
+  background-color: var(--base-800);
+  border-radius: 8px;
+  padding: var(--spacing-xs);
+  box-shadow: var(--shadow-switch-default-fixed);
+  transition: outline 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  outline: none;
+}
+
+/* Убираем фокус у кнопок */
+.themeSwitcher button:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Старый селектор, который больше не нужен */
+/* .themeSwitcher:has(button:focus-visible) {
+  box-shadow: var(--shadow-switch-focus-fixed);
+  outline: var(--focus-outline-width) solid var(--focus-outline-color);
+  outline-offset: var(--focus-outline-offset);
+} */
+
+/* Новые стили для фокуса на контейнере */
+.themeSwitcher:focus-visible {
+  box-shadow: var(--shadow-switch-focus-fixed);
+  outline: var(--focus-outline-width) solid var(--focus-outline-color);
+  outline-offset: var(--focus-outline-offset);
+}
+
+.themeSwitcherButtonSun,
+.themeSwitcherButtonMoon {
+  border-radius: 4px;
+  padding: var(--spacing-xs);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--shadow-switch-default-fixed);
+  transition: all 0.2s ease-in-out;
+}
+
+.themeSwitcherButtonSun:disabled,
+.themeSwitcherButtonMoon:disabled {
+  cursor: default;
+}
+
+.themeSwitcherButtonActive {
+  background-color: var(--primary-400-fixed);
+}
+
+.themeSwitcherButtonActive:hover {
+  background-color: var(--neutral-0-fixed);
 }
 
 .themeSwitcherButtonActive:hover svg {

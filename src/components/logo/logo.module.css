@@ -9,6 +9,6 @@
   transition: outline 0.2s ease-in-out;
 }
 
-.logo:focus:not(:focus-visible) {
+/* .logo:focus:not(:focus-visible) {
   outline: none;
-}
+} */

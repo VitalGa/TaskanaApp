@@ -1,6 +1,11 @@
 .containerHeader {
+  position: sticky;
+  top: 0;
+  z-index: 100;
   padding: var(--spacing-lg);
   height: 88px;
+  background-color: var(--neutral-0);
+  border-bottom: 1px solid var(--neutral-200);
 }
 
 @media (min-width: 1920px) {

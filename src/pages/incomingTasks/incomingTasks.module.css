@@ -1,6 +1,5 @@
 .incomingTasks {
-  overflow: hidden;
-  gap: 60px;
+  justify-content: space-between;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -19,7 +18,6 @@
 
 .incomingTasks > :nth-child(2) {
   flex: 1;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow: hidden;
   min-height: 0;
 }
