@@ -1,6 +1,6 @@
 import styles from './appLayout.module.css';
-import Header from '@/components/header/Header';
-import Content from '@/layouts/content/Content';
+import { Header } from '@/components';
+import { Content } from '@/layouts';
 
 const AppLayout = () => {
   return (

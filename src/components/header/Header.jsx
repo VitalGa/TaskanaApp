@@ -1,9 +1,7 @@
 import styles from './header.module.css';
-import Logo from '../logo/Logo';
-import Button from '../../ui/button/Button';
-import Icon from '../icon/Icon';
 import { useState } from 'react';
-import ThemeSwitcher from './themeSwitcher/ThemeSwitcher';
+import { Logo, Icon, ThemeSwitcher } from '@/components';
+import { Button } from '@/ui';
 
 const Header = () => {
   const [isLoading, setIsLoading] = useState(false);

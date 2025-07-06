@@ -1,6 +1,6 @@
-import MainContainer from '@/containers/mainContainer/MainContainer';
-import Footer from '@/components/footer/Footer';
 import styles from './incomingTasks.module.css';
+import { MainContainer } from '@/containers';
+import { Footer } from '@/components';
 
 const IncomingTasks = () => {
   return (

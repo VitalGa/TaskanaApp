@@ -1,6 +1,5 @@
-import TaskList from '@/components/taskList/TaskList';
 import styles from './mainContainer.module.css';
-import ContainerHeader from '@/components/containerHeader/ContainerHeader';
+import { ContainerHeader, TaskList } from '@/components';
 
 const MainContainer = () => {
   return (

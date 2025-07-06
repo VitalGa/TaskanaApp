@@ -1,6 +1,6 @@
 import styles from './taskList.module.css';
-import ContainerText from '@/components/containerText/ContainerText';
-import { EmptyTask } from '@/components/emptyTask/EmptyTask';
+import { ContainerText, EmptyTask } from '@/components';
+
 function TaskList() {
   return (
     <div className={`${styles.taskList} flex flex-col`}>

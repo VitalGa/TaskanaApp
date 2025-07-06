@@ -1,5 +1,5 @@
 import styles from './statistic.module.css';
-import Illustration from '@/components/illustration/Illustration';
+import { Illustration } from '@/components';
 
 const Statistic = () => {
   return (

@@ -1,5 +1,5 @@
 import styles from './logo.module.css';
-import Icon from '../icon/Icon';
+import { Icon } from '@/components';
 
 function Logo() {
   const handleClick = (e) => {

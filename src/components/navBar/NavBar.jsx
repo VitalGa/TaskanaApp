@@ -1,6 +1,6 @@
 import styles from './navBar.module.css';
-import Button from '@/ui/button/Button';
-import Icon from '@/components/icon/Icon';
+import { Icon } from '@/components';
+import { Button } from '@/ui';
 
 function NavBar() {
   return (

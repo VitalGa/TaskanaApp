@@ -1,5 +1,5 @@
 import styles from './emptyTask.module.css';
-import Illustration from '@/components/illustration/Illustration';
+import Illustration from '../illustration/Illustration';
 
 export const EmptyTask = () => {
   return (

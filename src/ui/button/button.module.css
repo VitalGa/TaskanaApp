@@ -52,12 +52,6 @@
   transition: all 0.2s ease-out;
 }
 
-/* Убираем обычный фокус для всех типов кнопок */
-/* .button:focus:not(:focus-visible) {
-  outline: none;
-  box-shadow: none;
-} */
-
 /* Размеры кнопок */
 
 .medium {
