@@ -4,8 +4,6 @@ import { Icon } from '@/components';
 function Logo() {
   const handleClick = (e) => {
     e.preventDefault();
-    const baseUrl = import.meta.env.BASE_URL;
-    window.history.pushState({}, '', baseUrl);
   };
 
   return (
