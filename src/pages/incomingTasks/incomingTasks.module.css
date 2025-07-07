@@ -5,16 +5,14 @@
   flex-direction: column;
 }
 
-@media (min-width: 100rem) {
-  /* 1600px -> 100rem */
+@media (min-width: var(--breakpoint-large)) {
   .incomingTasks {
-    gap: 6.25rem; /* 100px -> 6.25rem */
+    gap: var(--gap-large);
   }
 }
-@media (min-width: 120rem) {
-  /* 1920px -> 120rem */
+@media (min-width: var(--breakpoint-xl)) {
   .incomingTasks {
-    gap: 12rem; /* 192px -> 12rem */
+    gap: var(--gap-xl);
   }
 }
 

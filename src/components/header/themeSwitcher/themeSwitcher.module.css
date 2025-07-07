@@ -1,6 +1,6 @@
 .themeSwitcher {
   background-color: var(--base-800);
-  border-radius: 0.5rem; /* 8px -> 0.5rem */
+  border-radius: var(--border-radius-md);
   padding: var(--spacing-xs);
   box-shadow: var(--shadow-switch-default-fixed);
   outline: none;
@@ -20,7 +20,7 @@
 
 .themeSwitcherButtonSun,
 .themeSwitcherButtonMoon {
-  border-radius: 0.25rem; /* 4px -> 0.25rem */
+  border-radius: var(--border-radius-sm);
   padding: var(--spacing-xs);
   background-color: transparent;
   border: none;

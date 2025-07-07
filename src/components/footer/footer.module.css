@@ -1,7 +1,7 @@
 .footer {
   color: var(--neutral-600);
   background-color: var(--footer-background);
-  padding: 1.875rem; /* 30px -> 1.875rem */
+  padding: var(--footer-padding);
   margin-top: auto;
   transition: background-color var(--transition-theme);
 }
@@ -17,7 +17,7 @@
 }
 
 .footer__link:focus-visible {
-  outline: 0.1875rem solid var(--footer-link-color); /* 3px -> 0.1875rem */
-  outline-offset: 0.125rem; /* 2px -> 0.125rem */
-  border-radius: 0.1875rem; /* 3px -> 0.1875rem */
+  outline: var(--footer-outline-width) solid var(--footer-link-color);
+  outline-offset: var(--focus-outline-offset);
+  border-radius: var(--footer-outline-width);
 }

@@ -3,14 +3,13 @@
   top: 0;
   z-index: 100;
   padding: var(--spacing-lg);
-  height: 5.5rem; /* 88px -> 5.5rem */
+  height: var(--container-header-height);
   background-color: var(--neutral-0);
-  border-bottom: 0.0625rem solid var(--neutral-200); /* 1px -> 0.0625rem */
+  border-bottom: var(--border-width-thin) solid var(--neutral-200);
 }
 
-@media (min-width: 120rem) {
-  /* 1920px -> 120rem */
+@media (min-width: var(--breakpoint-xl)) {
   .containerHeader {
-    padding-left: 11.5625rem; /* 185px -> 11.5625rem */
+    padding-left: var(--container-header-padding-left-large);
   }
 }

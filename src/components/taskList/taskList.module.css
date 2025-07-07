@@ -1,6 +1,6 @@
 .taskList {
   z-index: 1;
-  gap: calc(var(--spacing-xl) + 0.5rem); /* 8px -> 0.5rem */
+  gap: calc(var(--spacing-xl) + var(--tasklist-gap-additional));
   flex: 1;
   padding-top: var(--spacing-md);
 }

@@ -9,8 +9,7 @@
   flex-direction: column;
 }
 
-@media (min-width: 100rem) {
-  /* 1600px -> 100rem */
+@media (min-width: var(--breakpoint-large)) {
   .mainContainer {
     padding: var(--spacing-md);
   }

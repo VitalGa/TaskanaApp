@@ -3,8 +3,8 @@
 }
 
 .logo:focus-visible {
-  outline: 0.125rem solid var(--neutral-0-fixed); /* 2px -> 0.125rem */
-  outline-offset: 0.25rem; /* 4px -> 0.25rem */
-  border-radius: 0.5rem; /* 8px -> 0.5rem */
+  outline: var(--focus-outline-width) solid var(--neutral-0-fixed);
+  outline-offset: var(--spacing-xs);
+  border-radius: var(--border-radius-md);
   /* transition: outline 0.2s ease-in-out; */
 }

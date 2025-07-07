@@ -3,7 +3,7 @@
   width: var(--navBar-width);
   background-color: var(--neutral-100);
   padding: var(--spacing-lg) var(--spacing-md);
-  border-right: 0.0625rem solid var(--neutral-300); /* 1px -> 0.0625rem */
+  border-right: var(--border-width-thin) solid var(--neutral-300);
   overflow-y: auto;
   transition: background-color var(--transition-theme), border-color var(--transition-theme);
 }
@@ -31,7 +31,7 @@
 }
 
 .textWrapper {
-  width: 7.75rem; /* 124px -> 7.75rem */
+  width: var(--navbar-text-width);
   height: var(--spacing-lg);
 }
 
