@@ -8,7 +8,7 @@ function NavBar() {
       <nav className={styles.navBar}>
         <ul>
           <li>
-            <Button variant='secondary' size='large' className={styles.navButton}>
+            <Button variant='secondary' size='large' className={styles.navButton} gap='10'>
               <Icon name='inbox' />
               <div className={`${styles.textWrapper} flex flex-start`}>
                 <span className='text-md-semibold'>Входящие</span>

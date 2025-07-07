@@ -17,13 +17,11 @@ function Header() {
       <Logo className={styles.logo} />
       <div className={`${styles.createAndThemeSwitcher} flex gap-24`}>
         <Button
-          type='button'
           loading={isLoading}
           variant='primary'
           size='medium'
           className='text-md-semibold'
-          fixedColor={true}
-          shadow='shadow-md'
+          gap='8'
           onClick={handleClick}>
           <Icon name='plus' width={24} height={24} />
           Создать

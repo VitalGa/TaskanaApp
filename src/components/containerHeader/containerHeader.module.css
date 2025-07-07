@@ -8,8 +8,8 @@
   border-bottom: var(--border-width-thin) solid var(--neutral-200);
 }
 
-@media (min-width: var(--breakpoint-xl)) {
+@media (min-width: 120rem) {
   .containerHeader {
-    padding-left: var(--container-header-padding-left-large);
+    padding-left: 11.5rem;
   }
 }

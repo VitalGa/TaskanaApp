@@ -1,9 +1,8 @@
 .header {
   height: var(--spacing-3xl);
-  position: sticky;
   z-index: 10;
+  position: sticky;
   top: 0;
-
   background-color: var(--base-black);
   padding: calc(var(--spacing-sm) + var(--header-padding-additional)) var(--spacing-lg)
     calc(var(--spacing-md) - var(--header-padding-additional)) var(--spacing-md);

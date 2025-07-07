@@ -11,8 +11,14 @@
 }
 
 .sideBar__wrapper {
-  padding-top: var(--sidebar-wrapper-padding-top);
+  padding-top: 20px;
   min-height: 100%;
+}
+
+@media (min-width: 120rem) {
+  .sideBar__wrapper {
+    margin-top: 1.93rem;
+  }
 }
 
 .sideBar__figure {

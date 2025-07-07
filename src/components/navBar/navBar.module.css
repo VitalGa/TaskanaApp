@@ -28,6 +28,7 @@
   width: 100%;
   justify-content: flex-start;
   gap: var(--spacing-sm);
+  padding: 6px;
 }
 
 .textWrapper {

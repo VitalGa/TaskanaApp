@@ -4,3 +4,15 @@
   flex: 1;
   padding-top: var(--spacing-md);
 }
+
+@media (min-width: 100rem) {
+  .taskList {
+    padding-top: var(--spacing-4xl);
+  }
+}
+
+@media (min-width: 120rem) {
+  .taskList {
+    padding-top: var(--spacing-5xl);
+  }
+}
