@@ -1,6 +1,6 @@
 import Icon from '@/components/icon/Icon';
 import styles from './themeSwitcher.module.css';
-import { useTheme } from '@/context/ThemeContext';
+import { useTheme } from '@/context';
 
 function ThemeSwitcher() {
   const { theme, toggleTheme } = useTheme();
