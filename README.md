@@ -84,4 +84,4 @@ className={cn(styles.button, typography.buttonText, isPrimary && styles.primary)
 
 - **ThemeSwitcher** положил в папку header, т.к. он используется в нём, что бы было всё в одном месте.
 
-- А ещё кнопка "Создать" нажимается и появляется лоадер)
+- А ещё кнопка "Создать" нажимается и появляется лоадер)))
