@@ -5,11 +5,11 @@
   --font-family: 'Source Sans 3', sans-serif;
 
   /* Font Sizes with Line Heights */
-  --font-size-14: 14px/20px;
-  --font-size-16: 16px/24px;
-  --font-size-18: 18px/24px;
-  --font-size-24: 24px/32px;
-  --font-size-32: 32px/40px;
+  --font-size-14: 0.875rem/1.25rem; /* 14px/20px -> 0.875rem/1.25rem */
+  --font-size-16: 1rem/1.5rem; /* 16px/24px -> 1rem/1.5rem */
+  --font-size-18: 1.125rem/1.5rem; /* 18px/24px -> 1.125rem/1.5rem */
+  --font-size-24: 1.5rem/2rem; /* 24px/32px -> 1.5rem/2rem */
+  --font-size-32: 2rem/2.5rem; /* 32px/40px -> 2rem/2.5rem */
 
   /* Font Combinations */
   --font-heading-h1: 700 var(--font-size-32) var(--font-family);

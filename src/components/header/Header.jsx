@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Logo, Icon, ThemeSwitcher } from '@/components';
 import { Button } from '@/ui';
 
-const Header = () => {
+function Header() {
   const [isLoading, setIsLoading] = useState(false);
 
   const handleClick = () => {
@@ -13,7 +13,7 @@ const Header = () => {
     }, 2000);
   };
   return (
-    <header className={`${styles.header} flex justify-between items-center`}>
+    <header className={`${styles.header} flex justify-between`}>
       <Logo className={styles.logo} />
       <div className={`${styles.createAndThemeSwitcher} flex gap-24`}>
         <Button
@@ -32,6 +32,6 @@ const Header = () => {
       </div>
     </header>
   );
-};
+}
 
 export default Header;

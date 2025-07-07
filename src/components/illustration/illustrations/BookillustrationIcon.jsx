@@ -1,4 +1,4 @@
-export const BookIllustrationIcon = ({ width = 233, height = 168, className = '', ...props }) => {
+export function BookIllustrationIcon({ width = 233, height = 168, className = '', ...props }) {
   return (
     <svg
       width={width}
@@ -194,4 +194,4 @@ export const BookIllustrationIcon = ({ width = 233, height = 168, className = ''
       />
     </svg>
   );
-};
+}

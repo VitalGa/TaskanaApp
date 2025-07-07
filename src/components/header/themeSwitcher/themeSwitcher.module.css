@@ -1,9 +1,8 @@
 .themeSwitcher {
   background-color: var(--base-800);
-  border-radius: 8px;
+  border-radius: 0.5rem; /* 8px -> 0.5rem */
   padding: var(--spacing-xs);
   box-shadow: var(--shadow-switch-default-fixed);
-  transition: outline 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   outline: none;
   cursor: pointer;
 }
@@ -21,13 +20,12 @@
 
 .themeSwitcherButtonSun,
 .themeSwitcherButtonMoon {
-  border-radius: 4px;
+  border-radius: 0.25rem; /* 4px -> 0.25rem */
   padding: var(--spacing-xs);
   background-color: transparent;
   border: none;
   cursor: pointer;
   box-shadow: var(--shadow-switch-default-fixed);
-  transition: all 0.2s ease-in-out;
 }
 
 .themeSwitcherButtonSun:disabled,
@@ -44,6 +42,5 @@
 }
 
 .themeSwitcherButtonActive:hover svg {
-  transition: color 0.2s ease-in-out;
   color: black;
 }

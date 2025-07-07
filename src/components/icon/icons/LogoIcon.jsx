@@ -1,4 +1,4 @@
-const LogoIcon = (props) => {
+function LogoIcon(props) {
   return (
     <svg xmlns='http://www.w3.org/2000/svg' width='126' height='40' viewBox='0 0 126 40' {...props}>
       <path
@@ -47,6 +47,6 @@ const LogoIcon = (props) => {
       </defs>
     </svg>
   );
-};
+}
 
 export default LogoIcon;

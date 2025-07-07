@@ -9,7 +9,7 @@ const icons = {
   plus: PlusIcon,
 };
 
-const Icon = ({ name, ...props }) => {
+function Icon({ name, ...props }) {
   const IconComponent = icons[name];
 
   if (!IconComponent) {
@@ -17,6 +17,6 @@ const Icon = ({ name, ...props }) => {
   }
 
   return <IconComponent {...props} />;
-};
+}
 
 export default Icon;

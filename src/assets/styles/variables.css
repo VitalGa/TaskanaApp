@@ -1,17 +1,103 @@
 :root {
-  /* Neutral/Light colors */
-  --neutral-900: #141414;
-  --neutral-800: #1c1c1c;
-  --neutral-700: #393939;
-  --neutral-600: #6c6c6c;
-  --neutral-300: #ececec;
-  --neutral-100: #fbfbfb;
+  /* Colors */
   --neutral-0: #ffffff;
+  --neutral-0-fixed: #ffffff;
+  --neutral-50: #fafafa;
+  --neutral-100: #f5f5f5;
+  --neutral-200: #e5e5e5;
+  --neutral-300: #d4d4d4;
+  --neutral-400: #a3a3a3;
+  --neutral-500: #737373;
+  --neutral-600: #525252;
+  --neutral-700: #404040;
+  --neutral-800: #262626;
+  --neutral-900: #171717;
+  --neutral-950: #0a0a0a;
 
-  /* Primary colors */
-  --primary-400: #d51010;
-  --primary-500: #a60c0c;
-  --button-disable-background: #d5101080;
+  --primary-50: #eff6ff;
+  --primary-100: #dbeafe;
+  --primary-200: #bfdbfe;
+  --primary-300: #93c5fd;
+  --primary-400: #60a5fa;
+  --primary-500: #3b82f6;
+  --primary-600: #2563eb;
+  --primary-700: #1d4ed8;
+  --primary-800: #1e40af;
+  --primary-900: #1e3a8a;
+
+  /* Layout */
+  --sideBar-width: 25rem; /* 400px -> 25rem */
+
+  /* Shadows */
+  --shadow-base-default: 0.125rem 0.125rem 0.25rem 0px #00000033; /* 2px 2px 4px -> 0.125rem 0.125rem 0.25rem */
+  --shadow-base-hover: 0.125rem 0.5rem 0.75rem 0px #00000040; /* 2px 8px 12px -> 0.125rem 0.5rem 0.75rem */
+  --shadow-sm-default: 0.125rem 0.125rem 0.25rem 0px #0000001a; /* 2px 2px 4px -> 0.125rem 0.125rem 0.25rem */
+  --shadow-sm-hover: 0.125rem 0.5rem 0.75rem 0px #00000033; /* 2px 8px 12px -> 0.125rem 0.5rem 0.75rem */
+
+  /* Fixed shadows for specific components */
+  --shadow-button-hover-fixed: 0.125rem 0.5rem 0.75rem 0px #000000cc; /* 2px 8px 12px -> 0.125rem 0.5rem 0.75rem */
+  --shadow-button-disabled-fixed: 0.125rem 0.125rem 0.25rem 0px #00000080; /* 2px 2px 4px -> 0.125rem 0.125rem 0.25rem */
+
+  /* Switch shadows */
+  --shadow-switch-default-fixed: 0.125rem 0.125rem 0.25rem 0px #00000080; /* 2px 2px 4px -> 0.125rem 0.125rem 0.25rem */
+  --shadow-switch-hover-fixed: 0.125rem 0.5rem 0.75rem 0px #000000cc; /* 2px 8px 12px -> 0.125rem 0.5rem 0.75rem */
+  --shadow-switch-focus-fixed: 0.125rem 0.5rem 0.75rem 0px #000000cc; /* 2px 8px 12px -> 0.125rem 0.5rem 0.75rem */
+
+  /* Header shadow */
+  --shadow-header-fixed: 0.125rem 0.125rem 0.25rem 0px #00000033; /* 2px 2px 4px -> 0.125rem 0.125rem 0.25rem */
+
+  /* Focus styles */
+  --focus-outline-width: 0.125rem; /* 2px -> 0.125rem */
+  --focus-outline-offset: 0.125rem; /* 2px -> 0.125rem */
+
+  /* Typography */
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-base: 1rem; /* 16px */
+  --font-size-md: 1.125rem; /* 18px */
+  --font-size-lg: 1.5rem; /* 24px */
+  --font-size-xl: 2rem; /* 32px */
+
+  /* Line heights */
+  --line-height-tight: 1.25; /* 20px при font-size: 16px */
+  --line-height-normal: 1.5; /* 24px при font-size: 16px */
+  --line-height-relaxed: 2; /* 32px при font-size: 16px */
+  --line-height-loose: 2.5; /* 40px при font-size: 16px */
+
+  /* Spacing */
+  --spacing-xs: 0.25rem; /* 4px */
+  --spacing-sm: 0.5rem; /* 8px */
+  --spacing-md: 1rem; /* 16px */
+  --spacing-lg: 1.5rem; /* 24px */
+  --spacing-xl: 2rem; /* 32px */
+  --spacing-2xl: 3rem; /* 48px */
+  --spacing-3xl: 4rem; /* 64px */
+
+  /* Border radius */
+  --border-radius-sm: 0.25rem; /* 4px */
+  --border-radius-md: 0.5rem; /* 8px */
+  --border-radius-lg: 1rem; /* 16px */
+  --border-radius-xl: 1.5rem; /* 24px */
+
+  /* Font weights */
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Footer */
+  --footer-link-color: #1c1c1c;
+  --footer-background: var(--neutral-0);
+
+  /* Fixed colors (не меняются при смене темы) */
+  --primary-400-fixed: #d51010;
+  --primary-500-fixed: #a60c0c;
+  --primary-300-fixed: #f25959;
+
+  /* Accent buttons (gradient or two states) */
+  --primary-accent: linear-gradient(to bottom, var(--primary-400), var(--primary-500));
+
+  /* Base colors */
+  --base-black: #000000;
+  --base-800: #262626;
 
   /* BookillustrationIcon */
   --book-lightTheme: #ffffff;
@@ -23,94 +109,39 @@
   --girl-lightTheme: #141414;
   --girl-group-lightTheme: #ececec;
 
-  /* SideBar */
-  --sideBar-width: 400px;
-
-  /* Footer */
-  --footer-link-color: #1c1c1c;
-
-  /* Фиксированные цвета (не меняются при смене темы) */
-  --neutral-0-fixed: #ffffff;
-  --primary-400-fixed: #d51010;
-  --primary-500-fixed: #a60c0c;
-  --primary-300-fixed: #f25959;
-
-  /* Акцентные кнопки (градиент или два состояния) */
-  --primary-accent: linear-gradient(to bottom, var(--primary-400), var(--primary-500));
-
-  /* Base colors */
-  --base-black: #000000;
-  --base-800: #262626;
-
-  /* Box-shadow */
-  --shadow-base-default: 2px 2px 4px 0px #00000033;
-  --shadow-base-hover: 2px 8px 12px 0px #00000040;
-  --shadow-sm-default: 2px 2px 4px 0px #0000001a;
-  --shadow-sm-hover: 2px 8px 12px 0px #00000033;
-
-  --shadow-button-hover-fixed: 2px 8px 12px 0px #000000cc;
-  --shadow-button-disabled-fixed: 2px 2px 4px 0px #00000080;
-
-  /* Switch */
-  --shadow-switch-default-fixed: 2px 2px 4px 0px #00000080;
-  --shadow-switch-hover-fixed: 2px 8px 12px 0px #000000cc;
-  --shadow-switch-focus-fixed: 2px 8px 12px 0px #000000cc;
-
-  /* Header */
-  --shadow-header-fixed: 2px 2px 4px 0px #00000033;
-
-  /* Фокус для Tab навигации - одинаковый для обеих тем */
+  /* Focus outline color */
   --focus-outline-color: #ffffff;
-  --focus-outline-width: 2px;
-  --focus-outline-offset: 2px;
 
-  /* Типографика */
-  --font-size-sm: 0.875rem; /* 14px */
-  --font-size-base: 1rem; /* 16px */
-  --font-size-md: 1.125rem; /* 18px */
-  --font-size-lg: 1.5rem; /* 24px */
-  --font-size-xl: 2rem; /* 32px */
-
-  --font-weight-regular: 400;
-  --font-weight-semibold: 600;
-  --font-weight-bold: 700;
-
-  --line-height-tight: 1.25; /* 20px при font-size: 16px */
-  --line-height-normal: 1.5; /* 24px при font-size: 16px */
-  --line-height-relaxed: 2; /* 32px при font-size: 16px */
-  --line-height-loose: 2.5; /* 40px при font-size: 16px */
-
-  /* Отступы и размеры */
-  --spacing-xs: 0.25rem; /* 4px */
-  --spacing-sm: 0.5rem; /* 8px */
-  --spacing-md: 1rem; /* 16px */
-  --spacing-lg: 1.5rem; /* 24px */
-  --spacing-xl: 2rem; /* 32px */
-  --spacing-2xl: 3rem; /* 48px */
-  --spacing-3xl: 4rem; /* 64px */
-
-  --border-radius-sm: 0.25rem; /* 4px */
-  --border-radius-md: 0.5rem; /* 8px */
-  --border-radius-lg: 1rem; /* 16px */
-  --border-radius-xl: 1.5rem; /* 24px */
-
-  /* Анимации */
+  /* Animations */
   --transition-fast: 150ms;
   --transition-normal: 300ms;
   --transition-slow: 500ms;
   --transition-theme: 200ms ease-in-out;
+
+  /* Button disable background */
+  --button-disable-background: #d5101080;
 }
 
-/* Добавляем transition для html элемента */
+/* transition для html и body */
 html {
   transition: background-color var(--transition-theme), color var(--transition-theme);
 }
 
-/* Применяем transition ко всем элементам */
+body {
+  transition: background-color var(--transition-theme), color var(--transition-theme);
+}
+
+/* transition для всех элементов, кроме focus состояний */
 * {
   transition: background-color var(--transition-theme), color var(--transition-theme),
     border-color var(--transition-theme), fill var(--transition-theme),
     stroke var(--transition-theme);
+}
+
+/* Убираем transition для focus, если появляется плавно - кажется, что лагает */
+*:focus,
+*:focus-visible {
+  transition: none;
 }
 
 :root[data-theme='dark'] {
@@ -129,15 +160,15 @@ html {
   --primary-400-fixed: #d51010;
 
   /* Box-shadow */
-  --shadow-base-default: 2px 2px 4px 0px #00000080;
-  --shadow-base-hover: 2px 8px 12px 0px #000000cc;
-  --shadow-sm-default: 2px 2px 4px 0px #0000004d;
-  --shadow-sm-hover: 2px 8px 12px 0px #00000099;
+  --shadow-base-default: 0.125rem 0.125rem 0.25rem 0px #00000080; /* 2px 2px 4px -> 0.125rem 0.125rem 0.25rem */
+  --shadow-base-hover: 0.125rem 0.5rem 0.75rem 0px #000000cc; /* 2px 8px 12px -> 0.125rem 0.5rem 0.75rem */
+  --shadow-sm-default: 0.125rem 0.125rem 0.25rem 0px #0000004d; /* 2px 2px 4px -> 0.125rem 0.125rem 0.25rem */
+  --shadow-sm-hover: 0.125rem 0.5rem 0.75rem 0px #00000099; /* 2px 8px 12px -> 0.125rem 0.5rem 0.75rem */
 
   /* Фокус для Tab навигации - сохраняем те же значения */
   --focus-outline-color: #ffffff;
-  --focus-outline-width: 2px;
-  --focus-outline-offset: 2px;
+  --focus-outline-width: 0.125rem; /* 2px -> 0.125rem */
+  --focus-outline-offset: 0.125rem; /* 2px -> 0.125rem */
 
   /* BookillustrationIcon  */
   --book-lightTheme: #141414;
@@ -151,6 +182,7 @@ html {
 
   /* Footer */
   --footer-link-color: #ffffff;
+  --footer-background: var(--neutral-0);
 
   --primary-accent: linear-gradient(to bottom, var(--primary-400), var(--primary-500));
 

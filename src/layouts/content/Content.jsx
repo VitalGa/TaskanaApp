@@ -2,7 +2,7 @@ import styles from './content.module.css';
 import { NavBar, SideBar } from '@/components';
 import { IncomingTasks } from '@/pages';
 
-const Content = () => {
+function Content() {
   return (
     <div className={`${styles.content} flex`}>
       <NavBar />
@@ -12,6 +12,6 @@ const Content = () => {
       <SideBar />
     </div>
   );
-};
+}
 
 export default Content;

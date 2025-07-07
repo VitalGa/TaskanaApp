@@ -2,7 +2,7 @@ import Icon from '@/components/icon/Icon';
 import styles from './themeSwitcher.module.css';
 import { useTheme } from '@/context/ThemeContext';
 
-const ThemeSwitcher = () => {
+function ThemeSwitcher() {
   const { theme, toggleTheme } = useTheme();
 
   const handleKeyDown = (event) => {
@@ -42,6 +42,6 @@ const ThemeSwitcher = () => {
       </button>
     </div>
   );
-};
+}
 
 export default ThemeSwitcher;

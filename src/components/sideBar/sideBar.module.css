@@ -3,14 +3,15 @@
   background-color: var(--neutral-100);
   width: var(--sideBar-width);
   padding: var(--spacing-lg);
-  padding-bottom: 42px;
+  padding-bottom: 2.625rem; /* 42px -> 2.625rem */
   gap: var(--spacing-lg);
-  border-left: 1px solid var(--neutral-300);
+  border-left: 0.0625rem solid var(--neutral-300); /* 1px -> 0.0625rem */
   overflow-y: auto;
   transition: background-color var(--transition-theme), border-color var(--transition-theme);
 }
 
 .sideBar__wrapper {
+  padding-top: 218px;
   min-height: 100%;
 }
 

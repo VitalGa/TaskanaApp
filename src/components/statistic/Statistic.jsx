@@ -1,7 +1,7 @@
 import styles from './statistic.module.css';
 import { Illustration } from '@/components';
 
-const Statistic = () => {
+function Statistic() {
   return (
     <figure className={`${styles.statistic__figure} flex flex-col items-center justify-center`}>
       <Illustration name='book' width={231} height={168} />
@@ -14,6 +14,6 @@ const Statistic = () => {
       </figcaption>
     </figure>
   );
-};
+}
 
 export default Statistic;

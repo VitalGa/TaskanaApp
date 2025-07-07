@@ -9,7 +9,7 @@
   border: none;
   position: relative;
   min-width: 100px;
-  transition: all 0.2s ease-in-out;
+  /* transition: all 0.2s ease-in-out; */
   outline: none;
 }
 
@@ -49,7 +49,6 @@
   box-shadow: var(--shadow-base-hover);
   outline: 2px solid var(--neutral-900);
   outline-offset: 2px;
-  transition: all 0.2s ease-out;
 }
 
 /* Размеры кнопок */

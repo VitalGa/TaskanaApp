@@ -5,11 +5,7 @@
   top: 0;
 
   background-color: var(--base-black);
-  padding: calc(var(--spacing-sm) + 4px) var(--spacing-lg) calc(var(--spacing-md) - 4px)
-    var(--spacing-md);
+  padding: calc(var(--spacing-sm) + 0.25rem) var(--spacing-lg) calc(var(--spacing-md) - 0.25rem)
+    /* 4px -> 0.25rem */ var(--spacing-md);
   box-shadow: var(--shadow-header-fixed);
-}
-
-.createAndThemeSwitcher {
-  display: flex;
 }

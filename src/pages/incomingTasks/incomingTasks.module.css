@@ -5,14 +5,16 @@
   flex-direction: column;
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 100rem) {
+  /* 1600px -> 100rem */
   .incomingTasks {
-    gap: 100px;
+    gap: 6.25rem; /* 100px -> 6.25rem */
   }
 }
-@media (min-width: 1920px) {
+@media (min-width: 120rem) {
+  /* 1920px -> 120rem */
   .incomingTasks {
-    gap: 192px;
+    gap: 12rem; /* 192px -> 12rem */
   }
 }
 
