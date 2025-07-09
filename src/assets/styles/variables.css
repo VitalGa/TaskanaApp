@@ -179,7 +179,7 @@ body {
 * {
   transition: background-color var(--transition-theme), color var(--transition-theme),
     border-color var(--transition-theme), fill var(--transition-theme),
-    stroke var(--transition-theme);
+    stroke var(--transition-theme), box-shadow var(--transition-theme);
 }
 
 /* Убираем transition для focus, если появляется плавно - кажется, что лагает */
