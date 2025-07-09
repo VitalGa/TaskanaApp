@@ -13,6 +13,9 @@
 .sideBar__wrapper {
   padding-top: 20px;
   min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (min-width: 120rem) {
