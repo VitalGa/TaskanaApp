@@ -5,6 +5,7 @@
   box-shadow: var(--shadow-switch-default-fixed);
   outline: none;
   cursor: pointer;
+  position: relative;
 }
 
 .themeSwitcher button:focus-visible {
@@ -18,6 +19,31 @@
   outline-offset: var(--focus-outline-offset);
 }
 
+/* Анимированный фон */
+.themeSwitcher::before {
+  content: '';
+  position: absolute;
+  top: var(--spacing-xs);
+  left: var(--spacing-xs);
+  width: 32px;
+  height: calc(100% - var(--spacing-xs) * 2);
+  background-color: transparent;
+  border-radius: var(--border-radius-sm);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  z-index: 1;
+}
+
+/* Перемещение фона для темной темы */
+.themeSwitcher[data-theme='dark']::before {
+  transform: translateX(calc(32px + var(--spacing-xs)));
+  background-color: var(--primary-400-fixed);
+}
+
+/* Показываем красный фон для светлой темы */
+.themeSwitcher[data-theme='light']::before {
+  background-color: var(--primary-400-fixed);
+}
+
 .themeSwitcherButtonSun,
 .themeSwitcherButtonMoon {
   border-radius: var(--border-radius-sm);
@@ -26,6 +52,8 @@
   background-color: #262626;
   border: none;
   cursor: pointer;
+  position: relative;
+  z-index: 2;
 }
 
 .themeSwitcherButtonSun:disabled,
@@ -34,7 +62,7 @@
 }
 
 .themeSwitcherButtonActive {
-  background-color: var(--primary-400-fixed);
+  background-color: transparent;
 }
 
 .themeSwitcherButtonActive:hover {

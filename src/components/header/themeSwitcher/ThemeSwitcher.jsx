@@ -19,6 +19,7 @@ function ThemeSwitcher() {
       role='switch'
       aria-label='Переключатель темы'
       aria-checked={theme === 'dark'}
+      data-theme={theme}
       onClick={toggleTheme}
       onKeyDown={handleKeyDown}
       tabIndex={0}>
