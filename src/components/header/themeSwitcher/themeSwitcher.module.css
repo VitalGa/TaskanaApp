@@ -19,7 +19,6 @@
   outline-offset: var(--focus-outline-offset);
 }
 
-/* Анимированный фон */
 .themeSwitcher::before {
   content: '';
   position: absolute;
@@ -33,13 +32,11 @@
   z-index: 1;
 }
 
-/* Перемещение фона для темной темы */
 .themeSwitcher[data-theme='dark']::before {
   transform: translateX(calc(32px + var(--spacing-xs)));
   background-color: var(--primary-400-fixed);
 }
 
-/* Показываем красный фон для светлой темы */
 .themeSwitcher[data-theme='light']::before {
   background-color: var(--primary-400-fixed);
 }

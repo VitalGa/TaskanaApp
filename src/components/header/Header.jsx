@@ -15,7 +15,7 @@ function Header() {
   return (
     <header className={`${styles.header} flex justify-between`}>
       <Logo className={styles.logo} />
-      <div className={`${styles.createAndThemeSwitcher} flex gap-24`}>
+      <div className={`flex gap-24`}>
         <Button
           loading={isLoading}
           variant='primary'
