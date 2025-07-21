@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { FaMinus, FaChevronUp, FaChevronDoubleUp } from 'react-icons/fa';
+import Icon from '@/components/icon/Icon';
+
 import styles from './TaskEditorBody.module.css';
 
 export default function TaskEditorBody() {
@@ -12,21 +13,21 @@ export default function TaskEditorBody() {
         <button
           className={`${styles.btn} ${priority === 'low' ? styles.active + ' ' + styles.low : ''}`}
           onClick={() => setPriority('low')}>
-          <FaMinus />
+          <Icon name='priorityLow' />
         </button>
         <button
           className={`${styles.btn} ${
             priority === 'normal' ? styles.active + ' ' + styles.normal : ''
           }`}
           onClick={() => setPriority('normal')}>
-          <FaChevronUp />
+          <Icon name='priorityNormal' />
         </button>
         <button
           className={`${styles.btn} ${
             priority === 'high' ? styles.active + ' ' + styles.high : ''
           }`}
           onClick={() => setPriority('high')}>
-          <FaChevronDoubleUp />
+          <Icon name='priorityHight' />
         </button>
       </div>
     </div>

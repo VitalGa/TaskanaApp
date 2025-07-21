@@ -11,3 +11,8 @@ export { default as LoadingIcon } from './buttonIcons/LoadingIcon';
 
 // Header icons
 export { default as PlusIcon } from './headerIcons/plus-2-Icon';
+
+// TaskEditorBody icons
+export { default as PriorityLowIcon } from './taskEditorBodyIcons/PriorityLowIcon';
+export { default as PriorityNormalIcon } from './taskEditorBodyIcons/PriorityNormalIcon';
+export { default as PriorityHightIcon } from './taskEditorBodyIcons/PriorityHightIcon';

@@ -1,1 +1,1 @@
-export { TaskEditorBody } from './TaskEditorBody';
+export { default as TaskEditorBody } from './TaskEditorBody';

@@ -1,4 +1,14 @@
-import { SunIcon, MoonIcon, LogoIcon, InboxIcon, LoadingIcon, PlusIcon } from './icons';
+import {
+  SunIcon,
+  MoonIcon,
+  LogoIcon,
+  InboxIcon,
+  LoadingIcon,
+  PlusIcon,
+  PriorityLowIcon,
+  PriorityNormalIcon,
+  PriorityHightIcon,
+} from './icons';
 
 const icons = {
   sun: SunIcon,
@@ -7,6 +17,9 @@ const icons = {
   inbox: InboxIcon,
   loading: LoadingIcon,
   plus: PlusIcon,
+  priorityLow: PriorityLowIcon,
+  priorityNormal: PriorityNormalIcon,
+  priorityHight: PriorityHightIcon,
 };
 
 function Icon({ name, ...props }) {
