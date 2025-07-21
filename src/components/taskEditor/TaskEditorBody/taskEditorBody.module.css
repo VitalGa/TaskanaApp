@@ -1,0 +1,39 @@
+.priorityContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.buttons {
+  display: flex;
+  gap: 4px;
+}
+
+.btn {
+  border: none;
+  background: #f0f0f0;
+  padding: 6px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background: #e0e0e0;
+}
+
+.btn.active.low {
+  background: #ddd;
+}
+
+.btn.active.normal {
+  background: #d0c6ff; /* сиреневый оттенок */
+}
+
+.btn.active.high {
+  background: #ffcccc; /* красный оттенок */
+}

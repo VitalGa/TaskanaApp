@@ -1,0 +1,8 @@
+.taskEditor {
+  display: block;
+  background-color: #fbfbfb;
+  width: 400px;
+  height: 100%;
+  overflow-y: hidden;
+  border-left: 1px solid #e0e0e0;
+}
