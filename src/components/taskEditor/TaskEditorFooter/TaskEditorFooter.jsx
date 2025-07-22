@@ -4,10 +4,10 @@ import Button from '@/ui/button/Button';
 export const TaskEditorFooter = () => {
   return (
     <div className={styles.taskEditorFooter}>
-      <Button variant='secondary' size='small'>
+      <Button variant='thirdLeft' size='small'>
         Создать
       </Button>
-      <Button variant='third' size='small'>
+      <Button variant='thirdRight' size='small'>
         Отмена
       </Button>
     </div>
