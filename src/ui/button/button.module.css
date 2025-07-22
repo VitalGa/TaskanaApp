@@ -103,17 +103,17 @@
   background-color: #fbfbfb;
 }
 
-.thirdLeft:disabled {
+/* .thirdLeft:disabled {
   background-color: #1c1c1c80;
   box-shadow: 2px 2px 4px 0px #00000033;
   cursor: not-allowed;
-}
+} */
 
-.thirdRight:disabled {
+/* .thirdRight:disabled {
   background-color: #f3f3f380;
   box-shadow: 2px 2px 4px 0px #0000001a;
   cursor: not-allowed;
-}
+} */
 
 /* Размеры кнопок */
 
