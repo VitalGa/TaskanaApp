@@ -1,39 +1,64 @@
+.bodyWrapper {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+
 .priorityContainer {
   display: flex;
   align-items: center;
-  gap: 8px;
+  padding: 0 24px;
+  gap: 16px;
 }
 
 .label {
-  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
 }
 
 .buttons {
   display: flex;
-  gap: 4px;
+  gap: 8px;
 }
 
 .btn {
-  border: none;
-  background: #f0f0f0;
-  padding: 6px 8px;
+  width: 40px;
+  height: 40px;
   border-radius: 6px;
   cursor: pointer;
-  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s, box-shadow 0.3s;
 }
 
-.btn:hover {
-  background: #e0e0e0;
+.btn.low:hover {
+  background: #ececec;
+  box-shadow: 2px 8px 12px 0px #00000033;
+}
+
+.btn.normal:hover {
+  background: #eadfff;
+  box-shadow: 2px 8px 12px 0px #00000033;
+}
+
+.btn.high:hover {
+  background: #ffcece;
+  box-shadow: 2px 8px 12px 0px #00000033;
 }
 
 .btn.active.low {
-  background: #ddd;
+  background: #f3f3f3;
+  box-shadow: 2px 2px 4px 0px #0000001a;
 }
 
 .btn.active.normal {
-  background: #d0c6ff; /* сиреневый оттенок */
+  background: #f5f0ff;
+  box-shadow: 2px 2px 4px 0px #0000001a;
 }
 
 .btn.active.high {
-  background: #ffcccc; /* красный оттенок */
+  background: #fff4f4;
+  box-shadow: 2px 2px 4px 0px #0000001a;
 }

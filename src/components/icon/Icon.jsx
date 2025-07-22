@@ -8,6 +8,7 @@ import {
   PriorityLowIcon,
   PriorityNormalIcon,
   PriorityHightIcon,
+  MarkIcon,
 } from './icons';
 
 const icons = {
@@ -20,6 +21,7 @@ const icons = {
   priorityLow: PriorityLowIcon,
   priorityNormal: PriorityNormalIcon,
   priorityHight: PriorityHightIcon,
+  mark: MarkIcon,
 };
 
 function Icon({ name, ...props }) {

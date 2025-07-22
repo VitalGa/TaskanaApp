@@ -1,34 +1,33 @@
 import { useState } from 'react';
 import Icon from '@/components/icon/Icon';
+import styles from './taskEditorBody.module.css';
 
-import styles from './TaskEditorBody.module.css';
-
-export default function TaskEditorBody() {
-  const [priority, setPriority] = useState('normal');
+export function TaskEditorBody() {
+  const [priority, setPriority] = useState('low');
 
   return (
-    <div className={styles.priorityContainer}>
-      <span className='label'>Приоритет</span>
-      <div className='buttons'>
-        <button
-          className={`${styles.btn} ${priority === 'low' ? styles.active + ' ' + styles.low : ''}`}
-          onClick={() => setPriority('low')}>
-          <Icon name='priorityLow' />
-        </button>
-        <button
-          className={`${styles.btn} ${
-            priority === 'normal' ? styles.active + ' ' + styles.normal : ''
-          }`}
-          onClick={() => setPriority('normal')}>
-          <Icon name='priorityNormal' />
-        </button>
-        <button
-          className={`${styles.btn} ${
-            priority === 'high' ? styles.active + ' ' + styles.high : ''
-          }`}
-          onClick={() => setPriority('high')}>
-          <Icon name='priorityHight' />
-        </button>
+    <div className={styles.bodyWrapper}>
+      <div className={styles.priorityContainer}>
+        <span className={styles.label}>Приоритет</span>
+        <div className={styles.buttons}>
+          <button
+            className={`${styles.btn} ${styles.low} ${priority === 'low' ? styles.active : ''}`}
+            onClick={() => setPriority('low')}>
+            <Icon name='priorityLow' />
+          </button>
+          <button
+            className={`${styles.btn} ${styles.normal} ${
+              priority === 'normal' ? styles.active : ''
+            }`}
+            onClick={() => setPriority('normal')}>
+            <Icon name='priorityNormal' />
+          </button>
+          <button
+            className={`${styles.btn} ${styles.high} ${priority === 'high' ? styles.active : ''}`}
+            onClick={() => setPriority('high')}>
+            <Icon name='priorityHight' />
+          </button>
+        </div>
       </div>
     </div>
   );
