@@ -58,6 +58,7 @@
   font-weight: 600;
   letter-spacing: 0%;
   box-shadow: 2px 2px 4px 0px #00000033;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, filter 0.3s;
 }
 
 .thirdRight {
@@ -68,6 +69,7 @@
   line-height: 24px;
   font-weight: 600;
   letter-spacing: 0%;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, filter 0.3s;
 }
 
 .thirdLeft:hover {
@@ -103,17 +105,19 @@
   background-color: #fbfbfb;
 }
 
-/* .thirdLeft:disabled {
+.thirdLeft:disabled {
   background-color: #1c1c1c80;
+  color: #f3f3f3;
   box-shadow: 2px 2px 4px 0px #00000033;
   cursor: not-allowed;
-} */
+}
 
-/* .thirdRight:disabled {
+.thirdRight:disabled {
   background-color: #f3f3f380;
+  color: #1c1c1c;
   box-shadow: 2px 2px 4px 0px #0000001a;
   cursor: not-allowed;
-} */
+}
 
 /* Размеры кнопок */
 

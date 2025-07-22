@@ -38,6 +38,7 @@ export const TaskEditorHeader = ({ value, handleChange }) => {
               className={styles.xmarkIcon}
               onMouseDown={(e) => e.preventDefault()}
               onClick={() => {
+                // TODO: Разобрать, почему handleChange требует { target: { value: '' } }
                 handleChange({ target: { value: '' } });
                 setIsTyping(false);
               }}
