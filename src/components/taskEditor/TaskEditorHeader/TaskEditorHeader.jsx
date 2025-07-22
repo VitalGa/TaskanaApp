@@ -2,17 +2,11 @@ import React, { useState } from 'react';
 import styles from './taskEditorHeader.module.css';
 import Icon from '@/components/icon/Icon';
 
-export const TaskEditorHeader = () => {
+export const TaskEditorHeader = ({ value, handleChange }) => {
   const [isTyping, setIsTyping] = useState(false);
-  const [value, setValue] = useState('');
 
   const handleFocus = () => setIsTyping(true);
   const handleBlur = () => setIsTyping(false);
-
-  const handleChange = (e) => {
-    setValue(e.target.value);
-    setIsTyping(true);
-  };
 
   return (
     <form className={styles.taskForm}>
@@ -44,7 +38,7 @@ export const TaskEditorHeader = () => {
               className={styles.xmarkIcon}
               onMouseDown={(e) => e.preventDefault()}
               onClick={() => {
-                setValue('');
+                handleChange({ target: { value: '' } });
                 setIsTyping(false);
               }}
               aria-label='Очистить поле'>
