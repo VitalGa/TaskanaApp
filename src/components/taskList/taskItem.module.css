@@ -1,0 +1,63 @@
+.taskItemWrapper {
+  display: flex;
+  align-items: center;
+  min-height: 56px;
+  padding: 8px 8px 8px 16px;
+  border-radius: 8px;
+}
+
+.taskItemWrapper:hover {
+  background: #fafafa;
+  box-shadow: 2px 2px 4px 0px #0000001a;
+  transition: all 0.3s ease-in-out;
+}
+
+.taskItemWrapper:active {
+  background: #fafafa;
+  box-shadow: 2px 2px 4px 0px #0000001a;
+  transition: all 0.3s ease-in-out;
+}
+
+.taskItem {
+  display: flex;
+  /* align-items: center; */
+  gap: 16px;
+}
+
+.priorityBox {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  background: #fff;
+  margin-right: 12px;
+  position: relative;
+  top: 2px;
+  left: 2px;
+  opacity: 1;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Разные бордеры для разных приоритетов */
+.low {
+  border: 1.5px solid var(--neutral-light-400, #bfbfbf);
+}
+
+.low:hover {
+  border: 1.5px solid var(--neutral-light-800, #1c1c1c);
+}
+
+.normal {
+  border: 1.5px solid var(--secondary-light-300, #b792ff);
+}
+
+.normal:hover {
+  border: 1.5px solid var(--secondary-light-500, #581bcc);
+}
+
+.high {
+  border: 1.5px solid var(--primary-light-300, #f25959);
+}
+
+.high:hover {
+  border: 1.5px solid var(--primary-light-500, #a60c0c);
+}

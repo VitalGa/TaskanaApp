@@ -3,29 +3,31 @@ import { useState, useContext } from 'react';
 import { TaskEditorHeader, TaskEditorBody, TaskEditorFooter } from '@/components/taskEditor';
 import styles from './taskEditor.module.css';
 import { TaskContext } from '@/context/TaskContext';
+import { useTaskEditor } from '@/context/TaskEditorContext';
 
 export const TaskEditor = () => {
   const { addTask } = useContext(TaskContext);
+  const { isTaskEditorOpen } = useTaskEditor();
 
   const handleCreate = () => {
     addTask({ title, priority });
   };
 
   const [title, setTitle] = useState('');
-  console.log(title);
 
   const [priority, setPriority] = useState('low');
-  console.log(priority);
 
   const handleChange = (e) => {
     setTitle(e.target.value);
   };
 
   return (
-    <div className={styles.taskEditor}>
-      <TaskEditorHeader value={title} handleChange={handleChange} />
-      <TaskEditorBody priority={priority} setPriority={setPriority} />
-      <TaskEditorFooter disabled={title === ''} handleCreate={handleCreate} />
+    <div className={styles.taskEditorWrapper}>
+      <div className={`${styles.taskEditor} ${isTaskEditorOpen ? styles.taskEditorOpen : ''}`}>
+        <TaskEditorHeader value={title} handleChange={handleChange} />
+        <TaskEditorBody priority={priority} setPriority={setPriority} />
+        <TaskEditorFooter disabled={title === ''} handleCreate={handleCreate} />
+      </div>
     </div>
   );
 };

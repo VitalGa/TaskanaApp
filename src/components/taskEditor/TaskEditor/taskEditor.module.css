@@ -6,4 +6,30 @@
   height: 100%;
   overflow-y: hidden;
   border-left: 1px solid #e0e0e0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #fff;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.08);
+  transform: translateX(100%);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 100;
+}
+
+.taskEditorOpen {
+  transform: translateX(0);
+}
+
+.taskEditorWrapper {
+  position: relative;
+  width: var(--sideBar-width);
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--neutral-100);
+  padding: var(--spacing-lg);
+  padding-bottom: var(--sidebar-padding-bottom);
+  gap: var(--spacing-lg);
+  border-left: var(--border-width-thin) solid var(--neutral-300);
+  overflow-y: auto;
+  transition: background-color var(--transition-theme), border-color var(--transition-theme);
 }

@@ -1,11 +1,14 @@
 import AppLayout from '@/layouts/appLayout/AppLayout';
-import { TaskProvider } from '@/context';
+import { TaskProvider } from '@/context/TaskContext';
+import { TaskEditorProvider } from '@/context/TaskEditorContext';
 
 function App() {
   return (
-    <TaskProvider>
-      <AppLayout />
-    </TaskProvider>
+    <TaskEditorProvider>
+      <TaskProvider>
+        <AppLayout />
+      </TaskProvider>
+    </TaskEditorProvider>
   );
 }
 

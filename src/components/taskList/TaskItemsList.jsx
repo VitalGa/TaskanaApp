@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { TaskContext } from '@/context/TaskContext';
 import TaskItem from './TaskItem';
+import styles from './taskItemsList.module.css';
 
 function TaskItemsList() {
   const { tasks } = useContext(TaskContext);
@@ -9,10 +10,13 @@ function TaskItemsList() {
   if (tasks.length === 0) return null;
 
   return (
-    <div>
-      {tasks.map((task) => (
-        <TaskItem key={task.id} title={task.title} priority={task.priority} />
-      ))}
+    <div className={styles.taskItemsList}>
+      {tasks
+        .slice()
+        .reverse()
+        .map((task) => (
+          <TaskItem key={task.id} title={task.title} priority={task.priority} />
+        ))}
     </div>
   );
 }
