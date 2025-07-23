@@ -21,15 +21,9 @@
 }
 
 .taskEditorWrapper {
-  position: relative;
-  width: var(--sideBar-width);
+  position: absolute;
+  top: 0;
+  right: 0;
   height: 100%;
-  overflow: hidden;
-  background-color: var(--neutral-100);
-  padding: var(--spacing-lg);
-  padding-bottom: var(--sidebar-padding-bottom);
-  gap: var(--spacing-lg);
-  border-left: var(--border-width-thin) solid var(--neutral-300);
-  overflow-y: auto;
-  transition: background-color var(--transition-theme), border-color var(--transition-theme);
+  width: 0;
 }

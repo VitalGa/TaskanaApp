@@ -14,12 +14,8 @@ function Content() {
       <div className={`flex flex-col flex-grow`}>
         <IncomingTasks />
       </div>
-      {/* {isTaskEditorOpen ? <TaskEditor /> : <SideBar />} */}
-      {isTaskEditorOpen ? (
-        <TaskEditor onClose={closeTaskEditor} />
-      ) : (
-        <SideBar onCreateClick={openTaskEditor} />
-      )}
+      <SideBar />
+      <TaskEditor />
     </div>
   );
 }
