@@ -1,7 +1,12 @@
 import AppLayout from '@/layouts/appLayout/AppLayout';
+import { TaskProvider } from '@/context';
 
 function App() {
-  return <AppLayout />;
+  return (
+    <TaskProvider>
+      <AppLayout />
+    </TaskProvider>
+  );
 }
 
 export default App;

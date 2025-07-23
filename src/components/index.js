@@ -11,3 +11,4 @@ export { default as NavBar } from './navBar/NavBar';
 export { default as SideBar } from './sideBar/SideBar';
 export { default as Statistic } from './statistic/Statistic';
 export { default as TaskList } from './taskList/TaskList';
+export { default as TaskItemsList } from './taskList/TaskItemsList';

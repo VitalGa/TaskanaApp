@@ -1,10 +1,7 @@
-import { useState } from 'react';
 import Icon from '@/components/icon/Icon';
 import styles from './taskEditorBody.module.css';
 
-export function TaskEditorBody() {
-  const [priority, setPriority] = useState('low');
-
+export function TaskEditorBody({ priority, setPriority }) {
   return (
     <div className={styles.bodyWrapper}>
       <div className={styles.priorityContainer}>

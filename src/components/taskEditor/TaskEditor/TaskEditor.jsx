@@ -5,6 +5,10 @@ import styles from './taskEditor.module.css';
 
 export const TaskEditor = () => {
   const [value, setValue] = useState('');
+  console.log(value);
+
+  const [priority, setPriority] = useState('low');
+  console.log(priority);
 
   const handleChange = (e) => {
     setValue(e.target.value);
@@ -13,7 +17,7 @@ export const TaskEditor = () => {
   return (
     <div className={styles.taskEditor}>
       <TaskEditorHeader value={value} handleChange={handleChange} />
-      <TaskEditorBody />
+      <TaskEditorBody priority={priority} setPriority={setPriority} />
       <TaskEditorFooter disabled={value === ''} />
     </div>
   );
