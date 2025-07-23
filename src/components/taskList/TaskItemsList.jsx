@@ -4,6 +4,7 @@ import TaskItem from './TaskItem';
 
 function TaskItemsList() {
   const { tasks } = useContext(TaskContext);
+  console.log(tasks);
 
   if (tasks.length === 0) return null;
 
