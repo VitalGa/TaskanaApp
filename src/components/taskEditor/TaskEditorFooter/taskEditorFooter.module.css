@@ -5,7 +5,7 @@
   padding: 16px 24px;
   gap: 10px;
   border-top: 1px solid var(--footer-border);
-  transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
 }
 
 .taskEditorFooter button {
@@ -17,4 +17,9 @@
   line-height: var(--line-height-md);
   letter-spacing: var(--letter-spacing-md);
   vertical-align: middle;
+}
+
+.taskEditorFooter,
+.taskEditorFooter button {
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
 }
