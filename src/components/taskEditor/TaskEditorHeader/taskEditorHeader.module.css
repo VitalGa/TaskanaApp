@@ -102,3 +102,10 @@
 .xmarkIcon:hover {
   color: #1c1c1c;
 }
+
+.taskForm,
+.inputGroup,
+.customInputContainer,
+.customInput {
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}

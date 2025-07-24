@@ -1,3 +1,8 @@
+.taskList,
+.taskListWrapper {
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
 .taskList {
   z-index: 1;
   gap: calc(var(--spacing-xl) + var(--tasklist-gap-additional));

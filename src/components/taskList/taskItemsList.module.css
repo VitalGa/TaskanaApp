@@ -1,6 +1,4 @@
-.taskItemsList {
-  display: flex;
-  flex-direction: column;
-  padding: 0 24px;
-  gap: 16px;
+.taskItemsList,
+.taskItemsListItem {
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s;
 }

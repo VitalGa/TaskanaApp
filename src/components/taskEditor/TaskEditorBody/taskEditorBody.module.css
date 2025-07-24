@@ -4,6 +4,13 @@
   flex-direction: column;
 }
 
+.bodyWrapper,
+.priorityContainer,
+.buttons,
+.btn {
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
 .priorityContainer {
   display: flex;
   align-items: center;

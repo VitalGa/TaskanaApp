@@ -1,3 +1,8 @@
+.taskEditor,
+.taskEditorWrapper {
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
 .taskEditor {
   display: flex;
   flex-direction: column;
