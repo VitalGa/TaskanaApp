@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, forwardRef } from 'react';
 import styles from './taskEditorHeader.module.css';
 import Icon from '@/components/icon/Icon';
 
-export const TaskEditorHeader = ({ value, handleChange }) => {
+export const TaskEditorHeader = forwardRef(({ value, handleChange }, ref) => {
   const [isTyping, setIsTyping] = useState(false);
 
   const handleFocus = () => setIsTyping(true);
@@ -31,6 +31,7 @@ export const TaskEditorHeader = ({ value, handleChange }) => {
             value={value}
             onChange={handleChange}
             id='task-name'
+            ref={ref}
           />
           {value && (
             <button
@@ -38,7 +39,6 @@ export const TaskEditorHeader = ({ value, handleChange }) => {
               className={styles.xmarkIcon}
               onMouseDown={(e) => e.preventDefault()}
               onClick={() => {
-                // TODO: Разобрать, почему handleChange требует { target: { value: '' } }
                 handleChange({ target: { value: '' } });
                 setIsTyping(false);
               }}
@@ -50,4 +50,4 @@ export const TaskEditorHeader = ({ value, handleChange }) => {
       </div>
     </form>
   );
-};
+});
