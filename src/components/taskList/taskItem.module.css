@@ -20,7 +20,7 @@
 
 .taskItem {
   display: flex;
-  /* align-items: center; */
+  align-items: center;
   gap: 16px;
 }
 
@@ -28,16 +28,16 @@
   width: 20px;
   height: 20px;
   border-radius: 4px;
-  background: #fff;
+  background: var(--neutral-0);
   margin-right: 12px;
   position: relative;
   top: 0;
   left: 2px;
   opacity: 1;
   transition: border-color 0.2s, box-shadow 0.2s;
+  flex-shrink: 0;
 }
 
-/* Разные бордеры для разных приоритетов */
 .low {
   border: 1.5px solid var(--neutral-light-400, #bfbfbf);
 }
@@ -64,9 +64,9 @@
 
 .taskTitle {
   display: block;
-  overflow-wrap: anywhere; /* переносит длинные слова */
-  word-break: break-word; /* дополнительная гарантия переноса */
+  overflow-wrap: anywhere;
+  word-break: break-word;
   line-height: 1.2;
   max-width: 100%;
-  text-align: left; /* выравнивание текста по левому краю */
+  text-align: left;
 }

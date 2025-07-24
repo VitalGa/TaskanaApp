@@ -183,6 +183,17 @@
 
   /* Footer Border */
   --footer-border: #e9e9e9;
+  --footer-button-left-background: #1c1c1c;
+  --footer-button-left-text: #ffffff;
+  --footer-button-left-hover: #393939;
+  --footer-button-left-disabled: #1c1c1c80;
+  --footer-button-left-disabled-text: #ffffff80;
+  --footer-button-left-pressed: #6c6c6c;
+
+  --footer-button-right-background: #f3f3f3;
+  --footer-button-right-text: #1c1c1c;
+  --footer-button-right-hover: #ececec;
+  --footer-button-right-pressed: #fbfbfb;
 }
 
 /* transition для html и body */
@@ -272,4 +283,15 @@ body {
 
   /* Footer Border */
   --footer-border: #333333;
+  --footer-button-left-background: #f3f3f3;
+  --footer-button-left-hover: #ececec;
+  --footer-button-left-disabled: #fafafa80;
+  --footer-button-left-disabled-text: #14141480;
+  --footer-button-left-pressed: #bfbfbf;
+  --footer-button-left-text: #141414;
+
+  --footer-button-right-background: #262626;
+  --footer-button-right-text: #fbfbfb;
+  --footer-button-right-hover: #333333;
+  --footer-button-right-pressed: #1c1c1c;
 }
