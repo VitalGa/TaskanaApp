@@ -31,7 +31,7 @@
   background: #fff;
   margin-right: 12px;
   position: relative;
-  top: 2px;
+  top: 0;
   left: 2px;
   opacity: 1;
   transition: border-color 0.2s, box-shadow 0.2s;
@@ -60,4 +60,13 @@
 
 .high:hover {
   border: 1.5px solid var(--primary-light-500, #a60c0c);
+}
+
+.taskTitle {
+  display: block;
+  overflow-wrap: anywhere; /* переносит длинные слова */
+  word-break: break-word; /* дополнительная гарантия переноса */
+  line-height: 1.2;
+  max-width: 100%;
+  text-align: left; /* выравнивание текста по левому краю */
 }

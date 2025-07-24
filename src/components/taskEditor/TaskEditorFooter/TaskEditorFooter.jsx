@@ -2,7 +2,7 @@ import styles from './taskEditorFooter.module.css';
 import Button from '@/ui/button/Button';
 import { useTaskEditor } from '@/context/TaskEditorContext';
 
-export const TaskEditorFooter = ({ disabled, handleCreate }) => {
+export const TaskEditorFooter = ({ disabled, handleCreate, handleCancel }) => {
   const { closeTaskEditor } = useTaskEditor();
 
   return (
@@ -16,7 +16,7 @@ export const TaskEditorFooter = ({ disabled, handleCreate }) => {
         Создать
       </Button>
       <Button
-        onClick={closeTaskEditor}
+        onClick={handleCancel}
         variant='thirdRight'
         size='small'
         className={styles.thirdRight}>

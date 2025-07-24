@@ -164,6 +164,18 @@
 
   /* Button disable background */
   --button-disable-background: #d5101080;
+
+  /* Priority buttons */
+  --priority-button-all: #ffffff;
+  --priority-button-all-focus: #141414;
+
+  --priority-button-hover-low: #ececec;
+  --priority-button-hover-normal: #eadfff;
+  --priority-button-hover-high: #ffcece;
+
+  --priority-button-active-low: #f3f3f3;
+  --priority-button-active-normal: #f5f0ff;
+  --priority-button-active-high: #fff4f4;
 }
 
 /* transition для html и body */
@@ -233,4 +245,16 @@ body {
 
   --base-black: #000000;
   --base-800: #1a1a1a;
+
+  /* Priority buttons */
+  --priority-button-all: #141414;
+  --priority-button-all-focus: #ffffff;
+
+  --priority-button-hover-low: #333333;
+  --priority-button-hover-normal: #3d2a66;
+  --priority-button-hover-high: #461313;
+
+  --priority-button-active-low: #262626;
+  --priority-button-active-normal: #261c3c;
+  --priority-button-active-high: #300b0b;
 }

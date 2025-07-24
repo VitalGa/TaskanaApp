@@ -9,7 +9,7 @@
   font-size: 32px;
   font-weight: 700;
   line-height: 40px;
-  color: #1c1c1c;
+  color: var(--footer-link-color);
   text-align: left;
 }
 
@@ -17,7 +17,7 @@
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
-  color: #1c1c1c;
+  color: var(--footer-link-color);
   text-align: left;
 }
 

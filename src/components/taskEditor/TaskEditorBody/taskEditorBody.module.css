@@ -34,31 +34,31 @@
 }
 
 .btn.low:hover {
-  background: #ececec;
+  background: var(--priority-button-hover-low);
   box-shadow: 2px 8px 12px 0px #00000033;
 }
 
 .btn.normal:hover {
-  background: #eadfff;
+  background: var(--priority-button-hover-normal);
   box-shadow: 2px 8px 12px 0px #00000033;
 }
 
 .btn.high:hover {
-  background: #ffcece;
+  background: var(--priority-button-hover-high);
   box-shadow: 2px 8px 12px 0px #00000033;
 }
 
 .btn.active.low {
-  background: #f3f3f3;
+  background: var(--priority-button-active-low);
   box-shadow: 2px 2px 4px 0px #0000001a;
 }
 
 .btn.active.normal {
-  background: #f5f0ff;
+  background: var(--priority-button-active-normal);
   box-shadow: 2px 2px 4px 0px #0000001a;
 }
 
 .btn.active.high {
-  background: #fff4f4;
+  background: var(--priority-button-active-high);
   box-shadow: 2px 2px 4px 0px #0000001a;
 }

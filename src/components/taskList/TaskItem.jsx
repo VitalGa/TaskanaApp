@@ -6,7 +6,7 @@ function TaskItem({ title, priority }) {
     <div className={styles.taskItemWrapper} tabIndex={0}>
       <div className={styles.taskItem}>
         <div className={`${styles.priorityBox} ${styles[priority]}`} />
-        <span>{title}</span>
+        <span className={styles.taskTitle}>{title}</span>
       </div>
     </div>
   );

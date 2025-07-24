@@ -7,7 +7,7 @@ import { useTaskEditor } from '@/context/TaskEditorContext';
 
 export const TaskEditor = () => {
   const { addTask } = useContext(TaskContext);
-  const { isTaskEditorOpen } = useTaskEditor();
+  const { isTaskEditorOpen, closeTaskEditor } = useTaskEditor();
   const inputRef = useRef(null);
 
   useEffect(() => {
@@ -24,6 +24,12 @@ export const TaskEditor = () => {
     addTask({ title, priority });
   };
 
+  const handleCancel = () => {
+    setTitle('');
+    setPriority('low');
+    closeTaskEditor();
+  };
+
   const [title, setTitle] = useState('');
   const [priority, setPriority] = useState('low');
 
@@ -36,7 +42,11 @@ export const TaskEditor = () => {
       <div className={`${styles.taskEditor} ${isTaskEditorOpen ? styles.taskEditorOpen : ''}`}>
         <TaskEditorHeader value={title} handleChange={handleChange} ref={inputRef} />
         <TaskEditorBody priority={priority} setPriority={setPriority} />
-        <TaskEditorFooter disabled={title === ''} handleCreate={handleCreate} />
+        <TaskEditorFooter
+          disabled={title === ''}
+          handleCreate={handleCreate}
+          handleCancel={handleCancel}
+        />
       </div>
     </div>
   );
