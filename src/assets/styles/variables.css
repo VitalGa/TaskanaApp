@@ -176,6 +176,10 @@
   --priority-button-active-low: #f3f3f3;
   --priority-button-active-normal: #f5f0ff;
   --priority-button-active-high: #fff4f4;
+
+  /* Input border */
+  --input-border: #bfbfbf;
+  --customInput-color: #6c6c6c;
 }
 
 /* transition для html и body */
@@ -257,4 +261,8 @@ body {
   --priority-button-active-low: #262626;
   --priority-button-active-normal: #261c3c;
   --priority-button-active-high: #300b0b;
+
+  /* Input border */
+  --input-border: #6c6c6c;
+  --customInput-color: #bfbfbf;
 }

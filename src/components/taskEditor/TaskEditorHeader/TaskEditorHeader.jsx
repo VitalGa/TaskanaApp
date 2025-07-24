@@ -36,14 +36,13 @@ export const TaskEditorHeader = forwardRef(({ value, handleChange }, ref) => {
           {value && (
             <button
               type='button'
-              className={styles.xmarkIcon}
               onMouseDown={(e) => e.preventDefault()}
               onClick={() => {
                 handleChange({ target: { value: '' } });
                 setIsTyping(false);
               }}
               aria-label='Очистить поле'>
-              <Icon name='mark' />
+              <Icon name='mark' className={styles.xmarkIcon} />
             </button>
           )}
         </div>
