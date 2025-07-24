@@ -180,6 +180,9 @@
   /* Input border */
   --input-border: #bfbfbf;
   --customInput-color: #6c6c6c;
+
+  /* Footer Border */
+  --footer-border: #e9e9e9;
 }
 
 /* transition для html и body */
@@ -211,6 +214,7 @@ body {
   --neutral-600: #bfbfbf;
   --neutral-300: #333333;
   --neutral-100: #1c1c1c;
+  --neutral-50: #141414;
   --neutral-0: #141414;
 
   --primary-400: #ff6f6f;
@@ -265,4 +269,7 @@ body {
   /* Input border */
   --input-border: #6c6c6c;
   --customInput-color: #bfbfbf;
+
+  /* Footer Border */
+  --footer-border: #333333;
 }
