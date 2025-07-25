@@ -1,35 +1,35 @@
 .taskForm {
   display: flex;
   flex-direction: column;
-  padding: 24px;
-  gap: 24px;
+  padding: var(--spacing-lg);
+  gap: calc(var(--spacing-md-additional) + 2px);
 }
 
 .taskFormHeader {
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 40px;
+  font-size: var(--spacing-xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--spacing-xl-additional);
   color: var(--footer-link-color);
   text-align: left;
 }
 
 .inputLabel {
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 24px;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-normal);
   color: var(--footer-link-color);
   text-align: left;
 }
 
 .inputLabelRequired {
   color: #d51010;
-  padding-left: 4px;
+  padding-left: var(--spacing-xs);
 }
 
 .inputGroup {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: calc(var(--spacing-sm-additional) + 2px);
 }
 
 .customInputContainer {
@@ -38,9 +38,10 @@
   display: flex;
   align-items: center;
   border: 1px solid var(--neutral-light-400, #bfbfbf);
-  border-radius: 8px;
-  padding: 16px 12px 16px 16px;
-  gap: 12px;
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-md) calc(var(--spacing-sm-additional) + 2px) var(--spacing-md)
+    var(--spacing-md);
+  gap: calc(var(--spacing-sm-additional) + 2px);
   background: var(--neutral-100);
 }
 .customInputContainer:hover {
@@ -60,12 +61,12 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: 24px;
+  height: var(--spacing-lg);
   border: none;
   outline: none;
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 400;
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-normal);
+  font-weight: var(--font-weight-regular);
   color: #6c6c6c;
   caret-color: #bfbfbf;
   background: transparent;
@@ -87,8 +88,8 @@
 
 .xmarkIcon {
   z-index: 10;
-  width: 10px;
-  height: 10px;
+  width: var(--spacing-sm-additional);
+  height: var(--spacing-sm-additional);
   display: flex;
   align-items: center;
   justify-content: center;

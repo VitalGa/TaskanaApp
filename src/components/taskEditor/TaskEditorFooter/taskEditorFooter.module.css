@@ -2,14 +2,14 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 16px 24px;
-  gap: 10px;
+  padding: var(--spacing-md) var(--spacing-lg);
+  gap: calc(var(--spacing-sm) + 2px);
   border-top: 1px solid var(--footer-border);
   transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
 }
 
 .taskEditorFooter button {
-  padding: 12px 16px;
+  padding: calc(var(--spacing-sm-additional) + 2px) var(--spacing-md);
   font-family: var(--font-family-source-sans-3);
   font-weight: 600;
   font-style: var(--font-style-semibold);

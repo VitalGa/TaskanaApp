@@ -7,7 +7,7 @@
   z-index: 1;
   gap: calc(var(--spacing-xl) + var(--tasklist-gap-additional));
   flex: 1;
-  padding-top: 85px;
+  padding-top: var(--spacing-3xl-additional);
 }
 
 @media (min-width: 100rem) {

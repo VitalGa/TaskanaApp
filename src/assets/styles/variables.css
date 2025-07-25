@@ -109,10 +109,13 @@
   --spacing-sm: 0.5rem; /* 8px */
   --spacing-sm-additional: 0.625rem; /* 10px */
   --spacing-md: 1rem; /* 16px */
+  --spacing-md-additional: 1.25rem; /* 20px */
   --spacing-lg: 1.5rem; /* 24px */
   --spacing-xl: 2rem; /* 32px */
+  --spacing-xl-additional: 2.5rem; /* 40px */
   --spacing-2xl: 3rem; /* 48px */
   --spacing-3xl: 4rem; /* 64px */
+  --spacing-3xl-additional: 5.3125rem; /* 85px */
   --spacing-4xl: 7.5rem; /* 120px */
   --spacing-5xl: 13rem; /* 208px */
 

@@ -14,25 +14,25 @@
 .priorityContainer {
   display: flex;
   align-items: center;
-  padding: 0 24px;
-  gap: 16px;
+  padding: 0 var(--spacing-lg);
+  gap: var(--spacing-md);
 }
 
 .label {
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 700;
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-normal);
+  font-weight: var(--font-weight-bold);
 }
 
 .buttons {
   display: flex;
-  gap: 8px;
+  gap: var(--spacing-sm);
 }
 
 .btn {
-  width: 40px;
-  height: 40px;
-  border-radius: 6px;
+  width: calc(var(--spacing-xl) + var(--spacing-sm));
+  height: calc(var(--spacing-xl) + var(--spacing-sm));
+  border-radius: calc(var(--spacing-sm) - 2px);
   cursor: pointer;
   display: flex;
   align-items: center;
