@@ -5,7 +5,8 @@
   padding: var(--spacing-md) var(--spacing-lg);
   gap: calc(var(--spacing-sm) + 2px);
   border-top: 1px solid var(--footer-border);
-  transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+  transition: background-color var(--transition-theme), color var(--transition-theme),
+    border-color var(--transition-theme), box-shadow var(--transition-theme);
 }
 
 .taskEditorFooter button {
@@ -21,5 +22,6 @@
 
 .taskEditorFooter,
 .taskEditorFooter button {
-  transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+  transition: background-color var(--transition-theme), color var(--transition-theme),
+    border-color var(--transition-theme), box-shadow var(--transition-theme);
 }

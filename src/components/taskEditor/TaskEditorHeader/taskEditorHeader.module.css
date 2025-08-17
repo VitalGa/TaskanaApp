@@ -108,5 +108,6 @@
 .inputGroup,
 .customInputContainer,
 .customInput {
-  transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+  transition: background-color var(--transition-theme), color var(--transition-theme),
+    border-color var(--transition-theme), box-shadow var(--transition-theme);
 }
