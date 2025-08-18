@@ -3,6 +3,7 @@
   background-color: var(--footer-background);
   padding: var(--footer-padding);
   margin-top: auto;
+  margin-bottom: 25px;
   transition: background-color var(--transition-theme), color var(--transition-theme);
 }
 
