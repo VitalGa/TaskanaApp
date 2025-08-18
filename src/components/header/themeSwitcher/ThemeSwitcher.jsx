@@ -5,6 +5,11 @@ import { useTheme } from '@/context';
 function ThemeSwitcher() {
   const { theme, toggleTheme } = useTheme();
 
+  const buttons = [
+    { icon: 'sun', theme: 'light' },
+    { icon: 'moon', theme: 'dark' },
+  ];
+
   const handleKeyDown = (event) => {
     if (event.key === 'Enter' || event.key === ' ') {
       event.preventDefault();
@@ -19,28 +24,22 @@ function ThemeSwitcher() {
       role='switch'
       aria-label='Переключатель темы'
       aria-checked={theme === 'dark'}
-      data-theme={theme}
+      style={{ '--active-index': theme === 'dark' ? 1 : 0 }}
       onClick={toggleTheme}
       onKeyDown={handleKeyDown}
       tabIndex={0}>
-      <button
-        tabIndex={-1}
-        type='button'
-        className={`${styles.themeSwitcherButtonSun} ${
-          theme === 'light' ? styles.themeSwitcherButtonActive : ''
-        } flex items-center justify-center`}
-        aria-hidden='true'>
-        <Icon name='sun' color='white' size={32} />
-      </button>
-      <button
-        tabIndex={-1}
-        type='button'
-        className={`${styles.themeSwitcherButtonMoon} ${
-          theme === 'dark' ? styles.themeSwitcherButtonActive : ''
-        } flex items-center justify-center`}
-        aria-hidden='true'>
-        <Icon name='moon' color='white' size={32} />
-      </button>
+      {buttons.map((button) => (
+        <button
+          key={button.theme}
+          tabIndex={-1}
+          type='button'
+          className={`${styles.themeSwitcherButton} ${
+            theme === button.theme ? styles.themeSwitcherButtonActive : ''
+          } flex items-center justify-center`}
+          aria-hidden='true'>
+          <Icon name={button.icon} color='white' size={32} />
+        </button>
+      ))}
     </div>
   );
 }

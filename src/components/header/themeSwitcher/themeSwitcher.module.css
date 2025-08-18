@@ -26,43 +26,54 @@
   left: var(--spacing-xs);
   width: 32px;
   height: calc(100% - var(--spacing-xs) * 2);
-  background-color: transparent;
+  background-color: var(--primary-400-fixed);
   border-radius: var(--border-radius-sm);
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition: transform 0.3s ease;
+  transform: translateX(calc(var(--active-index, 0) * (32px + var(--spacing-xs))));
   z-index: 1;
 }
 
-.themeSwitcher[data-theme='dark']::before {
-  transform: translateX(calc(32px + var(--spacing-xs)));
-  background-color: var(--primary-400-fixed);
-}
-
-.themeSwitcher[data-theme='light']::before {
-  background-color: var(--primary-400-fixed);
-}
-
-.themeSwitcherButtonSun,
-.themeSwitcherButtonMoon {
+.themeSwitcherButton {
   border-radius: var(--border-radius-sm);
   padding: var(--spacing-xs);
   background-color: transparent;
-  background-color: #262626;
   border: none;
   cursor: pointer;
   position: relative;
-  z-index: 2;
+  z-index: 3;
+  transition: opacity 0.3s ease;
 }
 
-.themeSwitcherButtonSun:disabled,
-.themeSwitcherButtonMoon:disabled {
+.themeSwitcherButton:not(.themeSwitcherButtonActive) {
+  opacity: 0.4;
+}
+
+.themeSwitcherButton:disabled {
   cursor: default;
 }
 
 .themeSwitcherButtonActive {
   background-color: transparent;
+  opacity: 1 !important;
 }
 
-.themeSwitcher:hover .themeSwitcherButtonActive {
+/* Белый hover фон, который движется */
+.themeSwitcher::after {
+  content: '';
+  position: absolute;
+  top: var(--spacing-xs);
+  left: var(--spacing-xs);
+  width: 32px;
+  height: calc(100% - var(--spacing-xs) * 2);
+  background-color: transparent;
+  border-radius: var(--border-radius-sm);
+  transition: transform 0.3s ease, background-color 0.2s ease;
+  transform: translateX(calc(var(--active-index, 0) * (32px + var(--spacing-xs))));
+  z-index: 2;
+  pointer-events: none;
+}
+
+.themeSwitcher:hover::after {
   background-color: var(--neutral-0-fixed);
 }
 
