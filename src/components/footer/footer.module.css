@@ -7,9 +7,10 @@
 }
 
 .footer__link {
-  color: inherit;
+  color: var(--neutral-600);
   text-decoration: underline;
   margin-left: var(--spacing-xs);
+  transition: color var(--transition-theme);
 }
 
 .footer__link:hover {

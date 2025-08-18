@@ -62,10 +62,10 @@
   background-color: transparent;
 }
 
-.themeSwitcherButtonActive:hover {
+.themeSwitcher:hover .themeSwitcherButtonActive {
   background-color: var(--neutral-0-fixed);
 }
 
-.themeSwitcherButtonActive:hover svg {
+.themeSwitcher:hover .themeSwitcherButtonActive svg {
   color: black;
 }
