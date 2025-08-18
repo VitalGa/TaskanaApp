@@ -1,5 +1,17 @@
 .appLayout {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
   height: 100vh;
+  width: 100%;
+}
+
+.header {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.content {
+  grid-column: 1;
+  grid-row: 2;
 }

@@ -7,17 +7,17 @@
   z-index: 1;
   gap: calc(var(--spacing-xl) + var(--tasklist-gap-additional));
   flex: 1;
-  padding-top: var(--spacing-3xl-additional);
+  padding-top: var(--spacing-2xl);
 }
 
 @media (min-width: 100rem) {
   .taskList {
-    padding-top: var(--spacing-4xl);
+    padding-top: var(--spacing-3xl);
   }
 }
 
 @media (min-width: 120rem) {
   .taskList {
-    padding-top: var(--spacing-5xl);
+    padding-top: var(--spacing-3xl-additional);
   }
 }

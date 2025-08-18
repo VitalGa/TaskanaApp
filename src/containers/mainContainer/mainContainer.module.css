@@ -1,5 +1,4 @@
 .mainContainer {
-  scrollbar-gutter: stable;
   position: relative;
   overflow-y: auto;
   overflow-x: hidden;

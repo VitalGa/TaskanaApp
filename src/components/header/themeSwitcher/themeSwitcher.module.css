@@ -28,6 +28,7 @@
   height: calc(100% - var(--spacing-xs) * 2);
   background-color: var(--primary-400-fixed);
   border-radius: var(--border-radius-sm);
+  box-shadow: var(--shadow-base-default);
   transition: transform 0.3s ease;
   transform: translateX(calc(var(--active-index, 0) * (32px + var(--spacing-xs))));
   z-index: 1;
@@ -57,7 +58,6 @@
   opacity: 1 !important;
 }
 
-/* Белый hover фон, который движется */
 .themeSwitcher::after {
   content: '';
   position: absolute;

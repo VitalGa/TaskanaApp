@@ -27,6 +27,8 @@
 
   /* Layout */
   --sideBar-width: 25rem; /* 400px -> 25rem */
+  --navBar-width: 12.75rem; /* 204px -> 12.75rem */
+  --barBorderColor: #ececec;
 
   /* Component sizes */
   --button-height: calc(var(--spacing-xl) + 0.5rem); /* 40px -> calc(32px + 8px) */
@@ -248,6 +250,9 @@ body {
   --focus-outline-color: #ffffff;
   --focus-outline-width: 0.125rem; /* 2px -> 0.125rem */
   --focus-outline-offset: 0.125rem; /* 2px -> 0.125rem */
+
+  /* Bar Border Color */
+  --barBorderColor: #333333;
 
   /* BookillustrationIcon  */
   --book-lightTheme: #141414;

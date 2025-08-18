@@ -1,5 +1,5 @@
 .content {
   position: relative;
-  height: calc(100dvh - var(--spacing-3xl));
-  overflow: hidden;
+  flex: 1;
+  min-height: 0;
 }

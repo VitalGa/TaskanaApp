@@ -5,11 +5,11 @@ import { IncomingTasks } from '@/pages';
 import { useState } from 'react';
 import { useTaskEditor } from '@/context/TaskEditorContext';
 
-function Content() {
+function Content({ className = '' }) {
   const { isTaskEditorOpen, openTaskEditor, closeTaskEditor } = useTaskEditor();
 
   return (
-    <div className={`${styles.content} flex`}>
+    <div className={`${styles.content} ${className} flex`}>
       <NavBar />
       <div className={`flex flex-col flex-grow`}>
         <IncomingTasks />

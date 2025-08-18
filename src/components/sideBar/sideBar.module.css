@@ -2,11 +2,14 @@
   display: block;
   background-color: var(--neutral-100);
   width: var(--sideBar-width);
+  min-width: var(--sideBar-width);
+  flex-shrink: 0;
   padding: var(--spacing-lg);
   padding-bottom: var(--sidebar-padding-bottom);
   gap: var(--spacing-lg);
-  border-left: var(--border-width-thin) solid var(--neutral-300);
+  border-left: var(--border-width-thin) solid var(--barBorderColor);
   overflow-y: auto;
+  overflow-x: hidden;
   transition: background-color var(--transition-theme), border-color var(--transition-theme);
 }
 
@@ -16,12 +19,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-@media (min-width: 120rem) {
-  .sideBar__wrapper {
-    margin-top: 0;
-  }
 }
 
 .sideBar__figure {

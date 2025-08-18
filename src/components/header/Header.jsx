@@ -4,7 +4,7 @@ import { Logo, Icon, ThemeSwitcher } from '@/components';
 import { Button } from '@/ui';
 import { useTaskEditor } from '@/context/TaskEditorContext';
 
-function Header() {
+function Header({ className = '' }) {
   const [isLoading, setIsLoading] = useState(false);
   const { openTaskEditor } = useTaskEditor();
 
@@ -17,7 +17,7 @@ function Header() {
   // };
 
   return (
-    <header className={`${styles.header} flex justify-between`}>
+    <header className={`${styles.header} ${className} flex justify-between`}>
       <Logo className={styles.logo} />
       <div className={`flex gap-24`}>
         <Button

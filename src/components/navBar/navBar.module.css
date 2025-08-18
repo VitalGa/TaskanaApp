@@ -1,10 +1,13 @@
 .wrapper {
   display: block;
   width: var(--navBar-width);
+  min-width: var(--navBar-width);
+  flex-shrink: 0;
   background-color: var(--neutral-100);
   padding: var(--spacing-lg) var(--spacing-md);
-  border-right: var(--border-width-thin) solid var(--neutral-300);
+  border-right: var(--border-width-thin) solid var(--barBorderColor);
   overflow-y: auto;
+  overflow-x: hidden;
   transition: background-color var(--transition-theme), border-color var(--transition-theme);
 }
 

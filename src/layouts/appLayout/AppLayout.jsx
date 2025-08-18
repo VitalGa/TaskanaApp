@@ -5,8 +5,8 @@ import { Content } from '@/layouts';
 function AppLayout() {
   return (
     <div className={styles.appLayout}>
-      <Header />
-      <Content />
+      <Header className={styles.header} />
+      <Content className={styles.content} />
     </div>
   );
 }
