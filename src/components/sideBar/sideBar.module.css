@@ -5,7 +5,6 @@
   min-width: var(--sideBar-width);
   flex-shrink: 0;
   padding: var(--spacing-lg);
-  padding-bottom: var(--sidebar-padding-bottom);
   gap: var(--spacing-lg);
   border-left: var(--border-width-thin) solid var(--barBorderColor);
   overflow-y: auto;
@@ -14,7 +13,6 @@
 }
 
 .sideBar__wrapper {
-  padding-top: 8px;
   min-height: 100%;
   display: flex;
   align-items: center;
