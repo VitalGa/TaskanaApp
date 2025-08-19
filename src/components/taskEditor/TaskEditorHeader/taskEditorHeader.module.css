@@ -49,11 +49,13 @@
 }
 
 .customInputContainer:focus-within {
-  border: 4px solid var(--footer-link-color);
+  outline: var(--focus-outline-width) solid var(--focus-outline-color);
+  outline-offset: var(--focus-outline-offset);
 }
 
 .typing {
-  border: 4px solid var(--neutral-light-800, #1c1c1c);
+  outline: var(--focus-outline-width) solid var(--focus-outline-color);
+  outline-offset: var(--focus-outline-offset);
 }
 
 .customInput {

@@ -20,6 +20,16 @@
   vertical-align: middle;
 }
 
+.taskEditorFooter > .thirdLeft:focus-visible {
+  outline: var(--focus-outline-width) solid var(--footer-button-left-background);
+  outline-offset: var(--focus-outline-offset);
+}
+
+.taskEditorFooter > .thirdRight:focus-visible {
+  outline: var(--focus-outline-width) solid var(--footer-button-right-text);
+  outline-offset: var(--focus-outline-offset);
+}
+
 .taskEditorFooter,
 .taskEditorFooter button {
   transition: background-color var(--transition-theme), color var(--transition-theme),
