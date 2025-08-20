@@ -30,6 +30,10 @@ export const TaskEditor = () => {
     closeTaskEditor();
   };
 
+  const handleOverlayClick = () => {
+    handleCancel();
+  };
+
   const [title, setTitle] = useState('');
   const [priority, setPriority] = useState('low');
 
@@ -38,16 +42,23 @@ export const TaskEditor = () => {
   };
 
   return (
-    <div className={styles.taskEditorWrapper}>
-      <div className={`${styles.taskEditor} ${isTaskEditorOpen ? styles.taskEditorOpen : ''}`}>
-        <TaskEditorHeader value={title} handleChange={handleChange} ref={inputRef} />
-        <TaskEditorBody priority={priority} setPriority={setPriority} />
-        <TaskEditorFooter
-          disabled={title === ''}
-          handleCreate={handleCreate}
-          handleCancel={handleCancel}
-        />
+    <>
+      <div
+        className={`${styles.overlay} ${isTaskEditorOpen ? styles.overlayVisible : ''}`}
+        onClick={handleOverlayClick}
+      />
+
+      <div className={styles.taskEditorWrapper}>
+        <div className={`${styles.taskEditor} ${isTaskEditorOpen ? styles.taskEditorOpen : ''}`}>
+          <TaskEditorHeader value={title} handleChange={handleChange} ref={inputRef} />
+          <TaskEditorBody priority={priority} setPriority={setPriority} />
+          <TaskEditorFooter
+            disabled={title === ''}
+            handleCreate={handleCreate}
+            handleCancel={handleCancel}
+          />
+        </div>
       </div>
-    </div>
+    </>
   );
 };

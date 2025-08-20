@@ -8,11 +8,13 @@ export function TaskEditorBody({ priority, setPriority }) {
         <span className={styles.label}>Приоритет</span>
         <div className={styles.buttons}>
           <button
+            type='button'
             className={`${styles.btn} ${styles.low} ${priority === 'low' ? styles.active : ''}`}
             onClick={() => setPriority('low')}>
             <Icon name='priorityLow' />
           </button>
           <button
+            type='button'
             className={`${styles.btn} ${styles.normal} ${
               priority === 'normal' ? styles.active : ''
             }`}
@@ -20,6 +22,7 @@ export function TaskEditorBody({ priority, setPriority }) {
             <Icon name='priorityNormal' />
           </button>
           <button
+            type='button'
             className={`${styles.btn} ${styles.high} ${priority === 'high' ? styles.active : ''}`}
             onClick={() => setPriority('high')}>
             <Icon name='priorityHight' />
