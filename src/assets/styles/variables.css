@@ -164,6 +164,9 @@
   /* Focus outline color */
   --focus-outline-color: #ffffff;
 
+  /* Focus task color */
+  --hover-task-color: #fafafa;
+
   /* Animations */
   --transition-fast: 150ms;
   --transition-normal: 300ms;
@@ -174,16 +177,20 @@
   --button-disable-background: #d5101080;
 
   /* Priority buttons */
-  --priority-button-all: #ffffff;
-  --priority-button-all-focus: #141414;
+  /* --priority-button-all: #ffffff;
+  --priority-button-all-focus: #141414; */
 
-  --priority-button-hover-low: #ececec;
-  --priority-button-hover-normal: #eadfff;
-  --priority-button-hover-high: #ffcece;
+  --priority-button-low: #bfbfbf;
+  --priority-button-normal: #b792ff;
+  --priority-button-high: #f25959;
 
-  --priority-button-active-low: #f3f3f3;
-  --priority-button-active-normal: #f5f0ff;
-  --priority-button-active-high: #fff4f4;
+  --priority-button-hover-low: #1c1c1c;
+  --priority-button-hover-normal: #581bcc;
+  --priority-button-hover-high: #a60c0c;
+
+  --priority-button-active-low: #bfbfbf;
+  --priority-button-active-normal: #eadfff;
+  --priority-button-active-high: #ffcece;
 
   /* Input border */
   --input-border: #bfbfbf;
@@ -250,8 +257,11 @@ body {
   --shadow-sm-default: 0.125rem 0.125rem 0.25rem 0px #0000004d; /* 2px 2px 4px -> 0.125rem 0.125rem 0.25rem */
   --shadow-sm-hover: 0.125rem 0.5rem 0.75rem 0px #00000099; /* 2px 8px 12px -> 0.125rem 0.5rem 0.75rem */
 
-  /* Фокус для Tab навигации - используем значения из :root */
+  /* Фокус для Tab навигации  */
   --focus-outline-color: #ffffff;
+
+  /* Focus task color */
+  --hover-task-color: #1c1c1c;
 
   /* Bar Border Color */
   --barBorderColor: #333333;
@@ -276,16 +286,20 @@ body {
   --base-800: #1a1a1a;
 
   /* Priority buttons */
-  --priority-button-all: #141414;
-  --priority-button-all-focus: #ffffff;
+  /* --priority-button-all: #141414;
+  --priority-button-all-focus: #ffffff; */
+
+  --priority-button-low: #6c6c6c;
+  --priority-button-normal: #7d45ea;
+  --priority-button-high: #a60c0c;
 
   --priority-button-hover-low: #333333;
   --priority-button-hover-normal: #3d2a66;
   --priority-button-hover-high: #461313;
 
-  --priority-button-active-low: #262626;
-  --priority-button-active-normal: #261c3c;
-  --priority-button-active-high: #300b0b;
+  --priority-button-active-low: #6c6c6c;
+  --priority-button-active-normal: #3d2a66;
+  --priority-button-active-high: #461313;
 
   /* Input border */
   --input-border: #6c6c6c;

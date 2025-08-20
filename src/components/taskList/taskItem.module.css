@@ -7,14 +7,22 @@
 }
 
 .taskItemWrapper:hover {
-  background: #fafafa;
+  background: var(--hover-task-color);
+  box-shadow: 2px 2px 4px 0px #0000001a;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.taskItemWrapper:active {
+  background: var(--hover-task-color);
   box-shadow: 2px 2px 4px 0px #0000001a;
   transition: all 0.3s ease-in-out;
 }
 
-.taskItemWrapper:active {
-  background: #fafafa;
-  box-shadow: 2px 2px 4px 0px #0000001a;
+.taskItemWrapper:focus {
+  outline: none;
+  background: var(--hover-task-color);
+  box-shadow: var(--shadow-sm-default), 0 0 0 2px var(--priority-button-all-focus);
   transition: all 0.3s ease-in-out;
 }
 
@@ -39,27 +47,42 @@
 }
 
 .low {
-  border: 1.5px solid var(--neutral-light-400, #bfbfbf);
+  border: 1.5px solid var(--priority-button-low);
 }
 
 .low:hover {
-  border: 1.5px solid var(--neutral-light-800, #1c1c1c);
+  border: 1.5px solid var(--priority-button-hover-low);
+}
+
+.low:focus {
+  border: 1.5px solid var(--priority-button-hover-low);
+  outline: 4px solid var(--priority-button-active-low);
 }
 
 .normal {
-  border: 1.5px solid var(--secondary-light-300, #b792ff);
+  border: 1.5px solid var(--priority-button-normal);
 }
 
 .normal:hover {
-  border: 1.5px solid var(--secondary-light-500, #581bcc);
+  border: 1.5px solid var(--priority-button-hover-normal);
+}
+
+.normal:focus {
+  border: 1.5px solid var(--priority-button-hover-normal);
+  outline: 4px solid var(--priority-button-active-normal);
 }
 
 .high {
-  border: 1.5px solid var(--primary-light-300, #f25959);
+  border: 1.5px solid var(--priority-button-high);
 }
 
 .high:hover {
-  border: 1.5px solid var(--primary-light-500, #a60c0c);
+  border: 1.5px solid var(--priority-button-hover-high);
+}
+
+.high:focus {
+  border: 1.5px solid var(--priority-button-hover-high);
+  outline: 4px solid var(--priority-button-active-high);
 }
 
 .taskTitle {
