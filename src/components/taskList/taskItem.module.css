@@ -50,11 +50,15 @@
   border: 1.5px solid var(--priority-button-low);
 }
 
-.low:hover {
+.taskItemWrapper:hover .priorityBox.low {
   border: 1.5px solid var(--priority-button-hover-low);
 }
 
-.low:focus {
+.taskItemWrapper:active .priorityBox.low {
+  border: 1.5px solid var(--priority-button-active-low);
+}
+
+.taskItemWrapper:focus .priorityBox.low {
   border: 1.5px solid var(--priority-button-hover-low);
   outline: 4px solid var(--priority-button-active-low);
 }
@@ -63,11 +67,15 @@
   border: 1.5px solid var(--priority-button-normal);
 }
 
-.normal:hover {
+.taskItemWrapper:hover .priorityBox.normal {
   border: 1.5px solid var(--priority-button-hover-normal);
 }
 
-.normal:focus {
+.taskItemWrapper:active .priorityBox.normal {
+  border: 1.5px solid var(--priority-button-active-normal);
+}
+
+.taskItemWrapper:focus .priorityBox.normal {
   border: 1.5px solid var(--priority-button-hover-normal);
   outline: 4px solid var(--priority-button-active-normal);
 }
@@ -76,11 +84,15 @@
   border: 1.5px solid var(--priority-button-high);
 }
 
-.high:hover {
+.taskItemWrapper:hover .priorityBox.high {
   border: 1.5px solid var(--priority-button-hover-high);
 }
 
-.high:focus {
+.taskItemWrapper:active .priorityBox.high {
+  border: 1.5px solid var(--priority-button-active-high);
+}
+
+.taskItemWrapper:focus .priorityBox.high {
   border: 1.5px solid var(--priority-button-hover-high);
   outline: 4px solid var(--priority-button-active-high);
 }

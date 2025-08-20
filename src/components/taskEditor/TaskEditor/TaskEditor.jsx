@@ -22,6 +22,9 @@ export const TaskEditor = () => {
 
   const handleCreate = () => {
     addTask({ title, priority });
+    setTitle('');
+    setPriority('low');
+    closeTaskEditor();
   };
 
   const handleCancel = () => {

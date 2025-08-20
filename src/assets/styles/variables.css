@@ -285,17 +285,13 @@ body {
   --base-black: #000000;
   --base-800: #1a1a1a;
 
-  /* Priority buttons */
-  /* --priority-button-all: #141414;
-  --priority-button-all-focus: #ffffff; */
-
   --priority-button-low: #6c6c6c;
   --priority-button-normal: #7d45ea;
   --priority-button-high: #a60c0c;
 
-  --priority-button-hover-low: #333333;
-  --priority-button-hover-normal: #3d2a66;
-  --priority-button-hover-high: #461313;
+  --priority-button-hover-low: #fbfbfb;
+  --priority-button-hover-normal: #b792ff;
+  --priority-button-hover-high: #f25959;
 
   --priority-button-active-low: #6c6c6c;
   --priority-button-active-normal: #3d2a66;
