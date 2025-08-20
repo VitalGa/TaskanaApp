@@ -36,6 +36,7 @@ export const TaskEditorHeader = forwardRef(({ value, handleChange }, ref) => {
           {value && (
             <button
               type='button'
+              className={styles.clearButton}
               onMouseDown={(e) => e.preventDefault()}
               onClick={() => {
                 handleChange({ target: { value: '' } });

@@ -3,20 +3,24 @@
   justify-content: flex-start;
   align-items: center;
   padding: var(--spacing-md) var(--spacing-lg);
-  gap: calc(var(--spacing-sm) + 2px);
+  /* gap: calc(var(--spacing-sm) + 2px); */
+  gap: 16px;
   border-top: 1px solid var(--footer-border);
+  margin-top: auto;
   transition: background-color var(--transition-theme), color var(--transition-theme),
     border-color var(--transition-theme), box-shadow var(--transition-theme);
 }
 
 .taskEditorFooter button {
-  padding: calc(var(--spacing-sm-additional) + 2px) var(--spacing-md);
+  min-width: 90px;
+  padding: 12px 16px;
   font-family: var(--font-family-source-sans-3);
   font-weight: 600;
   font-style: var(--font-style-semibold);
-  font-size: var(--font-size-md);
-  line-height: var(--line-height-md);
-  letter-spacing: var(--letter-spacing-md);
+  /* font-size: var(--font-size-md); */
+  font-size: 18px;
+  line-height: var(--line-height-normal);
+  letter-spacing: 0;
   vertical-align: middle;
 }
 

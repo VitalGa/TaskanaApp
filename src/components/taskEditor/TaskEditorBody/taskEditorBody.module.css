@@ -1,5 +1,5 @@
 .bodyWrapper {
-  flex: 1 1 auto;
+  /* flex: 1 1 auto; */
   display: flex;
   flex-direction: column;
 }
@@ -69,4 +69,10 @@
 .btn.active.high {
   background: var(--priority-button-active-high);
   box-shadow: 2px 2px 4px 0px #0000001a;
+}
+
+/* Стили для фокуса кнопок приоритета */
+.btn:focus-visible {
+  outline: var(--focus-outline-width) solid var(--priority-button-all-focus);
+  outline-offset: var(--focus-outline-offset);
 }

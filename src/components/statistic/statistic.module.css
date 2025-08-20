@@ -1,6 +1,5 @@
 .statistic__figure {
   gap: var(--spacing-lg);
-  margin-bottom: var(--spacing-xs-additional);
 }
 
 .statistic__text {

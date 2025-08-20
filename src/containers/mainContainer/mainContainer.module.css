@@ -1,6 +1,5 @@
 .mainContainer {
   position: relative;
-  overflow-y: auto;
   overflow-x: hidden;
   /* margin-bottom: var(--spacing-lg); */
   height: 100%;

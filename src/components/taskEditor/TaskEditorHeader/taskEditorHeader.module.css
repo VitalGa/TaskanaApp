@@ -16,7 +16,7 @@
 .inputLabel {
   font-size: var(--font-size-md);
   font-weight: var(--font-weight-bold);
-  line-height: var(--line-height-normal);
+  line-height: 26px;
   color: var(--footer-link-color);
   text-align: left;
 }
@@ -29,7 +29,7 @@
 .inputGroup {
   display: flex;
   flex-direction: column;
-  gap: calc(var(--spacing-sm-additional) + 2px);
+  gap: 12px;
 }
 
 .customInputContainer {
@@ -39,8 +39,7 @@
   align-items: center;
   border: 1px solid var(--neutral-light-400, #bfbfbf);
   border-radius: var(--border-radius-md);
-  padding: var(--spacing-md) calc(var(--spacing-sm-additional) + 2px) var(--spacing-md)
-    var(--spacing-md);
+  padding: 16px 12px;
   gap: calc(var(--spacing-sm-additional) + 2px);
   background: var(--neutral-100);
 }
@@ -54,8 +53,8 @@
 }
 
 .typing {
-  outline: var(--focus-outline-width) solid var(--focus-outline-color);
-  outline-offset: var(--focus-outline-offset);
+  border: 2px solid #1c1c1c;
+  border-radius: 8px;
 }
 
 .customInput {
@@ -88,28 +87,45 @@
   opacity: 1;
 }
 
-.xmarkIcon {
-  z-index: 10;
-  width: var(--spacing-sm-additional);
-  height: var(--spacing-sm-additional);
+.clearButton {
+  width: var(--spacing-lg); /* 24px */
+  height: var(--spacing-lg); /* 24px */
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  color: #8c8c8c;
+  border: none;
+  background: transparent;
+  flex-shrink: 0;
+  box-sizing: border-box;
 }
 
-.xmarkIcon:hover {
+.xmarkIcon {
+  width: 10.48px;
+  height: 10.48px;
+  color: #8c8c8c;
+  pointer-events: none;
+}
+
+.clearButton:hover .xmarkIcon {
   color: #1c1c1c;
+}
+
+.clearButton:focus-visible {
+  outline: var(--focus-outline-width) solid var(--priority-button-all-focus);
+  outline-offset: var(--focus-outline-offset);
+  border-radius: 8px;
 }
 
 .taskForm,
 .inputGroup,
 .customInputContainer,
 .customInput {
+  transition: background-color var(--transition-theme), color var(--transition-theme),
+    box-shadow var(--transition-theme);
+}
+
+.customInputContainer:not(.typing) {
   transition: background-color var(--transition-theme), color var(--transition-theme),
     border-color var(--transition-theme), box-shadow var(--transition-theme);
 }

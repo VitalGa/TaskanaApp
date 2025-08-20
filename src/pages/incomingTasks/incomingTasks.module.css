@@ -16,8 +16,8 @@
   }
 }
 
-.incomingTasks > :nth-child(2) {
+.incomingTasks > :nth-child(1) {
   flex: 1;
-  overflow: hidden;
+  overflow-y: auto;
   min-height: 0;
 }

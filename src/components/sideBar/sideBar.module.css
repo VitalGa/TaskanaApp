@@ -1,10 +1,10 @@
 .sideBar {
   display: block;
   background-color: var(--neutral-100);
-  width: var(--sideBar-width);
+  /* width: var(--sideBar-width); */
   min-width: var(--sideBar-width);
   flex-shrink: 0;
-  padding: var(--spacing-lg);
+  /* padding: var(--spacing-lg); */
   gap: var(--spacing-lg);
   border-left: var(--border-width-thin) solid var(--barBorderColor);
   overflow-y: auto;

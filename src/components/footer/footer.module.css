@@ -1,9 +1,9 @@
 .footer {
   color: var(--neutral-600);
   background-color: var(--footer-background);
-  padding: var(--footer-padding);
+  padding: 16px 24px;
   margin-top: auto;
-  margin-bottom: var(--spacing-xss);
+  /* margin-bottom: var(--spacing-xss); */
   transition: background-color var(--transition-theme), color var(--transition-theme);
 }
 
