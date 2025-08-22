@@ -28,82 +28,93 @@
 
 .taskItem {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  padding: 8px 0;
   gap: var(--spacing-md);
 }
 
-.priorityBox {
-  width: var(--spacing-md-additional);
-  height: var(--spacing-md-additional);
-  border-radius: var(--border-radius-sm);
-  background: var(--neutral-0);
-  margin-right: calc(var(--spacing-sm-additional + 2px));
-  position: relative;
-  top: 0;
-  left: calc(var(--spacing-xs) / 2px);
-  opacity: 1;
-  transition: border-color 0.2s, box-shadow 0.2s;
+.priorityContainer {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
 }
 
+.priorityBox {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  background: var(--neutral-0);
+  border-width: 1.5px;
+  border-style: solid;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
 .low {
-  border: 1.5px solid var(--priority-button-low);
+  border-color: var(--priority-button-low);
 }
 
 .taskItemWrapper:hover .priorityBox.low {
-  border: 1.5px solid var(--priority-button-hover-low);
+  border-color: var(--priority-button-hover-low);
 }
 
 .taskItemWrapper:active .priorityBox.low {
-  border: 1.5px solid var(--priority-button-active-low);
+  border-color: var(--priority-button-active-low);
 }
 
 .taskItemWrapper:focus .priorityBox.low {
-  border: 1.5px solid var(--priority-button-hover-low);
+  border-color: var(--priority-button-hover-low);
   outline: 4px solid var(--priority-button-active-low);
 }
 
 .normal {
-  border: 1.5px solid var(--priority-button-normal);
+  border-color: var(--priority-button-normal);
 }
 
 .taskItemWrapper:hover .priorityBox.normal {
-  border: 1.5px solid var(--priority-button-hover-normal);
+  border-color: var(--priority-button-hover-normal);
 }
 
 .taskItemWrapper:active .priorityBox.normal {
-  border: 1.5px solid var(--priority-button-active-normal);
+  border-color: var(--priority-button-active-normal);
 }
 
 .taskItemWrapper:focus .priorityBox.normal {
-  border: 1.5px solid var(--priority-button-hover-normal);
+  border-color: var(--priority-button-hover-normal);
   outline: 4px solid var(--priority-button-active-normal);
 }
 
 .high {
-  border: 1.5px solid var(--priority-button-high);
+  border-color: var(--priority-button-high);
 }
 
 .taskItemWrapper:hover .priorityBox.high {
-  border: 1.5px solid var(--priority-button-hover-high);
+  border-color: var(--priority-button-hover-high);
 }
 
 .taskItemWrapper:active .priorityBox.high {
-  border: 1.5px solid var(--priority-button-active-high);
+  border-color: var(--priority-button-active-high);
 }
 
 .taskItemWrapper:focus .priorityBox.high {
-  border: 1.5px solid var(--priority-button-hover-high);
+  border-color: var(--priority-button-hover-high);
   outline: 4px solid var(--priority-button-active-high);
 }
 
 .taskTitle {
-  display: block;
+  /* display: block; */
   overflow-wrap: anywhere;
   word-break: break-word;
-  line-height: 1.2;
   max-width: 100%;
   text-align: left;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  color: var(--footer-link-color);
 }
 
 .taskItemWrapper,
