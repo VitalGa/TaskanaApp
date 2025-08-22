@@ -11,7 +11,7 @@ export function TaskEditorBody({ priority, setPriority }) {
             type='button'
             className={`${styles.btn} ${styles.low} ${priority === 'low' ? styles.active : ''}`}
             onClick={() => setPriority('low')}>
-            <Icon name='priorityLow' />
+            <Icon name='priorityLow' color={styles.priorityButtonColorLow} />
           </button>
           <button
             type='button'
@@ -19,13 +19,13 @@ export function TaskEditorBody({ priority, setPriority }) {
               priority === 'normal' ? styles.active : ''
             }`}
             onClick={() => setPriority('normal')}>
-            <Icon name='priorityNormal' />
+            <Icon name='priorityNormal' color={styles.priorityButtonColorNormal} />
           </button>
           <button
             type='button'
             className={`${styles.btn} ${styles.high} ${priority === 'high' ? styles.active : ''}`}
             onClick={() => setPriority('high')}>
-            <Icon name='priorityHight' />
+            <Icon name='priorityHight' color={styles.priorityButtonColorHigh} />
           </button>
         </div>
       </div>

@@ -177,20 +177,31 @@
   --button-disable-background: #d5101080;
 
   /* Priority buttons */
-  /* --priority-button-all: #ffffff;
-  --priority-button-all-focus: #141414; */
+
+  --priority-button-color-low: #6c6c6c;
+  --priority-button-color-normal: #742cff;
+  --priority-button-color-high: #d51010;
 
   --priority-button-low: #bfbfbf;
   --priority-button-normal: #b792ff;
   --priority-button-high: #f25959;
 
-  --priority-button-hover-low: #1c1c1c;
-  --priority-button-hover-normal: #581bcc;
-  --priority-button-hover-high: #a60c0c;
+  --priority-button-hover-low: #ececec;
+  --priority-button-hover-normal: #eadfff;
+  --priority-button-hover-high: #ffcece;
 
-  --priority-button-active-low: #bfbfbf;
-  --priority-button-active-normal: #eadfff;
-  --priority-button-active-high: #ffcece;
+  --priority-button-active-low: #f3f3f3;
+  --priority-button-active-normal: #f5f0ff;
+  --priority-button-active-high: #fff4f4;
+
+  /* Priority buttons shadow */
+  --priority-button-shadow-hover-low: 2px 8px 12px 0px #00000033;
+  --priority-button-shadow-hover-normal: 2px 8px 12px 0px #00000033;
+  --priority-button-shadow-hover-high: 2px 8px 12px 0px #00000033;
+
+  --priority-button-shadow-active-low: 2px 2px 4px 0px #0000001a;
+  --priority-button-shadow-active-normal: 2px 2px 4px 0px #0000001a;
+  --priority-button-shadow-active-high: 2px 2px 4px 0px #0000001a;
 
   /* Input border */
   --input-border: #bfbfbf;
@@ -285,17 +296,32 @@ body {
   --base-black: #000000;
   --base-800: #1a1a1a;
 
+  /* Priority buttons */
+
+  --priority-button-color-low: #bfbfbf;
+  --priority-button-color-normal: #9d6aff;
+  --priority-button-color-high: #d51010;
+
   --priority-button-low: #6c6c6c;
   --priority-button-normal: #7d45ea;
   --priority-button-high: #a60c0c;
 
-  --priority-button-hover-low: #fbfbfb;
-  --priority-button-hover-normal: #b792ff;
-  --priority-button-hover-high: #f25959;
+  --priority-button-hover-low: #333333;
+  --priority-button-hover-normal: #3d2a66;
+  --priority-button-hover-high: #461313;
 
-  --priority-button-active-low: #6c6c6c;
-  --priority-button-active-normal: #3d2a66;
-  --priority-button-active-high: #461313;
+  --priority-button-active-low: #262626;
+  --priority-button-active-normal: #261c3c;
+  --priority-button-active-high: #300b0b;
+
+  /* Priority buttons shadow */
+  --priority-button-shadow-hover-low: 2px 8px 12px 0px #00000099;
+  --priority-button-shadow-hover-normal: 2px 8px 12px 0px #00000099;
+  --priority-button-shadow-hover-high: 2px 8px 12px 0px #00000099;
+
+  --priority-button-shadow-active-low: 2px 2px 4px 0px #0000004d;
+  --priority-button-shadow-active-normal: 2px 2px 4px 0px #0000004d;
+  --priority-button-shadow-active-high: 2px 2px 4px 0px #0000004d;
 
   /* Input border */
   --input-border: #6c6c6c;
