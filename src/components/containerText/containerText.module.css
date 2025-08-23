@@ -1,3 +1,12 @@
 .containerText {
-  color: var(--neutral-800);
+}
+
+.heading {
+  line-height: 2rem;
+  letter-spacing: 0;
+}
+
+.text {
+  line-height: 1.5rem;
+  letter-spacing: 0;
 }

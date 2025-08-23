@@ -8,10 +8,12 @@ import React, { useContext } from 'react';
 function MainContainer() {
   const { tasks } = useContext(TaskContext);
 
+  const safeTasks = Array.isArray(tasks) ? tasks : [];
+
   return (
     <main className={styles.mainContainer}>
       <ContainerHeader />
-      {tasks.length === 0 ? <TaskList /> : <TaskItemsList />}
+      {safeTasks.length === 0 ? <TaskList /> : <TaskItemsList />}
     </main>
   );
 }

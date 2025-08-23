@@ -13,6 +13,7 @@
   --neutral-800: #262626;
   --neutral-900: #171717;
   --neutral-950: #0a0a0a;
+  --neutral-960: #1c1c1c;
 
   --primary-50: #eff6ff;
   --primary-100: #dbeafe;
@@ -247,6 +248,7 @@ body {
 
 :root[data-theme='dark'] {
   --neutral-900: #ececec;
+  --neutral-960: #fbfbfb;
   --neutral-800: #fbfbfb;
   --neutral-700: #ececec;
   --neutral-600: #bfbfbf;

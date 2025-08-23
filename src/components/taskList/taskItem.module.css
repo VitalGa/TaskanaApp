@@ -104,7 +104,6 @@
 }
 
 .taskTitle {
-  /* display: block; */
   overflow-wrap: anywhere;
   word-break: break-word;
   max-width: 100%;

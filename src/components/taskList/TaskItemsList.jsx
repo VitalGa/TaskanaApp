@@ -5,7 +5,11 @@ import styles from './taskItemsList.module.css';
 
 function TaskItemsList() {
   const { tasks } = useContext(TaskContext);
-  console.log(tasks);
+
+  if (!Array.isArray(tasks)) {
+    console.warn('TaskItemsList: tasks is not an array, received:', tasks);
+    return null;
+  }
 
   if (tasks.length === 0) return null;
 

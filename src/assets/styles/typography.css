@@ -55,12 +55,12 @@
 /* ============== HEADINGS ============== */
 .heading-h1 {
   font: var(--font-heading-h1);
-  color: var(--neutral-800);
+  color: var(--neutral-960);
 }
 
 .heading-h2 {
   font: var(--font-heading-h2);
-  color: var(--neutral-800);
+  color: var(--neutral-960);
 }
 
 .heading-h3 {
@@ -77,7 +77,7 @@
 
 .text-lg-regular {
   font: var(--font-lg-regular);
-  color: var(--neutral-800);
+  color: var(--neutral-960);
 }
 
 /* Medium */
