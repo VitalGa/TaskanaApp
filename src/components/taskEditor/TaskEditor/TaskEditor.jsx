@@ -9,6 +9,7 @@ export const TaskEditor = () => {
   const { addTask } = useContext(TaskContext);
   const { isTaskEditorOpen, closeTaskEditor } = useTaskEditor();
   const inputRef = useRef(null);
+  const taskEditorRef = useRef(null);
 
   useEffect(() => {
     let timeout;
@@ -20,11 +21,30 @@ export const TaskEditor = () => {
     return () => clearTimeout(timeout);
   }, [isTaskEditorOpen]);
 
+  // Добавляем обработку клавиш Escape
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape' && isTaskEditorOpen) {
+        handleCancel();
+      }
+    };
+
+    if (isTaskEditorOpen) {
+      document.addEventListener('keydown', handleKeyDown);
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isTaskEditorOpen]);
+
   const handleCreate = () => {
-    addTask({ title, priority });
-    setTitle('');
-    setPriority('low');
-    closeTaskEditor();
+    if (title.trim()) {
+      addTask({ title: title.trim(), priority });
+      setTitle('');
+      setPriority('low');
+      closeTaskEditor();
+    }
   };
 
   const handleCancel = () => {
@@ -52,11 +72,18 @@ export const TaskEditor = () => {
       />
 
       <div className={styles.taskEditorWrapper}>
-        <div className={`${styles.taskEditor} ${isTaskEditorOpen ? styles.taskEditorOpen : ''}`}>
-          <TaskEditorHeader value={title} handleChange={handleChange} ref={inputRef} />
+        <div
+          className={`${styles.taskEditor} ${isTaskEditorOpen ? styles.taskEditorOpen : ''}`}
+          ref={taskEditorRef}>
+          <TaskEditorHeader
+            value={title}
+            handleChange={handleChange}
+            onSubmit={handleCreate}
+            ref={inputRef}
+          />
           <TaskEditorBody priority={priority} setPriority={setPriority} />
           <TaskEditorFooter
-            disabled={title === ''}
+            disabled={title.trim() === ''}
             handleCreate={handleCreate}
             handleCancel={handleCancel}
           />

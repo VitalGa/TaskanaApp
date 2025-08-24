@@ -12,14 +12,16 @@ export const TaskEditorFooter = ({ disabled, handleCreate, handleCancel }) => {
         variant='thirdLeft'
         size='small'
         className={styles.thirdLeft}
-        disabled={disabled}>
+        disabled={disabled}
+        tabIndex={6}>
         Создать
       </Button>
       <Button
         onClick={handleCancel}
         variant='thirdRight'
         size='small'
-        className={styles.thirdRight}>
+        className={styles.thirdRight}
+        tabIndex={7}>
         Отмена
       </Button>
     </div>

@@ -11,6 +11,7 @@ import Spinner from '../spinner/Spinner';
  * @param {function} onClick - Обработчик клика
  * @param {string} className - Дополнительные CSS классы
  * @param {'default' | '8' | '10'} gap - Отступ между элементами в контенте (в пикселях)
+ * @param {number} tabIndex - Порядок навигации по Tab
  */
 function Button({
   children,
@@ -21,6 +22,7 @@ function Button({
   onClick,
   className = '',
   gap = 'default',
+  tabIndex,
 }) {
   const buttonClasses = [
     styles.button,
@@ -42,7 +44,8 @@ function Button({
       type='button'
       className={buttonClasses}
       disabled={disabled || loading}
-      onClick={onClick}>
+      onClick={onClick}
+      tabIndex={tabIndex}>
       <div className={contentClasses}>{children}</div>
       <div className={styles.spinnerWrapper}>
         <Spinner width={24} height={24} />

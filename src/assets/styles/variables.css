@@ -82,6 +82,10 @@
   --shadow-button-hover-fixed: 0.125rem 0.5rem 0.75rem 0px #000000cc; /* 2px 8px 12px -> 0.125rem 0.5rem 0.75rem */
   --shadow-button-disabled-fixed: 0.125rem 0.125rem 0.25rem 0px #00000080; /* 2px 2px 4px -> 0.125rem 0.125rem 0.25rem */
 
+  /* Button shadows */
+  --shadow-button-hover: 0.125rem 0.5rem 0.75rem 0px #00000040; /* 2px 8px 12px -> 0.125rem 0.5rem 0.75rem */
+  --shadow-button-disabled: 0.125rem 0.125rem 0.25rem 0px #00000033; /* 2px 2px 4px -> 0.125rem 0.125rem 0.25rem */
+
   /* Switch shadows */
   --shadow-switch-default-fixed: 0.125rem 0.125rem 0.25rem 0px #00000080; /* 2px 2px 4px -> 0.125rem 0.125rem 0.25rem */
   --shadow-switch-hover-fixed: 0.125rem 0.5rem 0.75rem 0px #000000cc; /* 2px 8px 12px -> 0.125rem 0.5rem 0.75rem */
@@ -203,6 +207,9 @@
   --priority-button-shadow-active-low: 2px 2px 4px 0px #0000001a;
   --priority-button-shadow-active-normal: 2px 2px 4px 0px #0000001a;
   --priority-button-shadow-active-high: 2px 2px 4px 0px #0000001a;
+
+  /* Priority buttons focus outline */
+  --priority-button-all-focus: #141414;
 
   /* Priority TaskItem */
   --priority-taskItem-low: #bfbfbf;
@@ -337,6 +344,9 @@ body {
   --priority-button-shadow-active-low: 2px 2px 4px 0px #0000004d;
   --priority-button-shadow-active-normal: 2px 2px 4px 0px #0000004d;
   --priority-button-shadow-active-high: 2px 2px 4px 0px #0000004d;
+
+  /* Priority buttons focus outline */
+  --priority-button-all-focus: #ffffff;
 
   /* Priority TaskItem */
   --priority-taskItem-low: #6c6c6c;
