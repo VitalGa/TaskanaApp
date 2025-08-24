@@ -9,7 +9,7 @@
   background-color: var(--neutral-100);
   width: 400px;
   height: calc(100vh - 65px);
-  overflow-y: hidden;
+  overflow: hidden;
   border-left: var(--border-width-thin) solid var(--barBorderColor);
   position: fixed;
   top: 65px;
@@ -19,6 +19,40 @@
     color var(--transition-theme), border-color var(--transition-theme),
     box-shadow var(--transition-theme);
   z-index: 1001;
+}
+
+.taskEditorContent {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  /* Кастомизация скроллбара */
+  scrollbar-width: thin;
+  scrollbar-color: var(--neutral-400) transparent;
+}
+
+/* Кастомный скроллбар для WebKit браузеров */
+.taskEditorContent::-webkit-scrollbar {
+  width: 6px;
+}
+
+.taskEditorContent::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.taskEditorContent::-webkit-scrollbar-thumb {
+  background-color: var(--neutral-400);
+  border-radius: 3px;
+  border: none;
+}
+
+.taskEditorContent::-webkit-scrollbar-thumb:hover {
+  background-color: var(--neutral-500);
+}
+
+.taskEditorFooterContainer {
+  flex-shrink: 0;
 }
 
 .taskEditorOpen {

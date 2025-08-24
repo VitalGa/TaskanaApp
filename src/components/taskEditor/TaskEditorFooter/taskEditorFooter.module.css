@@ -6,7 +6,6 @@
   /* gap: calc(var(--spacing-sm) + 2px); */
   gap: 16px;
   border-top: 1px solid var(--footer-border);
-  margin-top: auto;
   transition: background-color var(--transition-theme), color var(--transition-theme),
     border-color var(--transition-theme), box-shadow var(--transition-theme);
 }

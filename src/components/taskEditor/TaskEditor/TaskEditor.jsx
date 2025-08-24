@@ -75,18 +75,22 @@ export const TaskEditor = () => {
         <div
           className={`${styles.taskEditor} ${isTaskEditorOpen ? styles.taskEditorOpen : ''}`}
           ref={taskEditorRef}>
-          <TaskEditorHeader
-            value={title}
-            handleChange={handleChange}
-            onSubmit={handleCreate}
-            ref={inputRef}
-          />
-          <TaskEditorBody priority={priority} setPriority={setPriority} />
-          <TaskEditorFooter
-            disabled={title.trim() === ''}
-            handleCreate={handleCreate}
-            handleCancel={handleCancel}
-          />
+          <div className={styles.taskEditorContent}>
+            <TaskEditorHeader
+              value={title}
+              handleChange={handleChange}
+              onSubmit={handleCreate}
+              ref={inputRef}
+            />
+            <TaskEditorBody priority={priority} setPriority={setPriority} />
+          </div>
+          <div className={styles.taskEditorFooterContainer}>
+            <TaskEditorFooter
+              disabled={title.trim() === ''}
+              handleCreate={handleCreate}
+              handleCancel={handleCancel}
+            />
+          </div>
         </div>
       </div>
     </>
