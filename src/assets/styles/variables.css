@@ -204,6 +204,19 @@
   --priority-button-shadow-active-normal: 2px 2px 4px 0px #0000001a;
   --priority-button-shadow-active-high: 2px 2px 4px 0px #0000001a;
 
+  /* Priority TaskItem */
+  --priority-taskItem-low: #bfbfbf;
+  --priority-taskItem-normal: #b792ff;
+  --priority-taskItem-high: #f25959;
+
+  --priority-taskItem-low-hover: #1c1c1c;
+  --priority-taskItem-normal-hover: #581bcc;
+  --priority-taskItem-high-hover: #a60c0c;
+
+  --priority-taskItem-focus-low: #bfbfbf;
+  --priority-taskItem-focus-normal: #eadfff;
+  --priority-taskItem-focus-high: #ffcece;
+
   /* Input border */
   --input-border: #bfbfbf;
   --customInput-color: #6c6c6c;
@@ -324,6 +337,19 @@ body {
   --priority-button-shadow-active-low: 2px 2px 4px 0px #0000004d;
   --priority-button-shadow-active-normal: 2px 2px 4px 0px #0000004d;
   --priority-button-shadow-active-high: 2px 2px 4px 0px #0000004d;
+
+  /* Priority TaskItem */
+  --priority-taskItem-low: #6c6c6c;
+  --priority-taskItem-normal: #7d45ea;
+  --priority-taskItem-high: #a60c0c;
+
+  --priority-taskItem-low-hover: #fbfbfb;
+  --priority-taskItem-normal-hover: #b792ff;
+  --priority-taskItem-high-hover: #f25959;
+
+  --priority-taskItem-focus-low: #6c6c6c;
+  --priority-taskItem-focus-normal: #3d2a66;
+  --priority-taskItem-focus-high: #461313;
 
   /* Input border */
   --input-border: #6c6c6c;

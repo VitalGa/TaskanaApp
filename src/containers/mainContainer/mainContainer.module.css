@@ -1,7 +1,6 @@
 .mainContainer {
   position: relative;
   overflow-x: hidden;
-  /* margin-bottom: var(--spacing-lg); */
   height: 100%;
   display: flex;
   flex-direction: column;

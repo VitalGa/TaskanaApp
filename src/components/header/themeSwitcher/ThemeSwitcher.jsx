@@ -29,16 +29,13 @@ function ThemeSwitcher() {
       onKeyDown={handleKeyDown}
       tabIndex={0}>
       {buttons.map((button) => (
-        <button
+        <div
           key={button.theme}
-          tabIndex={-1}
-          type='button'
           className={`${styles.themeSwitcherButton} ${
             theme === button.theme ? styles.themeSwitcherButtonActive : ''
-          } flex items-center justify-center`}
-          aria-hidden='true'>
+          } flex items-center justify-center`}>
           <Icon name={button.icon} color={theme === button.theme ? 'white' : '#6C6C6C'} size={32} />
-        </button>
+        </div>
       ))}
     </div>
   );

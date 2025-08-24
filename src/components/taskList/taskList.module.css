@@ -6,12 +6,8 @@
 .taskList {
   z-index: 1;
   gap: calc(var(--spacing-xl) + var(--tasklist-gap-additional));
-  flex: 1;
-  /* Flexbox центрирование вместо фиксированного padding-top */
+  padding-top: 84px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  min-height: calc(100vh - var(--container-header-height));
+  justify-content: flex-start;
 }
-
-/* Убираем медиа-запросы с padding-top, так как теперь используем flexbox центрирование */
