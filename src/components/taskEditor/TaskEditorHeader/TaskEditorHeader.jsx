@@ -8,6 +8,12 @@ export const TaskEditorHeader = forwardRef(({ value, handleChange, onSubmit }, r
   const handleFocus = () => setIsTyping(true);
   const handleBlur = () => setIsTyping(false);
 
+  const handleContainerClick = () => {
+    if (ref.current) {
+      ref.current.focus();
+    }
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (onSubmit && value.trim()) {
@@ -31,9 +37,8 @@ export const TaskEditorHeader = forwardRef(({ value, handleChange, onSubmit }, r
           <span className={styles.inputLabelRequired}>*</span>
         </label>
         <div
-          className={
-            isTyping ? `${styles.inputContainer} ${styles.typing}` : styles.inputContainer
-          }>
+          className={isTyping ? `${styles.inputContainer} ${styles.typing}` : styles.inputContainer}
+          onClick={handleContainerClick}>
           <input
             type='text'
             className={styles.input}

@@ -44,6 +44,7 @@
   background: var(--neutral-100);
   outline: 2px solid transparent;
   outline-offset: 3px;
+  cursor: text;
 }
 
 .inputContainer:not(.typing) {
