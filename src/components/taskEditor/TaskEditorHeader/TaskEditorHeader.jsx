@@ -32,13 +32,11 @@ export const TaskEditorHeader = forwardRef(({ value, handleChange, onSubmit }, r
         </label>
         <div
           className={
-            isTyping
-              ? `${styles.customInputContainer} ${styles.typing}`
-              : styles.customInputContainer
+            isTyping ? `${styles.inputContainer} ${styles.typing}` : styles.inputContainer
           }>
           <input
             type='text'
-            className={styles.customInput}
+            className={styles.input}
             placeholder='Название задачи'
             onFocus={handleFocus}
             onBlur={handleBlur}
@@ -52,7 +50,7 @@ export const TaskEditorHeader = forwardRef(({ value, handleChange, onSubmit }, r
           {value && (
             <button
               type='button'
-              className={styles.clearButton}
+              className={styles.clearBtn}
               onMouseDown={(e) => e.preventDefault()}
               onClick={() => {
                 handleChange({ target: { value: '' } });
@@ -63,7 +61,7 @@ export const TaskEditorHeader = forwardRef(({ value, handleChange, onSubmit }, r
               }}
               tabIndex={2}
               aria-label='Очистить поле'>
-              <Icon name='mark' className={styles.xmarkIcon} />
+              <Icon name='mark' className={styles.clearIcon} />
             </button>
           )}
         </div>
