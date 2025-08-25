@@ -26,6 +26,7 @@ function Header({ className = '' }) {
           size='medium'
           className='text-md-semibold'
           gap='8'
+          ariaLabel='Создать новую задачу'
           onClick={() => {
             // handleClick();
             openTaskEditor();

@@ -12,6 +12,9 @@ import Spinner from '../spinner/Spinner';
  * @param {string} className - Дополнительные CSS классы
  * @param {'default' | '8' | '10'} gap - Отступ между элементами в контенте (в пикселях)
  * @param {number} tabIndex - Порядок навигации по Tab
+ * @param {string} ariaLabel - Описание кнопки для скринридеров (особенно важно для кнопок с иконками без текста)
+ * @param {string} ariaDescribedBy - ID элемента, который описывает кнопку
+ * @param {boolean} ariaPressed - Состояние нажатия для toggle-кнопок
  */
 function Button({
   children,
@@ -23,6 +26,9 @@ function Button({
   className = '',
   gap = 'default',
   tabIndex,
+  ariaLabel,
+  ariaDescribedBy,
+  ariaPressed,
 }) {
   const buttonClasses = [
     styles.button,
@@ -45,7 +51,10 @@ function Button({
       className={buttonClasses}
       disabled={disabled || loading}
       onClick={onClick}
-      tabIndex={tabIndex}>
+      tabIndex={tabIndex}
+      aria-label={ariaLabel}
+      aria-describedby={ariaDescribedBy}
+      aria-pressed={ariaPressed}>
       <div className={contentClasses}>{children}</div>
       <div className={styles.spinnerWrapper}>
         <Spinner width={24} height={24} />

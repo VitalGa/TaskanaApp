@@ -13,6 +13,29 @@ body {
   background-color: var(--neutral-0);
 }
 
+/* transition для html и body */
+html {
+  transition: background-color var(--transition-theme), color var(--transition-theme);
+}
+
+body {
+  transition: background-color var(--transition-theme), color var(--transition-theme);
+}
+
+/* transition для всех элементов, кроме focus состояний */
+/* Исключаем свойства, влияющие на layout (width, height, padding, margin) */
+* {
+  transition: background-color var(--transition-theme), color var(--transition-theme),
+    border-color var(--transition-theme), fill var(--transition-theme),
+    stroke var(--transition-theme);
+}
+
+/* Убираем transition для focus, если появляется плавно - кажется, что лагает */
+*:focus,
+*:focus-visible {
+  transition: none;
+}
+
 .flex {
   display: flex;
 }
