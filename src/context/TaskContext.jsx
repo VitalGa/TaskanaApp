@@ -22,7 +22,7 @@ export const TaskProvider = ({ children }) => {
     setTasks((prev) => prev.filter((task) => task.id !== id));
   };
 
-  const editTask = (id, { title, updatedFields }) => {
+  const editTask = (id, { updatedFields }) => {
     setTasks((prev) =>
       prev.map((task) =>
         task.id === id ? { ...task, ...updatedFields, updatedAt: new Date().toISOString() } : task,

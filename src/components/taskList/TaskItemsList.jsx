@@ -7,11 +7,8 @@ function TaskItemsList() {
   const { tasks } = useContext(TaskContext);
 
   if (!Array.isArray(tasks)) {
-    console.warn('TaskItemsList: tasks is not an array, received:', tasks);
     return null;
   }
-
-  if (tasks.length === 0) return null;
 
   return (
     <div className={styles.taskItemsList}>
