@@ -21,7 +21,7 @@ export const TaskEditor = () => {
     return () => clearTimeout(timeout);
   }, [isTaskEditorOpen]);
 
-  // Добавляем обработку клавиш Escape
+ 
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === 'Escape' && isTaskEditorOpen) {
