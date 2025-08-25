@@ -12,16 +12,11 @@ export const TaskEditor = () => {
   const taskEditorRef = useRef(null);
 
   useEffect(() => {
-    let timeout;
     if (isTaskEditorOpen && inputRef.current) {
-      timeout = setTimeout(() => {
-        inputRef.current.focus();
-      }, 300);
+      inputRef.current.focus();
     }
-    return () => clearTimeout(timeout);
   }, [isTaskEditorOpen]);
 
- 
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === 'Escape' && isTaskEditorOpen) {
