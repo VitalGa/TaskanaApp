@@ -6,7 +6,7 @@
   gap: var(--spacing-sm);
   border-radius: var(--border-radius-md);
   cursor: pointer;
-  border: none;
+  border: var(--focus-outline-width) solid transparent;
   position: relative;
   min-width: var(--button-min-width);
   transition: background-color 0.2s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
@@ -24,7 +24,7 @@
 }
 
 .primary:focus-visible {
-  border-color: #141414;
+  border: var(--focus-outline-width) solid #141414;
   outline: var(--focus-outline-width) solid var(--neutral-0-fixed);
   outline-offset: var(--focus-outline-offset);
 }

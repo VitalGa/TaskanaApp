@@ -3,15 +3,15 @@
   background-color: var(--footer-background);
   padding: 16px 24px;
   margin-top: auto;
-  /* margin-bottom: var(--spacing-xss); */
   transition: background-color var(--transition-theme), color var(--transition-theme);
 }
 
 .footer__link {
   color: var(--neutral-600);
   text-decoration: underline;
-  margin-left: var(--spacing-xs);
   transition: color var(--transition-theme);
+  border-radius: var(--border-radius-sm);
+  margin-left: calc(var(--spacing-xs) - 1px);
 }
 
 .footer__link:hover {
@@ -20,6 +20,5 @@
 
 .footer__link:focus-visible {
   outline: var(--focus-outline-width) solid var(--footer-link-color);
-  outline-offset: var(--focus-outline-offset);
-  border-radius: var(--footer-outline-width);
+  outline-offset: 0;
 }
