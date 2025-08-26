@@ -4,7 +4,7 @@
   right: 0;
   height: 100%;
   width: 0;
-  z-index: 1000;
+  z-index: 1050;
   transition: background-color var(--transition-theme), color var(--transition-theme),
     border-color var(--transition-theme), box-shadow var(--transition-theme);
 }
@@ -24,7 +24,7 @@
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), width 0.4s cubic-bezier(0.4, 0, 0.2, 1),
     background-color var(--transition-theme), color var(--transition-theme),
     border-color var(--transition-theme), box-shadow var(--transition-theme);
-  z-index: 1001;
+  z-index: 1051;
 }
 
 .taskEditorContent {
@@ -33,12 +33,10 @@
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
-  /* Кастомизация скроллбара */
   scrollbar-width: thin;
   scrollbar-color: var(--neutral-400) transparent;
 }
 
-/* Кастомный скроллбар для WebKit браузеров */
 .taskEditorContent::-webkit-scrollbar {
   width: 6px;
 }
@@ -74,7 +72,7 @@
   height: 100%;
   background-color: transparent;
   visibility: hidden;
-  z-index: 999;
+  z-index: 1049;
 }
 
 .overlayVisible {
