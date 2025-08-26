@@ -12,12 +12,9 @@ function TaskItemsList() {
 
   return (
     <div className={styles.taskItemsList}>
-      {tasks
-        .slice()
-        .reverse()
-        .map((task) => (
-          <TaskItem key={task.id} title={task.title} priority={task.priority} />
-        ))}
+      {tasks.toReversed().map((task) => (
+        <TaskItem key={task.id} title={task.title} priority={task.priority} />
+      ))}
     </div>
   );
 }
