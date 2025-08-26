@@ -118,6 +118,11 @@
   cursor: not-allowed;
 }
 
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 /* Размеры кнопок */
 
 .small {
@@ -141,7 +146,6 @@
   box-shadow: var(--shadow-button-disabled);
   pointer-events: none;
   cursor: not-allowed;
-  filter: brightness(0.7);
 }
 
 .loading {
