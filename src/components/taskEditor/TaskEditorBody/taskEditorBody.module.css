@@ -1,6 +1,30 @@
 .bodyWrapper {
   display: flex;
   flex-direction: column;
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-height: 0;
+  scrollbar-width: thin;
+  scrollbar-color: var(--neutral-400) transparent;
+}
+
+.bodyWrapper::-webkit-scrollbar {
+  width: 6px;
+}
+
+.bodyWrapper::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.bodyWrapper::-webkit-scrollbar-thumb {
+  background-color: var(--neutral-400);
+  border-radius: 3px;
+  border: none;
+}
+
+.bodyWrapper::-webkit-scrollbar-thumb:hover {
+  background-color: var(--neutral-500);
 }
 
 .bodyWrapper,
