@@ -1,1 +1,1 @@
-export { TaskEditorHeader } from './TaskEditorHeader';
+export * from './TaskEditorHeader';

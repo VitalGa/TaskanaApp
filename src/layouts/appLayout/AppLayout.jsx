@@ -2,7 +2,7 @@ import styles from './appLayout.module.css';
 import { Header } from '@/components';
 import { Content } from '@/layouts';
 
-function AppLayout() {
+export function AppLayout() {
   return (
     <div className={styles.appLayout}>
       <Header className={styles.header} />
@@ -10,5 +10,3 @@ function AppLayout() {
     </div>
   );
 }
-
-export default AppLayout;

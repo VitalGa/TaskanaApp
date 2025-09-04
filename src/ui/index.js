@@ -1,2 +1,2 @@
-export { default as Button } from './button/Button';
-export { default as Spinner } from './spinner/Spinner';
+export * from './button/Button';
+export * from './spinner/Spinner';

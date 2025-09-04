@@ -1,5 +1,5 @@
 import styles from './button.module.css';
-import Spinner from '../spinner/Spinner';
+import { Spinner } from '../spinner/Spinner';
 
 /**
  * Компонент кнопки
@@ -16,7 +16,7 @@ import Spinner from '../spinner/Spinner';
  * @param {string} ariaDescribedBy - ID элемента, который описывает кнопку
  * @param {boolean} ariaPressed - Состояние нажатия для toggle-кнопок
  */
-function Button({
+export function Button({
   children,
   variant = 'primary',
   size = 'medium',
@@ -62,5 +62,3 @@ function Button({
     </button>
   );
 }
-
-export default Button;

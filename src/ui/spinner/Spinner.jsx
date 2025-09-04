@@ -1,7 +1,7 @@
 import styles from './spinner.module.css';
 import Icon from '@/components/icon/Icon';
 
-function Spinner() {
+export function Spinner() {
   return (
     <div className={`${styles.spinnerContainer} flex items-center justify-center`}>
       <div className={`${styles.spinner} flex items-center justify-center`}>
@@ -10,5 +10,3 @@ function Spinner() {
     </div>
   );
 }
-
-export default Spinner;

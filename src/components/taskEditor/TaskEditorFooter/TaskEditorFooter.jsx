@@ -1,5 +1,5 @@
 import styles from './taskEditorFooter.module.css';
-import Button from '@/ui/button/Button';
+import { Button } from '@/ui';
 
 export const TaskEditorFooter = ({ disabled, handleCreate, handleCancel }) => {
   return (

@@ -1,5 +1,5 @@
-export { TaskEditor } from './TaskEditor/TaskEditor';
-export { TaskEditorHeader } from './TaskEditorHeader/TaskEditorHeader';
-export { TaskEditorBody } from './TaskEditorBody/TaskEditorBody';
-export { TaskEditorFooter } from './TaskEditorFooter/TaskEditorFooter';
-export { generateId } from './utils/generateId';
+export * from './TaskEditor/TaskEditor';
+export * from './TaskEditorHeader/TaskEditorHeader';
+export * from './TaskEditorBody/TaskEditorBody';
+export * from './TaskEditorFooter/TaskEditorFooter';
+export * from './utils/generateId';

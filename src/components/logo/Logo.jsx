@@ -1,7 +1,7 @@
 import styles from './logo.module.css';
 import { Icon } from '@/components';
 
-function Logo() {
+export function Logo() {
   const handleClick = (e) => {
     e.preventDefault();
   };
@@ -12,5 +12,3 @@ function Logo() {
     </a>
   );
 }
-
-export default Logo;

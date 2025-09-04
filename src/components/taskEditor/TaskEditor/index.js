@@ -1,1 +1,1 @@
-export { TaskEditor } from './TaskEditor';
+export * from './TaskEditor';

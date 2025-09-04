@@ -1,2 +1,2 @@
-export { default as AppLayout } from './appLayout/AppLayout';
-export { default as Content } from './content/Content';
+export * from './appLayout/AppLayout';
+export * from './content/Content';

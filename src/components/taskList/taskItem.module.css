@@ -20,9 +20,10 @@
 }
 
 .taskItemWrapper:focus {
-  outline: none;
+  outline: 2px solid var(--priority-button-all-focus);
+  outline-offset: -2px;
   background: var(--hover-task-color);
-  box-shadow: var(--shadow-sm-default), 0 0 0 2px var(--priority-button-all-focus);
+  box-shadow: var(--shadow-sm-default);
 }
 
 .taskItem {

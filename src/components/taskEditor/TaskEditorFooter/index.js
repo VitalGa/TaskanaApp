@@ -1,1 +1,1 @@
-export { TaskEditorFooter } from './TaskEditorFooter';
+export * from './TaskEditorFooter';

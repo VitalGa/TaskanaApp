@@ -4,7 +4,7 @@ import { Logo, Icon, ThemeSwitcher } from '@/components';
 import { Button } from '@/ui';
 import { useTaskEditor } from '@/context/TaskEditorContext';
 
-function Header({ className = '' }) {
+export function Header({ className = '' }) {
   const [isLoading, setIsLoading] = useState(false);
   const { openTaskEditor } = useTaskEditor();
 
@@ -39,5 +39,3 @@ function Header({ className = '' }) {
     </header>
   );
 }
-
-export default Header;

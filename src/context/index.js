@@ -1,5 +1,5 @@
 // Theme context
-export { ThemeProvider, useTheme } from './ThemeContext';
+export * from './ThemeContext';
 
 // Task context
-export { TaskProvider } from './TaskContext';
+export * from './TaskContext';
