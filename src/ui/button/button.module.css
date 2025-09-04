@@ -24,6 +24,7 @@
 }
 
 .primary:focus-visible {
+  background-color: var(--primary-500-fixed);
   border: var(--focus-outline-width) solid #141414;
   outline: var(--focus-outline-width) solid var(--neutral-0-fixed);
   outline-offset: var(--focus-outline-offset);
@@ -34,17 +35,18 @@
 }
 
 .secondary {
-  background-color: var(--neutral-800);
+  background-color: var(--neutral-960);
   color: var(--neutral-0);
   box-shadow: var(--shadow-base-default);
 }
 
 .secondary:hover {
-  background-color: var(--neutral-700);
+  background-color: var(--neutral-650);
   box-shadow: var(--shadow-base-hover);
 }
 
 .secondary:focus-visible {
+  background-color: var(--neutral-650);
   box-shadow: var(--shadow-base-hover);
   outline: var(--focus-outline-width) solid var(--neutral-900);
   outline-offset: var(--focus-outline-offset);

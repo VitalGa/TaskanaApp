@@ -73,10 +73,12 @@
   pointer-events: none;
 }
 
-.themeSwitcher:hover::after {
+.themeSwitcher:hover::after,
+.themeSwitcher:focus-visible::after {
   background-color: var(--neutral-0-fixed);
 }
 
-.themeSwitcher:hover .themeSwitcherButtonActive svg {
+.themeSwitcher:hover .themeSwitcherButtonActive svg,
+.themeSwitcher:focus-visible .themeSwitcherButtonActive svg {
   color: black;
 }
