@@ -82,6 +82,7 @@
 .input::placeholder {
   color: var(--input-border);
   opacity: 1;
+  transition: color var(--transition-theme);
 }
 
 .clearBtn {

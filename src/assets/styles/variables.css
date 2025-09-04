@@ -268,7 +268,7 @@
   --shadow-sm-hover: 0.125rem 0.5rem 0.75rem 0px #00000099; /* 2px 8px 12px -> 0.125rem 0.5rem 0.75rem */
 
   /* Фокус для Tab навигации  */
-  --focus-outline-color: #ffffff;
+  --focus-outline-color: #141414;
 
   /* Focus task color */
   --hover-task-color: #1c1c1c;

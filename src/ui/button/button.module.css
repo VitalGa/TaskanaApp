@@ -87,11 +87,13 @@
 }
 
 .thirdLeft:focus-visible {
+  background-color: var(--footer-button-left-hover);
   outline: var(--focus-outline-width) solid var(--focus-outline-color);
   outline-offset: var(--focus-outline-offset);
 }
 
 .thirdRight:focus-visible {
+  background-color: var(--footer-button-right-hover);
   outline: var(--focus-outline-width) solid var(--focus-outline-color);
   outline-offset: var(--focus-outline-offset);
 }
