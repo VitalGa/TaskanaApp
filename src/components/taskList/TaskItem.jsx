@@ -11,7 +11,7 @@ function TaskItem({ title, priority }) {
   const priorityClass = priorityClassMap[priority] || 'low';
 
   return (
-    <div className={styles.taskItemWrapper} tabIndex={0}>
+    <li className={styles.taskItemWrapper} tabIndex={0} role='listitem'>
       <div className={styles.taskItem}>
         <div className={styles.priorityContainer}>
           <div
@@ -22,7 +22,7 @@ function TaskItem({ title, priority }) {
         </div>
         <p className={styles.taskTitle}>{title}</p>
       </div>
-    </div>
+    </li>
   );
 }
 
