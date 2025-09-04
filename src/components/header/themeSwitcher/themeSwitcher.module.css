@@ -41,7 +41,7 @@
   border: none;
   cursor: pointer;
   position: relative;
-  z-index: var(--z-content);
+  z-index: calc(var(--z-content) + 1);
   transition: opacity 0.3s ease;
 }
 
@@ -55,7 +55,6 @@
 
 .themeSwitcherButtonActive {
   background-color: transparent;
-  opacity: 1 !important;
 }
 
 .themeSwitcher::after {
