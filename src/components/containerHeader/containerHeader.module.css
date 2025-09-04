@@ -1,7 +1,7 @@
 .containerHeader {
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: var(--z-sidebar);
   padding: var(--spacing-lg);
   height: var(--container-header-height);
   background-color: var(--neutral-0);

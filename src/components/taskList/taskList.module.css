@@ -4,7 +4,7 @@
 }
 
 .taskList {
-  z-index: 1;
+  z-index: var(--z-content);
   gap: calc(var(--spacing-xl) + var(--tasklist-gap-additional));
   padding-top: 84px;
   display: flex;

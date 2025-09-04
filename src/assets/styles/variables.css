@@ -179,6 +179,20 @@
   --transition-slow: 500ms;
   --transition-theme: 200ms ease-in-out;
 
+  /* Z-index layers */
+  --z-behind: -1; /* Элементы позади основного контента */
+  --z-base: 0; /* Базовый уровень */
+  --z-content: 1; /* Основной контент */
+  --z-sidebar: 100; /* Боковые панели */
+  --z-header: 200; /* Шапка сайта */
+  --z-dropdown: 300; /* Выпадающие меню */
+  --z-overlay: 400; /* Оверлеи и фоны модалок */
+  --z-modal: 500; /* Модальные окна */
+  --z-popover: 600; /* Всплывающие подсказки */
+  --z-toast: 700; /* Уведомления */
+  --z-tooltip: 800; /* Подсказки */
+  --z-maximum: 9999; /* Критично важные элементы */
+
   /* Button disable background */
   --button-disable-background: #d5101080;
 

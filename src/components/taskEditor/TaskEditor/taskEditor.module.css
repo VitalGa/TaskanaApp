@@ -4,7 +4,7 @@
   right: 0;
   height: 100%;
   width: 0;
-  z-index: 1050;
+  z-index: var(--z-modal);
   transition: background-color var(--transition-theme), color var(--transition-theme),
     border-color var(--transition-theme), box-shadow var(--transition-theme);
 }
@@ -24,7 +24,7 @@
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), width 0.4s cubic-bezier(0.4, 0, 0.2, 1),
     background-color var(--transition-theme), color var(--transition-theme),
     border-color var(--transition-theme), box-shadow var(--transition-theme);
-  z-index: 1051;
+  z-index: var(--z-modal);
 }
 
 .taskEditorContent {
@@ -70,7 +70,7 @@
   height: 100%;
   background-color: transparent;
   visibility: hidden;
-  z-index: 1049;
+  z-index: var(--z-overlay);
 }
 
 .overlayVisible {

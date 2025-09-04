@@ -1,6 +1,6 @@
 .header {
   height: var(--spacing-3xl);
-  z-index: 1100;
+  z-index: var(--z-header);
   position: sticky;
   top: 0;
   background-color: var(--base-black);

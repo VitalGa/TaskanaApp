@@ -19,6 +19,7 @@
 }
 
 .footer__link:focus-visible {
+  color: var(--footer-link-color);
   outline: var(--focus-outline-width) solid var(--footer-link-color);
   outline-offset: 0;
 }
