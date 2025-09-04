@@ -37,14 +37,14 @@ export const TaskEditor = () => {
     if (title.trim()) {
       addTask({ title: title.trim(), priority });
       setTitle('');
-      setPriority('low');
+      setPriority('1');
       closeTaskEditor();
     }
   };
 
   const handleCancel = () => {
     setTitle('');
-    setPriority('low');
+    setPriority('1');
     closeTaskEditor();
   };
 
@@ -53,7 +53,7 @@ export const TaskEditor = () => {
   };
 
   const [title, setTitle] = useState('');
-  const [priority, setPriority] = useState('low');
+  const [priority, setPriority] = useState('1');
 
   const handleChange = (e) => {
     setTitle(e.target.value);

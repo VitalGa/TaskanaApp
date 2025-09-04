@@ -66,44 +66,61 @@
   transition: background var(--transition-theme), box-shadow var(--transition-theme);
 }
 
-.btn.low {
+.btn.priority1 {
   color: var(--priority-button-color-low);
 }
 
-.btn.normal {
+.btn.priority2 {
   color: var(--priority-button-color-normal);
 }
 
-.btn.high {
+.btn.priority3 {
   color: var(--priority-button-color-high);
 }
 
-.btn.low:hover {
+.btn.priority1:hover {
   background: var(--priority-button-hover-low);
   box-shadow: var(--priority-button-shadow-hover-low);
 }
 
-.btn.normal:hover {
+.btn.priority2:hover {
   background: var(--priority-button-hover-normal);
   box-shadow: var(--priority-button-shadow-hover-normal);
 }
 
-.btn.high:hover {
+.btn.priority3:hover {
   background: var(--priority-button-hover-high);
   box-shadow: var(--priority-button-shadow-hover-high);
 }
 
-.btn.active.low {
+/* Отдельные классы для активных состояний */
+.activePriority1 {
+  background: var(--priority-button-active-low) !important;
+  box-shadow: var(--priority-button-shadow-active-low) !important;
+}
+
+.activePriority2 {
+  background: var(--priority-button-active-normal) !important;
+  box-shadow: var(--priority-button-shadow-active-normal) !important;
+}
+
+.activePriority3 {
+  background: var(--priority-button-active-high) !important;
+  box-shadow: var(--priority-button-shadow-active-high) !important;
+}
+
+/* Резервные комбинированные селекторы */
+.btn.priority1.active {
   background: var(--priority-button-active-low);
   box-shadow: var(--priority-button-shadow-active-low);
 }
 
-.btn.active.normal {
+.btn.priority2.active {
   background: var(--priority-button-active-normal);
   box-shadow: var(--priority-button-shadow-active-normal);
 }
 
-.btn.active.high {
+.btn.priority3.active {
   background: var(--priority-button-active-high);
   box-shadow: var(--priority-button-shadow-active-high);
 }

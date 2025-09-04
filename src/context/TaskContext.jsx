@@ -13,7 +13,7 @@ export const TaskProvider = ({ children }) => {
       title,
       priority,
       createdAt: now,
-      completed: false,
+      updatedAt: now,
     };
     setTasks((prev) => [...prev, newTask]);
   };
