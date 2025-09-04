@@ -18,10 +18,6 @@ export const TaskProvider = ({ children }) => {
     setTasks((prev) => [...prev, newTask]);
   };
 
-  const removeTask = (id) => {
-    setTasks((prev) => prev.filter((task) => task.id !== id));
-  };
-
   const editTask = (id, { updatedFields }) => {
     setTasks((prev) =>
       prev.map((task) =>
@@ -31,8 +27,6 @@ export const TaskProvider = ({ children }) => {
   };
 
   return (
-    <TaskContext.Provider value={{ tasks, addTask, removeTask, editTask }}>
-      {children}
-    </TaskContext.Provider>
+    <TaskContext.Provider value={{ tasks, addTask, editTask }}>{children}</TaskContext.Provider>
   );
 };

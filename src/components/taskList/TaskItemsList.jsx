@@ -11,10 +11,12 @@ function TaskItemsList() {
   }
 
   return (
-    <div className={styles.taskItemsList}>
-      {tasks.toReversed().map((task) => (
-        <TaskItem key={task.id} title={task.title} priority={task.priority} />
-      ))}
+    <div className={styles.taskItemsListWrapper}>
+      <div className={styles.taskItemsList}>
+        {tasks.toReversed().map((task) => (
+          <TaskItem key={task.id} title={task.title} priority={task.priority} />
+        ))}
+      </div>
     </div>
   );
 }
