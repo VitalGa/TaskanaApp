@@ -6,6 +6,7 @@
   padding: var(--spacing-sm) var(--spacing-sm) var(--spacing-sm) var(--spacing-md);
   border-radius: 8px;
   animation: fadeIn 0.5s ease-in-out;
+  outline: none;
 }
 
 .taskItemWrapper:hover {
@@ -23,7 +24,7 @@
   outline: 2px solid var(--priority-button-all-focus);
   outline-offset: -2px;
   background: var(--hover-task-color);
-  box-shadow: var(--shadow-sm-default);
+  box-shadow: 2px 2px 4px 0px #0000001a;
 }
 
 .taskItem {
@@ -106,7 +107,8 @@
 .taskItemWrapper,
 .taskItem,
 .priorityBox {
-  transition: all 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    border-color 0.3s ease-in-out;
 }
 
 @keyframes fadeIn {
