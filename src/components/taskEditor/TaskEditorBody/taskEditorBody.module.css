@@ -93,7 +93,6 @@
   box-shadow: var(--priority-button-shadow-hover-high);
 }
 
-/* Отдельные классы для активных состояний */
 .activePriority1 {
   background: var(--priority-button-active-low) !important;
   box-shadow: var(--priority-button-shadow-active-low) !important;
@@ -109,7 +108,6 @@
   box-shadow: var(--priority-button-shadow-active-high) !important;
 }
 
-/* Резервные комбинированные селекторы */
 .btn.priority1.active {
   background: var(--priority-button-active-low);
   box-shadow: var(--priority-button-shadow-active-low);
@@ -125,7 +123,6 @@
   box-shadow: var(--priority-button-shadow-active-high);
 }
 
-/* Стили для фокуса кнопок приоритета */
 .btn:focus-visible {
   outline: var(--focus-outline-width) solid var(--priority-button-all-focus);
   outline-offset: var(--focus-outline-offset);

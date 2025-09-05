@@ -39,7 +39,7 @@
   align-items: center;
   border: 1px solid transparent;
   border-radius: var(--border-radius-md);
-  padding: 16px;
+  padding: 12px;
   gap: 12px;
   background: var(--neutral-100);
   outline: 2px solid transparent;

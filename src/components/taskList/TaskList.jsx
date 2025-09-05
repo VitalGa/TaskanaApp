@@ -7,20 +7,17 @@ import styles from './taskList.module.css';
 function TaskList() {
   const { tasks } = useContext(TaskContext);
 
-  // Проверяем есть ли задачи
   const hasTasks = Array.isArray(tasks) && tasks.length > 0;
 
   return (
     <div className={`${styles.taskList} flex flex-col`}>
       {hasTasks ? (
-        // Если есть задачи - показываем список
         <ul className={styles.taskItemsList} role='list'>
           {tasks.toReversed().map((task) => (
             <TaskItem key={task.id} title={task.title} priority={task.priority} />
           ))}
         </ul>
       ) : (
-        // Если задач нет - показываем пустое состояние
         <>
           <ContainerText />
           <EmptyTask />
