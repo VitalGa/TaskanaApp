@@ -177,7 +177,14 @@
   --transition-fast: 150ms;
   --transition-normal: 300ms;
   --transition-slow: 500ms;
-  --transition-theme: 200ms ease-in-out;
+
+  /* Unified timing function for theme transitions */
+  --transition-timing: ease-in-out;
+
+  /* Theme transition system */
+  --transition-theme: 200ms var(--transition-timing);
+  --transition-interactive: 150ms var(--transition-timing);
+  --transition-background: 250ms var(--transition-timing);
 
   /* Z-index layers */
   --z-behind: -1; /* Элементы позади основного контента */

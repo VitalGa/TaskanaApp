@@ -1,6 +1,6 @@
 .taskList,
 .taskListWrapper {
-  transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+  transition: background-color var(--transition-theme), color var(--transition-theme), border-color var(--transition-theme), box-shadow var(--transition-interactive);
 }
 
 .taskList {
@@ -21,7 +21,7 @@
   padding: 0 24px 24px 24px;
   width: 100%;
   gap: 8px;
-  transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+  transition: background-color var(--transition-theme), color var(--transition-theme), border-color var(--transition-theme), box-shadow var(--transition-interactive);
 }
 
 @media (min-width: 1600px) {

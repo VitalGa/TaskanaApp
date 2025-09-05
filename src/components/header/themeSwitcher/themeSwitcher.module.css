@@ -29,7 +29,7 @@
   background-color: var(--primary-400-fixed);
   border-radius: var(--border-radius-sm);
   box-shadow: var(--shadow-base-default);
-  transition: transform 0.3s ease;
+  transition: transform var(--transition-interactive);
   transform: translateX(calc(var(--active-index, 0) * (32px + var(--spacing-xs))));
   z-index: var(--z-content);
 }
@@ -42,7 +42,7 @@
   cursor: pointer;
   position: relative;
   z-index: calc(var(--z-content) + 1);
-  transition: opacity 0.3s ease;
+  transition: opacity var(--transition-interactive);
 }
 
 .themeSwitcherButton:not(.themeSwitcherButtonActive) svg {
@@ -66,7 +66,7 @@
   height: calc(100% - var(--spacing-xs) * 2);
   background-color: transparent;
   border-radius: var(--border-radius-sm);
-  transition: transform 0.3s ease, background-color 0.2s ease;
+  transition: transform var(--transition-interactive), background-color var(--transition-theme);
   transform: translateX(calc(var(--active-index, 0) * (32px + var(--spacing-xs))));
   z-index: var(--z-content);
   pointer-events: none;

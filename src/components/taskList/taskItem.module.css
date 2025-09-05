@@ -107,8 +107,8 @@
 .taskItemWrapper,
 .taskItem,
 .priorityBox {
-  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
-    border-color 0.3s ease-in-out;
+  transition: background var(--transition-background), box-shadow var(--transition-interactive),
+    border-color var(--transition-theme);
 }
 
 @keyframes fadeIn {

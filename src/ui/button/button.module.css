@@ -9,7 +9,8 @@
   border: var(--focus-outline-width) solid transparent;
   position: relative;
   min-width: var(--button-min-width);
-  transition: background-color 0.2s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
+  transition: background-color var(--transition-interactive), color var(--transition-interactive),
+    box-shadow var(--transition-interactive);
 }
 
 .primary {
@@ -20,7 +21,7 @@
 .primary:hover {
   background-color: var(--primary-500-fixed);
   box-shadow: var(--shadow-button-hover);
-  transition: all 0.3s ease-out;
+  transition: all var(--transition-interactive);
 }
 
 .primary:focus-visible {
@@ -78,14 +79,14 @@
 .thirdLeft:hover {
   background-color: var(--footer-button-left-hover);
   box-shadow: 2px 8px 12px 0px #00000040;
-  transition: all 0.3s ease-out;
+  transition: all var(--transition-interactive);
 }
 
 .thirdRight:hover {
   background-color: var(--footer-button-right-hover);
   color: var(--footer-button-right-text);
   box-shadow: 2px 8px 12px 0px #00000040;
-  transition: all 0.3s ease-out;
+  transition: all var(--transition-interactive);
 }
 
 .thirdLeft:focus-visible {
