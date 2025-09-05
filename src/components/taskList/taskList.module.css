@@ -11,3 +11,22 @@
   flex-direction: column;
   justify-content: flex-start;
 }
+
+.taskItemsList {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  list-style: none;
+  margin: 0;
+  padding: 0 24px 24px 24px;
+  width: 100%;
+  gap: 8px;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+@media (min-width: 1600px) {
+  .taskItemsList {
+    max-width: 924px;
+    align-self: center;
+  }
+}
