@@ -126,5 +126,5 @@
 
 .btn:focus-visible {
   outline: var(--focus-outline-width) solid var(--priority-button-all-focus);
-  outline-offset: var(--focus-outline-offset);
+  outline-offset: var(--focus-outline-offset-mines);
 }
