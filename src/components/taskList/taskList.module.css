@@ -1,12 +1,12 @@
 .taskList,
 .taskListWrapper {
-  transition: background-color var(--transition-theme), color var(--transition-theme), border-color var(--transition-theme), box-shadow var(--transition-interactive);
+  transition: background-color var(--transition-theme), color var(--transition-theme),
+    border-color var(--transition-theme), box-shadow var(--transition-interactive);
 }
 
 .taskList {
   z-index: var(--z-content);
   gap: calc(var(--spacing-xl) + var(--tasklist-gap-additional));
-  padding-top: 84px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -21,12 +21,18 @@
   padding: 0 24px 24px 24px;
   width: 100%;
   gap: 8px;
-  transition: background-color var(--transition-theme), color var(--transition-theme), border-color var(--transition-theme), box-shadow var(--transition-interactive);
+  transition: background-color var(--transition-theme), color var(--transition-theme),
+    border-color var(--transition-theme), box-shadow var(--transition-interactive);
 }
 
 @media (min-width: 1600px) {
   .taskItemsList {
-    max-width: 924px;
+    align-self: center;
+  }
+}
+@media (min-width: 1920px) {
+  .taskItemsList {
+    max-width: 996px;
     align-self: center;
   }
 }
