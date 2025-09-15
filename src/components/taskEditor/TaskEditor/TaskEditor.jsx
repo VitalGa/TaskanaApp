@@ -77,7 +77,13 @@ export const TaskEditor = () => {
               onSubmit={handleCreate}
               ref={inputRef}
             />
-            <TaskEditorBody priority={priority} setPriority={setPriority} />
+            <div className={styles.taskEditorBodyContainer}>
+              <TaskEditorBody priority={priority} setPriority={setPriority} />
+              <TaskEditorBody priority={priority} setPriority={setPriority} />
+              <TaskEditorBody priority={priority} setPriority={setPriority} />
+              <TaskEditorBody priority={priority} setPriority={setPriority} />
+              <TaskEditorBody priority={priority} setPriority={setPriority} />
+            </div>
           </div>
           <div className={styles.taskEditorFooterContainer}>
             <TaskEditorFooter

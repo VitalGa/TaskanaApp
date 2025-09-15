@@ -30,7 +30,8 @@
 
 .taskEditorContent {
   flex: 1;
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   min-height: 0;
@@ -52,6 +53,14 @@
 
 .taskEditorContent::-webkit-scrollbar-thumb:hover {
   background-color: var(--neutral-500);
+}
+
+.taskEditorBodyContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+  min-height: 0;
 }
 
 .taskEditorFooterContainer {
