@@ -79,10 +79,6 @@ export const TaskEditor = () => {
             />
             <div className={styles.taskEditorBodyContainer}>
               <TaskEditorBody priority={priority} setPriority={setPriority} />
-              <TaskEditorBody priority={priority} setPriority={setPriority} />
-              <TaskEditorBody priority={priority} setPriority={setPriority} />
-              <TaskEditorBody priority={priority} setPriority={setPriority} />
-              <TaskEditorBody priority={priority} setPriority={setPriority} />
             </div>
           </div>
           <div className={styles.taskEditorFooterContainer}>

@@ -58,7 +58,7 @@
 .taskEditorBodyContainer {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 24px;
   flex: 1;
   min-height: 0;
 }
