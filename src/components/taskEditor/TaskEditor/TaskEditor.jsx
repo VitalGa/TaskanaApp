@@ -13,11 +13,11 @@ export const TaskEditor = () => {
   const taskEditorRef = useRef(null);
 
   const [title, setTitle] = useState('');
-  const [priority, setPriority] = useState('1');
+  const [priority, setPriority] = useState(1);
 
   const handleCancel = useCallback(() => {
     setTitle('');
-    setPriority('1');
+    setPriority(1);
     closeTaskEditor();
   }, [closeTaskEditor]);
 
@@ -25,7 +25,7 @@ export const TaskEditor = () => {
     if (title.trim()) {
       addTask({ title: title.trim(), priority });
       setTitle('');
-      setPriority('1');
+      setPriority(1);
       closeTaskEditor();
     }
   }, [title, priority, addTask, closeTaskEditor]);
