@@ -1,4 +1,5 @@
-import { useState, useContext, useRef, useEffect } from 'react';
+import { useState, useContext, useRef, useEffect, useCallback } from 'react';
+import { useClickOutside } from '@/hooks/useClickOutside';
 
 import { TaskEditorHeader, TaskEditorBody, TaskEditorFooter } from '@/components/taskEditor';
 import styles from './taskEditor.module.css';
@@ -10,6 +11,30 @@ export const TaskEditor = () => {
   const { isTaskEditorOpen, closeTaskEditor } = useTaskEditor();
   const inputRef = useRef(null);
   const taskEditorRef = useRef(null);
+
+  const [title, setTitle] = useState('');
+  const [priority, setPriority] = useState('1');
+
+  const handleCancel = useCallback(() => {
+    setTitle('');
+    setPriority('1');
+    closeTaskEditor();
+  }, [closeTaskEditor]);
+
+  const handleCreate = useCallback(() => {
+    if (title.trim()) {
+      addTask({ title: title.trim(), priority });
+      setTitle('');
+      setPriority('1');
+      closeTaskEditor();
+    }
+  }, [title, priority, addTask, closeTaskEditor]);
+
+  const handleChange = useCallback((e) => {
+    setTitle(e.target.value);
+  }, []);
+
+  useClickOutside(taskEditorRef, handleCancel, isTaskEditorOpen);
 
   useEffect(() => {
     if (isTaskEditorOpen && inputRef.current) {
@@ -31,41 +56,10 @@ export const TaskEditor = () => {
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
     };
-  }, [isTaskEditorOpen]);
-
-  const handleCreate = () => {
-    if (title.trim()) {
-      addTask({ title: title.trim(), priority });
-      setTitle('');
-      setPriority('1');
-      closeTaskEditor();
-    }
-  };
-
-  const handleCancel = () => {
-    setTitle('');
-    setPriority('1');
-    closeTaskEditor();
-  };
-
-  const handleOverlayClick = () => {
-    handleCancel();
-  };
-
-  const [title, setTitle] = useState('');
-  const [priority, setPriority] = useState('1');
-
-  const handleChange = (e) => {
-    setTitle(e.target.value);
-  };
+  }, [isTaskEditorOpen, handleCancel]);
 
   return (
     <>
-      <div
-        className={`${styles.overlay} ${isTaskEditorOpen ? styles.overlayVisible : ''}`}
-        onClick={handleOverlayClick}
-      />
-
       <div className={styles.taskEditorWrapper}>
         <div
           className={`${styles.taskEditor} ${isTaskEditorOpen ? styles.taskEditorOpen : ''}`}
