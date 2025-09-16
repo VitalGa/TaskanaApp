@@ -10,7 +10,7 @@ export const TaskEditorFooter = ({ disabled, handleCreate, handleCancel }) => {
         size='small'
         className={styles.thirdLeft}
         disabled={disabled}
-        tabIndex={6}>
+        tabIndex={disabled ? -1 : 6}>
         Создать
       </Button>
       <Button
@@ -18,7 +18,8 @@ export const TaskEditorFooter = ({ disabled, handleCreate, handleCancel }) => {
         variant='thirdRight'
         size='small'
         className={styles.thirdRight}
-        tabIndex={7}>
+        disabled={disabled}
+        tabIndex={disabled ? -1 : 7}>
         Отмена
       </Button>
     </div>

@@ -1,7 +1,7 @@
 import Icon from '@/components/icon/Icon';
 import styles from './taskEditorBody.module.css';
 
-export function TaskEditorBody({ priority, setPriority }) {
+export function TaskEditorBody({ priority, setPriority, disabled = false }) {
   const handleKeyDown = (e, priorityValue) => {
     if (e.key === 'Enter' || e.key === '') {
       e.preventDefault();
@@ -21,7 +21,8 @@ export function TaskEditorBody({ priority, setPriority }) {
             }`}
             onClick={() => setPriority(1)}
             onKeyDown={(e) => handleKeyDown(e, 1)}
-            tabIndex={3}
+            disabled={disabled}
+            tabIndex={disabled ? -1 : 3}
             role='radio'
             aria-checked={priority === 1}
             aria-label='Низкий приоритет'>
@@ -34,7 +35,8 @@ export function TaskEditorBody({ priority, setPriority }) {
             }`}
             onClick={() => setPriority(2)}
             onKeyDown={(e) => handleKeyDown(e, 2)}
-            tabIndex={4}
+            disabled={disabled}
+            tabIndex={disabled ? -1 : 4}
             role='radio'
             aria-checked={priority === 2}
             aria-label='Обычный приоритет'>
@@ -47,7 +49,8 @@ export function TaskEditorBody({ priority, setPriority }) {
             }`}
             onClick={() => setPriority(3)}
             onKeyDown={(e) => handleKeyDown(e, 3)}
-            tabIndex={5}
+            disabled={disabled}
+            tabIndex={disabled ? -1 : 5}
             role='radio'
             aria-checked={priority === 3}
             aria-label='Высокий приоритет'>

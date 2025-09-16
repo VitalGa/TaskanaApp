@@ -70,14 +70,19 @@ export const TaskEditor = () => {
               handleChange={handleChange}
               onSubmit={handleCreate}
               ref={inputRef}
+              disabled={!isTaskEditorOpen}
             />
             <div className={styles.taskEditorBodyContainer}>
-              <TaskEditorBody priority={priority} setPriority={setPriority} />
+              <TaskEditorBody
+                priority={priority}
+                setPriority={setPriority}
+                disabled={!isTaskEditorOpen}
+              />
             </div>
           </div>
           <div className={styles.taskEditorFooterContainer}>
             <TaskEditorFooter
-              disabled={title.trim() === ''}
+              disabled={title.trim() === '' || !isTaskEditorOpen}
               handleCreate={handleCreate}
               handleCancel={handleCancel}
             />
