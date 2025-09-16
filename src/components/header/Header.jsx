@@ -6,7 +6,7 @@ import { useTaskEditor } from '@/context/TaskEditorContext';
 
 export function Header({ className = '' }) {
   const [isLoading, setIsLoading] = useState(false);
-  const { openTaskEditor } = useTaskEditor();
+  const { openTaskEditor, isTaskEditorOpen } = useTaskEditor();
 
   // TODO: remove this after testing
   // const handleClick = () => {
@@ -27,6 +27,7 @@ export function Header({ className = '' }) {
           className='text-md-semibold'
           gap='8'
           ariaLabel='Создать новую задачу'
+          disabled={isTaskEditorOpen}
           onClick={() => {
             // handleClick();
             openTaskEditor();
