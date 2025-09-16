@@ -21,8 +21,7 @@
   top: 0;
   right: 0;
   transform: translateX(100%);
-  transition: transform var(--transition-slow) cubic-bezier(0.4, 0, 0.2, 1),
-    width var(--transition-slow) cubic-bezier(0.4, 0, 0.2, 1),
+  transition: transform var(--transition-transform), width var(--transition-transform),
     background-color var(--transition-theme), color var(--transition-theme),
     border-color var(--transition-theme), box-shadow var(--transition-theme);
   z-index: var(--z-modal);
