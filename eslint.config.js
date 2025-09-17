@@ -22,7 +22,6 @@ export default [
         alias: {
           map: [
             ['@', path.resolve(__dirname, './src')],
-            ['@components', path.resolve(__dirname, './src/components')],
             ['@containers', path.resolve(__dirname, './src/containers')],
             ['@pages', path.resolve(__dirname, './src/pages')],
             ['@assets', path.resolve(__dirname, './src/assets')],
@@ -42,6 +41,12 @@ export default [
       ...reactHooks.configs.recommended.rules,
       'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
       'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
+      'no-restricted-imports': [
+        'error',
+        {
+          patterns: ['@/components/*/*'],
+        },
+      ],
     },
   },
 ];

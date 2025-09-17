@@ -1,5 +1,5 @@
 import styles from './spinner.module.css';
-import Icon from '@/components/icon/Icon';
+import { Icon } from '@/components';
 
 export function Spinner() {
   return (

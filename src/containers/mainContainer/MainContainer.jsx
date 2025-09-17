@@ -1,6 +1,6 @@
 import styles from './mainContainer.module.css';
 import { ContainerHeader } from '@/components';
-import TaskList from '@/components/taskList/TaskList';
+import { TaskList } from '@/components';
 
 function MainContainer() {
   return (

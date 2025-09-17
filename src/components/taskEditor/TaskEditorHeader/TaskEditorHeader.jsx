@@ -1,6 +1,6 @@
 import React, { useState, forwardRef } from 'react';
 import styles from './taskEditorHeader.module.css';
-import Icon from '@/components/icon/Icon';
+import { Icon } from '@/components';
 
 export const TaskEditorHeader = forwardRef(
   ({ value, handleChange, onSubmit, disabled = false }, ref) => {
