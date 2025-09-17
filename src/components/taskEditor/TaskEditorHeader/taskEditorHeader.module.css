@@ -16,6 +16,8 @@
   line-height: var(--spacing-xl-additional);
   color: var(--footer-link-color);
   text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .inputLabel {
