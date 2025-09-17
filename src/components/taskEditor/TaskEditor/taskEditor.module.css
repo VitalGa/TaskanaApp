@@ -13,17 +13,18 @@
   display: flex;
   flex-direction: column;
   background-color: var(--neutral-100);
-  width: 0;
-  height: 100%;
+  width: 400px;
+  height: calc(100vh - var(--spacing-3xl));
   overflow: hidden;
   border-left: var(--border-width-thin) solid var(--barBorderColor);
-  position: absolute;
-  top: 0;
+  position: fixed;
+  top: var(--spacing-3xl);
   right: 0;
   transform: translateX(100%);
-  transition: transform var(--transition-transform), width var(--transition-transform),
-    background-color var(--transition-theme), color var(--transition-theme),
-    border-color var(--transition-theme), box-shadow var(--transition-theme);
+  transition: transform var(--transition-transform), background-color var(--transition-theme),
+    color var(--transition-theme), border-color var(--transition-theme),
+    box-shadow var(--transition-theme);
+  will-change: transform;
   z-index: var(--z-modal);
 }
 
@@ -68,7 +69,6 @@
 
 .taskEditorOpen {
   transform: translateX(0);
-  width: 400px;
 }
 
 .overlay {
