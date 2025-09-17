@@ -7,4 +7,5 @@
   padding: var(--spacing-sm-additional-2) var(--spacing-lg) var(--spacing-sm-additional-2)
     var(--spacing-md);
   box-shadow: var(--shadow-header-fixed);
+  transition: background-color var(--transition-theme), box-shadow var(--transition-theme);
 }

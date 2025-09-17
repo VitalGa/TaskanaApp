@@ -3,4 +3,5 @@
   flex: 1;
   min-height: 0;
   overflow: hidden;
+  transition: background-color var(--transition-theme);
 }

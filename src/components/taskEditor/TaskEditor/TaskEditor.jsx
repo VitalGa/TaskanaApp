@@ -24,9 +24,12 @@ export const TaskEditor = () => {
   const handleCreate = useCallback(() => {
     if (title.trim()) {
       addTask({ title: title.trim(), priority });
-      setTitle('');
-      setPriority(1);
       closeTaskEditor();
+
+      setTimeout(() => {
+        setTitle('');
+        setPriority(1);
+      }, 500);
     }
   }, [title, priority, addTask, closeTaskEditor]);
 

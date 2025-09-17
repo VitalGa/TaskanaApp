@@ -5,6 +5,7 @@
   padding: var(--spacing-lg);
   height: var(--container-header-height);
   background-color: var(--neutral-0);
+  transition: background-color var(--transition-theme);
 }
 
 @media (min-width: 120rem) {
