@@ -8,14 +8,12 @@ const getSystemTheme = () => {
 
 export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState(() => {
-    // Читаем уже установленную тему из DOM (установлена синхронным скриптом)
     const currentTheme = document.documentElement.getAttribute('data-theme');
 
     if (currentTheme) {
       return currentTheme;
     }
 
-    // Fallback на случай, если скрипт не сработал
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
       return savedTheme;
@@ -25,7 +23,6 @@ export function ThemeProvider({ children }) {
   });
 
   useEffect(() => {
-    // Синхронизируем состояние с DOM и localStorage
     localStorage.setItem('theme', theme);
     document.documentElement.setAttribute('data-theme', theme);
   }, [theme]);
