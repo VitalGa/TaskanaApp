@@ -83,6 +83,7 @@ export const TaskEditor = () => {
           <div className={styles.taskEditorFooterContainer}>
             <TaskEditorFooter
               disabled={title.trim() === '' || !isTaskEditorOpen}
+              disabledCancel={!isTaskEditorOpen}
               handleCreate={handleCreate}
               handleCancel={handleCancel}
             />

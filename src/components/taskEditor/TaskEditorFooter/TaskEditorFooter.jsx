@@ -1,7 +1,7 @@
 import styles from './taskEditorFooter.module.css';
 import { Button } from '@/ui';
 
-export const TaskEditorFooter = ({ disabled, handleCreate, handleCancel }) => {
+export const TaskEditorFooter = ({ disabled, disabledCancel, handleCreate, handleCancel }) => {
   return (
     <div className={styles.taskEditorFooter}>
       <Button
@@ -18,8 +18,8 @@ export const TaskEditorFooter = ({ disabled, handleCreate, handleCancel }) => {
         variant='thirdRight'
         size='small'
         className={styles.thirdRight}
-        disabled={disabled}
-        tabIndex={disabled ? -1 : 7}>
+        disabled={disabledCancel}
+        tabIndex={disabledCancel ? -1 : 7}>
         Отмена
       </Button>
     </div>
