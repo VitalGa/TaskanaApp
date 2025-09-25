@@ -6,7 +6,7 @@
   padding: var(--spacing-sm) var(--spacing-sm) var(--spacing-sm) var(--spacing-md);
   border-radius: 8px;
   animation: fadeIn 0.4s var(--transition-timing);
-  outline: none;
+  outline: 2px solid transparent;
 }
 
 .taskItemWrapper:hover {
@@ -20,7 +20,7 @@
   box-shadow: 2px 2px 4px 0px #0000001a;
 }
 
-.taskItemWrapper:focus {
+.taskItemWrapper:focus-visible {
   outline: 2px solid var(--priority-button-all-focus);
   outline-offset: -2px;
   background: var(--hover-task-color);
@@ -61,7 +61,7 @@
   border-color: var(--priority-taskItem-low-hover);
 }
 
-.taskItemWrapper:focus .priorityBox.low {
+.taskItemWrapper:focus-visible .priorityBox.low {
   border-color: var(--priority-taskItem-low-hover);
   outline: 4px solid var(--priority-taskItem-focus-low);
 }
@@ -74,7 +74,7 @@
   border-color: var(--priority-taskItem-normal-hover);
 }
 
-.taskItemWrapper:focus .priorityBox.normal {
+.taskItemWrapper:focus-visible .priorityBox.normal {
   border-color: var(--priority-taskItem-normal-hover);
   outline: 4px solid var(--priority-taskItem-focus-normal);
 }
@@ -87,7 +87,7 @@
   border-color: var(--priority-taskItem-high-hover);
 }
 
-.taskItemWrapper:focus .priorityBox.high {
+.taskItemWrapper:focus-visible .priorityBox.high {
   border-color: var(--priority-taskItem-high-hover);
   outline: 4px solid var(--priority-taskItem-focus-high);
 }
@@ -108,7 +108,8 @@
 .taskItem,
 .priorityBox {
   transition: background var(--transition-background), box-shadow var(--transition-interactive),
-    border-color var(--transition-theme);
+    border-color var(--transition-theme), outline-color var(--transition-interactive),
+    outline-width var(--transition-interactive), opacity var(--transition-interactive);
 }
 
 @keyframes fadeIn {
