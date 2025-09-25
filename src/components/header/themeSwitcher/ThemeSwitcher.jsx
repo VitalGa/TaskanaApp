@@ -19,7 +19,7 @@ function ThemeSwitcher() {
   };
 
   return (
-    <section
+    <button
       className={`${styles.themeSwitcher} flex gap-4`}
       role='switch'
       aria-label='Переключатель темы'
@@ -37,7 +37,7 @@ function ThemeSwitcher() {
           <Icon name={button.icon} color={theme === button.theme ? 'white' : '#6C6C6C'} size={32} />
         </div>
       ))}
-    </section>
+    </button>
   );
 }
 

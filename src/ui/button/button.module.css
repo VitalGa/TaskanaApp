@@ -62,7 +62,8 @@
   font-weight: 600;
   letter-spacing: 0%;
   box-shadow: 2px 2px 4px 0px #00000033;
-  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, filter 0.3s;
+  transition: background-color var(--transition-interactive), color var(--transition-interactive),
+    box-shadow var(--transition-interactive), filter var(--transition-interactive);
 }
 
 .thirdRight {
@@ -73,7 +74,8 @@
   line-height: 24px;
   font-weight: 600;
   letter-spacing: 0%;
-  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, filter 0.3s;
+  transition: background-color var(--transition-interactive), color var(--transition-interactive),
+    box-shadow var(--transition-interactive), filter var(--transition-interactive);
 }
 
 .thirdLeft:hover {

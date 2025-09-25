@@ -175,19 +175,19 @@
   --hover-task-color: #fafafa;
 
   /* Animations */
-  --transition-instant: 100ms; /* Мгновенные изменения (hover, focus) */
+  --transition-instant: 200ms; /* Мгновенные изменения (hover, focus) — по ТЗ только 0.2s/0.4s */
   --transition-fast: 200ms; /* Быстрые переходы (кнопки, переключатели) */
-  --transition-normal: 300ms; /* Стандартные переходы (тема, цвета) */
-  --transition-slow: 500ms; /* Сложные анимации (модальные окна, слайдеры) */
+  --transition-normal: 200ms; /* Стандартные переходы (тема, цвета) */
+  --transition-slow: 400ms; /* Сложные анимации (модальные окна, слайдеры) */
 
   /* Unified timing function for all transitions */
   --transition-timing: ease-in-out;
 
   /* Специализированные переходы на основе единой системы */
-  --transition-theme: var(--transition-normal) var(--transition-timing);
-  --transition-interactive: var(--transition-fast) var(--transition-timing);
-  --transition-background: var(--transition-normal) var(--transition-timing);
-  --transition-transform: var(--transition-slow) cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-theme: var(--transition-fast) var(--transition-timing); /* 0.2s */
+  --transition-interactive: var(--transition-fast) var(--transition-timing); /* 0.2s */
+  --transition-background: var(--transition-fast) var(--transition-timing); /* 0.2s */
+  --transition-transform: var(--transition-slow) var(--transition-timing); /* 0.4s */
 
   /* Z-index layers */
   --z-behind: -1; /* Элементы позади основного контента */

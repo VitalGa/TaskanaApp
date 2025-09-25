@@ -5,7 +5,7 @@
   max-width: 924px;
   padding: var(--spacing-sm) var(--spacing-sm) var(--spacing-sm) var(--spacing-md);
   border-radius: 8px;
-  animation: fadeIn 0.5s ease-in-out;
+  animation: fadeIn 0.4s var(--transition-timing);
   outline: none;
 }
 
