@@ -26,7 +26,7 @@ export function TaskEditorBody({ priority, setPriority, disabled = false }) {
             role='radio'
             aria-checked={priority === 1}
             aria-label='Низкий приоритет'>
-            <Icon name='priorityLow' color={styles.priorityButtonColorLow} />
+            <Icon name='priorityLow' />
           </button>
           <button
             type='button'
@@ -40,7 +40,7 @@ export function TaskEditorBody({ priority, setPriority, disabled = false }) {
             role='radio'
             aria-checked={priority === 2}
             aria-label='Обычный приоритет'>
-            <Icon name='priorityNormal' color={styles.priorityButtonColorNormal} />
+            <Icon name='priorityNormal' />
           </button>
           <button
             type='button'
@@ -54,7 +54,7 @@ export function TaskEditorBody({ priority, setPriority, disabled = false }) {
             role='radio'
             aria-checked={priority === 3}
             aria-label='Высокий приоритет'>
-            <Icon name='priorityHight' color={styles.priorityButtonColorHigh} />
+            <Icon name='priorityHight' />
           </button>
         </div>
       </div>

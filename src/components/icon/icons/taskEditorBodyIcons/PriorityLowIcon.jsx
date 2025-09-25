@@ -1,4 +1,4 @@
-export default function PriorityLowIcon({ color = '#6C6C6C', ...props }) {
+export default function PriorityLowIcon({ color = 'currentColor', ...props }) {
   return (
     <svg
       width='40'

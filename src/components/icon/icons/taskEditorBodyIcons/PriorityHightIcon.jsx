@@ -1,4 +1,4 @@
-export default function PriorityHightIcon({ color = '#D51010', ...props }) {
+export default function PriorityHightIcon({ color = 'currentColor', ...props }) {
   return (
     <svg
       width='40'

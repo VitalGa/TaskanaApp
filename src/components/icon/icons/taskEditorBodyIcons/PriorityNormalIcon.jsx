@@ -1,4 +1,4 @@
-export default function PriorityNormalIcon({ color = '#742CFF', ...props }) {
+export default function PriorityNormalIcon({ color = 'currentColor', ...props }) {
   return (
     <svg
       width='40'
