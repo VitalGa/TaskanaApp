@@ -124,3 +124,18 @@
   outline: var(--focus-outline-width) solid var(--priority-button-all-focus);
   outline-offset: var(--focus-outline-offset-mines);
 }
+
+.btn.priority1:focus-visible {
+  background: var(--priority-button-active-low);
+  box-shadow: var(--priority-button-shadow-active-low);
+}
+
+.btn.priority2:focus-visible {
+  background: var(--priority-button-active-normal);
+  box-shadow: var(--priority-button-shadow-active-normal);
+}
+
+.btn.priority3:focus-visible {
+  background: var(--priority-button-active-high);
+  box-shadow: var(--priority-button-shadow-active-high);
+}
