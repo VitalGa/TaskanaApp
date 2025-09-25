@@ -2,7 +2,7 @@ import { Icon } from '@/components';
 import styles from './themeSwitcher.module.css';
 import { useTheme } from '@/context';
 
-function ThemeSwitcher() {
+export function ThemeSwitcher() {
   const { theme, toggleTheme } = useTheme();
 
   const buttons = [
@@ -40,5 +40,3 @@ function ThemeSwitcher() {
     </button>
   );
 }
-
-export default ThemeSwitcher;

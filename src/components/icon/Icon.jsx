@@ -24,7 +24,7 @@ const icons = {
   mark: MarkIcon,
 };
 
-function Icon({ name, ...props }) {
+export function Icon({ name, ...props }) {
   const IconComponent = icons[name];
 
   if (!IconComponent) {
@@ -33,5 +33,3 @@ function Icon({ name, ...props }) {
 
   return <IconComponent {...props} />;
 }
-
-export default Icon;

@@ -1,5 +1,5 @@
 import styles from './emptyTask.module.css';
-import Illustration from '../illustration/Illustration';
+import { Illustration } from '@/components';
 
 export function EmptyTask() {
   return (
@@ -8,5 +8,3 @@ export function EmptyTask() {
     </div>
   );
 }
-
-export default EmptyTask;

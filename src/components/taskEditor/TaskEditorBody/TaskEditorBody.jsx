@@ -1,4 +1,4 @@
-import Icon from '@/components/icon/Icon';
+import { Icon } from '@/components';
 import styles from './taskEditorBody.module.css';
 
 export function TaskEditorBody({ priority, setPriority, disabled = false }) {

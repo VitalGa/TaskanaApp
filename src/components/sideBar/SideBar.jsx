@@ -1,7 +1,7 @@
 import styles from './sideBar.module.css';
 import { Statistic } from '@/components';
 
-function SideBar() {
+export function SideBar() {
   return (
     <aside className={styles.sideBar}>
       <div className={styles.sideBar__wrapper}>
@@ -10,5 +10,3 @@ function SideBar() {
     </aside>
   );
 }
-
-export default SideBar;

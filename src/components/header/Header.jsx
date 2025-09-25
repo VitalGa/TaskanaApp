@@ -5,7 +5,7 @@ import { Button } from '@/ui';
 import { useTaskEditor } from '@/context/TaskEditorContext';
 
 export function Header({ className = '' }) {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading] = useState(false);
   const { openTaskEditor, isTaskEditorOpen } = useTaskEditor();
 
   // TODO: remove this after testing

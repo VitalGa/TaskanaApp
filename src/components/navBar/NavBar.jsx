@@ -2,7 +2,7 @@ import styles from './navBar.module.css';
 import { Icon } from '@/components';
 import { Button } from '@/ui';
 
-function NavBar() {
+export function NavBar() {
   return (
     <aside className={`${styles.wrapper} flex flex-col items-center`}>
       <nav className={styles.navBar}>
@@ -25,5 +25,3 @@ function NavBar() {
     </aside>
   );
 }
-
-export default NavBar;

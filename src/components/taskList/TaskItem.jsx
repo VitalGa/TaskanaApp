@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './taskItem.module.css';
 
-function TaskItem({ title, priority }) {
+export function TaskItem({ title, priority }) {
   const priorityClassMap = {
     1: 'low',
     2: 'normal',
@@ -25,5 +25,3 @@ function TaskItem({ title, priority }) {
     </li>
   );
 }
-
-export default TaskItem;

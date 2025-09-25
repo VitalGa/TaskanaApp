@@ -20,7 +20,8 @@
   box-shadow: 2px 2px 4px 0px #0000001a;
 }
 
-.taskItemWrapper:focus-visible {
+.taskItemWrapper:focus-visible,
+.taskItemWrapper:focus {
   outline: 2px solid var(--priority-button-all-focus);
   outline-offset: -2px;
   background: var(--hover-task-color);
@@ -61,7 +62,8 @@
   border-color: var(--priority-taskItem-low-hover);
 }
 
-.taskItemWrapper:focus-visible .priorityBox.low {
+.taskItemWrapper:focus-visible .priorityBox.low,
+.taskItemWrapper:focus .priorityBox.low {
   border-color: var(--priority-taskItem-low-hover);
   outline: 4px solid var(--priority-taskItem-focus-low);
 }
@@ -74,7 +76,8 @@
   border-color: var(--priority-taskItem-normal-hover);
 }
 
-.taskItemWrapper:focus-visible .priorityBox.normal {
+.taskItemWrapper:focus-visible .priorityBox.normal,
+.taskItemWrapper:focus .priorityBox.normal {
   border-color: var(--priority-taskItem-normal-hover);
   outline: 4px solid var(--priority-taskItem-focus-normal);
 }
@@ -87,7 +90,8 @@
   border-color: var(--priority-taskItem-high-hover);
 }
 
-.taskItemWrapper:focus-visible .priorityBox.high {
+.taskItemWrapper:focus-visible .priorityBox.high,
+.taskItemWrapper:focus .priorityBox.high {
   border-color: var(--priority-taskItem-high-hover);
   outline: 4px solid var(--priority-taskItem-focus-high);
 }

@@ -1,1 +1,1 @@
-export { default as IncomingTasks } from './incomingTasks/IncomingTasks';
+export * from './incomingTasks/IncomingTasks';

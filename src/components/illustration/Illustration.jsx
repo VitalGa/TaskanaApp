@@ -7,10 +7,9 @@ const iconMap = {
   book: BookIllustrationIcon,
 };
 
-function Illustration({ name, size = 24, className = '', ...props }) {
+export function Illustration({ name, size = 24, className = '', ...props }) {
   const SvgIcon = iconMap[name];
   if (!SvgIcon) return null;
 
   return <SvgIcon width={size} height={size} className={className} {...props} />;
 }
-export default Illustration;

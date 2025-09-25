@@ -3,7 +3,7 @@ import { TaskProvider } from '@/context/TaskContext';
 import { TaskEditorProvider } from '@/context/TaskEditorContext';
 import { ThemeProvider } from '@/context';
 
-function App() {
+export function App() {
   return (
     <ThemeProvider>
       <TaskEditorProvider>
@@ -14,5 +14,3 @@ function App() {
     </ThemeProvider>
   );
 }
-
-export default App;
