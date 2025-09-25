@@ -11,3 +11,15 @@
   line-height: 1.5rem;
   letter-spacing: 0;
 }
+
+@media (min-width: 1600px) {
+  .containerText {
+    padding-top: 118px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .containerText {
+    padding-top: 208px;
+  }
+}
