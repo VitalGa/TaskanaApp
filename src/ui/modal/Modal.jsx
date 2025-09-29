@@ -14,7 +14,6 @@ export const Modal = ({
 
   useEffect(() => {
     if (!isOpen) {
-      // Небольшая задержка для предотвращения мигания
       setTimeout(() => {
         setIsClosing(false);
       }, 50);

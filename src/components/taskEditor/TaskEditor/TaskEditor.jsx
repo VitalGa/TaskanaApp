@@ -113,14 +113,13 @@ export const TaskEditor = () => {
             />
           </div>
         </div>
-
         <Modal
           isOpen={showConfirmModal}
           onClose={handleCancelClose}
           onConfirm={handleConfirmClose}
           title='Несохраненные изменения'
           message='Вы не сохранили задачу. Закрыть и очистить форму?'
-          confirmText='Закрыть'
+          confirmText='Закрыть и очистить'
           cancelText='Отмена'
         />
       </div>
