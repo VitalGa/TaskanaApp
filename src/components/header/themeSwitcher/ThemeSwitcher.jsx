@@ -1,22 +1,20 @@
+// src/components/header/themeSwitcher/ThemeSwitcher.jsx
 import { Icon } from '@/components';
 import styles from './themeSwitcher.module.css';
 import { useTheme } from '@/context';
+import { useKeyboard } from '@/hooks/useKeyboard';
 
 export function ThemeSwitcher() {
   const { theme, toggleTheme } = useTheme();
+
+  const handleKeyDown = useKeyboard(['Enter', ' '], () => {
+    toggleTheme();
+  });
 
   const buttons = [
     { icon: 'sun', theme: 'light' },
     { icon: 'moon', theme: 'dark' },
   ];
-
-  const handleKeyDown = (event) => {
-    if (event.key === 'Enter' || event.key === ' ') {
-      event.preventDefault();
-      toggleTheme();
-      event.currentTarget.focus();
-    }
-  };
 
   return (
     <button

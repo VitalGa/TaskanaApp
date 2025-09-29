@@ -111,8 +111,6 @@
   box-shadow: var(--priority-button-shadow-active-high);
 }
 
-/* removed unused `.active` variants */
-
 .btn:focus-visible {
   outline: var(--focus-outline-width) solid var(--priority-button-all-focus);
   outline-offset: var(--focus-outline-offset-mines);
