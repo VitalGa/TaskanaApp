@@ -9,6 +9,17 @@ import {
   PriorityNormalIcon,
   PriorityHightIcon,
   MarkIcon,
+  TaskEditIcon,
+  CheckDropdownIcon,
+  ChevronDropdownIcon,
+  UpdatedAtDescIcon,
+  UpdatedAtAscIcon,
+  CreatedAtDescIcon,
+  CreatedAtAscIcon,
+  AlphabeticalDescIcon,
+  AlphabeticalAscIcon,
+  PriorityDescIcon,
+  PriorityAscIcon,
 } from './icons';
 
 const icons = {
@@ -22,6 +33,17 @@ const icons = {
   priorityNormal: PriorityNormalIcon,
   priorityHight: PriorityHightIcon,
   mark: MarkIcon,
+  taskEdit: TaskEditIcon,
+  checkDropdown: CheckDropdownIcon,
+  chevronDropdown: ChevronDropdownIcon,
+  updatedAtDesc: UpdatedAtDescIcon,
+  updatedAtAsc: UpdatedAtAscIcon,
+  createdAtDesc: CreatedAtDescIcon,
+  createdAtAsc: CreatedAtAscIcon,
+  alphabeticalDesc: AlphabeticalDescIcon,
+  alphabeticalAsc: AlphabeticalAscIcon,
+  priorityDesc: PriorityDescIcon,
+  priorityAsc: PriorityAscIcon,
 };
 
 export function Icon({ name, ...props }) {

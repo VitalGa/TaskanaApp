@@ -22,6 +22,25 @@ export function NavBar() {
           </li>
         </ul>
       </nav>
+      <div className={styles.icons}>
+        <Icon name='priorityDesc' />
+        <Icon name='priorityAsc' />
+
+        <Icon name='alphabeticalDesc' />
+        <Icon name='alphabeticalAsc' />
+
+        <Icon name='createdAtDesc' />
+        <Icon name='createdAtAsc' />
+
+        <Icon name='updatedAtDesc' />
+        <Icon name='updatedAtAsc' />
+
+        <Icon name='checkDropdown' />
+
+        <Icon name='chevronDropdown' />
+
+        <Icon name='taskEdit' />
+      </div>
     </aside>
   );
 }

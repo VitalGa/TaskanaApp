@@ -35,6 +35,7 @@ export function Header({ className = '' }) {
           <Icon name='plus' width={24} height={24} />
           Создать
         </Button>
+
         <ThemeSwitcher />
       </div>
     </header>

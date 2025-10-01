@@ -43,3 +43,9 @@
   color: var(--neutral-0);
   transition: color var(--transition-theme);
 }
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
