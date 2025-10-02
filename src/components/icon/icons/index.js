@@ -30,6 +30,7 @@ export { default as PriorityDescIcon } from './dropdownIcons/PriorityDescIcon';
 export { default as PriorityAscIcon } from './dropdownIcons/PriorityAscIcon';
 export { default as CheckDropdownIcon } from './dropdownIcons/CheckDropdownIcon';
 export { default as ChevronDropdownIcon } from './dropdownIcons/ChevronDropdownIcon';
+export { default as FilterDropdownIcon } from './dropdownIcons/FilterDropdownIcon';
 
 //TaskList icons
 export { default as TaskEditIcon } from './taskListIcons/TaskEditIcon';

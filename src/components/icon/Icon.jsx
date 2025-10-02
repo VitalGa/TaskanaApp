@@ -20,6 +20,7 @@ import {
   AlphabeticalAscIcon,
   PriorityDescIcon,
   PriorityAscIcon,
+  FilterDropdownIcon,
 } from './icons';
 
 const icons = {
@@ -44,6 +45,7 @@ const icons = {
   alphabeticalAsc: AlphabeticalAscIcon,
   priorityDesc: PriorityDescIcon,
   priorityAsc: PriorityAscIcon,
+  filterDropdown: FilterDropdownIcon,
 };
 
 export function Icon({ name, ...props }) {

@@ -10,14 +10,15 @@
   align-items: center;
   justify-content: space-between;
   gap: 8px;
-  padding: 8px 12px;
+  padding: 8px 8px 8px 12px;
   border-radius: 8px;
-  border: 1px solid #ddd;
-  background: #f9f9f9;
+  background: #f3f3f3;
+  box-shadow: 2px 2px 4px 0px #0000001a;
   cursor: pointer;
-  min-width: 240px;
-  font-size: 14px;
-  font-weight: 500;
+  min-width: 210px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
   transition: background 0.2s ease;
 }
 
@@ -30,11 +31,29 @@
   opacity: 0.6;
 }
 
+.dropdownHeaderWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.filterIcon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
 /* Иконка внутри */
 .icon {
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
   flex-shrink: 0;
+}
+
+.iconList {
+  padding: 8px;
+  border-radius: 8px;
 }
 
 /* Чеврон справа */
@@ -52,41 +71,56 @@
   position: absolute;
   top: calc(100% + 4px);
   left: 0;
-  width: 260px;
+  min-width: 211px;
   background: #fff;
-  border: 1px solid #ddd;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 0px 12px 4px #0000001a;
   z-index: 100;
-  padding: 6px 0;
-  animation: fadeIn 0.15s ease;
+  padding: 4px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.dropdownMenuVisible {
+  opacity: 1;
 }
 
 /* Заголовок */
-.dropdownHeader {
-  font-size: 13px;
-  font-weight: 600;
-  color: #666;
-  padding: 6px 12px;
-  border-bottom: 1px solid #eee;
-  margin-bottom: 4px;
+
+.dropdownHeaderWrapper {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 8px;
+  gap: 8px;
 }
 
-/* Список */
+.dropdownHeader {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  letter-spacing: 0;
+  color: #1c1c1c;
+  border-radius: 4px;
+}
+
 .dropdownMenu ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* Пункт списка */
 .dropdownItem {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 8px;
-  padding: 8px 12px;
-  font-size: 14px;
+  padding: 8px 0;
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  letter-spacing: 0;
   cursor: pointer;
   transition: background 0.2s ease;
 }
@@ -95,27 +129,21 @@
   background: #f5f5f5;
 }
 
-/* Активный пункт */
-.active {
-  font-weight: 600;
-  color: #1a73e8;
-  background: #f0f7ff;
+.rightCheckIconWrapper {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
 }
 
-/* Галочка справа */
 .checkIcon {
-  margin-left: auto;
-  color: #1a73e8;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
 }
 
-/* Анимация появления */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-4px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.left {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 8px;
 }

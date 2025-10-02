@@ -6,14 +6,14 @@ export function ContainerHeader() {
   const [sort, setSort] = useState('createdAtDesc');
 
   const options = [
-    { value: 'priorityDesc', label: 'Приоритет ↓', icon: 'priorityDesc' },
-    { value: 'priorityAsc', label: 'Приоритет ↑', icon: 'priorityAsc' },
-    { value: 'alphaDesc', label: 'Алфавит ↓', icon: 'alphabeticalDesc' },
-    { value: 'alphaAsc', label: 'Алфавит ↑', icon: 'alphabeticalAsc' },
-    { value: 'createdAtDesc', label: 'Дата создания ↓', icon: 'createdAtDesc' },
-    { value: 'createdAtAsc', label: 'Дата создания ↑', icon: 'createdAtAsc' },
-    { value: 'updatedAtDesc', label: 'Дата обновления ↓', icon: 'updatedAtDesc' },
-    { value: 'updatedAtAsc', label: 'Дата обновления ↑', icon: 'updatedAtAsc' },
+    { value: 'priorityDesc', label: 'Приоритету', icon: 'priorityDesc' },
+    { value: 'priorityAsc', label: 'Приоритету', icon: 'priorityAsc' },
+    { value: 'alphaDesc', label: 'Алфавиту', icon: 'alphabeticalDesc' },
+    { value: 'alphaAsc', label: 'Алфавиту', icon: 'alphabeticalAsc' },
+    { value: 'createdAtDesc', label: 'Дате создания', icon: 'createdAtDesc' },
+    { value: 'createdAtAsc', label: 'Дате создания', icon: 'createdAtAsc' },
+    { value: 'updatedAtDesc', label: 'Дате обновления', icon: 'updatedAtDesc' },
+    { value: 'updatedAtAsc', label: 'Дате обновления', icon: 'updatedAtAsc' },
   ];
 
   return (

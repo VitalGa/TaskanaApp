@@ -4,14 +4,37 @@ import styles from './dropdown.module.css';
 
 export function Dropdown({ options = [], value, onChange, disabled = false }) {
   const [open, setOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   const dropdownRef = useRef(null);
   const triggerRef = useRef(null);
+  const timeoutRef = useRef(null);
 
-  // Найти текущую выбранную опцию по value
   const selected = options.find((opt) => opt.value === value) || null;
 
-  // Закрытие при клике вне
+  // Управление анимацией открытия/закрытия
+  useEffect(() => {
+    if (open) {
+      // Открытие: сначала добавляем в DOM, затем делаем видимым
+      setIsVisible(false); // Сбрасываем видимость
+      timeoutRef.current = setTimeout(() => {
+        setIsVisible(true); // Через минимальную задержку делаем видимым
+      }, 10);
+    } else {
+      // Закрытие: сначала скрываем, затем удаляем из DOM
+      setIsVisible(false);
+      timeoutRef.current = setTimeout(() => {
+        // Таймер очистится автоматически при размонтировании
+      }, 200);
+    }
+
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, [open]);
+
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
@@ -35,7 +58,6 @@ export function Dropdown({ options = [], value, onChange, disabled = false }) {
 
   return (
     <div className={styles.dropdown} ref={dropdownRef}>
-      {/* Кнопка-триггер */}
       <button
         ref={triggerRef}
         className={styles.dropdownTrigger}
@@ -49,11 +71,16 @@ export function Dropdown({ options = [], value, onChange, disabled = false }) {
         <Icon name='chevronDropdown' className={`${styles.chevron} ${open ? styles.open : ''}`} />
       </button>
 
-      {/* Выпадающее меню */}
       {open && (
-        <div className={styles.dropdownMenu} role='menu'>
-          <div className={styles.dropdownHeader}>Сортировка по:</div>
-          <ul>
+        <div
+          className={`${styles.dropdownMenu} ${isVisible ? styles.dropdownMenuVisible : ''}`}
+          role='menu'>
+          <div className={styles.dropdownHeaderWrapper}>
+            <Icon name='filterDropdown' className={styles.filterIcon} />
+            <div className={styles.dropdownHeader}>Сортировка по:</div>
+          </div>
+
+          <ul className={styles.iconList}>
             {options.map((option) => (
               <li
                 key={option.value}
@@ -66,12 +93,13 @@ export function Dropdown({ options = [], value, onChange, disabled = false }) {
                 onClick={() => handleSelect(option)}>
                 <div className={styles.left}>
                   <Icon name={option.icon} className={styles.icon} />
-                  <span>{option.label}</span>
+                  <span className={styles.dropdownItemLabel}>{option.label}</span>
                 </div>
-
-                {selected && selected.value === option.value && (
-                  <Icon name='checkDropdown' className={styles.checkIcon} />
-                )}
+                <div className={styles.rightCheckIconWrapper}>
+                  {selected && selected.value === option.value && (
+                    <Icon name='checkDropdown' className={styles.checkIcon} />
+                  )}
+                </div>
               </li>
             ))}
           </ul>
