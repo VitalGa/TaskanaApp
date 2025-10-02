@@ -15,7 +15,8 @@
   background: #f3f3f3;
   box-shadow: 2px 2px 4px 0px #0000001a;
   cursor: pointer;
-  min-width: 210px;
+  /* min-width: 211px; */
+  width: 100%;
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
@@ -69,14 +70,16 @@
 /* Меню */
 .dropdownMenu {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
   top: calc(100% + 4px);
-  left: 0;
+  right: 0;
   min-width: 211px;
   background: #fff;
   border-radius: 8px;
   box-shadow: 0px 0px 12px 4px #0000001a;
   z-index: 100;
-  padding: 4px;
   opacity: 0;
   transition: opacity 0.2s ease;
 }
@@ -104,10 +107,11 @@
   border-radius: 4px;
 }
 
-.dropdownMenu ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.dropdownList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px 0;
 }
 
 .dropdownItem {
@@ -115,7 +119,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 8px;
-  padding: 8px 0;
+  padding: 0 8px;
   border-radius: 8px;
   font-size: 16px;
   line-height: 24px;

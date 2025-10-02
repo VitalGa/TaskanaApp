@@ -80,7 +80,7 @@ export function Dropdown({ options = [], value, onChange, disabled = false }) {
             <div className={styles.dropdownHeader}>Сортировка по:</div>
           </div>
 
-          <ul className={styles.iconList}>
+          <ul className={styles.dropdownList}>
             {options.map((option) => (
               <li
                 key={option.value}
