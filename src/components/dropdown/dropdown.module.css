@@ -1,0 +1,121 @@
+.dropdown {
+  position: relative;
+  display: inline-block;
+  font-family: sans-serif;
+}
+
+/* Кнопка-триггер */
+.dropdownTrigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #f9f9f9;
+  cursor: pointer;
+  min-width: 240px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.dropdownTrigger:hover {
+  background: #f1f1f1;
+}
+
+.dropdownTrigger:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Иконка внутри */
+.icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Чеврон справа */
+.chevron {
+  margin-left: auto;
+  transition: transform 0.2s ease;
+}
+
+.open {
+  transform: rotate(180deg);
+}
+
+/* Меню */
+.dropdownMenu {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  width: 260px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  z-index: 100;
+  padding: 6px 0;
+  animation: fadeIn 0.15s ease;
+}
+
+/* Заголовок */
+.dropdownHeader {
+  font-size: 13px;
+  font-weight: 600;
+  color: #666;
+  padding: 6px 12px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 4px;
+}
+
+/* Список */
+.dropdownMenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Пункт списка */
+.dropdownItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.dropdownItem:hover {
+  background: #f5f5f5;
+}
+
+/* Активный пункт */
+.active {
+  font-weight: 600;
+  color: #1a73e8;
+  background: #f0f7ff;
+}
+
+/* Галочка справа */
+.checkIcon {
+  margin-left: auto;
+  color: #1a73e8;
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
