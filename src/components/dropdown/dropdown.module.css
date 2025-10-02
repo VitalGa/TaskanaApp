@@ -1,25 +1,25 @@
 .dropdown {
   position: relative;
   display: inline-block;
-  font-family: sans-serif;
+  margin-top: 8px;
 }
 
-/* Кнопка-триггер */
 .dropdownTrigger {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 8px;
+  margin-bottom: 8px;
   padding: 8px 8px 8px 12px;
   border-radius: 8px;
   background: #f3f3f3;
   box-shadow: 2px 2px 4px 0px #0000001a;
   cursor: pointer;
-  /* min-width: 211px; */
   width: 100%;
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
+  letter-spacing: 0;
   transition: background 0.2s ease;
 }
 
@@ -45,7 +45,6 @@
   flex-shrink: 0;
 }
 
-/* Иконка внутри */
 .icon {
   width: 24px;
   height: 24px;
@@ -57,7 +56,6 @@
   border-radius: 8px;
 }
 
-/* Чеврон справа */
 .chevron {
   margin-left: auto;
   transition: transform 0.2s ease;
@@ -67,13 +65,12 @@
   transform: rotate(180deg);
 }
 
-/* Меню */
 .dropdownMenu {
   position: absolute;
   display: flex;
   flex-direction: column;
   gap: 4px;
-  top: calc(100% + 4px);
+  padding: 4px;
   right: 0;
   min-width: 211px;
   background: #fff;
@@ -87,8 +84,6 @@
 .dropdownMenuVisible {
   opacity: 1;
 }
-
-/* Заголовок */
 
 .dropdownHeaderWrapper {
   display: flex;
@@ -110,8 +105,7 @@
 .dropdownList {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  padding: 8px 0;
+  gap: 4px;
 }
 
 .dropdownItem {
@@ -119,7 +113,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 8px;
-  padding: 0 8px;
+  padding: 8px;
   border-radius: 8px;
   font-size: 16px;
   line-height: 24px;

@@ -3,7 +3,7 @@ import { Icon } from '@/components';
 import styles from './dropdown.module.css';
 
 export function Dropdown({ options = [], value, onChange, disabled = false }) {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
   const [isVisible, setIsVisible] = useState(false);
 
   const dropdownRef = useRef(null);
@@ -35,15 +35,15 @@ export function Dropdown({ options = [], value, onChange, disabled = false }) {
     };
   }, [open]);
 
-  useEffect(() => {
-    const handleClickOutside = (e) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
-        setOpen(false);
-      }
-    };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
+  // useEffect(() => {
+  //   const handleClickOutside = (e) => {
+  //     if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+  //       setOpen(false);
+  //     }
+  //   };
+  //   document.addEventListener('mousedown', handleClickOutside);
+  //   return () => document.removeEventListener('mousedown', handleClickOutside);
+  // }, []);
 
   const handleToggle = () => {
     if (disabled) return;
@@ -67,7 +67,11 @@ export function Dropdown({ options = [], value, onChange, disabled = false }) {
         disabled={disabled}
         type='button'>
         {selected && <Icon name={selected.icon} className={styles.icon} />}
-        <span className={styles.label}>{selected ? selected.label : 'Выберите…'}</span>
+        <span className={styles.label}>
+          {selected
+            ? `По ${selected.label.charAt(0).toLowerCase()}${selected.label.slice(1)}`
+            : 'Выберите…'}
+        </span>
         <Icon name='chevronDropdown' className={`${styles.chevron} ${open ? styles.open : ''}`} />
       </button>
 
