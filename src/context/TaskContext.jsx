@@ -3,8 +3,46 @@ import { generateId } from '../components/taskEditor/utils/generateId';
 
 export const TaskContext = createContext();
 
+const initialTasks = [
+  {
+    id: '1',
+    title: 'Подключение внешних сервисов или внутренних API для взаимодействия с серверной частью',
+    priority: 3,
+    createdAt: '2025-10-01T10:00:00.000Z',
+    updatedAt: '2025-10-01T10:00:00.000Z',
+  },
+  {
+    id: '2',
+    title: 'Поиск и устранение ошибок',
+    priority: 3,
+    createdAt: '2025-10-01T11:30:00.000Z',
+    updatedAt: '2025-10-02T09:15:00.000Z',
+  },
+  {
+    id: '3',
+    title: 'Добавление плавных анимаций и переходов для улучшения пользовательского опыта.',
+    priority: 2,
+    createdAt: '2025-09-30T14:20:00.000Z',
+    updatedAt: '2025-09-30T14:20:00.000Z',
+  },
+  {
+    id: '4',
+    title: 'Написание комментариев и документации для облегчения поддержки и развития проекта.',
+    priority: 1,
+    createdAt: '2025-10-02T08:00:00.000Z',
+    updatedAt: '2025-10-02T08:00:00.000Z',
+  },
+  {
+    id: '5',
+    title: 'Подключение внешних сервисов или внутренних API для взаимодействия с серверной частью',
+    priority: 2,
+    createdAt: '2025-09-29T16:45:00.000Z',
+    updatedAt: '2025-10-01T12:30:00.000Z',
+  },
+];
+
 export const TaskProvider = ({ children }) => {
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState(initialTasks);
 
   const addTask = ({ title, priority }) => {
     const now = new Date().toISOString();
