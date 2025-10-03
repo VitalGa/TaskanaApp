@@ -1,12 +1,9 @@
-import React, { useContext } from 'react';
-import { TaskContext } from '@/context/TaskContext';
+import React from 'react';
 import { ContainerText, EmptyTask } from '@/components';
 import { TaskItem } from './TaskItem';
 import styles from './taskList.module.css';
 
-export function TaskList() {
-  const { tasks } = useContext(TaskContext);
-
+export function TaskList({ tasks }) {
   const hasTasks = Array.isArray(tasks) && tasks.length > 0;
 
   return (
