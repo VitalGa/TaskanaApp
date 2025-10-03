@@ -12,20 +12,16 @@ export function Dropdown({ options = [], value, onChange, disabled = false }) {
 
   const selected = options.find((opt) => opt.value === value) || null;
 
-  // Управление анимацией открытия/закрытия
   useEffect(() => {
     if (open) {
-      // Открытие: сначала добавляем в DOM, затем делаем видимым
-      setIsVisible(false); // Сбрасываем видимость
-      timeoutRef.current = setTimeout(() => {
-        setIsVisible(true); // Через минимальную задержку делаем видимым
-      }, 10);
-    } else {
-      // Закрытие: сначала скрываем, затем удаляем из DOM
+      Dropdown;
       setIsVisible(false);
       timeoutRef.current = setTimeout(() => {
-        // Таймер очистится автоматически при размонтировании
-      }, 200);
+        setIsVisible(true);
+      }, 10);
+    } else {
+      setIsVisible(false);
+      timeoutRef.current = setTimeout(() => {}, 200);
     }
 
     return () => {
