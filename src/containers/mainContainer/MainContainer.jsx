@@ -8,7 +8,7 @@ import { sortTasksBy } from '@/utils/sortTasks';
 import { sortOptions } from '@/components/data/sortOptions';
 
 export function MainContainer() {
-  const [sortBy, setSortBy] = useState('createdAt-desc');
+  const [sortBy, setSortBy] = useState('createdAtDesc');
   const { tasks } = useContext(TaskContext);
 
   const sortedTasks = useMemo(() => {

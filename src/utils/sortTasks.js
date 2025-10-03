@@ -8,7 +8,21 @@
 export function sortTasksBy(tasks, sortValue) {
   const sortedTasks = [...tasks];
 
-  const [field, order] = sortValue.split('-');
+  // Определяем поле и порядок из значения в формате 'fieldOrder' (например: 'createdAtDesc')
+  let field, order;
+  if (sortValue.endsWith('Desc')) {
+    field = sortValue.slice(0, -4); // убираем 'Desc'
+    order = 'desc';
+  } else if (sortValue.endsWith('Asc')) {
+    field = sortValue.slice(0, -3); // убираем 'Asc'
+    order = 'asc';
+  } else {
+    // fallback для старого формата
+    const [fieldPart, orderPart] = sortValue.split('-');
+    field = fieldPart;
+    order = orderPart;
+  }
+
   const isAscending = order === 'asc';
 
   switch (field) {
