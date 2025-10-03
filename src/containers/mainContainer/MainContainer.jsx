@@ -1,7 +1,5 @@
 import styles from './mainContainer.module.css';
-import { ContainerHeader } from '@/components';
-import { TaskList } from '@/components';
-
+import { ContainerHeader, TaskList } from '@/components';
 import { useState, useMemo, useContext } from 'react';
 import { TaskContext } from '@/context/TaskContext';
 import { sortTasksBy } from '@/utils/sortTasks';

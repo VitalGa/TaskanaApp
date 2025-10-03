@@ -3,7 +3,7 @@ import { Icon } from '@/components';
 import styles from './dropdown.module.css';
 
 export function Dropdown({ options = [], value, onChange, disabled = false }) {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
   const dropdownRef = useRef(null);
@@ -31,15 +31,15 @@ export function Dropdown({ options = [], value, onChange, disabled = false }) {
     };
   }, [open]);
 
-  // useEffect(() => {
-  //   const handleClickOutside = (e) => {
-  //     if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
-  //       setOpen(false);
-  //     }
-  //   };
-  //   document.addEventListener('mousedown', handleClickOutside);
-  //   return () => document.removeEventListener('mousedown', handleClickOutside);
-  // }, []);
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   const handleToggle = () => {
     if (disabled) return;
