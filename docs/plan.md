@@ -506,96 +506,200 @@
 
 ## 📦 ЭТАП 4: Интеграция Dropdown со списком задач (1-2 часа)
 
-### 4.1. Подготовка компонента страницы
+**Примечание**: Dropdown уже создан и интегрирован в ContainerHeader, но нужно исправить интеграцию с сортировкой задач.
 
-- [ ] **Открыть компонент с списком задач**
+### 4.1. Анализ текущего состояния
 
-  - Вероятно, это `src/pages/incomingTasks/IncomingTasks.jsx`
+- [x] **Dropdown уже интегрирован в ContainerHeader**
+- [x] **TaskContext содержит задачи**
+- [ ] **🚨 КРИТИЧНО: Исправить баг в Dropdown (открыт по умолчанию)**
+- [ ] **🚨 КРИТИЧНО: Исправить несоответствие иконок в sortOptions.js**
+- [ ] **🚨 КРИТИЧНО: Исправить несоответствие значений сортировки**
+- [ ] **Добавить состояние сортировки в правильное место**
+- [ ] **Применить сортировку к TaskList**
 
-- [ ] **Импортировать необходимые модули**
+**ПРИОРИТЕТ ВЫПОЛНЕНИЯ:** Сначала исправляем критические проблемы, потом архитектуру!
+
+### 4.2. Исправление критических проблем
+
+**🚨 КРИТИЧЕСКИЕ ПРОБЛЕМЫ НАЙДЕНЫ:**
+
+1. **Несоответствие иконок**: `sortOptions.js` использует `'arrowDown'`, но в `Icon.jsx` нет таких иконок
+2. **Несоответствие значений**: `sortOptions.js` использует `'priority-desc'`, а `ContainerHeader.jsx` использует `'priorityDesc'`
+3. **Баг в Dropdown**: открыт по умолчанию (`useState(true)`)
+
+- [ ] **Исправить данные в sortOptions.js**
+
+  - Открыть `src/components/data/sortOptions.js`
+  - Заменить иконки на существующие:
+    ```js
+    export const sortOptions = [
+      {
+        value: 'priority-desc',
+        label: 'Приоритету',
+        icon: 'priorityDesc', // было 'arrowDown'
+        field: 'priority',
+        order: 'desc',
+      },
+      {
+        value: 'priority-asc',
+        label: 'Приоритету',
+        icon: 'priorityAsc', // было 'arrowUp'
+        field: 'priority',
+        order: 'asc',
+      },
+      // ... остальные аналогично
+    ];
+    ```
+
+- [ ] **Исправить баг в Dropdown.jsx**
+
+  - Открыть `src/components/dropdown/Dropdown.jsx`
+  - Изменить строку 6:
+    ```jsx
+    const [open, setOpen] = useState(false); // было true
+    ```
+
+- [ ] **Обновить ContainerHeader для использования правильных данных**
+
+  - Открыть `src/components/containerHeader/ContainerHeader.jsx`
+  - Заменить локальные `options` на импорт из `sortOptions.js`:
+    ```jsx
+    import { sortOptions } from '@/components/data/sortOptions';
+    ```
+  - Убрать локальный массив `options`
+  - Исправить значение по умолчанию:
+    ```jsx
+    const [sort, setSort] = useState('createdAt-desc'); // вместо 'createdAtDesc'
+    ```
+
+### 4.3. Перемещение состояния сортировки в правильное место
+
+- [ ] **Переместить состояние из ContainerHeader в MainContainer**
+
+  - **Почему MainContainer?** Потому что он содержит и заголовок с Dropdown, и TaskList
+  - ContainerHeader не должен управлять состоянием сортировки — это ответственность родительского компонента
+
+- [ ] **Обновить MainContainer.jsx**
+
   ```jsx
-  import { Dropdown } from '@/components';
-  import { sortOptions } from '@/data/sortOptions';
+  import { useState, useMemo, useContext } from 'react';
+  import { TaskContext } from '@/context/TaskContext';
   import { sortTasksBy } from '@/utils/sortTasks';
-  import { useState, useMemo } from 'react';
+  import { sortOptions } from '@/components/data/sortOptions';
+
+  export function MainContainer() {
+    const [sortBy, setSortBy] = useState('createdAt-desc');
+    const { tasks } = useContext(TaskContext);
+
+    const sortedTasks = useMemo(() => {
+      return sortTasksBy(tasks, sortBy);
+    }, [tasks, sortBy]);
+
+    return (
+      <main className={styles.mainContainer}>
+        <ContainerHeader sortBy={sortBy} onSortChange={setSortBy} sortOptions={sortOptions} />
+        <TaskList tasks={sortedTasks} />
+      </main>
+    );
+  }
   ```
 
-### 4.2. Добавление состояния сортировки
+### 4.4. Обновление ContainerHeader
 
-- [ ] **Добавить состояние для выбранной сортировки**
+- [ ] **Убрать локальное состояние из ContainerHeader**
   ```jsx
-  const [sortBy, setSortBy] = useState('createdAt-desc');
+  export function ContainerHeader({ sortBy, onSortChange, sortOptions }) {
+    return (
+      <div className={`${styles.containerHeader} flex justify-between items-center`}>
+        <h1 className='heading-h1'>Входящие</h1>
+        <Dropdown options={sortOptions} value={sortBy} onChange={onSortChange} />
+      </div>
+    );
+  }
   ```
 
-### 4.3. Применение сортировки к задачам
+### 4.5. Обновление TaskList
 
-- [ ] **Получить задачи из контекста**
-
-  - Найти, откуда берутся задачи (вероятно из `TaskContext`)
-
-  ```jsx
-  const { tasks } = useContext(TaskContext); // или как у тебя называется
-  ```
-
-- [ ] **Создать отсортированный массив через useMemo**
-  ```jsx
-  const sortedTasks = useMemo(() => {
-    return sortTasksBy(tasks, sortBy);
-  }, [tasks, sortBy]);
-  ```
-  - **Почему useMemo?** Чтобы не пересортировывать массив на каждый рендер
-  - Сортировка будет происходить только при изменении `tasks` или `sortBy`
-
-### 4.4. Обработчик изменения сортировки
-
-- [ ] **Создать функцию-обработчик**
-  ```jsx
-  const handleSortChange = (sortValue) => {
-    setSortBy(sortValue);
-  };
-  ```
-
-### 4.5. Добавление Dropdown в разметку
-
-- [ ] **Найти место для Dropdown**
-
-  - По макету, он должен быть над списком задач
-  - Возможно, рядом с заголовком "Входящие"
-
-- [ ] **Добавить Dropdown в JSX**
+- [ ] **Принимать отсортированные задачи как prop**
 
   ```jsx
-  <Dropdown options={sortOptions} defaultValue='createdAt-desc' onSortChange={handleSortChange} />
+  export function TaskList({ tasks }) {
+    // Убрать получение tasks из контекста
+    // const { tasks } = useContext(TaskContext); // удалить эту строку
+
+    const hasTasks = Array.isArray(tasks) && tasks.length > 0;
+    // остальной код остаётся тот же
+  }
   ```
 
-- [ ] **Использовать sortedTasks вместо tasks**
-  - Найти, где рендерится список задач
-  - Заменить `tasks.map(...)` на `sortedTasks.map(...)`
-
-### 4.6. Стилизация расположения Dropdown
-
-- [ ] **Добавить контейнер для Dropdown**
-
-  - Если нужно, обернуть в `div` для позиционирования
-  - Добавить стили для выравнивания
-
-- [ ] **Проверить по макету правильность расположения**
-
-### 4.7. Тестирование интеграции
+### 4.6. Тестирование интеграции
 
 - [ ] **Проверить работу сортировки**
 
-  - Создать несколько задач с разными приоритетами
-  - Создать задачи с разными названиями
-  - Выбрать каждый вариант сортировки
-  - Убедиться, что список пересортировывается
+  - Запустить приложение
+  - Выбрать разные варианты сортировки в Dropdown
+  - Убедиться, что список задач пересортировывается
+  - Проверить все 8 вариантов сортировки
 
 - [ ] **Проверить edge cases**
-  - Пустой список задач
+
+  - Пустой список задач (должен показывать EmptyTask)
   - Одна задача
   - Задачи с одинаковыми значениями
 
-**🎉 Чекпоинт 4**: Dropdown интегрирован, сортировка работает
+- [ ] **Проверить производительность**
+  - При большом количестве задач сортировка должна работать быстро
+  - useMemo предотвращает ненужные пересортировки
+
+### 4.7. Проверка соответствия данных
+
+- [ ] **Проверить соответствие всех компонентов**
+
+  **sortOptions.js должен содержать:**
+
+  ```js
+  { value: 'priority-desc', icon: 'priorityDesc' },
+  { value: 'priority-asc', icon: 'priorityAsc' },
+  { value: 'title-desc', icon: 'alphabeticalDesc' },
+  { value: 'title-asc', icon: 'alphabeticalAsc' },
+  { value: 'createdAt-desc', icon: 'createdAtDesc' },
+  { value: 'createdAt-asc', icon: 'createdAtAsc' },
+  { value: 'updatedAt-desc', icon: 'updatedAtDesc' },
+  { value: 'updatedAt-asc', icon: 'updatedAtAsc' },
+  ```
+
+  **sortTasksBy должен понимать:**
+
+  - `'priority-desc'`, `'priority-asc'`
+  - `'title-desc'`, `'title-asc'`
+  - `'createdAt-desc'`, `'createdAt-asc'`
+  - `'updatedAt-desc'`, `'updatedAt-asc'`
+
+- [ ] **Проверить, что все иконки существуют в Icon.jsx**
+  - `priorityDesc`, `priorityAsc`
+  - `alphabeticalDesc`, `alphabeticalAsc`
+  - `createdAtDesc`, `createdAtAsc`
+  - `updatedAtDesc`, `updatedAtAsc`
+  - `checkDropdown`, `chevronDropdown`, `filterDropdown`
+
+### 4.8. Отладка (если нужно)
+
+- [ ] **Добавить временные console.log для проверки**
+
+  ```jsx
+  console.log('Текущая сортировка:', sortBy);
+  console.log('Отсортированные задачи:', sortedTasks);
+  console.log('Доступные опции:', sortOptions);
+  ```
+
+- [ ] **Проверить работу Dropdown**
+  - Dropdown закрыт по умолчанию ✓
+  - Клик открывает/закрывает ✓
+  - Иконки отображаются ✓
+  - Выбор варианта работает ✓
+
+**🎉 Чекпоинт 4**: Dropdown интегрирован, сортировка работает корректно
 
 ---
 

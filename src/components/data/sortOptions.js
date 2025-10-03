@@ -1,0 +1,58 @@
+export const sortOptions = [
+  {
+    value: 'priority-desc',
+    label: 'Приоритету',
+    icon: 'arrowDown',
+    field: 'priority',
+    order: 'desc',
+  },
+  {
+    value: 'priority-asc',
+    label: 'Приоритету',
+    icon: 'arrowUp',
+    field: 'priority',
+    order: 'asc',
+  },
+  {
+    value: 'title-desc',
+    label: 'Алфавиту',
+    icon: 'arrowDown',
+    field: 'title',
+    order: 'desc',
+  },
+  {
+    value: 'title-asc',
+    label: 'Алфавиту',
+    icon: 'arrowUp',
+    field: 'title',
+    order: 'asc',
+  },
+  {
+    value: 'createdAt-desc',
+    label: 'Дате создания',
+    icon: 'arrowDown',
+    field: 'createdAt',
+    order: 'desc',
+  },
+  {
+    value: 'createdAt-asc',
+    label: 'Дате создания',
+    icon: 'arrowUp',
+    field: 'createdAt',
+    order: 'asc',
+  },
+  {
+    value: 'updatedAt-desc',
+    label: 'Дате обновления',
+    icon: 'arrowDown',
+    field: 'updatedAt',
+    order: 'desc',
+  },
+  {
+    value: 'updatedAt-asc',
+    label: 'Дате обновления',
+    icon: 'arrowUp',
+    field: 'updatedAt',
+    order: 'asc',
+  },
+];
