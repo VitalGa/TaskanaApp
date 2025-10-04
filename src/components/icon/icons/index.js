@@ -34,3 +34,6 @@ export { default as FilterDropdownIcon } from './dropdownIcons/FilterDropdownIco
 
 //TaskList icons
 export { default as TaskEditIcon } from './taskListIcons/TaskEditIcon';
+
+//TaskEditorFooter icons
+export { default as FooterDeleteIcon } from './taskEditorFooterIcons/FooterDeleteIcon';

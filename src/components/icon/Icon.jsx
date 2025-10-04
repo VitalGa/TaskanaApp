@@ -21,6 +21,7 @@ import {
   PriorityDescIcon,
   PriorityAscIcon,
   FilterDropdownIcon,
+  FooterDeleteIcon,
 } from './icons';
 
 const icons = {
@@ -46,6 +47,7 @@ const icons = {
   priorityDesc: PriorityDescIcon,
   priorityAsc: PriorityAscIcon,
   filterDropdown: FilterDropdownIcon,
+  footerDelete: FooterDeleteIcon,
 };
 
 export function Icon({ name, ...props }) {

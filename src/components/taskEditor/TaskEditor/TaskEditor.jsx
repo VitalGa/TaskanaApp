@@ -7,19 +7,24 @@ import styles from './taskEditor.module.css';
 import { TaskContext } from '@/context/TaskContext';
 import { useTaskEditor } from '@/context/TaskEditorContext';
 
-export const TaskEditor = () => {
-  const { addTask } = useContext(TaskContext);
+export const TaskEditor = ({ type = 'create', task = null }) => {
+  const { addTask, editTask } = useContext(TaskContext);
   const { isTaskEditorOpen, closeTaskEditor } = useTaskEditor();
   const inputRef = useRef(null);
   const taskEditorRef = useRef(null);
 
-  const [title, setTitle] = useState('');
-  const [priority, setPriority] = useState(1);
+  const [title, setTitle] = useState(task?.title || '');
+  const [priority, setPriority] = useState(task?.priority || 1);
   const [showConfirmModal, setShowConfirmModal] = useState(false);
+  const [originalTask, setOriginalTask] = useState(task);
 
-  const hasUnsavedChanges = () => {
-    return title.trim() !== '';
+  const hasChanges = () => {
+    if (type === 'create') return title.trim() !== '';
+    if (!originalTask) return false;
+
+    return title.trim() !== originalTask.title || priority !== originalTask.priority;
   };
+
   const handleConfirmClose = useCallback(() => {
     setTitle('');
     setPriority(1);
@@ -32,7 +37,7 @@ export const TaskEditor = () => {
   }, []);
 
   const handleCancel = useCallback(() => {
-    if (hasUnsavedChanges()) {
+    if (hasChanges()) {
       setShowConfirmModal(true);
     } else {
       setTitle('');
@@ -41,17 +46,41 @@ export const TaskEditor = () => {
     }
   }, [title, closeTaskEditor]);
 
-  const handleCreate = useCallback(() => {
-    if (title.trim()) {
-      addTask({ title: title.trim(), priority });
-      closeTaskEditor();
+  // const handleCreate = useCallback(() => {
+  //   if (title.trim()) {
+  //     addTask({ title: title.trim(), priority });
+  //     closeTaskEditor();
 
+  //     setTimeout(() => {
+  //       setTitle('');
+  //       setPriority(1);
+  //     }, 500);
+  //   }
+  // }, [title, priority, addTask, closeTaskEditor]);
+
+  const handleSave = useCallback(() => {
+    if (title.trim()) {
+      if (type === 'edit' && task) {
+        // Режим редактирования
+        editTask(task.id, {
+          updatedFields: {
+            title: title.trim(),
+            priority,
+          },
+        });
+      } else {
+        // Режим создания
+        addTask({ title: title.trim(), priority });
+      }
+
+      closeTaskEditor();
+      // Очистка полей после успешного сохранения
       setTimeout(() => {
         setTitle('');
         setPriority(1);
       }, 500);
     }
-  }, [title, priority, addTask, closeTaskEditor]);
+  }, [title, priority, type, task, addTask, editTask, closeTaskEditor]);
 
   const handleChange = useCallback((e) => {
     setTitle(e.target.value);
@@ -81,6 +110,18 @@ export const TaskEditor = () => {
     };
   }, [isTaskEditorOpen, handleCancel]);
 
+  useEffect(() => {
+    if (type === 'edit' && task) {
+      setTitle(task.title);
+      setPriority(task.priority);
+      setOriginalTask(task);
+    } else {
+      setTitle('');
+      setPriority(1);
+      setOriginalTask(null);
+    }
+  }, [type, task]);
+
   return (
     <>
       <div className={styles.taskEditorWrapper}>
@@ -91,7 +132,7 @@ export const TaskEditor = () => {
             <TaskEditorHeader
               value={title}
               handleChange={handleChange}
-              onSubmit={handleCreate}
+              onSubmit={handleSave}
               ref={inputRef}
               disabled={!isTaskEditorOpen}
             />
@@ -108,7 +149,7 @@ export const TaskEditor = () => {
             <TaskEditorFooter
               disabled={title.trim() === '' || !isTaskEditorOpen}
               disabledCancel={!isTaskEditorOpen}
-              handleCreate={handleCreate}
+              handleCreate={handleSave}
               handleCancel={handleCancel}
             />
           </div>

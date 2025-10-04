@@ -1,8 +1,28 @@
+.taskEditorFooterWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: var(--spacing-md) var(--spacing-lg);
+}
+
+.taskEditorFooterDeleteButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background-color: #f3f3f3;
+  box-shadow: 2px 2px 4px 0px #0000001a;
+}
+
 .taskEditorFooter {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: var(--spacing-md) var(--spacing-lg);
+
   gap: 16px;
   border-top: 1px solid var(--footer-border);
   transition: background-color var(--transition-theme), color var(--transition-theme),
