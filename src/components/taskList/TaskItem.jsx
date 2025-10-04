@@ -3,7 +3,7 @@ import styles from './taskItem.module.css';
 import { Icon } from '@/components';
 import { useTaskEditor } from '@/context';
 
-export function TaskItem({ title, priority }) {
+export function TaskItem({ title, priority, task, onEdit }) {
   const priorityClassMap = {
     1: 'low',
     2: 'normal',
@@ -11,6 +11,12 @@ export function TaskItem({ title, priority }) {
   };
 
   const priorityClass = priorityClassMap[priority] || 'low';
+
+  const handleEdit = () => {
+    if (onEdit) {
+      onEdit(task);
+    }
+  };
 
   return (
     <li className={styles.taskItemWrapper} tabIndex={0} role='listitem'>
@@ -27,7 +33,7 @@ export function TaskItem({ title, priority }) {
       <div className={styles.editIconContainer}>
         <button
           className={styles.editButton}
-          // onClick={handleEdit}
+          onClick={handleEdit}
           aria-label='Редактировать задачу'>
           <Icon name='taskEdit' className={styles.editIcon} />
         </button>

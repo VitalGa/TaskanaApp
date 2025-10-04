@@ -2,18 +2,25 @@ import styles from './taskEditorFooter.module.css';
 import { Button } from '@/ui';
 import { Icon } from '@/components';
 
-export const TaskEditorFooter = ({ disabled, disabledCancel, handleCreate, handleCancel }) => {
+export const TaskEditorFooter = ({
+  type = 'create',
+  disabled,
+  disabledCancel,
+  handleSave,
+  handleCancel,
+  handleDelete,
+}) => {
   return (
     <div className={styles.taskEditorFooterWrapper}>
       <div className={styles.taskEditorFooter}>
         <Button
-          onClick={handleCreate}
+          onClick={handleSave}
           variant='thirdLeft'
           size='small'
           className={styles.thirdLeft}
           disabled={disabled}
           tabIndex={disabled ? -1 : 6}>
-          Создать
+          {type === 'edit' ? 'Сохранить' : 'Создать'}
         </Button>
         <Button
           onClick={handleCancel}
@@ -26,7 +33,10 @@ export const TaskEditorFooter = ({ disabled, disabledCancel, handleCreate, handl
         </Button>
       </div>
       <div className={styles.taskEditorFooterDelete}>
-        <button className={styles.taskEditorFooterDeleteButton}>
+        <button
+          className={styles.taskEditorFooterDeleteButton}
+          onClick={handleDelete}
+          style={{ display: type === 'edit' ? 'block' : 'none' }}>
           <Icon name='footerDelete' />
         </button>
       </div>

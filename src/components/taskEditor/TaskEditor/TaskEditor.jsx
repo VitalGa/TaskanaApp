@@ -9,17 +9,21 @@ import { useTaskEditor } from '@/context/TaskEditorContext';
 
 export const TaskEditor = ({ type = 'create', task = null }) => {
   const { addTask, editTask, deleteTask } = useContext(TaskContext);
-  const { isTaskEditorOpen, closeTaskEditor } = useTaskEditor();
+  const { isTaskEditorOpen, closeTaskEditor, editorMode, editingTask } = useTaskEditor();
+
+  const currentType = editorMode || type;
+  const currentTask = editingTask || task;
+
   const inputRef = useRef(null);
   const taskEditorRef = useRef(null);
 
-  const [title, setTitle] = useState(task?.title || '');
-  const [priority, setPriority] = useState(task?.priority || 1);
+  const [title, setTitle] = useState(currentTask?.title || '');
+  const [priority, setPriority] = useState(currentTask?.priority || 1);
   const [showConfirmModal, setShowConfirmModal] = useState(false);
-  const [originalTask, setOriginalTask] = useState(task);
+  const [originalTask, setOriginalTask] = useState(currentTask);
 
   const hasChanges = () => {
-    if (type === 'create') return title.trim() !== '';
+    if (currentType === 'create') return title.trim() !== '';
     if (!originalTask) return false;
 
     return title.trim() !== originalTask.title || priority !== originalTask.priority;
@@ -60,9 +64,9 @@ export const TaskEditor = ({ type = 'create', task = null }) => {
 
   const handleSave = useCallback(() => {
     if (title.trim()) {
-      if (type === 'edit' && task) {
+      if (currentType === 'edit' && currentTask) {
         // Режим редактирования
-        editTask(task.id, {
+        editTask(currentTask.id, {
           updatedFields: {
             title: title.trim(),
             priority,
@@ -73,21 +77,21 @@ export const TaskEditor = ({ type = 'create', task = null }) => {
         addTask({ title: title.trim(), priority });
       }
 
-      const handleDelete = useCallback(() => {
-        if (type === 'edit' && task) {
-          deleteTask(task.id);
-          closeTaskEditor();
-        }
-      }, [type, task, deleteTask, closeTaskEditor]);
-
       closeTaskEditor();
-      // Очистка полей после успешного сохранения
+
       setTimeout(() => {
         setTitle('');
         setPriority(1);
       }, 500);
     }
-  }, [title, priority, type, task, addTask, editTask, closeTaskEditor]);
+  }, [title, priority, currentType, currentTask, addTask, editTask, closeTaskEditor]);
+
+  const handleDelete = useCallback(() => {
+    if (currentType === 'edit' && currentTask) {
+      deleteTask(currentTask.id);
+      closeTaskEditor();
+    }
+  }, [currentType, currentTask, deleteTask, closeTaskEditor]);
 
   const handleChange = useCallback((e) => {
     setTitle(e.target.value);
@@ -118,16 +122,16 @@ export const TaskEditor = ({ type = 'create', task = null }) => {
   }, [isTaskEditorOpen, handleCancel]);
 
   useEffect(() => {
-    if (type === 'edit' && task) {
-      setTitle(task.title);
-      setPriority(task.priority);
-      setOriginalTask(task);
+    if (currentType === 'edit' && currentTask) {
+      setTitle(currentTask.title);
+      setPriority(currentTask.priority);
+      setOriginalTask(currentTask);
     } else {
       setTitle('');
       setPriority(1);
       setOriginalTask(null);
     }
-  }, [type, task]);
+  }, [currentType, currentTask]);
 
   return (
     <>
@@ -154,10 +158,12 @@ export const TaskEditor = ({ type = 'create', task = null }) => {
           </div>
           <div className={styles.taskEditorFooterContainer}>
             <TaskEditorFooter
+              type={currentType}
               disabled={title.trim() === '' || !isTaskEditorOpen}
               disabledCancel={!isTaskEditorOpen}
-              handleCreate={handleSave}
+              handleSave={handleSave}
               handleCancel={handleCancel}
+              handleDelete={handleDelete}
             />
           </div>
         </div>
