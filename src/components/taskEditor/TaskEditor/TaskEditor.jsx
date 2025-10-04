@@ -8,7 +8,7 @@ import { TaskContext } from '@/context/TaskContext';
 import { useTaskEditor } from '@/context/TaskEditorContext';
 
 export const TaskEditor = ({ type = 'create', task = null }) => {
-  const { addTask, editTask } = useContext(TaskContext);
+  const { addTask, editTask, deleteTask } = useContext(TaskContext);
   const { isTaskEditorOpen, closeTaskEditor } = useTaskEditor();
   const inputRef = useRef(null);
   const taskEditorRef = useRef(null);
@@ -72,6 +72,13 @@ export const TaskEditor = ({ type = 'create', task = null }) => {
         // Режим создания
         addTask({ title: title.trim(), priority });
       }
+
+      const handleDelete = useCallback(() => {
+        if (type === 'edit' && task) {
+          deleteTask(task.id);
+          closeTaskEditor();
+        }
+      }, [type, task, deleteTask, closeTaskEditor]);
 
       closeTaskEditor();
       // Очистка полей после успешного сохранения
