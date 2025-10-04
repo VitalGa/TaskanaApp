@@ -707,23 +707,27 @@
 
 ### 5.1. Анализ текущего TaskEditor
 
-- [ ] **Изучить компонент TaskEditor**
+- [x] **Изучить компонент TaskEditor**
 
-  - Открыть `src/components/taskEditor/TaskEditor/TaskEditor.jsx`
-  - Понять текущую структуру
-  - Определить, какие props уже есть
+  - ✅ Открыт `src/components/taskEditor/TaskEditor/TaskEditor.jsx`
+  - ✅ Текущая структура: компонент без props, использует только контекст
+  - ✅ Текущие props: отсутствуют
 
 - [ ] **Определить, что нужно добавить**
-  - Prop `type` (create/edit)
-  - Prop `task` (данные задачи для редактирования)
-  - Кнопка "Удалить"
-  - Логика проверки изменений
+  - ❌ Prop `type` (create/edit) - отсутствует
+  - ❌ Prop `task` (данные задачи для редактирования) - отсутствует
+  - ❌ Кнопка "Удалить" - отсутствует
+  - ❌ Логика проверки изменений - упрощенная версия есть
 
 ### 5.2. Добавление новых props
 
 - [ ] **Обновить сигнатуру компонента**
 
   ```jsx
+  // БЫЛО:
+  export const TaskEditor = () => {
+
+  // ДОЛЖНО БЫТЬ:
   export const TaskEditor = ({ type = 'create', task = null }) => {
   ```
 
@@ -780,16 +784,23 @@
 - [ ] **Обновить функцию handleCreate**
 
   - Переименовать в `handleSave`
+  - Добавить `editTask` в деструктуризацию TaskContext
   - Добавить разветвление по `type`:
+
     ```jsx
+    // В начале компонента:
+    const { addTask, editTask } = useContext(TaskContext);
+
+    // Функция handleSave:
     const handleSave = useCallback(() => {
       if (title.trim()) {
         if (type === 'edit' && task) {
           // Обновляем задачу
-          updateTask(task.id, {
-            title: title.trim(),
-            priority,
-            updatedAt: new Date().toISOString(),
+          editTask(task.id, {
+            updatedFields: {
+              title: title.trim(),
+              priority,
+            },
           });
         } else {
           // Создаём задачу
@@ -802,7 +813,7 @@
           setPriority(1);
         }, 500);
       }
-    }, [title, priority, type, task, addTask, updateTask, closeTaskEditor]);
+    }, [title, priority, type, task, addTask, editTask, closeTaskEditor]);
     ```
 
 - [ ] **Обновить условие disabled для кнопки**
@@ -819,6 +830,10 @@
 - [ ] **Добавить функцию удаления**
 
   ```jsx
+  // В начале компонента:
+  const { addTask, editTask, deleteTask } = useContext(TaskContext);
+
+  // Функция handleDelete:
   const handleDelete = useCallback(() => {
     if (type === 'edit' && task) {
       deleteTask(task.id);
@@ -830,13 +845,19 @@
 - [ ] **Обновить TaskEditorFooter**
 
   - Открыть `src/components/taskEditor/TaskEditorFooter/TaskEditorFooter.jsx`
-  - Добавить props: `showDelete`, `onDelete`
-  - Добавить кнопку "Удалить":
+  - ✅ Текущие props: `disabled`, `disabledCancel`, `handleCreate`, `handleCancel`
+  - ❌ Нужно добавить props: `showDelete`, `onDelete`
+  - ❌ Добавить кнопку "Удалить":
     ```jsx
     {
-      showDelete && <button onClick={onDelete}>Удалить</button>;
+      showDelete && (
+        <button className={styles.deleteButton} onClick={onDelete} aria-label='Удалить задачу'>
+          Удалить
+        </button>
+      );
     }
     ```
+  - ❌ Добавить стили для кнопки удаления (красная, опасное действие)
 
 - [ ] **Передать props в TaskEditorFooter**
   ```jsx
@@ -852,27 +873,50 @@
 ### 5.7. Обновление заголовка
 
 - [ ] **Изменить заголовок в зависимости от режима**
-  - Открыть `TaskEditorHeader`
-  - Добавить prop `title` или `mode`
-  - Показывать "Создать задачу" или "Редактировать задачу"
 
-### 5.8. Добавление функции updateTask в контекст
+  - Открыть `TaskEditorHeader`
+  - ✅ Текущий заголовок: жестко задан "Создание задачи"
+  - ❌ Нужно добавить prop `title` или `mode`
+  - ❌ Показывать "Создать задачу" или "Редактировать задачу"
+
+- [ ] **Обновить TaskEditorHeader компонент**
+
+  ```jsx
+  // БЫЛО в TaskEditorHeader.jsx:
+  export const TaskEditorHeader = forwardRef(
+    ({ value, handleChange, onSubmit, disabled = false }, ref) => {
+      // ...
+      <h2 className={styles.taskFormHeader}>Создание задачи</h2>
+
+  // ДОЛЖНО БЫТЬ:
+  export const TaskEditorHeader = forwardRef(
+    ({ value, handleChange, onSubmit, disabled = false, mode = 'create' }, ref) => {
+      // ...
+      <h2 className={styles.taskFormHeader}>
+        {mode === 'edit' ? 'Редактирование задачи' : 'Создание задачи'}
+      </h2>
+  ```
+
+- [ ] **Передать prop mode в TaskEditorHeader в TaskEditor.jsx**
+
+  ```jsx
+  <TaskEditorHeader
+    value={title}
+    handleChange={handleChange}
+    onSubmit={handleSave}
+    ref={inputRef}
+    disabled={!isTaskEditorOpen}
+    mode={type}
+  />
+  ```
+
+### 5.8. Обновление TaskContext
 
 - [ ] **Открыть TaskContext**
 
   - Файл `src/context/TaskContext.jsx`
-
-- [ ] **Добавить функцию updateTask**
-
-  ```jsx
-  const updateTask = (id, updates) => {
-    setTasks((prevTasks) =>
-      prevTasks.map((task) =>
-        task.id === id ? { ...task, ...updates, updatedAt: new Date().toISOString() } : task,
-      ),
-    );
-  };
-  ```
+  - ✅ Функция `editTask` уже существует с правильной сигнатурой
+  - ❌ Функция `deleteTask` отсутствует
 
 - [ ] **Добавить функцию deleteTask**
 
@@ -882,9 +926,14 @@
   };
   ```
 
-- [ ] **Экспортировать функции в value**
+- [ ] **Обновить экспорт в value**
+
   ```jsx
-  <TaskContext.Provider value={{ tasks, addTask, updateTask, deleteTask }}>
+  // БЫЛО:
+  <TaskContext.Provider value={{ tasks, addTask, editTask }}>
+
+  // ДОЛЖНО БЫТЬ:
+  <TaskContext.Provider value={{ tasks, addTask, editTask, deleteTask }}>
   ```
 
 ### 5.9. Расширение TaskEditorContext
@@ -892,6 +941,8 @@
 - [ ] **Открыть TaskEditorContext**
 
   - Файл `src/context/TaskEditorContext.jsx`
+  - ✅ Текущее состояние: только `isTaskEditorOpen`, `openTaskEditor`, `closeTaskEditor`
+  - ❌ Отсутствуют режимы редактирования
 
 - [ ] **Добавить состояние для режима и задачи**
 
@@ -920,25 +971,44 @@
   };
   ```
 
-- [ ] **Экспортировать в value**
+- [ ] **Обновить экспорт в value**
 
   ```jsx
-  value={{
+  // БЫЛО:
+  <TaskEditorContext.Provider value={{ isTaskEditorOpen, openTaskEditor, closeTaskEditor }}>
+
+  // ДОЛЖНО БЫТЬ:
+  <TaskEditorContext.Provider value={{
     isTaskEditorOpen,
     closeTaskEditor,
     openTaskEditorForEdit,
     openTaskEditorForCreate,
     editorMode,
     editingTask,
-  }}
+  }}>
   ```
 
-- [ ] **Обновить использование в TaskEditor**
+- [ ] **Обновить использование в Content.jsx**
 
   ```jsx
+  // В Content.jsx
   const { editorMode, editingTask } = useTaskEditor();
 
   <TaskEditor type={editorMode} task={editingTask} />;
+  ```
+
+### 5.10. Обновление Header.jsx
+
+- [ ] **Обновить использование openTaskEditor в Header**
+
+  ```jsx
+  // БЫЛО:
+  const { openTaskEditor, isTaskEditorOpen } = useTaskEditor();
+  onClick={() => { openTaskEditor(); }}
+
+  // ДОЛЖНО БЫТЬ:
+  const { openTaskEditorForCreate, isTaskEditorOpen } = useTaskEditor();
+  onClick={() => { openTaskEditorForCreate(); }}
   ```
 
 **🎉 Чекпоинт 5**: TaskEditor поддерживает редактирование
@@ -952,6 +1022,19 @@
 - [ ] **Открыть компонент TaskItem**
 
   - Файл `src/components/taskList/TaskItem.jsx`
+  - ✅ Текущие props: `title`, `priority`
+  - ❌ Нужен весь объект `task` для получения `id`
+
+- [ ] **Обновить сигнатуру компонента**
+
+  ```jsx
+  // БЫЛО:
+  export function TaskItem({ title, priority }) {
+
+  // ДОЛЖНО БЫТЬ:
+  export function TaskItem({ task }) {
+    const { title, priority, id } = task;
+  ```
 
 - [ ] **Импортировать необходимое**
 
@@ -979,9 +1062,10 @@
 - [ ] **Добавить кнопку в разметку**
   ```jsx
   <button className={styles.editButton} onClick={handleEdit} aria-label='Редактировать задачу'>
-    <Icon name='edit' />
+    <Icon name='taskEdit' />
   </button>
   ```
+  - ⚠️ Важно: имя иконки `taskEdit`, а не `edit`
 
 ### 6.3. Стилизация кнопки
 
@@ -1016,17 +1100,25 @@
   }
   ```
 
-### 6.4. Обновление кнопки "Создать" в Header
+### 6.4. Обновление TaskList
 
-- [ ] **Открыть компонент Header**
+- [ ] **Открыть компонент TaskList**
 
-  - Файл `src/components/header/Header.jsx`
+  - Файл `src/components/taskList/TaskList.jsx`
 
-- [ ] **Обновить обработчик кнопки "Создать"**
+- [ ] **Обновить передачу props в TaskItem**
 
-  - Использовать `openTaskEditorForCreate()` вместо старой функции
+  ```jsx
+  // БЫЛО:
+  <TaskItem key={task.id} title={task.title} priority={task.priority} />
 
-- [ ] **Проверить, что кнопка работает правильно**
+  // ДОЛЖНО БЫТЬ:
+  <TaskItem key={task.id} task={task} />
+  ```
+
+### 6.5. Обновление кнопки "Создать" в Header (уже сделано в 5.10)
+
+- [x] **Обновление выполнено в разделе 5.10**
 
 **🎉 Чекпоинт 6**: Кнопка редактирования работает
 
