@@ -1,5 +1,7 @@
 import React from 'react';
 import styles from './taskItem.module.css';
+import { Icon } from '@/components';
+import { useTaskEditor } from '@/context';
 
 export function TaskItem({ title, priority }) {
   const priorityClassMap = {
@@ -21,6 +23,14 @@ export function TaskItem({ title, priority }) {
           />
         </div>
         <p className={styles.taskTitle}>{title}</p>
+      </div>
+      <div className={styles.editIconContainer}>
+        <button
+          className={styles.editButton}
+          // onClick={handleEdit}
+          aria-label='Редактировать задачу'>
+          <Icon name='taskEdit' className={styles.editIcon} />
+        </button>
       </div>
     </li>
   );
