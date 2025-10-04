@@ -1,7 +1,7 @@
 /**
  * Сортирует массив задач
  * @param {Array} tasks - Массив задач
- * @param {string} sortValue - Значение сортировки (например: "priority-desc")
+ * @param {string} sortValue - Значение сортировки в формате 'fieldOrder' (например: "priorityDesc")
  * @returns {Array} - Отсортированный массив
  */
 
@@ -17,10 +17,11 @@ export function sortTasksBy(tasks, sortValue) {
     field = sortValue.slice(0, -3); // убираем 'Asc'
     order = 'asc';
   } else {
-    // fallback для старого формата
-    const [fieldPart, orderPart] = sortValue.split('-');
-    field = fieldPart;
-    order = orderPart;
+    // Если формат не распознан, возвращаем исходный массив
+    console.warn(
+      `Неизвестный формат сортировки: ${sortValue}. Ожидается формат 'fieldOrder' (например: 'priorityDesc')`,
+    );
+    return sortedTasks;
   }
 
   const isAscending = order === 'asc';
