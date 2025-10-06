@@ -266,8 +266,13 @@
   --footer-button-right-text: #1c1c1c;
   --footer-button-right-hover: #ececec;
   --footer-button-right-pressed: #fbfbfb;
-}
 
+  /*Dropdown*/
+  --dropdownTrigger-background: #f3f3f3;
+  --dropdown-background: #ffffff;
+  --dropdown-unselected-text: #6c6c6c;
+  --dropdown-text: #1c1c1c;
+}
 :root[data-theme='dark'] {
   --neutral-900: #ececec;
   --neutral-960: #fbfbfb;
@@ -381,4 +386,10 @@
   --footer-button-right-text: #fbfbfb;
   --footer-button-right-hover: #333333;
   --footer-button-right-pressed: #1c1c1c;
+
+  /*Dropdown*/
+  --dropdownTrigger-background: #262626;
+  --dropdown-background: #141414;
+  --dropdown-unselected-text: #bfbfbf;
+  --dropdown-text: #fbfbfb;
 }

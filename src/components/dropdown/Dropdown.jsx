@@ -62,15 +62,25 @@ export function Dropdown({ options = [], value, onChange, disabled = false }) {
         aria-expanded={open}
         disabled={disabled}
         type='button'>
-        {selected && <Icon name={selected.icon} className={styles.icon} />}
-        <span className={styles.label}>
+        {selected && (
+          <Icon
+            name={selected.icon}
+            className={`${styles.icon} ${value === 'createdAtDesc' ? styles.labelSelected : ''}`}
+          />
+        )}
+        <span
+          className={`${styles.label} ${value === 'createdAtDesc' ? styles.labelSelected : ''}`}>
           {selected
             ? `По ${selected.label.charAt(0).toLowerCase()}${selected.label.slice(1)}`
             : 'Выберите…'}
         </span>
-        <Icon name='chevronDropdown' className={`${styles.chevron} ${open ? styles.open : ''}`} />
+        <Icon
+          name='chevronDropdown'
+          className={`${styles.chevron} ${value === 'createdAtDesc' ? styles.labelSelected : ''} ${
+            open ? styles.open : ''
+          } `}
+        />
       </button>
-
       {open && (
         <div
           className={`${styles.dropdownMenu} ${isVisible ? styles.dropdownMenuVisible : ''}`}

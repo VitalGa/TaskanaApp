@@ -12,7 +12,7 @@
   margin-bottom: 8px;
   padding: 8px 8px 8px 12px;
   border-radius: 8px;
-  background: #f3f3f3;
+  background: var(--dropdownTrigger-background);
   box-shadow: 2px 2px 4px 0px #0000001a;
   cursor: pointer;
   width: 100%;
@@ -23,13 +23,25 @@
   transition: background 0.2s ease;
 }
 
-.dropdownTrigger:hover {
-  background: #f1f1f1;
+.dropdownTrigger.selected {
+  color: var(--dropdown-text);
 }
 
-.dropdownTrigger:disabled {
+/* .dropdownTrigger:hover {
+  background: #f1f1f1;
+} */
+
+/* .dropdownTrigger:disabled {
   cursor: not-allowed;
   opacity: 0.6;
+} */
+
+.label {
+  color: var(--dropdown-text);
+}
+
+.labelSelected {
+  color: var(--dropdown-unselected-text);
 }
 
 .dropdownHeaderWrapper {
@@ -43,12 +55,18 @@
   width: 24px;
   height: 24px;
   flex-shrink: 0;
+  color: var(--dropdown-text);
 }
 
 .icon {
   width: 24px;
   height: 24px;
   flex-shrink: 0;
+  color: var(--dropdown-text);
+}
+
+.icon.labelSelected {
+  color: var(--dropdown-unselected-text);
 }
 
 .iconList {
@@ -59,6 +77,11 @@
 .chevron {
   margin-left: auto;
   transition: transform 0.2s ease;
+  color: var(--dropdown-text);
+}
+
+.chevron.labelSelected {
+  color: var(--dropdown-unselected-text) !important;
 }
 
 .open {
@@ -73,7 +96,7 @@
   padding: 4px;
   right: 0;
   min-width: 211px;
-  background: #fff;
+  background: var(--dropdown-background);
   border-radius: 8px;
   box-shadow: 0px 0px 12px 4px #0000001a;
   z-index: 100;
@@ -98,7 +121,7 @@
   line-height: 24px;
   font-weight: 700;
   letter-spacing: 0;
-  color: #1c1c1c;
+  color: var(--dropdown-text);
   border-radius: 4px;
 }
 
