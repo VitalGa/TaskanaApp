@@ -270,9 +270,16 @@
   /*Dropdown*/
   --dropdownTrigger-background: #f3f3f3;
   --dropdown-background: #ffffff;
+  --dropdown-background-hover: #ececec;
   --dropdown-unselected-text: #6c6c6c;
   --dropdown-text: #1c1c1c;
+  --dropdown-item-background-hover: #f3f3f3;
+
+  /*Dropdown shadow*/
+  --dropdownTrigger-shadow-default: 2px 2px 4px 0px #0000001a;
+  --dropdownTrigger-shadow-hover: 2px 8px 12px 0px #00000033;
 }
+
 :root[data-theme='dark'] {
   --neutral-900: #ececec;
   --neutral-960: #fbfbfb;
@@ -390,6 +397,12 @@
   /*Dropdown*/
   --dropdownTrigger-background: #262626;
   --dropdown-background: #141414;
+  --dropdown-background-hover: #333333;
   --dropdown-unselected-text: #bfbfbf;
   --dropdown-text: #fbfbfb;
+  --dropdown-item-background-hover: #262626;
+
+  /*Dropdown shadow*/
+  --dropdownTrigger-shadow-default: 2px 2px 4px 0px #0000004d;
+  --dropdownTrigger-shadow-hover: 2px 8px 12px 0px #00000099;
 }
