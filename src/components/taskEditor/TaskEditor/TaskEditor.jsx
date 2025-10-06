@@ -7,12 +7,12 @@ import styles from './taskEditor.module.css';
 import { TaskContext } from '@/context/TaskContext';
 import { useTaskEditor } from '@/context/TaskEditorContext';
 
-export const TaskEditor = ({ type = 'create', task = null }) => {
+export const TaskEditor = () => {
   const { addTask, editTask, deleteTask } = useContext(TaskContext);
   const { isTaskEditorOpen, closeTaskEditor, editorMode, editingTask } = useTaskEditor();
 
-  const currentType = editorMode || type;
-  const currentTask = editingTask || task;
+  const currentType = editorMode;
+  const currentTask = editingTask;
 
   const inputRef = useRef(null);
   const taskEditorRef = useRef(null);
@@ -50,22 +50,9 @@ export const TaskEditor = ({ type = 'create', task = null }) => {
     }
   }, [title, closeTaskEditor]);
 
-  // const handleCreate = useCallback(() => {
-  //   if (title.trim()) {
-  //     addTask({ title: title.trim(), priority });
-  //     closeTaskEditor();
-
-  //     setTimeout(() => {
-  //       setTitle('');
-  //       setPriority(1);
-  //     }, 500);
-  //   }
-  // }, [title, priority, addTask, closeTaskEditor]);
-
   const handleSave = useCallback(() => {
     if (title.trim()) {
       if (currentType === 'edit' && currentTask) {
-        // Режим редактирования
         editTask(currentTask.id, {
           updatedFields: {
             title: title.trim(),
@@ -73,7 +60,6 @@ export const TaskEditor = ({ type = 'create', task = null }) => {
           },
         });
       } else {
-        // Режим создания
         addTask({ title: title.trim(), priority });
       }
 
@@ -141,6 +127,7 @@ export const TaskEditor = ({ type = 'create', task = null }) => {
           ref={taskEditorRef}>
           <div className={styles.taskEditorContent}>
             <TaskEditorHeader
+              title={currentType === 'edit' ? 'Редактирование' : 'Создание задачи'}
               value={title}
               handleChange={handleChange}
               onSubmit={handleSave}
@@ -159,7 +146,11 @@ export const TaskEditor = ({ type = 'create', task = null }) => {
           <div className={styles.taskEditorFooterContainer}>
             <TaskEditorFooter
               type={currentType}
-              disabled={title.trim() === '' || !isTaskEditorOpen}
+              disabled={
+                !isTaskEditorOpen ||
+                (currentType === 'create' && title.trim() === '') ||
+                (currentType === 'edit' && !hasChanges())
+              }
               disabledCancel={!isTaskEditorOpen}
               handleSave={handleSave}
               handleCancel={handleCancel}

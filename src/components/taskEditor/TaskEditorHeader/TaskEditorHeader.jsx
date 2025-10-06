@@ -3,7 +3,7 @@ import styles from './taskEditorHeader.module.css';
 import { Icon } from '@/components';
 
 export const TaskEditorHeader = forwardRef(
-  ({ value, handleChange, onSubmit, disabled = false }, ref) => {
+  ({ value, handleChange, onSubmit, disabled = false, title }, ref) => {
     const [isTyping, setIsTyping] = useState(false);
 
     const handleFocus = () => setIsTyping(true);
@@ -31,7 +31,7 @@ export const TaskEditorHeader = forwardRef(
 
     return (
       <form className={styles.taskForm} onSubmit={handleSubmit}>
-        <h2 className={styles.taskFormHeader}>Создание задачи</h2>
+        <h2 className={styles.taskFormHeader}>{title}</h2>
         <div className={styles.inputGroup}>
           <label className={styles.inputLabel} htmlFor='task-name'>
             Название

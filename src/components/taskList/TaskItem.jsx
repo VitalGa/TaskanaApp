@@ -34,6 +34,7 @@ export function TaskItem({ title, priority, task, onEdit }) {
         <button
           className={styles.editButton}
           onClick={handleEdit}
+          data-task-edit-button
           aria-label='Редактировать задачу'>
           <Icon name='taskEdit' className={styles.editIcon} />
         </button>

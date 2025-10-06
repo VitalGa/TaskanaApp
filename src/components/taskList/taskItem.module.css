@@ -120,6 +120,8 @@
 .editIconContainer {
   display: flex;
   align-self: flex-start;
+  position: relative;
+  z-index: calc(var(--z-modal) + 1);
 }
 
 .editButton {
