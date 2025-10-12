@@ -32,10 +32,10 @@ export const TaskEditorProvider = ({ children }) => {
       value={{
         isTaskEditorOpen,
         openTaskEditor,
-        openTaskEditorForEdit, // ← Добавляем новую функцию
+        openTaskEditorForEdit,
         closeTaskEditor,
         editorMode,
-        editingTask, // ← Уже есть, теперь будем использовать в TaskItem
+        editingTask,
       }}>
       {children}
     </TaskEditorContext.Provider>

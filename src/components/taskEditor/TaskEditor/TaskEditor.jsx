@@ -134,7 +134,6 @@ export const TaskEditor = () => {
               ref={inputRef}
               disabled={!isTaskEditorOpen}
             />
-
             <div className={styles.taskEditorBodyContainer}>
               <TaskEditorBody
                 priority={priority}

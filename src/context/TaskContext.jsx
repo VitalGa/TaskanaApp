@@ -42,7 +42,10 @@ const initialTasks = [
 ];
 
 export const TaskProvider = ({ children }) => {
-  const [tasks, setTasks] = useState(initialTasks);
+  // Если нужно показать тестовые данные, то раскомментировать эту строку
+  // const [tasks, setTasks] = useState(initialTasks);
+  // Если нужно показать пустой список, то раскомментировать эту строку
+  const [tasks, setTasks] = useState([]);
 
   const addTask = ({ title, priority }) => {
     const now = new Date().toISOString();

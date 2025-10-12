@@ -86,6 +86,14 @@ className={cn(styles.button, typography.buttonText, isPrimary && styles.primary)
 
 - **ThemeSwitcher** положил в папку header, т.к. он используется в нём, что бы было всё в одном месте.
 
+- В TaskProvider
+
+  Если нужно показать тестовые данные, то раскомментировать эту строку:
+  // const [tasks, setTasks] = useState(initialTasks);
+
+  и закомментировать вот эту:
+  const [tasks, setTasks] = useState([]);
+
 ### Замечания проверяющих.
 
 Павел, Vendrik
