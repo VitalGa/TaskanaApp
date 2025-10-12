@@ -15,6 +15,12 @@ export const TaskEditorProvider = ({ children }) => {
     setTaskEditorOpen(true);
   };
 
+  // Удобная функция специально для редактирования
+  // Вместо openTaskEditor('edit', task) можно просто openTaskEditorForEdit(task)
+  const openTaskEditorForEdit = (task) => {
+    openTaskEditor('edit', task);
+  };
+
   const closeTaskEditor = () => {
     setTaskEditorOpen(false);
     setEditorMode('create');
@@ -26,9 +32,10 @@ export const TaskEditorProvider = ({ children }) => {
       value={{
         isTaskEditorOpen,
         openTaskEditor,
+        openTaskEditorForEdit, // ← Добавляем новую функцию
         closeTaskEditor,
         editorMode,
-        editingTask,
+        editingTask, // ← Уже есть, теперь будем использовать в TaskItem
       }}>
       {children}
     </TaskEditorContext.Provider>

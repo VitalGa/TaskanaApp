@@ -289,8 +289,12 @@
   /*TaskItemEditIcon*/
   --taskItemEditIcon-color: #6c6c6c;
   --taskItemEditIcon-hover: #1c1c1c;
+  --taskItemEditIcon-disabled: #6c6c6c80;
+  --taskItemEditIcon-pressed: #6c6c6c;
+  --taskItemEditButton-disabled: #f3f3f3;
   --editButton-hover-background: #ececec;
   --editButton-hover-shadow: 2px 8px 12px 0px #00000033;
+  --editButton-pressed-background: #fbfbfb;
 }
 
 :root[data-theme='dark'] {
@@ -429,6 +433,10 @@
   /*TaskItemEditIcon*/
   --taskItemEditIcon-color: #bfbfbf;
   --taskItemEditIcon-hover: #fbfbfb;
+  --taskItemEditIcon-pressed: #bfbfbf;
+  --taskItemEditIcon-disabled: #bfbfbf80;
+  --taskItemEditButton-disabled: #141414;
   --editButton-hover-background: #333333;
   --editButton-hover-shadow: 2px 8px 12px 0px #00000099;
+  --editButton-pressed-background: #1c1c1c;
 }

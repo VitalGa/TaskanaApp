@@ -135,6 +135,16 @@
   pointer-events: auto;
 }
 
+.taskItemWrapper.editing .editIconContainer {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.editIconContainer.loading {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 .editButton {
   display: flex;
   align-items: center;
@@ -165,6 +175,37 @@
   color: var(--taskItemEditIcon-hover);
 }
 
+.editButton:active {
+  background: var(--editButton-pressed-background);
+}
+
+.editButton:active .editIcon {
+  color: var(--taskItemEditIcon-pressed);
+}
+
+.editButton:disabled {
+  cursor: no-drop;
+  background: var(--taskItemEditButton-disabled);
+}
+
+.editButton:disabled .editIcon {
+  color: var(--taskItemEditIcon-disabled);
+}
+
+.editButton:disabled:hover,
+.editButton:disabled:focus-visible,
+.editButton:disabled:active {
+  background: var(--taskItemEditButton-disabled);
+  box-shadow: 2px 8px 12px 0px transparent;
+  cursor: not-allowed;
+}
+
+.editButton:disabled:hover .editIcon,
+.editButton:disabled:focus-visible .editIcon,
+.editButton:disabled:active .editIcon {
+  color: var(--taskItemEditIcon-disabled);
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -173,5 +214,18 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+.loadingIcon {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
