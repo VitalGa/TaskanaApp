@@ -48,7 +48,7 @@ export const TaskEditor = () => {
       setPriority(1);
       closeTaskEditor();
     }
-  }, [title, closeTaskEditor]);
+  }, [title, priority, closeTaskEditor, currentType, originalTask]);
 
   const handleSave = useCallback(() => {
     if (title.trim()) {

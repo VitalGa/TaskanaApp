@@ -278,6 +278,19 @@
   /*Dropdown shadow*/
   --dropdownTrigger-shadow-default: 2px 2px 4px 0px #0000001a;
   --dropdownTrigger-shadow-hover: 2px 8px 12px 0px #00000033;
+
+  /*TaskEditorFooterDeleteButton*/
+  --footerDeleteButton-background: #f3f3f3;
+  --footerDeleteButton-shadow: 2px 2px 4px 0px #0000001a;
+  --footerDeleteButton-hover-shadow: 2px 8px 12px 0px #00000033;
+  --footerDeleteButton-hover: #d51010;
+  --taskEditorFooterDeleteIcon-hover: #ffffff;
+
+  /*TaskItemEditIcon*/
+  --taskItemEditIcon-color: #6c6c6c;
+  --taskItemEditIcon-hover: #1c1c1c;
+  --editButton-hover-background: #ececec;
+  --editButton-hover-shadow: 2px 8px 12px 0px #00000033;
 }
 
 :root[data-theme='dark'] {
@@ -405,4 +418,17 @@
   /*Dropdown shadow*/
   --dropdownTrigger-shadow-default: 2px 2px 4px 0px #0000004d;
   --dropdownTrigger-shadow-hover: 2px 8px 12px 0px #00000099;
+
+  /*TaskEditorFooterDeleteButton*/
+  --footerDeleteButton-background: #262626;
+  --footerDeleteButton-shadow: 2px 2px 4px 0px #0000004d;
+  --footerDeleteButton-hover-shadow: 2px 8px 12px 0px #00000099;
+  --footerDeleteButton-hover: #d51010;
+  --taskEditorFooterDeleteIcon-hover: #fbfbfb;
+
+  /*TaskItemEditIcon*/
+  --taskItemEditIcon-color: #bfbfbf;
+  --taskItemEditIcon-hover: #fbfbfb;
+  --editButton-hover-background: #333333;
+  --editButton-hover-shadow: 2px 8px 12px 0px #00000099;
 }

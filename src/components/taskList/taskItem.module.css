@@ -122,6 +122,17 @@
   align-self: flex-start;
   position: relative;
   z-index: calc(var(--z-modal) + 1);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.taskItemWrapper:hover .editIconContainer,
+.taskItemWrapper:focus .editIconContainer,
+.taskItemWrapper:focus-visible .editIconContainer,
+.taskItemWrapper:focus-within .editIconContainer {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .editButton {
@@ -132,11 +143,26 @@
   padding: 8px;
   width: 40px;
   height: 40px;
+  background: transparent;
+  box-shadow: 2px 8px 12px 0px transparent;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
 }
 
 .editIcon {
   width: 24px;
   height: 24px;
+  color: var(--taskItemEditIcon-color);
+}
+
+.editButton:hover,
+.editButton:focus-visible {
+  background: var(--editButton-hover-background);
+  box-shadow: var(--editButton-hover-shadow);
+}
+
+.editButton:hover .editIcon,
+.editButton:focus-visible .editIcon {
+  color: var(--taskItemEditIcon-hover);
 }
 
 @keyframes fadeIn {
