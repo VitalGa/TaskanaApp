@@ -5,6 +5,7 @@ import styles from './dropdown.module.css';
 export function Dropdown({ options = [], value, onChange, disabled = false }) {
   const [open, setOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const [shouldRender, setShouldRender] = useState(false);
 
   const dropdownRef = useRef(null);
   const triggerRef = useRef(null);
@@ -14,13 +15,16 @@ export function Dropdown({ options = [], value, onChange, disabled = false }) {
 
   useEffect(() => {
     if (open) {
+      setShouldRender(true);
       setIsVisible(false);
       timeoutRef.current = setTimeout(() => {
         setIsVisible(true);
       }, 10);
     } else {
       setIsVisible(false);
-      timeoutRef.current = setTimeout(() => {}, 200);
+      timeoutRef.current = setTimeout(() => {
+        setShouldRender(false);
+      }, 200);
     }
 
     return () => {
@@ -80,7 +84,7 @@ export function Dropdown({ options = [], value, onChange, disabled = false }) {
           } `}
         />
       </button>
-      {open && (
+      {shouldRender && (
         <div
           className={`${styles.dropdownMenu} ${isVisible ? styles.dropdownMenuVisible : ''}`}
           role='menu'>
