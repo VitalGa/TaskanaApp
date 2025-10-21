@@ -4,7 +4,6 @@ import styles from './dropdown.module.css';
 
 export function Dropdown({ options = [], value, onChange, disabled = false }) {
   const [open, setOpen] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
   const [shouldRender, setShouldRender] = useState(false);
 
   const dropdownRef = useRef(null);
@@ -16,12 +15,7 @@ export function Dropdown({ options = [], value, onChange, disabled = false }) {
   useEffect(() => {
     if (open) {
       setShouldRender(true);
-      setIsVisible(false);
-      timeoutRef.current = setTimeout(() => {
-        setIsVisible(true);
-      }, 10);
     } else {
-      setIsVisible(false);
       timeoutRef.current = setTimeout(() => {
         setShouldRender(false);
       }, 200);
@@ -86,7 +80,7 @@ export function Dropdown({ options = [], value, onChange, disabled = false }) {
       </button>
       {shouldRender && (
         <div
-          className={`${styles.dropdownMenu} ${isVisible ? styles.dropdownMenuVisible : ''}`}
+          className={`${styles.dropdownMenu} ${open ? styles.dropdownMenuVisible : ''}`}
           role='menu'>
           <div className={styles.dropdownHeaderWrapper}>
             <Icon name='filterDropdown' className={styles.filterIcon} />
