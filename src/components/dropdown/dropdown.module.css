@@ -20,7 +20,7 @@
   line-height: 24px;
   font-weight: 600;
   letter-spacing: 0;
-  transition: background 0.2s ease;
+  transition: background 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
 }
 
 .dropdownTrigger.selected {
@@ -32,13 +32,9 @@
   box-shadow: var(--dropdownTrigger-shadow-hover);
 }
 
-/* .dropdownTrigger:disabled {
-  cursor: not-allowed;
-  opacity: 0.6;
-} */
-
 .label {
   color: var(--dropdown-text);
+  transition: color 0.2s ease;
 }
 
 .labelSelected {
@@ -64,6 +60,7 @@
   height: 24px;
   flex-shrink: 0;
   color: var(--dropdown-text);
+  transition: color 0.2s ease;
 }
 
 .icon.labelSelected {
@@ -77,7 +74,7 @@
 
 .chevron {
   margin-left: auto;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, color 0.2s ease;
   color: var(--dropdown-text);
 }
 
@@ -102,7 +99,7 @@
   box-shadow: 0px 0px 12px 4px #0000001a;
   z-index: 100;
   opacity: 0;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease, background 0.2s ease;
 }
 
 .dropdownMenuVisible {
@@ -124,6 +121,7 @@
   letter-spacing: 0;
   color: var(--dropdown-text);
   border-radius: 4px;
+  transition: color 0.2s ease;
 }
 
 .dropdownList {
@@ -144,7 +142,7 @@
   font-weight: 400;
   letter-spacing: 0;
   cursor: pointer;
-  transition: background 0.2s ease;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
 .dropdownItem:hover {

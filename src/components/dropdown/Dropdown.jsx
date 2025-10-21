@@ -14,7 +14,6 @@ export function Dropdown({ options = [], value, onChange, disabled = false }) {
 
   useEffect(() => {
     if (open) {
-      Dropdown;
       setIsVisible(false);
       timeoutRef.current = setTimeout(() => {
         setIsVisible(true);

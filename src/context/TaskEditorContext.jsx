@@ -15,8 +15,7 @@ export const TaskEditorProvider = ({ children }) => {
     setTaskEditorOpen(true);
   };
 
-  // Удобная функция специально для редактирования
-  // Вместо openTaskEditor('edit', task) можно просто openTaskEditorForEdit(task)
+  
   const openTaskEditorForEdit = (task) => {
     openTaskEditor('edit', task);
   };
