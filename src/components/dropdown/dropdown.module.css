@@ -20,16 +20,18 @@
   line-height: 24px;
   font-weight: 600;
   letter-spacing: 0;
-  transition: background 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .dropdownTrigger.selected {
   color: var(--dropdown-text);
+  transition: all 0.2s ease;
 }
 
 .dropdownTrigger:hover {
   background: var(--dropdown-background-hover);
   box-shadow: var(--dropdownTrigger-shadow-hover);
+  transition: all 0.2s ease;
 }
 
 .label {
@@ -39,6 +41,7 @@
 
 .labelSelected {
   color: var(--dropdown-unselected-text);
+  transition: color 0.2s ease;
 }
 
 .dropdownHeaderWrapper {
@@ -65,6 +68,7 @@
 
 .icon.labelSelected {
   color: var(--dropdown-unselected-text);
+  transition: color 0.2s ease;
 }
 
 .iconList {
