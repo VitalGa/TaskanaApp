@@ -61,6 +61,7 @@
   border: none;
   background: transparent;
   transition: background var(--transition-theme), box-shadow var(--transition-theme);
+  z-index: 100;
 }
 
 .priority1 {
@@ -113,7 +114,7 @@
 
 .btn:focus-visible {
   outline: var(--focus-outline-width) solid var(--priority-button-all-focus);
-  outline-offset: var(--focus-outline-offset-mines);
+  outline-offset: 3px;
 }
 
 .priority1:focus-visible {
