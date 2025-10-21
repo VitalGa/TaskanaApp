@@ -10,22 +10,17 @@
     <meta name="color-scheme" content="light dark" />
     <title>Taskana App</title>
 
-    <!-- Синхронная установка темы до рендера React -->
     <script>
       (function () {
-        // Функция определения системной темы
         function getSystemTheme() {
           return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
         }
 
-        // Получаем сохраненную тему или системную
         const savedTheme = localStorage.getItem('theme');
         const theme = savedTheme || getSystemTheme();
 
-        // Устанавливаем тему синхронно до рендера
         document.documentElement.setAttribute('data-theme', theme);
 
-        // Сохраняем в localStorage для консистентности
         if (!savedTheme) {
           localStorage.setItem('theme', theme);
         }

@@ -2,19 +2,18 @@ import styles from './button.module.css';
 import { Spinner } from '../spinner/Spinner';
 
 /**
- * Компонент кнопки
- * @param {React.ReactNode} children - Содержимое кнопки
- * @param {'primary' | 'secondary'} variant - Вариант стиля кнопки
- * @param {'medium' | 'large'} size - Размер кнопки
- * @param {boolean} disabled - Состояние отключения
- * @param {boolean} loading - Состояние загрузки
- * @param {function} onClick - Обработчик клика
- * @param {string} className - Дополнительные CSS классы
- * @param {'default' | '8' | '10'} gap - Отступ между элементами в контенте (в пикселях)
- * @param {number} tabIndex - Порядок навигации по Tab
- * @param {string} ariaLabel - Описание кнопки для скринридеров (особенно важно для кнопок с иконками без текста)
- * @param {string} ariaDescribedBy - ID элемента, который описывает кнопку
- * @param {boolean} ariaPressed - Состояние нажатия для toggle-кнопок
+ * @param {React.ReactNode} children
+ * @param {'primary' | 'secondary'} variant
+ * @param {'medium' | 'large'} size
+ * @param {boolean} disabled
+ * @param {boolean} loading
+ * @param {function} onClick
+ * @param {string} className
+ * @param {'default' | '8' | '10'} gap
+ * @param {number} tabIndex
+ * @param {string} ariaLabel
+ * @param {string} ariaDescribedBy
+ * @param {boolean} ariaPressed
  */
 export function Button({
   children,
