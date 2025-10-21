@@ -20,18 +20,18 @@
   line-height: 24px;
   font-weight: 600;
   letter-spacing: 0;
-  transition: all 0.2s ease;
+  transition: all 0.2s ease, box-shadow 0.2s ease;
 }
 
 .dropdownTrigger.selected {
   color: var(--dropdown-text);
-  transition: all 0.2s ease;
+  transition: all 0.2s ease, box-shadow 0.2s ease;
 }
 
 .dropdownTrigger:hover {
   background: var(--dropdown-background-hover);
   box-shadow: var(--dropdownTrigger-shadow-hover);
-  transition: all 0.2s ease;
+  transition: all 0.2s ease, box-shadow 0.2s ease;
 }
 
 .label {
