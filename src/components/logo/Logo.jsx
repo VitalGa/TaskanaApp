@@ -8,7 +8,7 @@ export function Logo() {
 
   return (
     <a href={import.meta.env.BASE_URL} className={styles.logo} onClick={handleClick}>
-      <Icon name='logo' width='124' height='40' />
+      <Icon name='logo' width='126' height='40' />
     </a>
   );
 }

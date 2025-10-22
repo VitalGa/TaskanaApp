@@ -8,14 +8,6 @@ export function Header({ className = '' }) {
   const [isLoading] = useState(false);
   const { openTaskEditor, isTaskEditorOpen } = useTaskEditor();
 
-  // TODO: remove this after testing
-  // const handleClick = () => {
-  //   setIsLoading(true);
-  //   setTimeout(() => {
-  //     setIsLoading(false);
-  //   }, 2000);
-  // };
-
   return (
     <header className={`${styles.header} ${className} flex justify-between`}>
       <Logo className={styles.logo} />
@@ -29,13 +21,11 @@ export function Header({ className = '' }) {
           ariaLabel='Создать новую задачу'
           disabled={isTaskEditorOpen}
           onClick={() => {
-            // handleClick();
             openTaskEditor();
           }}>
           <Icon name='plus' width={24} height={24} />
           Создать
         </Button>
-
         <ThemeSwitcher />
       </div>
     </header>
