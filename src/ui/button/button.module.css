@@ -6,7 +6,7 @@
   gap: var(--spacing-sm);
   border-radius: var(--border-radius-md);
   cursor: pointer;
-  border: var(--focus-outline-width) solid transparent;
+  /* border: var(--focus-outline-width) solid transparent; */
   position: relative;
   min-width: var(--button-min-width);
   transition: background-color var(--transition-interactive), color var(--transition-interactive),
@@ -25,10 +25,8 @@
 }
 
 .primary:focus-visible {
-  background-color: var(--primary-500-fixed);
-  border: var(--focus-outline-width) solid #141414;
   outline: var(--focus-outline-width) solid var(--neutral-0-fixed);
-  outline-offset: var(--focus-outline-offset);
+  outline-offset: var(--focus-outline-offset-3);
 }
 
 .primary:active {
@@ -139,8 +137,7 @@
 }
 
 .medium {
-  padding: var(--spacing-sm) var(--spacing-md) var(--spacing-sm)
-    calc(var(--spacing-sm) + var(--button-padding-additional));
+  padding: var(--spacing-sm) var(--spacing-md) var(--spacing-sm) var(--spacing-sm-additional-2);
 }
 
 .large {

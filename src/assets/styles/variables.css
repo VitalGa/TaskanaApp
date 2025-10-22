@@ -98,6 +98,7 @@
   /* Focus styles */
   --focus-outline-width: 0.125rem; /* 2px -> 0.125rem */
   --focus-outline-offset: 0.125rem; /* 2px -> 0.125rem */
+  --focus-outline-offset-3: 0.187rem; /* 3px -> 0.187rem */
   --focus-outline-offset-mines: -0.125rem; /* -2px -> -0.125rem */
 
   /* Typography */

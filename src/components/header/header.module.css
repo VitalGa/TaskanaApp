@@ -9,3 +9,6 @@
   box-shadow: var(--shadow-header-fixed);
   transition: background-color var(--transition-theme), box-shadow var(--transition-theme);
 }
+
+.header-button-create {
+}
