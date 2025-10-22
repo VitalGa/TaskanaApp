@@ -13,11 +13,10 @@
 .taskItemWrapper:hover {
   background: var(--hover-task-color);
   box-shadow: 2px 2px 4px 0px #0000001a;
-  cursor: pointer;
+  cursor: default;
 }
 
-/* Выделение задачи при фокусе на кнопке редактирования */
-.taskItemWrapper:focus-within {
+.taskItemWrapper:focus-within:focus-visible {
   background: var(--hover-task-color);
   box-shadow: 2px 2px 4px 0px #0000001a, inset 0 0 0 1px var(--priority-button-all-focus);
   outline: 2px solid var(--priority-button-all-focus);
@@ -29,8 +28,7 @@
   box-shadow: 2px 2px 4px 0px #0000001a;
 }
 
-.taskItemWrapper:focus-visible,
-.taskItemWrapper:focus {
+.taskItemWrapper:focus-visible {
   background: var(--hover-task-color);
   box-shadow: 2px 2px 4px 0px #0000001a, inset 0 0 0 1px var(--priority-button-all-focus);
   outline: 2px solid var(--priority-button-all-focus);
@@ -71,13 +69,12 @@
   border-color: var(--priority-taskItem-low-hover);
 }
 
-.taskItemWrapper:focus-visible .priorityBox.low,
-.taskItemWrapper:focus .priorityBox.low {
+.taskItemWrapper:focus-visible .priorityBox.low {
   border-color: var(--priority-taskItem-low-hover);
   outline: 4px solid var(--priority-taskItem-focus-low);
 }
 
-.taskItemWrapper:focus-within .priorityBox.low {
+.taskItemWrapper:focus-within:focus-visible .priorityBox.low {
   border-color: var(--priority-taskItem-low-hover);
   outline: 4px solid var(--priority-taskItem-focus-low);
 }
@@ -90,13 +87,12 @@
   border-color: var(--priority-taskItem-normal-hover);
 }
 
-.taskItemWrapper:focus-visible .priorityBox.normal,
-.taskItemWrapper:focus .priorityBox.normal {
+.taskItemWrapper:focus-visible .priorityBox.normal {
   border-color: var(--priority-taskItem-normal-hover);
   outline: 4px solid var(--priority-taskItem-focus-normal);
 }
 
-.taskItemWrapper:focus-within .priorityBox.normal {
+.taskItemWrapper:focus-within:focus-visible .priorityBox.normal {
   border-color: var(--priority-taskItem-normal-hover);
   outline: 4px solid var(--priority-taskItem-focus-normal);
 }
@@ -109,13 +105,12 @@
   border-color: var(--priority-taskItem-high-hover);
 }
 
-.taskItemWrapper:focus-visible .priorityBox.high,
-.taskItemWrapper:focus .priorityBox.high {
+.taskItemWrapper:focus-visible .priorityBox.high {
   border-color: var(--priority-taskItem-high-hover);
   outline: 4px solid var(--priority-taskItem-focus-high);
 }
 
-.taskItemWrapper:focus-within .priorityBox.high {
+.taskItemWrapper:focus-within:focus-visible .priorityBox.high {
   border-color: var(--priority-taskItem-high-hover);
   outline: 4px solid var(--priority-taskItem-focus-high);
 }
