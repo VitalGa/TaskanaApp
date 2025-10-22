@@ -16,6 +16,14 @@
   cursor: pointer;
 }
 
+/* Выделение задачи при фокусе на кнопке редактирования */
+.taskItemWrapper:focus-within {
+  background: var(--hover-task-color);
+  box-shadow: 2px 2px 4px 0px #0000001a, inset 0 0 0 1px var(--priority-button-all-focus);
+  outline: 2px solid var(--priority-button-all-focus);
+  outline-offset: -2px;
+}
+
 .taskItemWrapper:active {
   background: var(--hover-task-color);
   box-shadow: 2px 2px 4px 0px #0000001a;
@@ -69,6 +77,12 @@
   outline: 4px solid var(--priority-taskItem-focus-low);
 }
 
+/* Выделение приоритетного блока при фокусе на кнопке редактирования */
+.taskItemWrapper:focus-within .priorityBox.low {
+  border-color: var(--priority-taskItem-low-hover);
+  outline: 4px solid var(--priority-taskItem-focus-low);
+}
+
 .normal {
   border-color: var(--priority-taskItem-normal);
 }
@@ -83,6 +97,12 @@
   outline: 4px solid var(--priority-taskItem-focus-normal);
 }
 
+/* Выделение приоритетного блока при фокусе на кнопке редактирования */
+.taskItemWrapper:focus-within .priorityBox.normal {
+  border-color: var(--priority-taskItem-normal-hover);
+  outline: 4px solid var(--priority-taskItem-focus-normal);
+}
+
 .high {
   border-color: var(--priority-taskItem-high);
 }
@@ -93,6 +113,12 @@
 
 .taskItemWrapper:focus-visible .priorityBox.high,
 .taskItemWrapper:focus .priorityBox.high {
+  border-color: var(--priority-taskItem-high-hover);
+  outline: 4px solid var(--priority-taskItem-focus-high);
+}
+
+/* Выделение приоритетного блока при фокусе на кнопке редактирования */
+.taskItemWrapper:focus-within .priorityBox.high {
   border-color: var(--priority-taskItem-high-hover);
   outline: 4px solid var(--priority-taskItem-focus-high);
 }
