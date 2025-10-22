@@ -29,6 +29,16 @@ export const TaskEditor = () => {
     return title.trim() !== originalTask.title || priority !== originalTask.priority;
   };
 
+  const canSave = () => {
+    if (currentType === 'create') {
+      return title.trim() !== '';
+    }
+    if (currentType === 'edit') {
+      return title.trim() !== '' && hasChanges();
+    }
+    return false;
+  };
+
   const handleConfirmClose = useCallback(() => {
     setTitle('');
     setPriority(1);
@@ -145,11 +155,7 @@ export const TaskEditor = () => {
           <div className={styles.taskEditorFooterContainer}>
             <TaskEditorFooter
               type={currentType}
-              disabled={
-                !isTaskEditorOpen ||
-                (currentType === 'create' && title.trim() === '') ||
-                (currentType === 'edit' && !hasChanges())
-              }
+              disabled={!isTaskEditorOpen || !canSave()}
               disabledCancel={!isTaskEditorOpen}
               handleSave={handleSave}
               handleCancel={handleCancel}
