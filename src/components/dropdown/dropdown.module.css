@@ -20,6 +20,7 @@
   line-height: 24px;
   font-weight: 600;
   letter-spacing: 0;
+  outline: none;
   transition: all var(--transition-theme), box-shadow var(--transition-interactive);
 }
 
@@ -32,6 +33,13 @@
   background: var(--dropdown-background-hover);
   box-shadow: var(--dropdownTrigger-shadow-hover);
   transition: all var(--transition-theme), box-shadow var(--transition-interactive);
+}
+
+.dropdownTrigger:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--dropdown-background),
+    0 0 0 calc(2px + var(--focus-outline-width)) var(--girl-lightTheme);
+  transition: all var(--transition-theme);
 }
 
 .label {
@@ -154,6 +162,13 @@
 
 .dropdownItem:hover {
   background: var(--dropdown-item-background-hover);
+}
+
+.dropdownItem:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 1px var(--dropdown-background),
+    0 0 0 calc(1px + var(--focus-outline-width)) var(--girl-lightTheme);
+  transition: all var(--transition-theme);
 }
 
 .rightCheckIconWrapper {
