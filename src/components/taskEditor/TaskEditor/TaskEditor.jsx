@@ -82,7 +82,7 @@ export const TaskEditor = () => {
     if (isTaskEditorOpen && inputRef.current) {
       inputRef.current.focus();
     }
-  }, [isTaskEditorOpen]);
+  }, [isTaskEditorOpen, editorMode]);
 
   useEffect(() => {
     const handleKeyDown = (e) => {

@@ -15,8 +15,9 @@ export const useClickOutside = (refs, callback, enabled = true) => {
       );
 
       const isEditButton = event.target.closest('[data-task-edit-button]');
+      const isCreateButton = event.target.closest('.header-button-create');
 
-      if (isOutsideAll && !isEditButton) {
+      if (isOutsideAll && !isEditButton && !isCreateButton) {
         setTimeout(() => {
           callbackRef.current(event);
         }, 0);

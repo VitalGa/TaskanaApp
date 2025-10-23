@@ -6,7 +6,7 @@ import { useTaskEditor } from '@/context/TaskEditorContext';
 
 export function Header({ className = '' }) {
   const [isLoading] = useState(false);
-  const { openTaskEditor, isTaskEditorOpen } = useTaskEditor();
+  const { openTaskEditor, isTaskEditorOpen, editorMode } = useTaskEditor();
 
   return (
     <header className={`${styles.header} ${className} flex justify-between`}>
@@ -20,7 +20,9 @@ export function Header({ className = '' }) {
           gap='8'
           ariaLabel='Создать новую задачу'
           onClick={() => {
-            openTaskEditor();
+            if (!isTaskEditorOpen || editorMode === 'edit') {
+              openTaskEditor();
+            }
           }}>
           <Icon name='plus' width={24} height={24} />
           Создать
