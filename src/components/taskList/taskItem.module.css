@@ -173,6 +173,7 @@
   height: 40px;
   background: transparent;
   box-shadow: 2px 8px 12px 0px transparent;
+  outline: none;
   transition: background 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -182,10 +183,16 @@
   color: var(--taskItemEditIcon-color);
 }
 
-.editButton:hover,
+.editButton:hover {
+  background: var(--editButton-hover-background);
+  box-shadow: var(--editButton-hover-shadow);
+}
+
 .editButton:focus-visible {
   background: var(--editButton-hover-background);
   box-shadow: var(--editButton-hover-shadow);
+  outline: 2px solid var(--priority-button-all-focus);
+  outline-offset: 2px;
 }
 
 .editButton:hover .editIcon,
