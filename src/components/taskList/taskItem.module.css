@@ -55,7 +55,7 @@
   width: 20px;
   height: 20px;
   border-radius: 4px;
-  border-width: 2px;
+  border-width: 1px;
   border-style: solid;
   outline: 0px solid transparent;
   outline-offset: 0;
@@ -63,10 +63,12 @@
 
 .low {
   border-color: var(--priority-taskItem-low);
+  box-shadow: 0 0 0 0.5px var(--priority-taskItem-low);
 }
 
 .taskItemWrapper:hover .priorityBox.low {
   border-color: var(--priority-taskItem-low-hover);
+  box-shadow: 0 0 0 0.5px var(--priority-taskItem-low-hover);
 }
 
 .taskItemWrapper:focus-visible .priorityBox.low {
@@ -81,10 +83,12 @@
 
 .normal {
   border-color: var(--priority-taskItem-normal);
+  box-shadow: 0 0 0 0.5px var(--priority-taskItem-normal);
 }
 
 .taskItemWrapper:hover .priorityBox.normal {
   border-color: var(--priority-taskItem-normal-hover);
+  box-shadow: 0 0 0 0.5px var(--priority-taskItem-normal-hover);
 }
 
 .taskItemWrapper:focus-visible .priorityBox.normal {
@@ -99,10 +103,12 @@
 
 .high {
   border-color: var(--priority-taskItem-high);
+  box-shadow: 0 0 0 0.5px var(--priority-taskItem-high);
 }
 
 .taskItemWrapper:hover .priorityBox.high {
   border-color: var(--priority-taskItem-high-hover);
+  box-shadow: 0 0 0 0.5px var(--priority-taskItem-high-hover);
 }
 
 .taskItemWrapper:focus-visible .priorityBox.high {
