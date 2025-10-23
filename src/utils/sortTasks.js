@@ -1,10 +1,42 @@
+const SORT_STRATEGIES = {
+  priority: (a, b, isAscending) => {
+    return isAscending ? a.task.priority - b.task.priority : b.task.priority - a.task.priority;
+  },
+
+  title: (a, b, isAscending) => {
+    const result = a.task.title.localeCompare(b.task.title, 'ru');
+    return isAscending ? result : -result;
+  },
+
+  createdAt: (a, b, isAscending) => {
+    const diff = new Date(a.task.createdAt) - new Date(b.task.createdAt);
+    return isAscending ? diff : -diff;
+  },
+
+  updatedAt: (a, b, isAscending) => {
+    const diff = new Date(a.task.updatedAt) - new Date(b.task.updatedAt);
+    return isAscending ? -diff : diff;
+  },
+};
+
 /**
- 
- * @param {Array} tasks  
- * @param {string} sortValue  
- * @returns {Array}  
+ * @param {Function} sortStrategy
+ * @param {boolean} isAscending
+ * @returns {Function}
  */
 
+function createComparator(sortStrategy, isAscending) {
+  return (a, b) => {
+    const sortResult = sortStrategy(a, b, isAscending);
+    return sortResult !== 0 ? sortResult : a.originalIndex - b.originalIndex;
+  };
+}
+
+/**
+ * @param {Array} tasks
+ * @param {string} sortValue
+ * @returns {Array}
+ */
 export function sortTasksBy(tasks, sortValue) {
   const tasksWithIndex = tasks.map((task, index) => ({ task, originalIndex: index }));
 
@@ -22,52 +54,15 @@ export function sortTasksBy(tasks, sortValue) {
     return tasks;
   }
 
-  const isAscending = order === 'asc';
+  const sortStrategy = SORT_STRATEGIES[field];
 
-  switch (field) {
-    case 'priority':
-      return tasksWithIndex
-        .sort((a, b) => {
-          const priorityDiff = isAscending
-            ? a.task.priority - b.task.priority
-            : b.task.priority - a.task.priority;
-
-          return priorityDiff !== 0 ? priorityDiff : b.originalIndex - a.originalIndex;
-        })
-        .map((item) => item.task);
-
-    case 'title':
-      return tasksWithIndex
-        .sort((a, b) => {
-          const result = a.task.title.localeCompare(b.task.title, 'ru');
-          const titleDiff = isAscending ? result : -result;
-
-          return titleDiff !== 0 ? titleDiff : a.originalIndex - b.originalIndex;
-        })
-        .map((item) => item.task);
-
-    case 'createdAt':
-      return tasksWithIndex
-        .sort((a, b) => {
-          const diff = new Date(a.task.createdAt) - new Date(b.task.createdAt);
-          const dateDiff = isAscending ? diff : -diff;
-
-          return dateDiff !== 0 ? dateDiff : a.originalIndex - b.originalIndex;
-        })
-        .map((item) => item.task);
-
-    case 'updatedAt':
-      return tasksWithIndex
-        .sort((a, b) => {
-          const diff = new Date(a.task.updatedAt) - new Date(b.task.updatedAt);
-
-          const dateDiff = isAscending ? -diff : diff;
-
-          return dateDiff !== 0 ? dateDiff : a.originalIndex - b.originalIndex;
-        })
-        .map((item) => item.task);
-
-    default:
-      return tasks;
+  if (!sortStrategy) {
+    console.warn(`Неизвестное поле для сортировки: ${field}`);
+    return tasks;
   }
+
+  const isAscending = order === 'asc';
+  const comparator = createComparator(sortStrategy, isAscending);
+
+  return tasksWithIndex.sort(comparator).map((item) => item.task);
 }
