@@ -1,5 +1,6 @@
 import { useState, useContext, useRef, useEffect, useCallback } from 'react';
 import { useClickOutside } from '@/hooks/useClickOutside';
+import { useEscapeKey } from '@/hooks/useEscapeKey';
 
 import { TaskEditorHeader, TaskEditorBody, TaskEditorFooter } from '@/components/taskEditor';
 import styles from './taskEditor.module.css';
@@ -78,27 +79,13 @@ export const TaskEditor = () => {
 
   useClickOutside(taskEditorRef, handleCancel, isTaskEditorOpen);
 
+  useEscapeKey(handleCancel, isTaskEditorOpen);
+
   useEffect(() => {
     if (isTaskEditorOpen && inputRef.current) {
       inputRef.current.focus();
     }
   }, [isTaskEditorOpen, editorMode]);
-
-  useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (e.key === 'Escape' && isTaskEditorOpen) {
-        handleCancel();
-      }
-    };
-
-    if (isTaskEditorOpen) {
-      document.addEventListener('keydown', handleKeyDown);
-    }
-
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-    };
-  }, [isTaskEditorOpen, handleCancel]);
 
   useEffect(() => {
     if (currentType === 'edit' && currentTask) {

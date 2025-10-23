@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { Icon } from '@/components';
+import { useClickOutside } from '@/hooks/useClickOutside';
 import styles from './dropdown.module.css';
 
 export function Dropdown({ options = [], value, onChange, disabled = false }) {
@@ -28,15 +29,8 @@ export function Dropdown({ options = [], value, onChange, disabled = false }) {
     };
   }, [open]);
 
-  useEffect(() => {
-    const handleClickOutside = (e) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
-        setOpen(false);
-      }
-    };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
+  
+  useClickOutside(dropdownRef, () => setOpen(false), true);
 
   const handleToggle = () => {
     if (disabled) return;
