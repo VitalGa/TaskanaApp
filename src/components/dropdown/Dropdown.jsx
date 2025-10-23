@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Icon } from '@/components';
 import styles from './dropdown.module.css';
 
