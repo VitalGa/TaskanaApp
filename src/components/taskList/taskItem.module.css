@@ -159,9 +159,29 @@
   pointer-events: auto;
 }
 
+.taskItemWrapper.editing {
+  background: var(--hover-task-color);
+  box-shadow: 2px 2px 4px 0px #0000001a;
+}
+
 .taskItemWrapper.editing .editIconContainer {
   opacity: 1;
   pointer-events: auto;
+}
+
+.taskItemWrapper.editing .priorityBox.low {
+  border-color: var(--priority-taskItem-low-hover);
+  box-shadow: 0 0 0 0.5px var(--priority-taskItem-low-hover);
+}
+
+.taskItemWrapper.editing .priorityBox.normal {
+  border-color: var(--priority-taskItem-normal-hover);
+  box-shadow: 0 0 0 0.5px var(--priority-taskItem-normal-hover);
+}
+
+.taskItemWrapper.editing .priorityBox.high {
+  border-color: var(--priority-taskItem-high-hover);
+  box-shadow: 0 0 0 0.5px var(--priority-taskItem-high-hover);
 }
 
 .editIconContainer.loading {
