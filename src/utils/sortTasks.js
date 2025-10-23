@@ -6,7 +6,7 @@
  */
 
 export function sortTasksBy(tasks, sortValue) {
-  const sortedTasks = [...tasks];
+  const tasksWithIndex = tasks.map((task, index) => ({ task, originalIndex: index }));
 
   let field, order;
   if (sortValue.endsWith('Desc')) {
@@ -19,36 +19,55 @@ export function sortTasksBy(tasks, sortValue) {
     console.warn(
       `Неизвестный формат сортировки: ${sortValue}. Ожидается формат 'fieldOrder' (например: 'priorityDesc')`,
     );
-    return sortedTasks;
+    return tasks;
   }
 
   const isAscending = order === 'asc';
 
   switch (field) {
     case 'priority':
-      return sortedTasks.sort((a, b) =>
-        isAscending ? a.priority - b.priority : b.priority - a.priority,
-      );
+      return tasksWithIndex
+        .sort((a, b) => {
+          const priorityDiff = isAscending
+            ? a.task.priority - b.task.priority
+            : b.task.priority - a.task.priority;
+
+          return priorityDiff !== 0 ? priorityDiff : b.originalIndex - a.originalIndex;
+        })
+        .map((item) => item.task);
 
     case 'title':
-      return sortedTasks.sort((a, b) => {
-        const result = a.title.localeCompare(b.title, 'ru');
-        return isAscending ? result : -result;
-      });
+      return tasksWithIndex
+        .sort((a, b) => {
+          const result = a.task.title.localeCompare(b.task.title, 'ru');
+          const titleDiff = isAscending ? result : -result;
+
+          return titleDiff !== 0 ? titleDiff : a.originalIndex - b.originalIndex;
+        })
+        .map((item) => item.task);
 
     case 'createdAt':
-      return sortedTasks.sort((a, b) => {
-        const diff = new Date(a.createdAt) - new Date(b.createdAt);
-        return isAscending ? diff : -diff;
-      });
+      return tasksWithIndex
+        .sort((a, b) => {
+          const diff = new Date(a.task.createdAt) - new Date(b.task.createdAt);
+          const dateDiff = isAscending ? diff : -diff;
+
+          return dateDiff !== 0 ? dateDiff : a.originalIndex - b.originalIndex;
+        })
+        .map((item) => item.task);
 
     case 'updatedAt':
-      return sortedTasks.sort((a, b) => {
-        const diff = new Date(a.updatedAt) - new Date(b.updatedAt);
-        return isAscending ? diff : -diff;
-      });
+      return tasksWithIndex
+        .sort((a, b) => {
+          const diff = new Date(a.task.updatedAt) - new Date(b.task.updatedAt);
+
+          const dateDiff = isAscending ? -diff : diff;
+
+          return dateDiff !== 0 ? dateDiff : a.originalIndex - b.originalIndex;
+        })
+        .map((item) => item.task);
 
     default:
-      return sortedTasks;
+      return tasks;
   }
 }
