@@ -1,4 +1,3 @@
-// src/components/header/themeSwitcher/ThemeSwitcher.jsx
 import { Icon } from '@/components';
 import styles from './themeSwitcher.module.css';
 import { useTheme } from '@/context';

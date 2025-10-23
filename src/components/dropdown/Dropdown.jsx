@@ -29,7 +29,6 @@ export function Dropdown({ options = [], value, onChange, disabled = false }) {
     };
   }, [open]);
 
-  
   useClickOutside(dropdownRef, () => setOpen(false), true);
 
   const handleToggle = () => {
