@@ -9,12 +9,6 @@ export const TaskEditorHeader = forwardRef(
     const handleFocus = () => setIsTyping(true);
     const handleBlur = () => setIsTyping(false);
 
-    const handleContainerClick = () => {
-      if (ref.current) {
-        ref.current.focus();
-      }
-    };
-
     const handleSubmit = (e) => {
       e.preventDefault();
       if (onSubmit && value.trim()) {
@@ -40,8 +34,7 @@ export const TaskEditorHeader = forwardRef(
           <div
             className={
               isTyping ? `${styles.inputContainer} ${styles.typing}` : styles.inputContainer
-            }
-            onClick={handleContainerClick}>
+            }>
             <input
               type='text'
               className={styles.input}
