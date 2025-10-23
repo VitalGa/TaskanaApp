@@ -44,6 +44,7 @@
 
   /* Navbar sizes */
   --navbar-text-width: 7.75rem; /* 124px -> 7.75rem */
+  --navbar-padding-right: 0.9375rem; /* 15px -> 0.9375rem */
 
   /* Footer sizes */
   --footer-padding: 1.875rem; /* 30px -> 1.875rem */

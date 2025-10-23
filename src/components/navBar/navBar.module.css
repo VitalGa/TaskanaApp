@@ -4,7 +4,7 @@
   min-width: var(--navBar-width);
   flex-shrink: 0;
   background-color: var(--neutral-100);
-  padding: var(--spacing-lg) var(--spacing-md);
+  padding: var(--spacing-lg) var(--spacing-md) var(--spacing-lg) var(--navbar-padding-right);
   border-right: var(--border-width-thin) solid var(--barBorderColor);
   overflow-y: auto;
   overflow-x: hidden;
@@ -31,7 +31,7 @@
   width: 100%;
   justify-content: flex-start;
   gap: var(--spacing-sm);
-  padding: 4px;
+  padding: 8px;
 }
 
 .textWrapper {
