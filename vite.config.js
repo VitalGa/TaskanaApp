@@ -19,11 +19,6 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': checkDir('./src'),
-      '@containers': checkDir('./src/containers'),
-      '@pages': checkDir('./src/pages'),
-      '@assets': checkDir('./src/assets'),
-      '@layouts': checkDir('./src/layouts'),
-      '@ui': checkDir('./src/ui'),
     },
   },
 });
