@@ -51,7 +51,7 @@ export function TaskItem({ title, priority, task, onEdit }) {
         <button
           className={styles.editButton}
           onClick={handleEdit}
-          disabled={isTaskEditorOpen || isLoading}
+          disabled={isLoading}
           data-task-edit-button
           aria-label={isLoading ? 'Загрузка...' : 'Редактировать задачу'}>
           <Icon

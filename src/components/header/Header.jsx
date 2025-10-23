@@ -19,7 +19,6 @@ export function Header({ className = '' }) {
           className='text-md-semibold header-button-create'
           gap='8'
           ariaLabel='Создать новую задачу'
-          disabled={isTaskEditorOpen}
           onClick={() => {
             openTaskEditor();
           }}>

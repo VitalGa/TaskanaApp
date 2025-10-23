@@ -15,7 +15,6 @@ export const TaskEditorProvider = ({ children }) => {
     setTaskEditorOpen(true);
   };
 
-  
   const openTaskEditorForEdit = (task) => {
     openTaskEditor('edit', task);
   };

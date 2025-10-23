@@ -1,6 +1,5 @@
 import { useState, useContext, useRef, useEffect, useCallback } from 'react';
 import { useClickOutside } from '@/hooks/useClickOutside';
-import { Modal } from '@/ui/modal/Modal';
 
 import { TaskEditorHeader, TaskEditorBody, TaskEditorFooter } from '@/components/taskEditor';
 import styles from './taskEditor.module.css';
@@ -19,7 +18,6 @@ export const TaskEditor = () => {
 
   const [title, setTitle] = useState(currentTask?.title || '');
   const [priority, setPriority] = useState(currentTask?.priority || 1);
-  const [showConfirmModal, setShowConfirmModal] = useState(false);
   const [originalTask, setOriginalTask] = useState(currentTask);
 
   const hasChanges = () => {
@@ -39,26 +37,11 @@ export const TaskEditor = () => {
     return false;
   };
 
-  const handleConfirmClose = useCallback(() => {
+  const handleCancel = useCallback(() => {
     setTitle('');
     setPriority(1);
-    setShowConfirmModal(false);
     closeTaskEditor();
   }, [closeTaskEditor]);
-
-  const handleCancelClose = useCallback(() => {
-    setShowConfirmModal(false);
-  }, []);
-
-  const handleCancel = useCallback(() => {
-    if (hasChanges()) {
-      setShowConfirmModal(true);
-    } else {
-      setTitle('');
-      setPriority(1);
-      closeTaskEditor();
-    }
-  }, [title, priority, closeTaskEditor, currentType, originalTask]);
 
   const handleSave = useCallback(() => {
     if (title.trim()) {
@@ -163,15 +146,6 @@ export const TaskEditor = () => {
             />
           </div>
         </div>
-        <Modal
-          isOpen={showConfirmModal}
-          onClose={handleCancelClose}
-          onConfirm={handleConfirmClose}
-          title='Несохраненные изменения'
-          message='Вы не сохранили задачу. Закрыть и очистить форму?'
-          confirmText='Закрыть и очистить'
-          cancelText='Отмена'
-        />
       </div>
     </>
   );
