@@ -2,14 +2,27 @@
   position: sticky;
   top: 0;
   z-index: var(--z-sidebar);
-  padding: var(--spacing-lg);
   height: var(--container-header-height);
   background-color: var(--neutral-0);
   transition: background-color var(--transition-theme);
+  display: flex;
+  flex-direction: column;
 }
 
-@media (min-width: 120rem) {
-  .containerHeader {
-    padding-left: 11.5rem;
+.containerHeaderContent {
+  padding: var(--spacing-lg);
+  width: 100%;
+}
+
+@media (min-width: 1600px) {
+  .containerHeaderContent {
+    align-self: center;
+  }
+}
+
+@media (min-width: 1920px) {
+  .containerHeaderContent {
+    max-width: 996px;
+    align-self: center;
   }
 }
