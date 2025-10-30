@@ -1,4 +1,4 @@
-import React, { useState, forwardRef } from 'react';
+import { useState, forwardRef } from 'react';
 import styles from './taskEditorHeader.module.css';
 import { Icon } from '@/components';
 

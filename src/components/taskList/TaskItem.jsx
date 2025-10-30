@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import styles from './taskItem.module.css';
 import { Icon } from '@/components';
 import { useTaskEditor } from '@/context';

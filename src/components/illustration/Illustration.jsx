@@ -1,4 +1,3 @@
-import React from 'react';
 import { GirlIllustrationIcon } from './illustrations/GirlIllustrationIcon';
 import { BookIllustrationIcon } from './illustrations/BookIllustrationIcon';
 

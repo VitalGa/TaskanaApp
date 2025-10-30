@@ -1,4 +1,3 @@
-import React from 'react';
 import { ContainerText, EmptyTask } from '@/components';
 import { TaskItem } from './TaskItem';
 import styles from './taskList.module.css';
