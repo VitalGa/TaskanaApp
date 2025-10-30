@@ -54,7 +54,6 @@
   width: calc(var(--spacing-xl) + var(--spacing-sm));
   height: calc(var(--spacing-xl) + var(--spacing-sm));
   border-radius: calc(var(--spacing-sm) - 2px);
-  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;

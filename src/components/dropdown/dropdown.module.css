@@ -14,7 +14,6 @@
   border-radius: 8px;
   background: var(--dropdownTrigger-background);
   box-shadow: var(--dropdownTrigger-shadow-default);
-  cursor: pointer;
   width: 100%;
   font-size: 16px;
   line-height: 24px;
@@ -157,7 +156,6 @@
   line-height: 24px;
   font-weight: 400;
   letter-spacing: 0;
-  cursor: pointer;
   transition: background var(--transition-theme), color var(--transition-theme);
 }
 

@@ -4,7 +4,6 @@
   padding: var(--spacing-xs);
   box-shadow: var(--shadow-switch-default-fixed);
   outline: none;
-  cursor: pointer;
   position: relative;
 }
 
@@ -39,7 +38,6 @@
   padding: var(--spacing-xs);
   background-color: transparent;
   border: none;
-  cursor: pointer;
   position: relative;
   z-index: calc(var(--z-content) + 1);
   transition: opacity var(--transition-interactive);

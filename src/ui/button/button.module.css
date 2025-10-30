@@ -5,7 +5,6 @@
   height: var(--button-height);
   gap: var(--spacing-sm);
   border-radius: var(--border-radius-md);
-  cursor: pointer;
   position: relative;
   min-width: var(--button-min-width);
   transition: background-color var(--transition-interactive), color var(--transition-interactive),
