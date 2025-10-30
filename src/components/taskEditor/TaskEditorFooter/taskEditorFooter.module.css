@@ -30,6 +30,11 @@
   color: var(--taskEditorFooterDeleteIcon-hover);
 }
 
+.taskEditorFooterDeleteButton:focus-visible {
+  outline: var(--focus-outline-width) solid var(--footerDeleteButton-focus, #d51010);
+  outline-offset: var(--focus-outline-offset);
+}
+
 .taskEditorFooter {
   display: flex;
   justify-content: flex-start;

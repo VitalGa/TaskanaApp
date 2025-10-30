@@ -36,7 +36,9 @@ export const TaskEditorFooter = ({
         <button
           className={styles.taskEditorFooterDeleteButton}
           onClick={handleDelete}
-          style={{ display: type === 'edit' ? 'block' : 'none' }}>
+          style={{ display: type === 'edit' ? 'block' : 'none' }}
+          tabIndex={type === 'edit' ? 8 : -1}
+          aria-hidden={type !== 'edit'}>
           <Icon name='footerDelete' className={styles.taskEditorFooterDeleteIcon} />
         </button>
       </div>
