@@ -1,6 +1,6 @@
 import styles from './containerHeader.module.css';
 import { Dropdown } from '@/components/dropdown';
-import { sortOptions } from '@/components/data/sortOptions';
+import { sortOptions } from '@/data/sortOptions';
 
 export function ContainerHeader({ sortBy, onSortChange }) {
   return (
