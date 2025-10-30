@@ -74,16 +74,12 @@
   font-size: var(--font-size-md);
   line-height: var(--line-height-normal);
   font-weight: var(--font-weight-regular);
-  color: var(--customInput-color);
+  color: var(--neutral-800);
   caret-color: var(--input-border);
 }
 
 .input:focus {
   outline: none;
-}
-
-.typing .input {
-  color: var(--neutral-960);
 }
 
 .input::placeholder {
