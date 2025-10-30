@@ -6,17 +6,25 @@ import styles from './dropdown.module.css';
 export function Dropdown({ options = [], value, onChange, disabled = false }) {
   const [open, setOpen] = useState(false);
   const [shouldRender, setShouldRender] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   const dropdownRef = useRef(null);
   const triggerRef = useRef(null);
   const timeoutRef = useRef(null);
+  const animationFrameRef = useRef(null);
 
   const selected = options.find((opt) => opt.value === value) || null;
 
   useEffect(() => {
     if (open) {
       setShouldRender(true);
+      animationFrameRef.current = requestAnimationFrame(() => {
+        animationFrameRef.current = requestAnimationFrame(() => {
+          setIsVisible(true);
+        });
+      });
     } else {
+      setIsVisible(false);
       timeoutRef.current = setTimeout(() => {
         setShouldRender(false);
       }, 200);
@@ -25,6 +33,9 @@ export function Dropdown({ options = [], value, onChange, disabled = false }) {
     return () => {
       if (timeoutRef.current) {
         clearTimeout(timeoutRef.current);
+      }
+      if (animationFrameRef.current) {
+        cancelAnimationFrame(animationFrameRef.current);
       }
     };
   }, [open]);
@@ -40,6 +51,13 @@ export function Dropdown({ options = [], value, onChange, disabled = false }) {
     setOpen(false);
     triggerRef.current && triggerRef.current.focus();
     if (onChange) onChange(option.value);
+  };
+
+  const handleKeyDown = (event, option) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      handleSelect(option);
+    }
   };
 
   return (
@@ -73,7 +91,7 @@ export function Dropdown({ options = [], value, onChange, disabled = false }) {
       </button>
       {shouldRender && (
         <div
-          className={`${styles.dropdownMenu} ${open ? styles.dropdownMenuVisible : ''}`}
+          className={`${styles.dropdownMenu} ${isVisible ? styles.dropdownMenuVisible : ''}`}
           role='menu'>
           <div className={styles.dropdownHeaderWrapper}>
             <Icon name='filterDropdown' className={styles.filterIcon} />
@@ -90,7 +108,8 @@ export function Dropdown({ options = [], value, onChange, disabled = false }) {
                 className={`${styles.dropdownItem} ${
                   selected && selected.value === option.value ? styles.active : ''
                 }`}
-                onClick={() => handleSelect(option)}>
+                onClick={() => handleSelect(option)}
+                onKeyDown={(e) => handleKeyDown(e, option)}>
                 <div className={styles.left}>
                   <Icon name={option.icon} className={styles.icon} />
                   <span className={styles.dropdownItemLabel}>{option.label}</span>
