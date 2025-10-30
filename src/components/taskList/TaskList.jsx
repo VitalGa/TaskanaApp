@@ -7,7 +7,7 @@ export function TaskList({ tasks, onEditTask }) {
   const hasTasks = Array.isArray(tasks) && tasks.length > 0;
 
   return (
-    <div className={`${styles.taskList} flex flex-col`}>
+    <div className={`${styles.taskList} ${!hasTasks ? styles.isEmpty : ''} flex flex-col`}>
       {hasTasks ? (
         <ul className={styles.taskItemsList} role='list'>
           {tasks.toReversed().map((task) => (
