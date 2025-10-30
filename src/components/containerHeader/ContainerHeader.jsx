@@ -1,7 +1,8 @@
 import styles from './containerHeader.module.css';
 import { Dropdown } from '@/components/dropdown';
+import { sortOptions } from '@/components/data/sortOptions';
 
-export function ContainerHeader({ sortBy, onSortChange, sortOptions }) {
+export function ContainerHeader({ sortBy, onSortChange }) {
   return (
     <div className={`${styles.containerHeader} flex justify-between items-center`}>
       <h1 className='heading-h1'>Входящие</h1>

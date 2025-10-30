@@ -3,7 +3,6 @@ import { ContainerHeader, TaskList } from '@/components';
 import { useState, useMemo, useContext } from 'react';
 import { TaskContext } from '@/context/TaskContext';
 import { sortTasksBy } from '@/utils/sortTasks';
-import { sortOptions } from '@/components/data/sortOptions';
 import { useTaskEditor } from '@/context/TaskEditorContext';
 
 export function MainContainer() {
@@ -21,7 +20,7 @@ export function MainContainer() {
 
   return (
     <main className={styles.mainContainer}>
-      <ContainerHeader sortBy={sortBy} onSortChange={setSortBy} sortOptions={sortOptions} />
+      <ContainerHeader sortBy={sortBy} onSortChange={setSortBy} />
       <TaskList tasks={sortedTasks} onEditTask={handleEditTask} />
     </main>
   );
