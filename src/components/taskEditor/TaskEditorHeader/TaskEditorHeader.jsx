@@ -48,6 +48,7 @@ export const TaskEditorHeader = forwardRef(
               ref={ref}
               disabled={disabled}
               tabIndex={disabled ? -1 : 1}
+              autoComplete='off'
             />
             {value && (
               <button
