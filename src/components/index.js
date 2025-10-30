@@ -1,5 +1,6 @@
 export * from './containerHeader/ContainerHeader';
 export * from './containerText/ContainerText';
+export * from './dropdown';
 export * from './emptyTask/EmptyTask';
 export * from './footer/Footer';
 export * from './header/Header';
@@ -10,4 +11,5 @@ export * from './header/themeSwitcher/ThemeSwitcher';
 export * from './navBar/NavBar';
 export * from './sideBar/SideBar';
 export * from './statistic/Statistic';
+export * from './taskEditor';
 export * from './taskList/TaskList';
