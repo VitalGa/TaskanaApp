@@ -3,7 +3,7 @@ export { default as MoonIcon } from './themeToggleIcons/MoonIcon';
 
 export { default as LogoIcon } from './LogoIcon';
 
-export { default as InboxIcon } from './buttonIcons/InboxIcon';
+export { default as InboxIcon } from './buttonIcons/inboxIcon.jsx';
 export { default as LoadingIcon } from './buttonIcons/LoadingIcon';
 
 export { default as PlusIcon } from './headerIcons/plus-2-Icon';

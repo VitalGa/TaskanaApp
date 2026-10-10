@@ -1,5 +1,5 @@
-import { GirlIllustrationIcon } from './illustrations/GirlIllustrationIcon';
-import { BookIllustrationIcon } from './illustrations/BookIllustrationIcon';
+import { GirlIllustrationIcon } from './illustrations/GirlillustrationIcon.jsx';
+import { BookIllustrationIcon } from './illustrations/BookillustrationIcon.jsx';
 
 const iconMap = {
   girl: GirlIllustrationIcon,
