@@ -1,4 +1,7 @@
 # TaskanaApp
+Вот такой ToDo List. 
+Ниже я оставил рабочую переписку.
+
 
 - Имя: Vitaly
 - Ник: VitalGa
